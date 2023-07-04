@@ -1,0 +1,62 @@
+@font-face {
+    // font-family: "Montserrat-SemiBold";
+    // src: url(../fonts/Montserrat-SemiBold.woff2) format("woff2"), url(../fonts/Montserrat-SemiBold.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+// цвета
+
+$purple: #7a7dbc;
+$dark: #3a3a42;
+$pink: #ec84b6;
+$pink1: #eedcfa;
+$pink2: #969ae4;
+$white: #fff;
+$light-pink: #fdecff;
+$light-pink1: #fdfaff;
+
+// переменная со шрифтом
+
+// $font-italic: 'inter-italic', 'font', sans-serif;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat-SemiBold", "font", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 14px;
+    min-width: 320px;
+    background-color: $light-pink1;
+    overflow-x: hidden;
+    color: $dark;
+}
+
+main {
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+@media (min-width: 375px) {
+}
+
+@media (min-width: 768px) {
+    .container {
+        // max-width: 600px;
+        // margin: 0 auto;
+    }
+
+}
+
+@media (min-width: 1280px) {
+    
+}
