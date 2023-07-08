@@ -1,10 +1,66 @@
-@font-face {
-  font-family: "Montserrat-SemiBold";
-  src: url(../fonts/Montserrat-SemiBold.woff2) format("woff2"), url(../fonts/Montserrat-SemiBold.woff) format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+.header {
+  width: 100%;
+  height: 60px;
+  background: green;
 }
+
+.footer {
+  width: 100%;
+  height: 60px;
+  background: yellow;
+}
+
+.footer {
+  width: 100%;
+  height: 60px;
+  background: yellow;
+}
+
+.footer {
+  width: 100%;
+  height: 60px;
+  background: yellow;
+}
+
+.footer {
+  width: 100%;
+  height: 60px;
+  background: yellow;
+}
+
+.footer {
+  width: 100%;
+  height: 60px;
+  background: yellow;
+}
+
+.footer {
+  width: 100%;
+  height: 60px;
+  background: yellow;
+}
+
+.footer {
+  width: 100%;
+  height: 60px;
+  background: yellow;
+}
+
+.footer {
+  width: 100%;
+  height: 60px;
+  background: yellow;
+}
+
+/*
+@font-face {
+    // font-family: "Montserrat-SemiBold";
+    // src: url(../fonts/Montserrat-SemiBold.woff2) format("woff2"), url(../fonts/Montserrat-SemiBold.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+*/
 html {
   scroll-behavior: smooth;
 }
@@ -17,7 +73,8 @@ body {
   min-width: 320px;
   background-color: #fdfaff;
   overflow-x: hidden;
-  color: #3a3a42;
+  color: #22082B;
+  background: #F3F3F3;
 }
 
 main {
@@ -28,4 +85,13 @@ ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+
+@media (min-width: 768px) {
+  /*
+      .container {
+          // max-width: 600px;
+          // margin: 0 auto;
+      }
+  */
 }/*# sourceMappingURL=style.css.map */

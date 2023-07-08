@@ -1,3 +1,18 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+@import "./blocks/header";
+@import "./blocks/main";
+@import "./blocks/about";
+@import "./blocks/portfolio";
+@import "./blocks/services";
+@import "./blocks/memo";
+@import "./blocks/reviews";
+@import "./blocks/contacts";
+@import "./blocks/footer";
+
+
+/*
 @font-face {
     // font-family: "Montserrat-SemiBold";
     // src: url(../fonts/Montserrat-SemiBold.woff2) format("woff2"), url(../fonts/Montserrat-SemiBold.woff) format("woff");
@@ -5,17 +20,8 @@
     font-style: normal;
     font-display: swap;
 }
+*/
 
-// цвета
-
-$purple: #7a7dbc;
-$dark: #3a3a42;
-$pink: #ec84b6;
-$pink1: #eedcfa;
-$pink2: #969ae4;
-$white: #fff;
-$light-pink: #fdecff;
-$light-pink1: #fdfaff;
 
 // переменная со шрифтом
 
@@ -33,7 +39,9 @@ body {
     min-width: 320px;
     background-color: $light-pink1;
     overflow-x: hidden;
-    color: $dark;
+    color: $purple;
+    background: #F3F3F3;
+    ;
 }
 
 main {
@@ -46,17 +54,19 @@ ul {
     margin: 0;
 }
 
-@media (min-width: 375px) {
-}
+
+
+
+
+@media (min-width: 375px) {}
 
 @media (min-width: 768px) {
+    /*
     .container {
         // max-width: 600px;
         // margin: 0 auto;
     }
-
+*/
 }
 
-@media (min-width: 1280px) {
-    
-}
+@media (min-width: 1280px) {}
