@@ -1,5 +1,53 @@
-.footer {
-    width: 100%;
-    height: 60px;
-    background: yellow;
-}
+.position-relative {
+    position: relative;
+    max-width: 296px;
+  }
+  
+  #rotation {
+    overflow: hidden;
+  }
+  
+  #rotation img {
+    height: 703px;
+    cursor: grab;
+  }
+  
+  .btn-calc {
+    position: absolute;
+    cursor: pointer;
+  }
+  
+  .btn-calc-pussy {
+    top: 140px;
+    right: 239px;
+  }
+  
+  .btn-calc-right-leg {
+    top: 220px;
+    right: 253px;
+  }
+  
+  .btn-calc::before {
+    content: url("../images/point.png");
+  }
+  
+  @media (max-width: 768px) {
+    #rotation,
+    .position-relative {
+      width: 375px;
+    }
+  
+    #rotation img {
+      height: 90vh;
+    }
+  
+    .btn-calc-pussy {
+      top: 105px;
+      right: 177px;
+    }
+    
+    .btn-calc-right-leg {
+      top: 164px;
+      right: 186px;
+    }
+  }
