@@ -1,53 +1,71 @@
-.position-relative {
+.services {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .services__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .border-line {
+    width: 605px;
+    height: 5px;
+  }
+}
+
+.animation {
     position: relative;
-    max-width: 296px;
-  }
-  
-  #rotation {
-    overflow: hidden;
-  }
-  
-  #rotation img {
-    height: 703px;
-    cursor: grab;
-  }
-  
-  .btn-calc {
-    position: absolute;
-    cursor: pointer;
-  }
-  
-  .btn-calc-pussy {
-    top: 140px;
-    right: 239px;
-  }
-  
-  .btn-calc-right-leg {
-    top: 220px;
-    right: 253px;
-  }
-  
-  .btn-calc::before {
-    content: url("../images/point.png");
-  }
-  
-  @media (max-width: 768px) {
-    #rotation,
-    .position-relative {
-      width: 375px;
+    width: 320px;
+
+    #rotation {
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 703px;
+        cursor: grab;
+      }
     }
-  
-    #rotation img {
-      height: 90vh;
+
+    .btn-calc {
+      position: absolute;
+      cursor: pointer;
+
+      &.btn-calc-pussy {
+        top: 140px;
+        right: 239px;
+      }
+      
+      &.btn-calc-right-leg {
+        top: 220px;
+        right: 253px;
+      }
+      
+      &.btn-calc::before {
+        content: url("../images/point.png");
+      }
     }
+  }
+
   
-    .btn-calc-pussy {
-      top: 105px;
-      right: 177px;
-    }
-    
-    .btn-calc-right-leg {
-      top: 164px;
-      right: 186px;
+  @media (max-width: 320px) {
+    .animation {
+      width: 183px;
+
+      #rotation img {
+          height: 377px;
+      }
+
+      .btn-calc-pussy {
+        top: 105px;
+        right: 177px;
+      }
+      
+      .btn-calc-right-leg {
+        top: 164px;
+        right: 186px;
+      }
     }
   }
