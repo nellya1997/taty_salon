@@ -1,6 +1,8 @@
+@import "normalize.scss";
 @import "variables.scss";
-@import "general.scss";
 @import "mixins.scss";
+@import "general.scss";
+
 
 @import "./blocks/header";
 @import "./blocks/main";
