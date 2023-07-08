@@ -1,21 +1,11 @@
 .services {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  @include flexy(column, space-between, unset);
 
-  .services__header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  &__header {
+    @include flexy(row, space-between, center);
   }
 
-  .border-line {
-    width: 605px;
-    height: 5px;
-  }
-}
-
-.animation {
+  &__animation {
     position: relative;
     width: 320px;
 
@@ -49,15 +39,35 @@
     }
   }
 
-  
-  @media (max-width: 320px) {
-    .animation {
-      width: 183px;
+  &__h2 {
+    @include m(bottom, 50);
+  }
 
+  &__main {
+    @include flexy(column, space-between, center);
+  }
+}
+
+@media (max-width: 320px) {
+
+  .services {
+
+    &__h2 {
+      display: block;
+      font-size: 12px;
+      line-height: 12.6px;
+
+      @include centry(202px);
+      @include m(bottom, 17.5);
+    }
+
+    &__animation {
+      width: 183px;
+  
       #rotation img {
           height: 377px;
       }
-
+  
       .btn-calc-pussy {
         top: 105px;
         right: 177px;
@@ -69,3 +79,4 @@
       }
     }
   }
+}

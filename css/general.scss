@@ -35,16 +35,48 @@ html {
   line-height: 30px;
   color: $purple;
   background-color: $grey;
+  scroll-behavior: smooth;
 }
 
 body {
   width: 100vw;
 }
 
+.container {
+  width: 91.6%;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.border-line {
+  width: 31.5vw;
+  height: 0.26%;
+}
+
 h1 {
   font-family: Constantine, sans-serif;
   font-weight: 400;
-  font-size: 35px;
+  font-size: 1.45rem;
   line-height: 1.2;
   color: $dark;
+}
+
+@media (max-width: 320px) {
+  html {
+    font-size: 10px;
+    line-height: 12.5px;
+  }
+
+  .container {
+    width: 81.25%;
+  }
+}
+
+@media (max-width: 768px) {
+  .border-line {
+    width: 23.44vw;
+  }
 }
