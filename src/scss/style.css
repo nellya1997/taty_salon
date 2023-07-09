@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -306,4 +307,215 @@ template {
  */
 [hidden] {
   display: none;
-}/*# sourceMappingURL=normalize.css.map */
+}
+
+@font-face {
+  font-weight: 400;
+  /* Соответствует значению normal */
+  font-family: Manrope;
+  src: url("../src/fonts/Manrope-Regular.ttf");
+}
+@font-face {
+  font-weight: 500;
+  font-family: Manrope;
+  src: url("../src/fonts/Manrope-Medium.ttf");
+}
+@font-face {
+  font-weight: 600;
+  /* Соответствует значению "почти" bold )) */
+  font-family: Manrope;
+  src: url("../src/fonts/Manrope-SemiBold.ttf");
+}
+@font-face {
+  font-weight: 400;
+  font-family: Constantine;
+  src: url("../src/fonts/Constantine.ttf");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: Manrope, sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 30px;
+  color: #22082B;
+  background-color: #f3f3f3;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+}
+
+.container {
+  width: 91.6%;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.border-line {
+  width: 31.5vw;
+  height: 0.26%;
+}
+
+h1 {
+  font-family: Constantine, sans-serif;
+  font-weight: 400;
+  font-size: 1.45rem;
+  line-height: 1.2;
+  color: #3a3a42;
+}
+
+@media (max-width: 320px) {
+  html {
+    font-size: 10px;
+    line-height: 12.5px;
+  }
+  .container {
+    width: 81.25%;
+  }
+}
+@media (max-width: 768px) {
+  .border-line {
+    width: 23.44vw;
+  }
+}
+.header {
+  width: 100%;
+  height: 60px;
+  background: green;
+}
+
+.footer {
+  width: 100%;
+  height: 60px;
+  background: yellow;
+}
+
+.footer {
+  width: 100%;
+  height: 60px;
+  background: yellow;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: unset;
+}
+.services__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.services__animation {
+  position: relative;
+  width: 320px;
+}
+.services__animation #rotation {
+  overflow: hidden;
+}
+.services__animation #rotation img {
+  width: 100%;
+  height: 703px;
+  cursor: grab;
+}
+.services__animation .btn-calc {
+  position: absolute;
+  cursor: pointer;
+}
+.services__animation .btn-calc.btn-calc-pussy {
+  top: 140px;
+  right: 239px;
+}
+.services__animation .btn-calc.btn-calc-right-leg {
+  top: 220px;
+  right: 253px;
+}
+.services__animation .btn-calc.btn-calc::before {
+  content: url("../images/point.png");
+}
+.services__h2 {
+  margin-bottom: 50px;
+}
+.services__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 320px) {
+  .services__h2 {
+    display: block;
+    font-size: 12px;
+    line-height: 12.6px;
+    margin: 0 auto;
+    width: 202px;
+    margin-bottom: 17.5px;
+  }
+  .services__animation {
+    width: 183px;
+  }
+  .services__animation #rotation img {
+    height: 377px;
+  }
+  .services__animation .btn-calc-pussy {
+    top: 105px;
+    right: 177px;
+  }
+  .services__animation .btn-calc-right-leg {
+    top: 164px;
+    right: 186px;
+  }
+}
+.footer {
+  width: 100%;
+  height: 60px;
+  background: yellow;
+}
+
+.footer {
+  width: 100%;
+  height: 60px;
+  background: yellow;
+}
+
+.footer {
+  width: 100%;
+  height: 60px;
+  background: yellow;
+}
+
+.footer {
+  width: 100%;
+  height: 60px;
+  background: yellow;
+}
+
+/*
+@font-face {
+    // font-family: "Montserrat-SemiBold";
+    // src: url(../fonts/Montserrat-SemiBold.woff2) format("woff2"), url(../fonts/Montserrat-SemiBold.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+*/
+@media (min-width: 768px) {
+  /*
+      .container {
+          // max-width: 600px;
+          // margin: 0 auto;
+      }
+  */
+}/*# sourceMappingURL=style.css.map */
