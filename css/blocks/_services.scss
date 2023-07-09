@@ -37,6 +37,19 @@
         content: url("../images/point.png");
       }
     }
+
+    &__footer {
+
+      img {
+        width: 100%;
+      }
+
+      .services__h2 {
+        font-family: Constantine, sans-serif;
+
+        @include fonty(16px, 400, 17.12px);
+      }
+    }
   }
 
   &__h2 {
