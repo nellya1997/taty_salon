@@ -37,6 +37,19 @@
         content: url("../images/point.png");
       }
     }
+
+    &__footer {
+
+      img {
+        width: 100%;
+      }
+
+      .services__h2 {
+        font-family: Constantine, sans-serif;
+
+        @include fonty(16px, 400, 17.12px);
+      }
+    }
   }
 
   &__h2 {
@@ -44,7 +57,39 @@
   }
 
   &__main {
-    @include flexy(column, space-between, center);
+    @include flexy(row, space-between, top);
+
+    &__left-column {
+      width: 36.19%;
+      @include fonty(20px, 400, 21.4px);
+      @include p(top, 55);
+
+      img {
+        @include m(top, 22);
+      }
+    }
+
+    &__right-column {
+      width: 33.81%;
+      @include fonty(20px, 400, 27.32px);
+      @include p(top, 55);
+
+      .mt-18 {
+        @include m(top, 18);
+      }
+
+      .mt-36 {
+        @include m(top, 36);
+      }
+
+      .mb-15 {
+        @include m(bottom, 15);
+      }
+
+      .h2 {
+        @include fonty(22px, 600, 30.05px);
+      }
+    }
   }
 }
 
