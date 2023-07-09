@@ -47,6 +47,21 @@ body {
   margin: 0 auto;
 }
 
+.btn {
+  display: block;
+  text-decoration: none;
+  padding: 1.18rem 4.32rem 1.82rem;
+  width: 23.49vw;
+  height: 4.32rem;
+  background-image: url('../images/bg-button.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: $purple;
+
+  @include fonty(25px, 600, 34.15px);
+}
+
 .text-center {
   text-align: center;
 }
