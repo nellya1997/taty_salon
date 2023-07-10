@@ -1,7 +1,73 @@
 .header {
-    width: 100%;
-    height: 60px;
-    background: green;
+    height: 143px;
+    @include flexy(row, space-between);
+
+    .navigation {
+        width: 67%;
+        @include flexy(row, space-between);
+
+        &__item {
+            @include fonty(30px, 600, 41px);
+
+            &-active {
+                border: 3px solid #825890;
+                border-radius: 50px;
+                padding: 5px 16px;
+                position: relative;
+
+                &::after {
+                    //content: url("/src/images/header/drops.png");
+                    //content: url("../../images/header/drops.png");
+                    content: "";
+                    position: absolute;
+                    top: 100%;
+                    left: 63%;
+
+                    width: 38px;
+                    height: 80px;
+                    //background-image: url("../../images/header/drops.png");
+                    background-image: url("/src/images/header/drops.png");
+                    background-size: 38px 80px;
+                }
+            }
+        }
+    }
+
+
+    .header-contacts {
+        @include flexy(column, center, flex-start);
+
+        &__phone {
+            @include fonty($weight: 600);
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 15%;
+                left: -20%;
+                width: 21px;
+                height: 21px;
+                background-image: url("/src/images/header/phone.png");
+            }
+        }
+
+        &__address {
+            @include fonty(18px, 400, 25px);
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 12%;
+                left: -18%;
+                width: 24px;
+                height: 24px;
+                //background-image: url("/src/images/header/location.png");
+                background-image: url("../../images/header/location.png");
+            }
+        }
+    }
 }
 
 
