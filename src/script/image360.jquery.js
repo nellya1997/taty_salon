@@ -1,17 +1,12 @@
-<<<<<<< HEAD
-const rotate = (num, classList) => { //функция подсчёта угла поворота кнопок
-	const isLegButton = [...classList].includes('link-calc-right-leg');
-	if (isLegButton) {
-		const zeroImage = 7; //средний слайд, от него будем крутиться
-	if (num === zeroImage) return 0;
-
-	return num > 5 && num < 9 ? Math.abs((num - zeroImage) * 30) : 90;
-	}
-
-=======
 const rotate = (num) => { //функция подсчёта угла поворота кнопок
->>>>>>> 1d81cba (перенос на PC, добавил кнопки)
 	if (num <= 1) return 0;
+	if (num < 4 || num > 22) {
+		return num * 15 - 15;
+	}
+	else if (num > 11 && num < 15) {
+		return num * 15 - 15;
+	}
+	return 90;
 	if (num < 4 || num > 22) {
 		return num * 15 - 15;
 	}
@@ -39,14 +34,9 @@ const rotate = (num) => { //функция подсчёта угла повор�
 			direction = true; // напавление движения мыши true - влево, false -  вправо
 
 			//ищем кнопки в документе
-<<<<<<< HEAD
-			const buttonPussyImage = document.querySelector('.link-calc-pussy');
-			const buttonRightLegImage = document.querySelector('.link-calc-right-leg');
-=======
 			const buttons = document.querySelectorAll('.btn-calc');
 //			const buttonThroatImage = document.querySelector('.throat');
 //			const buttonBreastImage = document.querySelector('.breast');
->>>>>>> 1d81cba (перенос на PC, добавил кнопки)
 			//кнопки, которые не должны быть отображены на старте скрываем вот таким способом
 //			buttonRightLegImage.style.transform = `rotateY(90deg)`;
 						
@@ -80,6 +70,12 @@ const rotate = (num) => { //функция подсчёта угла повор�
 					if(index_img > (count_imgs - 1)) index_img = 0;
 					// тут мы врезаемся в события jQuery и меняем поворот кнопок
 					// index_img + 1 потому что номер слайда тут считается индексом, а нам нужен номер
+					buttons.forEach((button) => {
+						if ((button.classList.contains('throat') || button.classList.contains('breast')) && index_img > 10 && index_img < 16) {
+							return button.style.transform = `rotateY(${rotate(index_img + 1, button.classList)}deg) translateY(2vw)`;
+						}
+						button.style.transform = `rotateY(${rotate(index_img + 1, button.classList)}deg)`;
+					});
 					buttons.forEach((button) => {
 						if ((button.classList.contains('throat') || button.classList.contains('breast')) && index_img > 10 && index_img < 16) {
 							return button.style.transform = `rotateY(${rotate(index_img + 1, button.classList)}deg) translateY(2vw)`;
