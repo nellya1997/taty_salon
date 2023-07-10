@@ -7,14 +7,14 @@
 
   &__animation {
     position: relative;
-    width: 320px;
+    width: 18.18%;
 
     #rotation {
       overflow: hidden;
 
       img {
         width: 100%;
-        height: 703px;
+        height: 65%;
         cursor: grab;
       }
     }
@@ -61,33 +61,91 @@
 
     &__left-column {
       width: 36.19%;
-      @include fonty(20px, 400, 21.4px);
+      @include fonty(0.9rem, 400, 1.07em);
       @include p(top, 55);
 
-      img {
-        @include m(top, 22);
+      &__pain-points {
+        font-weight: 600;
+
+        @include centry(71%);
+
+        img {
+          @include m(top, 22);
+          width: 100%;
+        }
+
+        .pain-points__text {
+          @include flexy(row, space-between, bottom);
+          @include m(top, 6);
+        }
       }
     }
 
     &__right-column {
       width: 33.81%;
-      @include fonty(20px, 400, 27.32px);
+      @include fonty(0.9rem, 400, 1.36em);
       @include p(top, 55);
-
+  
       .mt-18 {
         @include m(top, 18);
       }
-
+  
       .mt-36 {
         @include m(top, 36);
       }
-
+  
       .mb-15 {
-        @include m(bottom, 15);
+        margin-bottom: calc(15px + 1.18rem);
+      }
+  
+      .h2 {
+        @include fonty(1rem, 600, 1.36em);
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+
+  .services {
+
+    &__main {
+      @include flexy(column, center, center);
+
+      &__left-column {
+        order: 2;
+
+        img {
+          width: 100%;
+        }
+
+        &::before {
+          content: 'Шкала боли';
+
+          @include fonty(1.5rem, 600, 1.36em);
+        }
+
+        > p {
+          display: none;
+        }
       }
 
-      .h2 {
-        @include fonty(22px, 600, 30.05px);
+      &__right-column {
+        order: 3;
+        text-align: center;
+      }
+      
+      div:nth-child(odd) {
+        width: 100%;
+      }
+    }
+
+    &__animation {
+      order: 1;
+      width: 300px;
+
+      &__footer {
+        display: none;
       }
     }
   }
@@ -110,7 +168,7 @@
       width: 183px;
 
       #rotation img {
-        height: 377px;
+        width: 100%;
       }
 
       .btn-calc-pussy {

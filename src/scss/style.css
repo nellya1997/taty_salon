@@ -83,8 +83,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -344,23 +343,23 @@ template {
   font-weight: 400;
   /* Соответствует значению normal */
   font-family: Manrope;
-  src: url("../src/fonts/Manrope-Regular.ttf");
+  src: url("../fonts/Manrope-Regular.ttf");
 }
 @font-face {
   font-weight: 500;
   font-family: Manrope;
-  src: url("../src/fonts/Manrope-Medium.ttf");
+  src: url("../fonts/Manrope-Medium.ttf");
 }
 @font-face {
   font-weight: 600;
   /* Соответствует значению "почти" bold )) */
   font-family: Manrope;
-  src: url("../src/fonts/Manrope-SemiBold.ttf");
+  src: url("../fonts/Manrope-SemiBold.ttf");
 }
 @font-face {
   font-weight: 400;
   font-family: Constantine;
-  src: url("../src/fonts/Constantine.ttf");
+  src: url("../fonts/Constantine.ttf");
 }
 * {
   box-sizing: border-box;
@@ -388,19 +387,15 @@ body {
 }
 
 .btn {
-  display: block;
   text-decoration: none;
   padding: 1.18rem 4.32rem 1.82rem;
-  width: 23.49vw;
-  height: 4.32rem;
   background-image: url("../images/bg-button.png");
-  background-position: center center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   color: #22082B;
-  font-size: 25px;
+  font-size: 1.13rem;
   font-weight: 600;
-  line-height: 34.15px;
+  line-height: 1.36em;
 }
 
 .text-center {
@@ -420,18 +415,44 @@ h1 {
   color: #3a3a42;
 }
 
+@media (max-width: 1550px) {
+  html {
+    font-size: 15px;
+    line-height: 1.25;
+  }
+  .btn {
+    background-image: url("../images/bg-button-md.png");
+  }
+}
+@media (max-width: 1280px) {
+  html {
+    font-size: 14px;
+  }
+  .btn {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 850px) {
+  html {
+    font-size: 15px;
+  }
+  .border-line {
+    width: 23.44vw;
+  }
+  .services {
+    margin-bottom: 40px;
+  }
+}
 @media (max-width: 320px) {
   html {
     font-size: 10px;
-    line-height: 12.5px;
+  }
+  .btn {
+    width: 79%;
   }
   .container {
     width: 81.25%;
-  }
-}
-@media (max-width: 768px) {
-  .border-line {
-    width: 23.44vw;
   }
 }
 .header {
@@ -532,14 +553,14 @@ h1 {
 }
 .services__animation {
   position: relative;
-  width: 320px;
+  width: 18.18%;
 }
 .services__animation #rotation {
   overflow: hidden;
 }
 .services__animation #rotation img {
   width: 100%;
-  height: 703px;
+  height: 65%;
   cursor: grab;
 }
 .services__animation .btn-calc {
@@ -577,19 +598,32 @@ h1 {
 }
 .services__main__left-column {
   width: 36.19%;
-  font-size: 20px;
+  font-size: 0.9rem;
   font-weight: 400;
-  line-height: 21.4px;
+  line-height: 1.07em;
   padding-top: 55px;
 }
-.services__main__left-column img {
+.services__main__left-column__pain-points {
+  font-weight: 600;
+  margin: 0 auto;
+  width: 71%;
+}
+.services__main__left-column__pain-points img {
   margin-top: 22px;
+  width: 100%;
+}
+.services__main__left-column__pain-points .pain-points__text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: bottom;
+  margin-top: 6px;
 }
 .services__main__right-column {
   width: 33.81%;
-  font-size: 20px;
+  font-size: 0.9rem;
   font-weight: 400;
-  line-height: 27.32px;
+  line-height: 1.36em;
   padding-top: 55px;
 }
 .services__main__right-column .mt-18 {
@@ -599,14 +633,51 @@ h1 {
   margin-top: 36px;
 }
 .services__main__right-column .mb-15 {
-  margin-bottom: 15px;
+  margin-bottom: calc(15px + 1.18rem);
 }
 .services__main__right-column .h2 {
-  font-size: 22px;
+  font-size: 1rem;
   font-weight: 600;
-  line-height: 30.05px;
+  line-height: 1.36em;
 }
 
+@media (max-width: 850px) {
+  .services__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .services__main__left-column {
+    order: 2;
+  }
+  .services__main__left-column img {
+    width: 100%;
+  }
+  .services__main__left-column::before {
+    content: "Шкала боли";
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.36em;
+  }
+  .services__main__left-column > p {
+    display: none;
+  }
+  .services__main__right-column {
+    order: 3;
+    text-align: center;
+  }
+  .services__main div:nth-child(odd) {
+    width: 100%;
+  }
+  .services__animation {
+    order: 1;
+    width: 300px;
+  }
+  .services__animation__footer {
+    display: none;
+  }
+}
 @media (max-width: 320px) {
   .services__h2 {
     display: block;
@@ -620,7 +691,7 @@ h1 {
     width: 183px;
   }
   .services__animation #rotation img {
-    height: 377px;
+    width: 100%;
   }
   .services__animation .btn-calc-pussy {
     top: 105px;
@@ -671,4 +742,6 @@ h1 {
           // margin: 0 auto;
       }
   */
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
