@@ -11,7 +11,7 @@
 
 <body>
 
-  <header class="header container">
+  <!-- <header class="header container">
     <div class="navigation">
       <a href="#" class="navigation__item navigation__item-active">Главная</a>
       <a href="#" class="navigation__item">Обо мне</a>
@@ -26,80 +26,86 @@
       </a>
       <a class="header-contacts__address" href="#">ул. Айвазовского 10/54</a>
     </div>
-  </header>
+  </header> -->
 
 
   <main>
     <section class="main"></section>
     <section class="about"></section>
-    <section class="portfolio"></section>
-    <section class="services container">
-      <div class="services__header">
-        <img class="border-line" src="./src/images/line.png" alt="Border line">
-        <h1>Услуги</h1>
-        <img class="border-line" src="./src/images/line.png" alt="Border line">
+    <section class="portfolio">
+      <div class="container">
+        <div class="wrapper-title">
+          <h2 class="title">Портфолио</h2>
+        </div>
       </div>
-      <p class="services__h2 text-center">Нажми на место, где хотите набить тату, чтобы узнать цену</p>
-      <div class="services__main">
-        <div class="services__main__left-column text-center">
-          <p>Эта процедура — не из приятных, и она доставляет определенные сложности вне зависимости от пола и возраста человека.
-            Существует так называемая карта боли, которая иллюстрирует самые болезненные и относительно неприятные области для нанесения
-            рисунка.</p>
-            <div class="services__main__left-column__pain-points">
-              <picture>
-                <source media="(max-width:768px)" srcset="./src/images/anatomy-md.png">
-                <img src="./src/images/anatomy.png" alt="Болевые точки">
-              </picture>
-              <div class="pain-points__text">
-                <p>Наименее болезненно</p>
-                <p>Очень больно</p>
+    </section>
+    <section class="services">
+      <div class="container">
+        <div class="wrapper-title">
+          <h2 class="title">Услуги</h2>
+        </div>
+        <p class="services__h2 text-center">Нажми на место, где хотите набить тату, чтобы узнать цену</p>
+        <div class="services__main">
+          <div class="services__main__left-column text-center">
+            <p>Эта процедура — не из приятных, и она доставляет определенные сложности вне зависимости от пола и возраста человека.
+              Существует так называемая карта боли, которая иллюстрирует самые болезненные и относительно неприятные области для нанесения
+              рисунка.</p>
+              <div class="services__main__left-column__pain-points">
+                <picture>
+                  <source media="(max-width:768px)" srcset="./src/images/anatomy-md.png">
+                  <img src="./src/images/anatomy.png" alt="Болевые точки">
+                </picture>
+                <div class="pain-points__text">
+                  <p>Наименее болезненно</p>
+                  <p>Очень больно</p>
+                </div>
               </div>
+          </div>
+          <div class="services__animation">
+            <div id="rotation">
+              <img src="./src/images/1.jpg" style="display: inline;">
+              <img src="./src/images/2.jpg">
+              <img src="./src/images/3.jpg">
+              <img src="./src/images/4.jpg">
+              <img src="./src/images/5.jpg">
+              <img src="./src/images/6.jpg">
+              <img src="./src/images/7.jpg">
+              <img src="./src/images/8.jpg">
+              <img src="./src/images/9.jpg">
+              <img src="./src/images/10.jpg">
+              <img src="./src/images/11.jpg">
+              <img src="./src/images/12.jpg">
+              <img src="./src/images/13.jpg">
+              <img src="./src/images/14.jpg">
+              <img src="./src/images/15.jpg">
+              <img src="./src/images/16.jpg">
+              <img src="./src/images/17.jpg">
+              <img src="./src/images/18.jpg">
+              <img src="./src/images/19.jpg">
+              <img src="./src/images/20.jpg">
+              <img src="./src/images/21.jpg">
+              <img src="./src/images/22.jpg">
+              <img src="./src/images/23.jpg">
+              <img src="./src/images/24.jpg">
             </div>
-        </div>
-        <div class="services__animation">
-          <div id="rotation">
-            <img src="./src/images/1.jpg" style="display: inline;">
-            <img src="./src/images/2.jpg">
-            <img src="./src/images/3.jpg">
-            <img src="./src/images/4.jpg">
-            <img src="./src/images/5.jpg">
-            <img src="./src/images/6.jpg">
-            <img src="./src/images/7.jpg">
-            <img src="./src/images/8.jpg">
-            <img src="./src/images/9.jpg">
-            <img src="./src/images/10.jpg">
-            <img src="./src/images/11.jpg">
-            <img src="./src/images/12.jpg">
-            <img src="./src/images/13.jpg">
-            <img src="./src/images/14.jpg">
-            <img src="./src/images/15.jpg">
-            <img src="./src/images/16.jpg">
-            <img src="./src/images/17.jpg">
-            <img src="./src/images/18.jpg">
-            <img src="./src/images/19.jpg">
-            <img src="./src/images/20.jpg">
-            <img src="./src/images/21.jpg">
-            <img src="./src/images/22.jpg">
-            <img src="./src/images/23.jpg">
-            <img src="./src/images/24.jpg">
+            <a class="link-calc link-calc-pussy"></a>
+            <a class="link-calc link-calc-right-leg"></a>
+            <div class="services__animation__footer">
+              <img src="./src/images/twist.png" alt="Покрути">
+              <img src="./src/images/twist.png" alt="Покрути">
+              <p class="services__h2 text-center">Покрути</p>
+            </div>
           </div>
-          <a class="btn-calc btn-calc-pussy"></a>
-          <a class="btn-calc btn-calc-right-leg"></a>
-          <div class="services__animation__footer">
-            <img src="./src/images/twist.png" alt="Покрути">
-            <img src="./src/images/twist.png" alt="Покрути">
-            <p class="services__h2 text-center">Покрути</p>
+          <div class="services__main__right-column">
+            <p>Восприимчивость различных участков неодинакова. На болезненность влияют разные факторы: плотность кожи, количество нервных
+              окончаний в определенной области, удаленность от кости (если кость близко к коже, будет больно при нанесении тату).
+            </p>
+            <p class="mt-18"><strong>Важно!</strong> Если вам становится нестерпимо больно, не надо дергаться и извиваться под рукой мастера. Лучше всего прервать
+              сеанс и продолжить в следующий раз.
+            </p>
+            <p class="mt-36 mb-15 h2">Если знаешь размер и место тату, то смело записывайся</p>
+            <a class="link" href="#">Записаться на сеанс</a>
           </div>
-        </div>
-        <div class="services__main__right-column">
-          <p>Восприимчивость различных участков неодинакова. На болезненность влияют разные факторы: плотность кожи, количество нервных
-            окончаний в определенной области, удаленность от кости (если кость близко к коже, будет больно при нанесении тату).
-          </p>
-          <p class="mt-18"><strong>Важно!</strong> Если вам становится нестерпимо больно, не надо дергаться и извиваться под рукой мастера. Лучше всего прервать
-            сеанс и продолжить в следующий раз.
-          </p>
-          <p class="mt-36 mb-15 h2">Если знаешь размер и место тату, то смело записывайся</p>
-          <a class="btn" href="#">Записаться на сеанс</a>
         </div>
       </div>
     </section>

@@ -83,7 +83,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -386,11 +387,11 @@ body {
   margin: 0 auto;
 }
 
-.btn {
+.link {
   text-decoration: none;
-  padding: 1.18rem 4.32rem 1.82rem;
+  padding: 17px 50px;
   background-image: url("../images/bg-button.png");
-  background-size: contain;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   color: #22082B;
   font-size: 1.13rem;
@@ -407,33 +408,44 @@ body {
   height: 0.26%;
 }
 
-h1 {
+.title {
   font-family: Constantine, sans-serif;
   font-weight: 400;
   font-size: 1.45rem;
   line-height: 1.2;
   color: #3a3a42;
+  text-align: center;
 }
 
-@media (max-width: 1550px) {
-  html {
-    font-size: 15px;
-    line-height: 1.25;
-  }
-  .btn {
-    background-image: url("../images/bg-button-md.png");
-  }
+.wrapper-title {
+  position: relative;
 }
-@media (max-width: 1280px) {
-  html {
-    font-size: 14px;
-  }
-  .btn {
-    width: 100%;
-    font-size: 1rem;
-  }
+.wrapper-title::after, .wrapper-title::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  width: 26%;
+  height: 1px;
+  background-color: #825890;
 }
-@media (max-width: 850px) {
+.wrapper-title::before {
+  right: 0;
+  left: auto;
+}
+
+html {
+  font-size: 10px;
+}
+
+.link {
+  text-align: center;
+}
+
+.container {
+  margin: 0 10px;
+}
+
+@media (min-width: 375px) {
   html {
     font-size: 15px;
   }
@@ -444,15 +456,27 @@ h1 {
     margin-bottom: 40px;
   }
 }
-@media (max-width: 320px) {
+@media (min-width: 768px) {
   html {
-    font-size: 10px;
-  }
-  .btn {
-    width: 79%;
+    font-size: 14px;
   }
   .container {
-    width: 81.25%;
+    margin: 0 auto;
+    max-width: 1024px;
+  }
+  .link {
+    width: 100%;
+    font-size: 1rem;
+    display: block;
+  }
+}
+@media (min-width: 1440px) {
+  html {
+    font-size: 15px;
+    line-height: 1.25;
+  }
+  .link {
+    background-image: url("../images/bg-button-md.png");
   }
 }
 .header {
@@ -544,12 +568,6 @@ h1 {
   flex-direction: column;
   justify-content: space-between;
   align-items: unset;
-}
-.services__header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
 }
 .services__animation {
   position: relative;
@@ -742,6 +760,4 @@ h1 {
           // margin: 0 auto;
       }
   */
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
