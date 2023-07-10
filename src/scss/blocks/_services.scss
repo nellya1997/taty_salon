@@ -27,14 +27,14 @@
         top: 140px;
         right: 239px;
       }
-      
+
       &.btn-calc-right-leg {
         top: 220px;
         right: 253px;
       }
-      
+
       &.btn-calc::before {
-        content: url("../images/point.png");
+        content: url("../src/images/point.png");
       }
     }
 
@@ -108,16 +108,16 @@
 
     &__animation {
       width: 183px;
-  
+
       #rotation img {
-          height: 377px;
+        height: 377px;
       }
-  
+
       .btn-calc-pussy {
         top: 105px;
         right: 177px;
       }
-      
+
       .btn-calc-right-leg {
         top: 164px;
         right: 186px;
