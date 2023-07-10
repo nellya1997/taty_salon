@@ -31,23 +31,30 @@
 }
 
 html {
-  font-family: Manrope, sans-serif;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 30px;
-  color: $purple;
-  background-color: $grey;
+  // font-family: Manrope, sans-serif;
+  // font-weight: 400;
+  // font-size: 22px;
+  // line-height: 30px;
+  // color: $purple;
+  // background-color: $grey;
   scroll-behavior: smooth;
 }
 
 body {
-  width: 100vw;
+  // font-family: "Montserrat";
+  // font-weight: 600;
+  // font-size: 14px;
+  // line-height: 14px;
+  min-width: 320px;
+  // background-color: $light-pink1;
+  overflow-x: hidden;
+  // color: $lilac;
 }
 
-.container {
-  width: 91.6%;
-  margin: 0 auto;
-}
+// .container {
+//   // width: 91.6%;
+//   margin: 0 auto;
+// }
 
 .link {
   text-decoration: none;
