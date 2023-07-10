@@ -1,5 +1,5 @@
 const rotate = (num, classList) => { //функция подсчёта угла поворота кнопок
-	const isLegButton = [...classList].includes('btn-calc-right-leg');
+	const isLegButton = [...classList].includes('link-calc-right-leg');
 	if (isLegButton) {
 		const zeroImage = 7; //средний слайд, от него будем крутиться
 	if (num === zeroImage) return 0;
@@ -29,8 +29,8 @@ const rotate = (num, classList) => { //функция подсчёта угла 
 			direction = true; // напавление движения мыши true - влево, false -  вправо
 
 			//ищем кнопки в документе
-			const buttonPussyImage = document.querySelector('.btn-calc-pussy');
-			const buttonRightLegImage = document.querySelector('.btn-calc-right-leg');
+			const buttonPussyImage = document.querySelector('.link-calc-pussy');
+			const buttonRightLegImage = document.querySelector('.link-calc-right-leg');
 			//кнопки, которые не должны быть отображены на старте скрываем вот таким способом
 			buttonRightLegImage.style.transform = `rotateY(90deg)`;
 						

@@ -1,10 +1,6 @@
 .services {
   @include flexy(column, space-between, unset);
 
-  &__header {
-    @include flexy(row, space-between, center);
-  }
-
   &__animation {
     position: relative;
     width: 18.18%;
@@ -134,7 +130,7 @@
         order: 3;
         text-align: center;
       }
-      
+
       div:nth-child(odd) {
         width: 100%;
       }

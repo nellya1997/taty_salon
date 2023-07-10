@@ -49,11 +49,12 @@ body {
   margin: 0 auto;
 }
 
-.btn {
+.link {
   text-decoration: none;
-  padding: 1.18rem 4.32rem 1.82rem;
+  padding: 17px 50px;
   background-image: url('../images/bg-button.png');
-  background-size: contain;
+  background-size: 100% 100%;
+  // background-size: contain;
   background-repeat: no-repeat;
   color: $purple;
 
@@ -69,59 +70,89 @@ body {
   height: 0.26%;
 }
 
-h1 {
+.title {
   font-family: Constantine, sans-serif;
   font-weight: 400;
   font-size: 1.45rem;
   line-height: 1.2;
   color: $dark;
+  text-align: center;
 }
 
-@media (max-width: 1550px) {
+.wrapper-title {
+  position: relative;
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    width: 26%;
+    height: 1px;
+    background-color: $violet;
+  }
+
+  &::before {
+    right: 0;
+    left: auto;
+  }
+}
+
+  html {
+    font-size: 10px;
+  }
+
+  .link {
+    // width: 79%;
+    text-align: center;
+  }
+
+  .container {
+    margin: 0 10px;
+  }
+
+  @media (min-width: 375px) {
+    html {
+      font-size: 15px;
+    }
+
+    .border-line {
+      width: 23.44vw;
+    }
+
+    .services {
+      @include m(bottom, 40);
+    }
+
+    // .link {
+    //   background-size: 100% 100%;
+    // }
+  }
+
+  @media (min-width: 768px) {
+    html {
+      font-size: 14px;
+    }
+
+    .container {
+      margin: 0 auto;
+      max-width: 1024px;
+    }
+
+    .link {
+      width: 100%;
+      font-size: 1rem;
+      display: block;
+    }
+  }
+
+@media (min-width: 1440px) {
   html {
     font-size: 15px;
     line-height: 1.25;
   }
 
-  .btn {
+  .link {
     background-image: url('../images/bg-button-md.png');
-  }
-}
-
-@media (max-width: 1280px) {
-  html {
-    font-size: 14px;
-  }
-
-  .btn {
-    width: 100%;
-    font-size: 1rem;
-  }
-}
-@media (max-width: 850px) {
-  html {
-    font-size: 15px;
-  }
-
-  .border-line {
-    width: 23.44vw;
-  }
-
-  .services {
-    @include m(bottom, 40);
-  }
-}
-
-@media (max-width: 320px) {
-  html {
-    font-size: 10px;
-  }
-
-  .btn {
-    width: 79%;
-  }
-
-  .container {
-    width: 81.25%;
   }
 }
