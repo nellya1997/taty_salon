@@ -14,23 +14,139 @@
         cursor: grab;
       }
     }
-
+// точки на картинке
     .btn-calc {
       position: absolute;
       cursor: pointer;
-
-      &.btn-calc-pussy {
-        top: 140px;
-        right: 239px;
+      width: 2.08vw;
+      height: 2.08vw;
+      background-image: url("../images/point.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+  
+      &.throat {
+        top: 6vw;
+        left: calc(50% - (2.08vw / 2));
       }
 
-      &.btn-calc-right-leg {
-        top: 220px;
-        right: 253px;
+      &.breast {
+        top: 10.3vw;
+        left: calc(50% - (2.08vw / 2));
       }
 
-      &.btn-calc::before {
-        content: url("../src/images/point.png");
+      &.left-hand-top {
+        top: 8.6vw;
+        left: calc(70% - (2.08vw / 2));
+      }
+
+      &.left-hand-center {
+        top: 13.3vw;
+        left: calc(78% - (2.08vw / 2));
+      }
+
+      &.left-hand-bottom {
+        top: 17.3vw;
+        left: calc(87% - (2.08vw / 2));
+      }
+
+      &.right-hand-top {
+        top: 8.6vw;
+        left: calc(30% - (2.08vw / 2));
+      }
+
+      &.right-hand-center {
+        top: 13.3vw;
+        left: calc(23% - (2.08vw / 2));
+      }
+
+      &.right-hand-bottom {
+        top: 17.3vw;
+        left: calc(13% - (2.08vw / 2));
+      }
+
+      &.left-leg-top {
+        top: 19vw;
+        left: calc(61% - (2.08vw / 2));
+      }
+
+      &.left-leg-center {
+        top: 26vw;
+        left: calc(58% - (2.08vw / 2));
+      }
+
+      &.left-leg-bottom {
+        top: 32.3vw;
+        left: calc(56% - (2.08vw / 2));
+      }
+
+      &.right-leg-top {
+        top: 19vw;
+        left: calc(39% - (2.08vw / 2));
+      }
+
+      &.right-leg-center {
+        top: 26vw;
+        left: calc(42% - (2.08vw / 2));
+      }
+
+      &.right-leg-bottom {
+        top: 32.3vw;
+        left: calc(44% - (2.08vw / 2));
+      }
+
+      &.right-leg-profile-center {
+        top: 26vw;
+        left: calc(42% - (2.08vw / 2));
+      }
+
+      &.right-leg-profile-bottom {
+        top: 32.3vw;
+        left: calc(44% - (2.08vw / 2));
+      }
+
+      &.left-leg-profile-center {
+        top: 26vw;
+        left: calc(42% - (2.08vw / 2));
+      }
+
+      &.left-leg-profile-bottom {
+        top: 32.3vw;
+        left: calc(44% - (2.08vw / 2));
+      }
+
+      &.right-hand-profile-top {
+        top: 8.6vw;
+        left: calc(30% - (2.08vw / 2));
+      }
+
+      &.right-hand-profile-center {
+        top: 13.3vw;
+        left: calc(23% - (2.08vw / 2));
+      }
+
+      &.right-hand-profile-bottom {
+        top: 17.3vw;
+        left: calc(13% - (2.08vw / 2));
+      }
+
+      &.left-hand-profile-top {
+        top: 8.6vw;
+        left: calc(30% - (2.08vw / 2));
+      }
+
+      &.left-hand-profile-center {
+        top: 13.3vw;
+        left: calc(23% - (2.08vw / 2));
+      }
+
+      &.left-hand-profile-bottom {
+        top: 17.3vw;
+        left: calc(13% - (2.08vw / 2));
+      }
+
+      &.stomach-profile {
+        top: 17.3vw;
+        left: calc(13% - (2.08vw / 2));
       }
     }
 
@@ -39,10 +155,10 @@
       img {
         width: 100%;
       }
-
+  
       .services__h2 {
         font-family: Constantine, sans-serif;
-
+  
         @include fonty(16px, 400, 17.12px);
       }
     }
@@ -53,7 +169,7 @@
   }
 
   &__main {
-    @include flexy(row, space-between, top);
+    @include flexy(row, space-between, unset);
 
     &__left-column {
       width: 36.19%;
@@ -165,16 +281,6 @@
 
       #rotation img {
         width: 100%;
-      }
-
-      .btn-calc-pussy {
-        top: 105px;
-        right: 177px;
-      }
-
-      .btn-calc-right-leg {
-        top: 164px;
-        right: 186px;
       }
     }
   }

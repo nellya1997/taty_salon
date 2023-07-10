@@ -83,8 +83,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -587,17 +586,111 @@ html {
 .services__animation .btn-calc {
   position: absolute;
   cursor: pointer;
+  width: 2.08vw;
+  height: 2.08vw;
+  background-image: url("../images/point.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.services__animation .btn-calc.btn-calc-pussy {
-  top: 140px;
-  right: 239px;
+.services__animation .btn-calc.throat {
+  top: 6vw;
+  left: calc(50% - 1.04vw);
 }
-.services__animation .btn-calc.btn-calc-right-leg {
-  top: 220px;
-  right: 253px;
+.services__animation .btn-calc.breast {
+  top: 10.3vw;
+  left: calc(50% - 1.04vw);
 }
-.services__animation .btn-calc.btn-calc::before {
-  content: url("../src/images/point.png");
+.services__animation .btn-calc.left-hand-top {
+  top: 8.6vw;
+  left: calc(70% - 1.04vw);
+}
+.services__animation .btn-calc.left-hand-center {
+  top: 13.3vw;
+  left: calc(78% - 1.04vw);
+}
+.services__animation .btn-calc.left-hand-bottom {
+  top: 17.3vw;
+  left: calc(87% - 1.04vw);
+}
+.services__animation .btn-calc.right-hand-top {
+  top: 8.6vw;
+  left: calc(30% - 1.04vw);
+}
+.services__animation .btn-calc.right-hand-center {
+  top: 13.3vw;
+  left: calc(23% - 1.04vw);
+}
+.services__animation .btn-calc.right-hand-bottom {
+  top: 17.3vw;
+  left: calc(13% - 1.04vw);
+}
+.services__animation .btn-calc.left-leg-top {
+  top: 19vw;
+  left: calc(61% - 1.04vw);
+}
+.services__animation .btn-calc.left-leg-center {
+  top: 26vw;
+  left: calc(58% - 1.04vw);
+}
+.services__animation .btn-calc.left-leg-bottom {
+  top: 32.3vw;
+  left: calc(56% - 1.04vw);
+}
+.services__animation .btn-calc.right-leg-top {
+  top: 19vw;
+  left: calc(39% - 1.04vw);
+}
+.services__animation .btn-calc.right-leg-center {
+  top: 26vw;
+  left: calc(42% - 1.04vw);
+}
+.services__animation .btn-calc.right-leg-bottom {
+  top: 32.3vw;
+  left: calc(44% - 1.04vw);
+}
+.services__animation .btn-calc.right-leg-profile-center {
+  top: 26vw;
+  left: calc(42% - 1.04vw);
+}
+.services__animation .btn-calc.right-leg-profile-bottom {
+  top: 32.3vw;
+  left: calc(44% - 1.04vw);
+}
+.services__animation .btn-calc.left-leg-profile-center {
+  top: 26vw;
+  left: calc(42% - 1.04vw);
+}
+.services__animation .btn-calc.left-leg-profile-bottom {
+  top: 32.3vw;
+  left: calc(44% - 1.04vw);
+}
+.services__animation .btn-calc.right-hand-profile-top {
+  top: 8.6vw;
+  left: calc(30% - 1.04vw);
+}
+.services__animation .btn-calc.right-hand-profile-center {
+  top: 13.3vw;
+  left: calc(23% - 1.04vw);
+}
+.services__animation .btn-calc.right-hand-profile-bottom {
+  top: 17.3vw;
+  left: calc(13% - 1.04vw);
+}
+.services__animation .btn-calc.left-hand-profile-top {
+  top: 8.6vw;
+  left: calc(30% - 1.04vw);
+}
+.services__animation .btn-calc.left-hand-profile-center {
+  top: 13.3vw;
+  left: calc(23% - 1.04vw);
+}
+.services__animation .btn-calc.left-hand-profile-bottom {
+  top: 17.3vw;
+  left: calc(13% - 1.04vw);
+}
+.services__animation .btn-calc.stomach-profile {
+  top: 17.3vw;
+  left: calc(13% - 1.04vw);
 }
 .services__animation__footer img {
   width: 100%;
@@ -615,7 +708,7 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: top;
+  align-items: unset;
 }
 .services__main__left-column {
   width: 36.19%;
@@ -714,14 +807,6 @@ html {
   .services__animation #rotation img {
     width: 100%;
   }
-  .services__animation .btn-calc-pussy {
-    top: 105px;
-    right: 177px;
-  }
-  .services__animation .btn-calc-right-leg {
-    top: 164px;
-    right: 186px;
-  }
 }
 .footer {
   width: 100%;
@@ -763,4 +848,6 @@ html {
           // margin: 0 auto;
       }
   */
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
