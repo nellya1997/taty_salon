@@ -7,7 +7,7 @@
     & img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
     }
 
     .portfolio__wrapper & {
@@ -20,7 +20,7 @@
 
     &--portfolio {
         width: calc(50% - 10px);
-        min-height: 130px;
+        max-height: 165px;
         height: auto;
     }
 
