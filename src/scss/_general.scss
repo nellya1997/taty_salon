@@ -41,14 +41,14 @@ html {
 }
 
 body {
-  // font-family: "Montserrat";
-  // font-weight: 600;
-  // font-size: 14px;
-  // line-height: 14px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 30px;
   min-width: 320px;
   // background-color: $light-pink1;
   overflow-x: hidden;
-  // color: $lilac;
+  color: $dark-purple;
 }
 
 // .container {
@@ -63,7 +63,7 @@ body {
   background-size: 100% 100%;
   // background-size: contain;
   background-repeat: no-repeat;
-  color: $purple;
+  // color: $purple;
 
   @include fonty(1.13rem, 600, 1.36em);
 }
@@ -106,36 +106,13 @@ body {
   }
 }
 
-.picture {
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-
-  & img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-  }
-
-  // width: calc(20% - 5px);
-
-  .portfolio__wrapper & {
-      width: calc(20% - 5px);
-  }
-
-  .portfolio__wrapper &:nth-child(-1n+3) {
-      width: calc(33% - 10px);
-  }
-
-}
-
   html {
     font-size: 10px;
   }
 
-  .container {
-    margin: 0 10px;
-  }
+  // .container {
+  //   margin: 0 10px;
+  // }
 
   @media (min-width: 375px) {
     html {
@@ -158,11 +135,6 @@ body {
   @media (min-width: 768px) {
     html {
       font-size: 14px;
-    }
-
-    .container {
-      margin: 0 auto;
-      max-width: 1024px;
     }
 
     .link {
