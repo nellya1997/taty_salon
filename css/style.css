@@ -84,7 +84,7 @@ abbr[title] {
   text-decoration: underline;
   /* 2 */
   -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -190,9 +190,9 @@ select {
    * Correct the inability to style clickable types in iOS and Safari.
    */
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+[type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
 }
 
@@ -200,9 +200,9 @@ button,
    * Remove the inner border and padding in Firefox.
    */
 button::-moz-focus-inner,
-[type='button']::-moz-focus-inner,
-[type='reset']::-moz-focus-inner,
-[type='submit']::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -211,9 +211,9 @@ button::-moz-focus-inner,
    * Restore the focus styles unset by the previous rule.
    */
 button:-moz-focusring,
-[type='button']:-moz-focusring,
-[type='reset']:-moz-focusring,
-[type='submit']:-moz-focusring {
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -263,8 +263,8 @@ textarea {
    * 1. Add the correct box sizing in IE 10.
    * 2. Remove the padding in IE 10.
    */
-[type='checkbox'],
-[type='radio'] {
+[type=checkbox],
+[type=radio] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -274,8 +274,8 @@ textarea {
 /**
    * Correct the cursor style of increment and decrement buttons in Chrome.
    */
-[type='number']::-webkit-inner-spin-button,
-[type='number']::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -283,7 +283,7 @@ textarea {
    * 1. Correct the odd appearance in Chrome and Safari.
    * 2. Correct the outline style in Safari.
    */
-[type='search'] {
+[type=search] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -293,7 +293,7 @@ textarea {
 /**
    * Remove the inner padding in Chrome and Safari on macOS.
    */
-[type='search']::-webkit-search-decoration {
+[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -341,35 +341,31 @@ template {
 }
 
 @font-face {
-  font-family: 'Manrope';
-  src: url(../fonts/Manrope-Regular.woff) format('woff2'),
-    url(../fonts/Manrope-Regular.woff2) format('woff');
+  font-family: "Manrope";
+  src: url(../fonts/Manrope-Regular.woff) format("woff2"), url(../fonts/Manrope-Regular.woff2) format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-weight: 500;
-  font-family: 'Manrope';
-  src: url(../fonts/Manrope-Medium.woff2) format('woff2'),
-    url(../fonts/Manrope-Medium.woff) format('woff');
+  font-family: "Manrope";
+  src: url(../fonts/Manrope-Medium.woff2) format("woff2"), url(../fonts/Manrope-Medium.woff) format("woff");
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-weight: 600;
   /* Соответствует значению "почти" bold )) */
-  font-family: 'Manrope';
-  src: url(../fonts/Manrope-SemiBold.woff2) format('woff2'),
-    url(../fonts/Manrope-SemiBold.woff) format('woff');
+  font-family: "Manrope";
+  src: url(../fonts/Manrope-SemiBold.woff2) format("woff2"), url(../fonts/Manrope-SemiBold.woff) format("woff");
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-weight: 400;
-  font-family: 'Constantine', 'font', sans-serif;
-  src: url(../fonts/Constantine.woff2) format('woff2'),
-    url(../fonts/Constantine.woff) format('woff');
+  font-family: "Constantine", "font", sans-serif;
+  src: url(../fonts/Constantine.woff2) format("woff2"), url(../fonts/Constantine.woff) format("woff");
 }
 * {
   box-sizing: border-box;
@@ -378,13 +374,13 @@ template {
 }
 
 html {
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
   font-weight: 400;
   font-size: 22px;
   line-height: 30px;
   min-width: 320px;
   scroll-behavior: smooth;
-  color: #22082b;
+  color: #22082B;
 }
 
 body {
@@ -406,7 +402,7 @@ picture img {
 .link {
   text-decoration: none;
   padding: 17px 50px;
-  background-image: url('../images/bg-button.png');
+  background-image: url("../images/bg-button.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   font-size: 1.13rem;
@@ -436,10 +432,9 @@ picture img {
 .wrapper-title {
   position: relative;
 }
-.wrapper-title::after,
-.wrapper-title::before {
+.wrapper-title::after, .wrapper-title::before {
   position: absolute;
-  content: '';
+  content: "";
   top: 50%;
   width: 26%;
   height: 1px;
@@ -467,7 +462,7 @@ picture img {
 }
 @media (min-width: 1440px) {
   .link {
-    background-image: url('../images/bg-button-md.png');
+    background-image: url("../images/bg-button-md.png");
   }
 }
 .container {
@@ -489,12 +484,12 @@ picture img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 .portfolio__wrapper .picture {
   width: calc(20% - 5px);
 }
-.portfolio__wrapper .picture:nth-child(-1n + 3) {
+.portfolio__wrapper .picture:nth-child(-1n+3) {
   width: calc(33% - 10px);
 }
 
@@ -524,13 +519,13 @@ picture img {
   position: relative;
 }
 .header .navigation__item-active::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 100%;
   left: 63%;
   width: 38px;
   height: 80px;
-  background-image: url('/src/images/header/drops.png');
+  background-image: url("/src/images/header/drops.png");
   background-size: 38px 80px;
 }
 .header .header-contacts {
@@ -546,13 +541,13 @@ picture img {
   position: relative;
 }
 .header .header-contacts__phone::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 15%;
   left: -20%;
   width: 21px;
   height: 21px;
-  background-image: url('/src/images/header/phone.png');
+  background-image: url("/src/images/header/phone.png");
 }
 .header .header-contacts__address {
   font-size: 18px;
@@ -561,13 +556,13 @@ picture img {
   position: relative;
 }
 .header .header-contacts__address::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 12%;
   left: -18%;
   width: 24px;
   height: 24px;
-  background-image: url('../../images/header/location.png');
+  background-image: url("../../images/header/location.png");
 }
 
 .footer {
@@ -617,8 +612,8 @@ picture img {
   padding-left: 40px;
 }
 .portfolio__list li::after {
-  content: '';
-  background-color: #a289aa;
+  content: "";
+  background-color: #A289AA;
   width: 21px;
   height: 21px;
   border-radius: 50%;
@@ -656,7 +651,7 @@ picture img {
   cursor: pointer;
   width: 2.08vw;
   height: 2.08vw;
-  background-image: url('../images/point.svg');
+  background-image: url("../images/point.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -837,7 +832,7 @@ picture img {
     width: 100%;
   }
   .services__main__left-column::before {
-    content: 'Шкала боли';
+    content: "Шкала боли";
     font-size: 1.5rem;
     font-weight: 600;
     line-height: 1.36em;
@@ -882,21 +877,15 @@ picture img {
   background: yellow;
 }
 
+.contacts__info-wrapper {
+  border-radius: 10px;
+  background: rgba(197, 192, 220, 0.2);
+  filter: blur(4.5px);
+  width: 229px;
+  height: 224px;
+}
 .footer {
   width: 100%;
   height: 60px;
   background: yellow;
 }
-
-.footer {
-  width: 100%;
-  height: 60px;
-  background: yellow;
-}
-
-.footer {
-  width: 100%;
-  height: 60px;
-  background: yellow;
-} /*# sourceMappingURL=style.css.map */
-
