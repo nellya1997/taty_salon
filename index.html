@@ -7,11 +7,13 @@
   <title>Tattoo</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./src/scss/style.css" />
+
+  <link rel="stylesheet" href="src/scss/blocks/_memo.scss">
 </head>
 
 <body>
 
-  <header class="header container">
+  <!-- <header class="header container">
     <div class="navigation">
       <a href="#" class="navigation__item navigation__item-active">Главная</a>
       <a href="#" class="navigation__item">Обо мне</a>
@@ -26,13 +28,13 @@
       </a>
       <a class="header-contacts__address" href="#">ул. Айвазовского 10/54</a>
     </div>
-  </header>
+  </header> -->
 
 
   <main>
     <section class="main"></section>
     <section class="about"></section>
-    <section class="portfolio">
+    <!-- <section class="portfolio">
       <div class="container">
         <div class="wrapper-title">
           <h2 class="title">Портфолио</h2>
@@ -92,13 +94,17 @@
           <p>Перекрытие шрамов и&nbsp;неудачных тату</p>
           <span>Перекрытия&nbsp;&mdash; это всегда непросто:</span>
           <ul class="list portfolio__list">
-            <li><span>ограниченная цветовая палитра, так как светлые и&nbsp;теплые оттенки не&nbsp;перекрывают темные</span></li>
-            <li><span>эскиз должен скрыть старую татуировку полностью, поэтому он&nbsp;обычно больше по&nbsp;размеру</span></li>
-            <li><span>темные части старой татуировки останутся там, где они были, и&nbsp;нужно под них подстраиваться</span></li>
+            <li><span>ограниченная цветовая палитра, так как светлые и&nbsp;теплые оттенки не&nbsp;перекрывают
+                темные</span></li>
+            <li><span>эскиз должен скрыть старую татуировку полностью, поэтому он&nbsp;обычно больше
+                по&nbsp;размеру</span></li>
+            <li><span>темные части старой татуировки останутся там, где они были, и&nbsp;нужно под них
+                подстраиваться</span></li>
           </ul>
 
           <p>
-            Выпуклость никуда не&nbsp;пропадет и&nbsp;ее&nbsp;нужно прятать рисунком, поэтому если их&nbsp;закрасить просто так, они станут заметнее на&nbsp;фоне ровной кожи
+            Выпуклость никуда не&nbsp;пропадет и&nbsp;ее&nbsp;нужно прятать рисунком, поэтому если их&nbsp;закрасить
+            просто так, они станут заметнее на&nbsp;фоне ровной кожи
           </p>
 
           <p>Любые шрамы перекрывать нужно очень осторожно</p>
@@ -112,6 +118,7 @@
       </div>
     </section>
     <section class="services">
+
       <div class="container">
         <div class="wrapper-title">
           <h2 class="title">Услуги</h2>
@@ -119,19 +126,21 @@
         <p class="services__h2 text-center">Нажми на место, где хотите набить тату, чтобы узнать цену</p>
         <div class="services__main">
           <div class="services__main__left-column text-center">
-            <p>Эта процедура — не из приятных, и она доставляет определенные сложности вне зависимости от пола и возраста человека.
-              Существует так называемая карта боли, которая иллюстрирует самые болезненные и относительно неприятные области для нанесения
+            <p>Эта процедура — не из приятных, и она доставляет определенные сложности вне зависимости от пола и
+              возраста человека.
+              Существует так называемая карта боли, которая иллюстрирует самые болезненные и относительно неприятные
+              области для нанесения
               рисунка.</p>
-              <div class="services__main__left-column__pain-points">
-                <picture>
-                  <source media="(max-width:768px)" srcset="./src/images/anatomy-md.png">
-                  <img src="./src/images/anatomy.png" alt="Болевые точки">
-                </picture>
-                <div class="pain-points__text">
-                  <p>Наименее болезненно</p>
-                  <p>Очень больно</p>
-                </div>
+            <div class="services__main__left-column__pain-points">
+              <picture>
+                <source media="(max-width:768px)" srcset="./src/images/anatomy-md.png">
+                <img src="./src/images/anatomy.png" alt="Болевые точки">
+              </picture>
+              <div class="pain-points__text">
+                <p>Наименее болезненно</p>
+                <p>Очень больно</p>
               </div>
+            </div>
           </div>
           <div class="services__animation">
             <div id="rotation">
@@ -168,32 +177,220 @@
             </div>
           </div>
           <div class="services__main__right-column">
-            <p>Восприимчивость различных участков неодинакова. На болезненность влияют разные факторы: плотность кожи, количество нервных
-              окончаний в определенной области, удаленность от кости (если кость близко к коже, будет больно при нанесении тату).
+            <p>Восприимчивость различных участков неодинакова. На болезненность влияют разные факторы: плотность кожи,
+              количество нервных
+              окончаний в определенной области, удаленность от кости (если кость близко к коже, будет больно при
+              нанесении тату).
             </p>
-            <p class="mt-18"><strong>Важно!</strong> Если вам становится нестерпимо больно, не надо дергаться и извиваться под рукой мастера. Лучше всего прервать
+            <p class="mt-18"><strong>Важно!</strong> Если вам становится нестерпимо больно, не надо дергаться и
+              извиваться под рукой мастера. Лучше всего прервать
               сеанс и продолжить в следующий раз.
             </p>
             <p class="mt-36 mb-15 h2">Если знаешь размер и место тату, то смело записывайся</p>
             <a class="link" href="#">Записаться на сеанс</a>
-          <a class="btn-calc throat"></a>
-          <a class="btn-calc breast"></a>
-          <a class="btn-calc left-hand-top"></a>
-          <a class="btn-calc left-hand-center"></a>
-          <a class="btn-calc left-hand-bottom"></a>
-          <a class="btn-calc right-hand-top"></a>
-          <a class="btn-calc right-hand-center"></a>
-          <a class="btn-calc right-hand-bottom"></a>
-          <a class="btn-calc left-leg-top"></a>
-          <a class="btn-calc left-leg-center"></a>
-          <a class="btn-calc left-leg-bottom"></a>
-          <a class="btn-calc right-leg-top"></a>
-          <a class="btn-calc right-leg-center"></a>
-          <a class="btn-calc right-leg-bottom"></a>
+            <a class="btn-calc throat"></a>
+            <a class="btn-calc breast"></a>
+            <a class="btn-calc left-hand-top"></a>
+            <a class="btn-calc left-hand-center"></a>
+            <a class="btn-calc left-hand-bottom"></a>
+            <a class="btn-calc right-hand-top"></a>
+            <a class="btn-calc right-hand-center"></a>
+            <a class="btn-calc right-hand-bottom"></a>
+            <a class="btn-calc left-leg-top"></a>
+            <a class="btn-calc left-leg-center"></a>
+            <a class="btn-calc left-leg-bottom"></a>
+            <a class="btn-calc right-leg-top"></a>
+            <a class="btn-calc right-leg-center"></a>
+            <a class="btn-calc right-leg-bottom"></a>
+          </div>
         </div>
+    </section> -->
+
+    <section class="memo">
+      <div class="container">
+
+        <div class="wrapper-title">
+          <h2 class="title">Памятки</h2>
+
+        </div>
+        <p class="wrapper-desc text-center">
+          Как поготовиться к сеансу?
+        </p>
+
+        <div class="requirements-wrapper">
+          <div class="requirements__card">
+            <div class="requirements__icon-wrapper">
+              <img class="requirements__icon" src="./src/images/memo/smile-icon.svg">
+            </div>
+            <p class="requirements__title">Отличное настроение</p>
+            <p class="requirements__description">Подумать о хорошем и расслабиться</p>
+          </div>
+          <div class="requirements__card">
+            <div class="requirements__icon-wrapper">
+              <img class="requirements__icon" src="./src/images/memo/dishes-icon.svg">
+            </div>
+            <p class="requirements__title">Покушать</p>
+            <p class="requirements__description">Перед сеансом быть сытым</p>
+          </div>
+          <div class="requirements__card">
+            <div class="requirements__icon-wrapper">
+              <img class="requirements__icon" src="./src/images/memo/moon-icon.svg">
+            </div>
+            <p class="requirements__title">Выспаться</p>
+            <p class="requirements__description">Чтобы организм не стрессовал</p>
+          </div>
+          <div class="requirements__card">
+            <div class="requirements__icon-wrapper">
+              <img class="requirements__icon" src="./src/images/memo/shirt-icon.svg">
+            </div>
+            <p class="requirements__title">Удобная одежда</p>
+            <p class="requirements__description">Для вашего комфорта - любимая одежда</p>
+          </div>
+        </div>
+
+        <div class="requirements-description__last">
+          <p class="requirements-description__text text-center">Эти пункты нужны, чтобы наши базовые потребности были
+            полностью закрыты и организм дополнительно не стрессовал</p>
+        </div>
+
+        <div class="tabs-wrapper">
+          <div class="tab-content__warpper">
+
+            <div class="separate-tab__content">
+              <div id="tabButton1" class="tab_button">
+
+                <img id="tabImageOpen1" class="tab_button__open" src="./src/images/memo/tab-btn__open.svg">
+                <p class="tab_button-text">
+                  Заживление татуировки
+                </p>
+
+
+              </div>
+              <div class="tab_content" id="tabContent1">
+                <ol class="healing-list__wrapper">
+                  <li class="healing-list__item">
+                    <span class="healing-list__item__title">Активное заживление</span>
+                    <p class="healing-list-item__text">
+                      В это время кожа в области татуировки краснеет, возникает припухлость, а самое главное - начинает
+                      выделяться вязкая бесцветная жидкость.
+                    </p>
+                    <p class="healing-list-item__text">
+                      Данный этап длится в среднем до 2 дней, бить тревогу не надо, это естественный физиологический
+                      процесс
+                    </p>
+                  </li>
+                  <li class="healing-list__item">
+                    <span class="healing-list__item__title">Регенерация</span>
+                    <p class="healing-list-item__text">
+                      В этот период опухоль спадает, сукровица перестает выделятся, кожа подсыхает и стягивается.
+                    </p>
+                    <p class="healing-list-item__text">
+                      Длительность этого этапа – до 6 дней
+                    </p>
+                  </li>
+                  <li class="healing-list__item">
+                    <span class="healing-list__item__title">Восстановление</span>
+                    <p class="healing-list-item__text">
+                      В этот период кожа начинает шелушиться, а “корочки” постепенно отпадать.
+                      Область тату может достаточно ощутимо зудеть
+                    </p>
+                    <p class="healing-list-item__text">
+                      Этап длится от 7 до 14 дней
+                    </p>
+                  </li>
+                </ol>
+                <p class="healing-list__description">
+                  До заживления - нельзя ходить в сауны, бани, купаться в бассейне, море, водоемах, заниматься активным
+                  спортом - 7-10 дней примерно
+                </p>
+                <p class="healing-list__description">
+                  При посещении пляжа использовать солнцезащитные средства. <br>
+                  На месте татуировки противопоказана лазерная и фотоэпиляция
+                </p>
+                <!-- <p class="healing-list__description">
+               
+                </p> -->
+              </div>
+            </div>
+            <div class="separate-tab__content">
+              <div id="tabButton2" class="tab_button">
+
+                <img id="tabImageOpen2" class="tab_button__open" src="./src/images/memo/tab-btn__open.svg">
+                <p class="tab_button-text">
+                  Уход за татуировкой
+                </p>
+
+
+              </div>
+              <div class="tab_content" id="tabContent2">
+                <ol class="healing-list__wrapper">
+                  <li class="healing-list__item">
+                    <p class="healing-list-item__text">
+                      Небольшие татуировки (до 15 см) удобно заживлять с помощью специальной плёнки.
+                    </p>
+                    <p class="healing-list-item__text">
+                      Ходить с этой пленкой тебе нужно 6-7 дней.
+                    </p>
+                    <p class="healing-list-item__text">
+                      Под пленкой будет скапливаться жидкость. Не прокалывай плёнку, не сливай эту жидкость и старайся
+                      не
+                      носить одежду, которая может давить на плёнку.
+                    </p>
+                    <p class="healing-list-item__text">
+                      После того, как снимешь плёнку, тщательно промой татуировку с мылом и протяжении недели следует
+                      мазать мазью или увлажняющим кремом
+                    </p>
+                  </li>
+                  <li class="healing-list__item">
+                    <p class="healing-list-item__text">
+                      Большие татуировки (от 15 см) удобно заживлять с помощью пелёнки.
+                    </p>
+                    <p class="healing-list-item__text">
+                      Первый раз меняй компресс перед сном в день сеанса - нужно промыть теплой водой с кусковым мылом
+                    </p>
+                    <p class="healing-list-item__text">
+                      После этого необходимо дать подсохнуть и намазать тонким слоем мази. И снова надеть пеленку.
+                    </p>
+                    <p class="healing-list-item__text">
+                      На второй день днем можно ходить без пеленки - только не забывайте наносить мазь, в течение
+                      недели,
+                      но на ночь всё равно заматывайте пеленкой
+                    </p>
+                  </li>
+
+                </ol>
+              </div>
+            </div>
+
+
+
+
+          </div>
+        </div>
+
+        <p class="personal-memo__title text-center">
+          Личные памятки
+        </p>
+
+        <div class="personal-memo-content__wrapper">
+          <div class="personal-memo-content__item">
+            <img class="personal-memo-content__img" src="./src/images/memo/personal-memo__item.jpg">
+            <a class="personal-memo-content__link" href="#">Подробный разбор перекрытия <br> старой зашрамированной татуировки</a>
+          </div>
+          <div class="personal-memo-content__item">
+            <img class="personal-memo-content__img" src="./src/images/memo/personal-memo__item.jpg">
+            <a class="personal-memo-content__link" href="#">Почему тату бледнеет?</a>
+          </div>
+          <div class="personal-memo-content__item">
+            <img class="personal-memo-content__img" src="./src/images/memo/personal-memo__item.jpg">
+            <a class="personal-memo-content__link" href="#">Как готовиться твой эскиз?</a>
+          </div>
+        </div>
+
+
       </div>
     </section>
-    <section class="memo"></section>
+
     <section class="reviews"></section>
     <section class="contacts"></section>
   </main>
@@ -207,6 +404,39 @@
     $(document).ready(function () {
       $("#rotation").image360();
     });		
+  </script>
+
+  <script>
+    const btn1 = document.getElementById('tabButton1');
+    const btn2 = document.getElementById('tabButton2');
+
+    let tabContent1 = document.getElementById('tabContent1');
+    let tabContent2 = document.getElementById('tabContent2');
+
+    const tabImageOpen1 = document.getElementById('tabImageOpen1');
+    const tabImageOpen2 = document.getElementById('tabImageOpen2');
+
+    let img = document.querySelector('.tab_button__open');
+
+    btn1.addEventListener('click', () => {
+      if (!tabContent1.style.cssText || tabContent1.style.cssText === 'display: none;') {
+        tabContent1.style.cssText = 'display: block;'
+        tabImageOpen1.style.cssText = 'transform: rotate(45deg);'
+      } else {
+        tabContent1.style.cssText = 'display: none;'
+        tabImageOpen1.style.cssText = 'transform: rotate(0deg);'
+      }
+    })
+    btn2.addEventListener('click', () => {
+      if (!tabContent2.style.cssText || tabContent2.style.cssText === 'display: none;') {
+        tabContent2.style.cssText = 'display: block;'
+        tabImageOpen2.style.cssText = 'transform: rotate(45deg);'
+      } else {
+        tabContent2.style.cssText = 'display: none;'
+        tabImageOpen2.style.cssText = 'transform: rotate(0deg);'
+      }
+    })
+
   </script>
 </body>
 
