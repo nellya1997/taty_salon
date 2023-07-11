@@ -1,28 +1,38 @@
+
+
 @font-face {
+  font-family: 'Manrope';
+  src: url(../fonts/Manrope-Regular.woff) format("woff2"), url(../fonts/Manrope-Regular.woff2) format("woff");
   font-weight: 400;
-  /* Соответствует значению normal */
-  font-family: Manrope;
-  src: url("../fonts/Manrope-Regular.ttf");
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-weight: 500;
-  font-family: Manrope;
-  src: url("../fonts/Manrope-Medium.ttf");
+  font-family: 'Manrope';
+  src: url(../fonts/Manrope-Medium.woff2) format("woff2"), url(../fonts/Manrope-Medium.woff) format("woff");
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-weight: 600;
   /* Соответствует значению "почти" bold )) */
-  font-family: Manrope;
-  src: url("../fonts/Manrope-SemiBold.ttf");
+  font-family: 'Manrope';
+  // src: url("../fonts/Manrope-SemiBold.ttf");
+  src: url(../fonts/Manrope-SemiBold.woff2) format("woff2"), url(../fonts/Manrope-SemiBold.woff) format("woff");
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-weight: 400;
-  font-family: Constantine;
-  src: url("../fonts/Constantine.ttf");
+  font-family: 'Constantine', "font", sans-serif;
+  src: url(../fonts/Constantine.woff2) format("woff2"), url(../fonts/Constantine.woff) format("woff");
 }
+
+$constantine: "Constantine", "font", sans-serif;
 
 * {
   box-sizing: border-box;
@@ -31,30 +41,24 @@
 }
 
 html {
-  // font-family: Manrope, sans-serif;
-  // font-weight: 400;
-  // font-size: 22px;
-  // line-height: 30px;
-  // color: $purple;
-  // background-color: $grey;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 30px;
+  min-width: 320px;
   scroll-behavior: smooth;
 }
 
 body {
-  // font-family: "Montserrat";
-  // font-weight: 600;
-  // font-size: 14px;
-  // line-height: 14px;
-  min-width: 320px;
+  // font-family: 'Manrope', sans-serif;
+  // font-weight: 400;
+  // font-size: 22px;
+  // line-height: 30px;
+  // min-width: 320px;
   // background-color: $light-pink1;
   overflow-x: hidden;
-  // color: $lilac;
+  color: $dark-purple;
 }
-
-// .container {
-//   // width: 91.6%;
-//   margin: 0 auto;
-// }
 
 .link {
   text-decoration: none;
@@ -63,7 +67,7 @@ body {
   background-size: 100% 100%;
   // background-size: contain;
   background-repeat: no-repeat;
-  color: $purple;
+  // color: $purple;
 
   @include fonty(1.13rem, 600, 1.36em);
 }
@@ -106,71 +110,35 @@ body {
   }
 }
 
-.picture {
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-
-  & img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-  }
-
-  // width: calc(20% - 5px);
-
-  .portfolio__wrapper & {
-      width: calc(20% - 5px);
-  }
-
-  .portfolio__wrapper &:nth-child(-1n+3) {
-      width: calc(33% - 10px);
-  }
-
-}
-
   html {
     font-size: 10px;
   }
 
-  .container {
-    margin: 0 10px;
+@media (min-width: 375px) {
+  html {
+    font-size: 15px;
   }
 
-  @media (min-width: 375px) {
-    html {
-      font-size: 15px;
-    }
-
-    .border-line {
-      width: 23.44vw;
-    }
-
-    .services {
-      @include m(bottom, 40);
-    }
-
-    // .link {
-    //   background-size: 100% 100%;
-    // }
+  .border-line {
+    width: 23.44vw;
   }
 
-  @media (min-width: 768px) {
-    html {
-      font-size: 14px;
-    }
-
-    .container {
-      margin: 0 auto;
-      max-width: 1024px;
-    }
-
-    .link {
-      width: 100%;
-      font-size: 1rem;
-      display: block;
-    }
+  .services {
+    @include m(bottom, 40);
   }
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  .link {
+    width: 100%;
+    font-size: 1rem;
+    display: block;
+  }
+}
 
 @media (min-width: 1440px) {
   html {

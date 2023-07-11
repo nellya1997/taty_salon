@@ -341,26 +341,31 @@ template {
 }
 
 @font-face {
+  font-family: "Manrope";
+  src: url(../fonts/Manrope-Regular.woff) format("woff2"), url(../fonts/Manrope-Regular.woff2) format("woff");
   font-weight: 400;
-  /* Соответствует значению normal */
-  font-family: Manrope;
-  src: url("../fonts/Manrope-Regular.ttf");
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-weight: 500;
-  font-family: Manrope;
-  src: url("../fonts/Manrope-Medium.ttf");
+  font-family: "Manrope";
+  src: url(../fonts/Manrope-Medium.woff2) format("woff2"), url(../fonts/Manrope-Medium.woff) format("woff");
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-weight: 600;
   /* Соответствует значению "почти" bold )) */
-  font-family: Manrope;
-  src: url("../fonts/Manrope-SemiBold.ttf");
+  font-family: "Manrope";
+  src: url(../fonts/Manrope-SemiBold.woff2) format("woff2"), url(../fonts/Manrope-SemiBold.woff) format("woff");
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-weight: 400;
-  font-family: Constantine;
-  src: url("../fonts/Constantine.ttf");
+  font-family: "Constantine", "font", sans-serif;
+  src: url(../fonts/Constantine.woff2) format("woff2"), url(../fonts/Constantine.woff) format("woff");
 }
 * {
   box-sizing: border-box;
@@ -369,12 +374,17 @@ template {
 }
 
 html {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 30px;
+  min-width: 320px;
   scroll-behavior: smooth;
 }
 
 body {
-  min-width: 320px;
   overflow-x: hidden;
+  color: #22082B;
 }
 
 .link {
@@ -383,7 +393,6 @@ body {
   background-image: url("../images/bg-button.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  color: #22082B;
   font-size: 1.13rem;
   font-weight: 600;
   line-height: 1.36em;
@@ -424,30 +433,8 @@ body {
   left: auto;
 }
 
-.picture {
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-}
-.picture img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.portfolio__wrapper .picture {
-  width: calc(20% - 5px);
-}
-.portfolio__wrapper .picture:nth-child(-1n+3) {
-  width: calc(33% - 10px);
-}
-
 html {
   font-size: 10px;
-}
-
-.container {
-  margin: 0 10px;
 }
 
 @media (min-width: 375px) {
@@ -465,10 +452,6 @@ html {
   html {
     font-size: 14px;
   }
-  .container {
-    margin: 0 auto;
-    max-width: 1024px;
-  }
   .link {
     width: 100%;
     font-size: 1rem;
@@ -482,6 +465,22 @@ html {
   }
   .link {
     background-image: url("../images/bg-button-md.png");
+  }
+}
+.container {
+  margin: 0 10px;
+}
+
+@media (min-width: 1440px) {
+  .container {
+    margin: 0 auto;
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1920px) {
+  .container {
+    margin: 0 auto;
+    max-width: 1800px;
   }
 }
 .picture {
@@ -595,6 +594,46 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+.portfolio__information {
+  font-weight: 600;
+}
+.portfolio__information p {
+  font-size: 17px;
+  line-height: 17px;
+  margin-bottom: 9px;
+}
+.portfolio__information p:nth-last-child(2) {
+  font-weight: 400;
+}
+.portfolio__information p:last-child {
+  font-weight: 600;
+}
+.portfolio__information span {
+  font-size: 15px;
+  line-height: 14px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+.portfolio__list li {
+  position: relative;
+  padding-left: 40px;
+}
+.portfolio__list li::after {
+  content: "";
+  background-color: #A289AA;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+}
+.portfolio__list li span {
+  font-weight: 400;
+  margin-bottom: 0;
 }
 
 .services {
