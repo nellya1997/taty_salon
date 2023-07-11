@@ -380,11 +380,23 @@ html {
   line-height: 30px;
   min-width: 320px;
   scroll-behavior: smooth;
+  color: #22082B;
 }
 
 body {
   overflow-x: hidden;
-  color: #22082B;
+}
+
+picture {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
 }
 
 .link {
@@ -433,14 +445,7 @@ body {
   left: auto;
 }
 
-html {
-  font-size: 10px;
-}
-
 @media (min-width: 375px) {
-  html {
-    font-size: 15px;
-  }
   .border-line {
     width: 23.44vw;
   }
@@ -449,9 +454,6 @@ html {
   }
 }
 @media (min-width: 768px) {
-  html {
-    font-size: 14px;
-  }
   .link {
     width: 100%;
     font-size: 1rem;
@@ -459,10 +461,6 @@ html {
   }
 }
 @media (min-width: 1440px) {
-  html {
-    font-size: 15px;
-    line-height: 1.25;
-  }
   .link {
     background-image: url("../images/bg-button-md.png");
   }
@@ -471,16 +469,10 @@ html {
   margin: 0 10px;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 567px) {
   .container {
     margin: 0 auto;
-    max-width: 1024px;
-  }
-}
-@media (min-width: 1920px) {
-  .container {
-    margin: 0 auto;
-    max-width: 1800px;
+    max-width: 80%;
   }
 }
 .picture {
@@ -901,22 +893,4 @@ html {
   width: 100%;
   height: 60px;
   background: yellow;
-}
-
-/*
-@font-face {
-    // font-family: "Montserrat-SemiBold";
-    // src: url(../fonts/Montserrat-SemiBold.woff2) format("woff2"), url(../fonts/Montserrat-SemiBold.woff) format("woff");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-*/
-@media (min-width: 768px) {
-  /*
-      .container {
-          // max-width: 600px;
-          // margin: 0 auto;
-      }
-  */
 }/*# sourceMappingURL=style.css.map */
