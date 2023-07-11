@@ -56,19 +56,6 @@ body {
   overflow-x: hidden;
 }
 
-picture {
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-
-  img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: contain;
-    object-fit: contain;
-  }
-}
-
 .link {
   text-decoration: none;
   padding: 17px 50px;

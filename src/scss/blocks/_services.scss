@@ -14,7 +14,8 @@
         cursor: grab;
       }
     }
-// точки на картинке
+
+    // точки на картинке
     .btn-calc {
       position: absolute;
       cursor: pointer;
@@ -23,7 +24,7 @@
       background-image: url("../images/point.svg");
       background-repeat: no-repeat;
       background-size: cover;
-  
+
       &.throat {
         top: 6vw;
         left: calc(50% - (2.08vw / 2));
@@ -155,10 +156,10 @@
       img {
         width: 100%;
       }
-  
+
       .services__h2 {
         font-family: Constantine, sans-serif;
-  
+
         @include fonty(16px, 400, 17.12px);
       }
     }
@@ -197,19 +198,19 @@
       width: 33.81%;
       @include fonty(0.9rem, 400, 1.36em);
       @include p(top, 55);
-  
+
       .mt-18 {
         @include m(top, 18);
       }
-  
+
       .mt-36 {
         @include m(top, 36);
       }
-  
+
       .mb-15 {
         margin-bottom: calc(15px + 1.18rem);
       }
-  
+
       .h2 {
         @include fonty(1rem, 600, 1.36em);
       }
@@ -237,7 +238,7 @@
           @include fonty(1.5rem, 600, 1.36em);
         }
 
-        > p {
+        >p {
           display: none;
         }
       }
