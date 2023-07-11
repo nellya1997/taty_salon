@@ -5,13 +5,18 @@
 }
 
 .portfolio {
+
+    background: url(../../../src/images/portfolio/bg.png) no-repeat;
+    padding-top: 64px;
+    background-size: 100%;
+
     &__wrapper {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
 
-        & picture:nth-child(-1n+3) {
-            width: calc(33% - 10px);
-        }
+        // & picture:nth-child(-1n+3) {
+        //     width: calc(33% - 10px);
+        // }
     }
 }
