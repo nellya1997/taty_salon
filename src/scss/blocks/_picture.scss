@@ -10,14 +10,18 @@
         object-fit: cover;
     }
 
-    // width: calc(20% - 5px);
-
     .portfolio__wrapper & {
         width: calc(20% - 5px);
     }
 
     .portfolio__wrapper &:nth-child(-1n+3) {
         width: calc(33% - 10px);
+    }
+
+    &--portfolio {
+        width: calc(50% - 10px);
+        max-height: 165px;
+        height: auto;
     }
 
 }
