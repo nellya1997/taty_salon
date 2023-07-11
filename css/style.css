@@ -491,31 +491,30 @@ ul {
 }
 
 .header {
-  height: 143px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
-.header .navigation {
-  width: 67%;
+.header__nav {
+  border: 2px solid red;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
-.header .navigation__item {
-  font-size: 30px;
+.header__link {
+  font-size: 12px;
   font-weight: 600;
-  line-height: 41px;
+  line-height: 16px;
 }
-.header .navigation__item-active {
+.header__link-active {
   border: 3px solid #825890;
   border-radius: 50px;
   padding: 5px 16px;
   position: relative;
 }
-.header .navigation__item-active::after {
+.header__link-active::after {
   content: "";
   position: absolute;
   top: 100%;
@@ -525,19 +524,20 @@ ul {
   background-image: url("/src/images/header/drops.png");
   background-size: 38px 80px;
 }
-.header .header-contacts {
+.header__contacts {
+  border: 2px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 }
-.header .header-contacts__phone {
+.header__contacts__phone {
   font-size: 22px;
   font-weight: 600;
   line-height: 30px;
   position: relative;
 }
-.header .header-contacts__phone::before {
+.header__contacts__phone::before {
   content: "";
   position: absolute;
   top: 15%;
@@ -546,13 +546,13 @@ ul {
   height: 21px;
   background-image: url("/src/images/header/phone.png");
 }
-.header .header-contacts__address {
+.header__address {
   font-size: 18px;
   font-weight: 400;
   line-height: 25px;
   position: relative;
 }
-.header .header-contacts__address::before {
+.header__address::before {
   content: "";
   position: absolute;
   top: 12%;
@@ -561,11 +561,8 @@ ul {
   height: 24px;
   background-image: url("../../images/header/location.png");
 }
-
-.footer {
-  width: 100%;
-  height: 60px;
-  background: yellow;
+.header__socials {
+  border: 2px solid red;
 }
 
 .footer {
@@ -903,17 +900,12 @@ ul {
     width: 100%;
   }
 }
-.footer {
-  width: 100%;
-  height: 60px;
-  background: yellow;
-}
-
 .contacts {
   background-color: red;
   width: 100px;
   height: 100px;
   color: green;
+  border: 5px solid red;
 }
 
 .footer {
