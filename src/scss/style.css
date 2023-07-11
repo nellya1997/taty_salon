@@ -391,16 +391,8 @@ body {
   overflow-x: hidden;
 }
 
-picture {
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-}
-picture img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-  object-fit: contain;
+ul {
+  list-style: none;
 }
 
 .link {
@@ -497,6 +489,11 @@ picture img {
 .portfolio__wrapper .picture:nth-child(-1n + 3) {
   width: calc(33% - 10px);
 }
+.picture--portfolio {
+  width: calc(50% - 10px);
+  max-height: 165px;
+  height: auto;
+}
 
 .header {
   height: 143px;
@@ -586,6 +583,7 @@ picture img {
   background: url(../../../src/images/portfolio/bg.png) no-repeat;
   padding-top: 64px;
   background-size: 100%;
+  margin-bottom: 32px;
 }
 .portfolio__wrapper {
   display: flex;
@@ -612,6 +610,9 @@ picture img {
   margin-bottom: 16px;
   display: inline-block;
 }
+.portfolio__list {
+  margin-bottom: 15px;
+}
 .portfolio__list li {
   position: relative;
   padding-left: 40px;
@@ -631,6 +632,37 @@ picture img {
 .portfolio__list li span {
   font-weight: 400;
   margin-bottom: 0;
+}
+.portfolio__swiper {
+  padding-bottom: 47px;
+  margin-bottom: 20px;
+}
+.portfolio__slides {
+  display: flex;
+  justify-content: space-between;
+}
+.portfolio__swiper-button-prev, .portfolio__swiper-button-next {
+  top: auto;
+  width: 37px;
+  height: 37px;
+  bottom: 0;
+  background: url(./../../../src/icon/left.svg) no-repeat;
+  background-size: 37px 37px;
+  left: calc(50% - 54px);
+}
+.portfolio__swiper-button-next {
+  background: url(./../../../src/icon/right.svg) no-repeat;
+  left: auto;
+  right: calc(50% - 54px);
+}
+.portfolio__swiper-button-prev::after, .portfolio__swiper-button-next::after {
+  content: "";
+}
+.portfolio__consultation p {
+  margin-bottom: 11px;
+}
+.portfolio__consultation p:nth-child(2) {
+  margin-bottom: 42px;
 }
 
 .services {
@@ -888,10 +920,11 @@ picture img {
   background: yellow;
 }
 
-.footer {
-  width: 100%;
-  height: 60px;
-  background: yellow;
+.contacts {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  color: green;
 }
 
 .footer {
