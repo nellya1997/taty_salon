@@ -500,6 +500,11 @@ html {
 .portfolio__wrapper .picture:nth-child(-1n+3) {
   width: calc(33% - 10px);
 }
+.picture--portfolio {
+  width: calc(50% - 10px);
+  min-height: 130px;
+  height: auto;
+}
 
 .header {
   height: 143px;
@@ -634,6 +639,10 @@ html {
 .portfolio__list li span {
   font-weight: 400;
   margin-bottom: 0;
+}
+.portfolio__slides {
+  display: flex;
+  justify-content: space-between;
 }
 
 .services {

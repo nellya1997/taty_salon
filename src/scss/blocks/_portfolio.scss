@@ -65,4 +65,9 @@
             }
         }
     }
+
+    &__slides {
+        display: flex;
+        justify-content: space-between;
+    }
 }
