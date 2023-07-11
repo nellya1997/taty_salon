@@ -11,20 +11,35 @@
 
 <body>
 
-  <header class="header container">
-    <div class="navigation">
-      <a href="#" class="navigation__item navigation__item-active">Главная</a>
-      <a href="#" class="navigation__item">Обо мне</a>
-      <a href="#" class="navigation__item">Портфолио</a>
-      <a href="#" class="navigation__item">Услуги</a>
-      <a href="#" class="navigation__item">Памятки</a>
-      <a href="#" class="navigation__item">Отзывы</a>
+  <header class="header">
+    <div class="header__nav">
+      <a href="#" class="header__link">Главная</a>
+      <a href="#" class="header__link">Обо мне</a>
+      <a href="#" class="header__link">Портфолио</a>
+      <a href="#" class="header__link">Услуги</a>
+      <a href="#" class="header__link">Памятки</a>
+      <a href="#" class="header__link">Отзывы</a>
+      <a href="#" class="header__link">Контакты</a>
     </div>
-    <div class="header-contacts">
-      <a class="header-contacts__phone" href="tel:+79600330101">
-        8-960-033-01-01
+    <div class="header__contacts">
+      <a class="header__address" href="#">
+        <p>Адрес студии:</p>
+        <p>Г. Казань, Айвазовского 10/54</p>
       </a>
-      <a class="header-contacts__address" href="#">ул. Айвазовского 10/54</a>
+      <div class="header__schedule">
+        <p>График работы</p>
+        <p>Ежедневно 12:00 - 19:00</p>
+      </div>
+      <a class="header__phone" href="tel:+79600330101">
+        <p>Связь со мной</p>
+        <p>8-960-033-01-01</p>
+      </a>
+    </div>
+    <div class="header__socials">
+      <a href="" class="header__social"></a>
+      <a href="" class="header__social"></a>
+      <a href="" class="header__social"></a>
+      <a href="" class="header__social"></a>
     </div>
   </header>
 
@@ -106,7 +121,7 @@
           </p>
 
           <p>Любые шрамы перекрывать нужно очень осторожно</p>
-          
+
 
         </div>
 
@@ -127,7 +142,7 @@
                 <source type="image/jpeg" srcset="./src/images/portfolio/before-after/after1.jpg" media="(max-width: 1024px)">
                 <source type="image/webp" srcset="./src/images/portfolio/before-after/after1.webp" media="(max-width: 1024px)">
                 <img src="./src/images/portfolio/before-after/after1.jpg" alt="Работа после">
-            </picture>
+              </picture>
             </div>
 
             <div class="swiper-slide portfolio__slides">
@@ -145,7 +160,7 @@
                 <source type="image/jpeg" srcset="./src/images/portfolio/before-after/after2.jpg" media="(max-width: 1024px)">
                 <source type="image/webp" srcset="./src/images/portfolio/before-after/after2.webp" media="(max-width: 1024px)">
                 <img src="./src/images/portfolio/before-after/after2.jpg" alt="Работа после">
-            </picture>
+              </picture>
             </div>
 
             <div class="swiper-slide portfolio__slides">
@@ -163,7 +178,7 @@
                 <source type="image/jpeg" srcset="./src/images/portfolio/before-after/after3.jpg" media="(max-width: 1024px)">
                 <source type="image/webp" srcset="./src/images/portfolio/before-after/after3.webp" media="(max-width: 1024px)">
                 <img src="./src/images/portfolio/before-after/after3.jpg" alt="Работа после">
-            </picture>
+              </picture>
             </div>
 
             <div class="swiper-slide portfolio__slides">
@@ -181,7 +196,7 @@
                 <source type="image/jpeg" srcset="./src/images/portfolio/before-after/after4.jpg" media="(max-width: 1024px)">
                 <source type="image/webp" srcset="./src/images/portfolio/before-after/after4.webp" media="(max-width: 1024px)">
                 <img src="./src/images/portfolio/before-after/after4.jpg" alt="Работа после">
-            </picture>
+              </picture>
             </div>
           </div>
 
@@ -195,7 +210,7 @@
 
           <a class="link text-center" href="#">Записаться на сеанс</a>
         </div>
-        
+
         <!-- </div> -->
       </div>
     </section>
@@ -272,22 +287,22 @@
             </p>
             <p class="mt-36 mb-15 h2">Если знаешь размер и место тату, то смело записывайся</p>
             <a class="link text-center" href="#">Записаться на сеанс</a>
-          <a class="btn-calc throat"></a>
-          <a class="btn-calc breast"></a>
-          <a class="btn-calc left-hand-top"></a>
-          <a class="btn-calc left-hand-center"></a>
-          <a class="btn-calc left-hand-bottom"></a>
-          <a class="btn-calc right-hand-top"></a>
-          <a class="btn-calc right-hand-center"></a>
-          <a class="btn-calc right-hand-bottom"></a>
-          <a class="btn-calc left-leg-top"></a>
-          <a class="btn-calc left-leg-center"></a>
-          <a class="btn-calc left-leg-bottom"></a>
-          <a class="btn-calc right-leg-top"></a>
-          <a class="btn-calc right-leg-center"></a>
-          <a class="btn-calc right-leg-bottom"></a>
+            <a class="btn-calc throat"></a>
+            <a class="btn-calc breast"></a>
+            <a class="btn-calc left-hand-top"></a>
+            <a class="btn-calc left-hand-center"></a>
+            <a class="btn-calc left-hand-bottom"></a>
+            <a class="btn-calc right-hand-top"></a>
+            <a class="btn-calc right-hand-center"></a>
+            <a class="btn-calc right-hand-bottom"></a>
+            <a class="btn-calc left-leg-top"></a>
+            <a class="btn-calc left-leg-center"></a>
+            <a class="btn-calc left-leg-bottom"></a>
+            <a class="btn-calc right-leg-top"></a>
+            <a class="btn-calc right-leg-center"></a>
+            <a class="btn-calc right-leg-bottom"></a>
+          </div>
         </div>
-      </div>
     </section>
     <section class="memo "></section>
 

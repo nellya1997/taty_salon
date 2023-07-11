@@ -23,7 +23,8 @@
     width: $width;
 }
 
-@mixin p($side, $px) { // внутренний отступ, например: @include p(top, 20) выведет в стилях 'padding-top: 20px';
+@mixin p($side, $px) {
+    // внутренний отступ, например: @include p(top, 20) выведет в стилях 'padding-top: 20px';
     padding-#{$side}: #{$px}px;
 }
 

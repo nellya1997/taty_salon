@@ -1,40 +1,42 @@
 .header {
-    height: 143px;
-    @include flexy(row, space-between);
+    @include flexy(column);
 
-    .navigation {
-        width: 67%;
-        @include flexy(row, space-between);
+    &__nav {
+        border: $myBorder;
+        @include flexy(column);
+    }
 
-        &__item {
-            @include fonty(30px, 600, 41px);
 
-            &-active {
-                border: 3px solid #825890;
-                border-radius: 50px;
-                padding: 5px 16px;
-                position: relative;
+    &__link {
+        @include fonty(12px, 600, 16px);
 
-                &::after {
-                    //content: url("/src/images/header/drops.png");
-                    //content: url("../../images/header/drops.png");
-                    content: "";
-                    position: absolute;
-                    top: 100%;
-                    left: 63%;
+        &-active {
+            border: 3px solid #825890;
+            border-radius: 50px;
+            padding: 5px 16px;
+            position: relative;
 
-                    width: 38px;
-                    height: 80px;
-                    //background-image: url("../../images/header/drops.png");
-                    background-image: url("/src/images/header/drops.png");
-                    background-size: 38px 80px;
-                }
+            &::after {
+                //content: url("/src/images/header/drops.png");
+                //content: url("../../images/header/drops.png");
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 63%;
+
+                width: 38px;
+                height: 80px;
+                //background-image: url("../../images/header/drops.png");
+                background-image: url("/src/images/header/drops.png");
+                background-size: 38px 80px;
             }
         }
     }
 
 
-    .header-contacts {
+    &__contacts {
+        border: $myBorder;
+
         @include flexy(column, center, flex-start);
 
         &__phone {
@@ -51,23 +53,30 @@
                 background-image: url("/src/images/header/phone.png");
             }
         }
+    }
 
-        &__address {
-            @include fonty(18px, 400, 25px);
-            position: relative;
+    &__address {
+        @include fonty(18px, 400, 25px);
+        position: relative;
 
-            &::before {
-                content: "";
-                position: absolute;
-                top: 12%;
-                left: -18%;
-                width: 24px;
-                height: 24px;
-                //background-image: url("/src/images/header/location.png");
-                background-image: url("../../images/header/location.png");
-            }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 12%;
+            left: -18%;
+            width: 24px;
+            height: 24px;
+            //background-image: url("/src/images/header/location.png");
+            background-image: url("../../images/header/location.png");
         }
     }
+
+
+    &__socials {
+        border: $myBorder;
+    }
+
+
 }
 
 
