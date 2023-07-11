@@ -8,8 +8,8 @@ const swiper1 = new Swiper('.js-swiper-portfolio', {
     //   el: '.swiper-pagination',
     //   clickable: true,
     // },
-    // navigation: {
-    //   nextEl: '.swiper-button-next',
-    //   prevEl: '.swiper-button-prev',
-    // },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
   });

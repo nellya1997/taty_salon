@@ -1,5 +1,3 @@
-
-
 @font-face {
   font-family: 'Manrope';
   src: url(../fonts/Manrope-Regular.woff) format("woff2"), url(../fonts/Manrope-Regular.woff2) format("woff");
@@ -32,8 +30,6 @@
   src: url(../fonts/Constantine.woff2) format("woff2"), url(../fonts/Constantine.woff) format("woff");
 }
 
-$constantine: "Constantine", "font", sans-serif;
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -47,17 +43,15 @@ html {
   line-height: 30px;
   min-width: 320px;
   scroll-behavior: smooth;
+  color: $dark-purple;
 }
 
 body {
-  // font-family: 'Manrope', sans-serif;
-  // font-weight: 400;
-  // font-size: 22px;
-  // line-height: 30px;
-  // min-width: 320px;
-  // background-color: $light-pink1;
   overflow-x: hidden;
-  color: $dark-purple;
+}
+
+ul {
+  list-style: none;
 }
 
 .link {
@@ -68,7 +62,6 @@ body {
   // background-size: contain;
   background-repeat: no-repeat;
   // color: $purple;
-
   @include fonty(1.13rem, 600, 1.36em);
 }
 
@@ -110,15 +103,7 @@ body {
   }
 }
 
-  html {
-    font-size: 10px;
-  }
-
 @media (min-width: 375px) {
-  html {
-    font-size: 15px;
-  }
-
   .border-line {
     width: 23.44vw;
   }
@@ -129,10 +114,6 @@ body {
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 14px;
-  }
-
   .link {
     width: 100%;
     font-size: 1rem;
@@ -141,11 +122,6 @@ body {
 }
 
 @media (min-width: 1440px) {
-  html {
-    font-size: 15px;
-    line-height: 1.25;
-  }
-
   .link {
     background-image: url('../images/bg-button-md.png');
   }
