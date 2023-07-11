@@ -405,6 +405,7 @@ body {
   line-height: 1.2;
   color: #3a3a42;
   text-align: center;
+  margin-bottom: 16px;
 }
 
 .wrapper-title {
@@ -421,6 +422,24 @@ body {
 .wrapper-title::before {
   right: 0;
   left: auto;
+}
+
+.picture {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+.picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.portfolio__wrapper .picture {
+  width: calc(20% - 5px);
+}
+.portfolio__wrapper .picture:nth-child(-1n+3) {
+  width: calc(33% - 10px);
 }
 
 html {
@@ -467,6 +486,20 @@ html {
 }
 .picture {
   display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+.picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.portfolio__wrapper .picture {
+  width: calc(20% - 5px);
+}
+.portfolio__wrapper .picture:nth-child(-1n+3) {
+  width: calc(33% - 10px);
 }
 
 .header {
@@ -553,13 +586,15 @@ html {
   background: yellow;
 }
 
+.portfolio {
+  background: url(../../../src/images/portfolio/bg.png) no-repeat;
+  padding-top: 64px;
+  background-size: 100%;
+}
 .portfolio__wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-}
-.portfolio__wrapper picture:nth-child(-1n+3) {
-  width: calc(33% - 10px);
 }
 
 .services {
@@ -583,17 +618,111 @@ html {
 .services__animation .btn-calc {
   position: absolute;
   cursor: pointer;
+  width: 2.08vw;
+  height: 2.08vw;
+  background-image: url("../images/point.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.services__animation .btn-calc.btn-calc-pussy {
-  top: 140px;
-  right: 239px;
+.services__animation .btn-calc.throat {
+  top: 6vw;
+  left: calc(50% - 1.04vw);
 }
-.services__animation .btn-calc.btn-calc-right-leg {
-  top: 220px;
-  right: 253px;
+.services__animation .btn-calc.breast {
+  top: 10.3vw;
+  left: calc(50% - 1.04vw);
 }
-.services__animation .btn-calc.btn-calc::before {
-  content: url("../src/images/point.png");
+.services__animation .btn-calc.left-hand-top {
+  top: 8.6vw;
+  left: calc(70% - 1.04vw);
+}
+.services__animation .btn-calc.left-hand-center {
+  top: 13.3vw;
+  left: calc(78% - 1.04vw);
+}
+.services__animation .btn-calc.left-hand-bottom {
+  top: 17.3vw;
+  left: calc(87% - 1.04vw);
+}
+.services__animation .btn-calc.right-hand-top {
+  top: 8.6vw;
+  left: calc(30% - 1.04vw);
+}
+.services__animation .btn-calc.right-hand-center {
+  top: 13.3vw;
+  left: calc(23% - 1.04vw);
+}
+.services__animation .btn-calc.right-hand-bottom {
+  top: 17.3vw;
+  left: calc(13% - 1.04vw);
+}
+.services__animation .btn-calc.left-leg-top {
+  top: 19vw;
+  left: calc(61% - 1.04vw);
+}
+.services__animation .btn-calc.left-leg-center {
+  top: 26vw;
+  left: calc(58% - 1.04vw);
+}
+.services__animation .btn-calc.left-leg-bottom {
+  top: 32.3vw;
+  left: calc(56% - 1.04vw);
+}
+.services__animation .btn-calc.right-leg-top {
+  top: 19vw;
+  left: calc(39% - 1.04vw);
+}
+.services__animation .btn-calc.right-leg-center {
+  top: 26vw;
+  left: calc(42% - 1.04vw);
+}
+.services__animation .btn-calc.right-leg-bottom {
+  top: 32.3vw;
+  left: calc(44% - 1.04vw);
+}
+.services__animation .btn-calc.right-leg-profile-center {
+  top: 26vw;
+  left: calc(42% - 1.04vw);
+}
+.services__animation .btn-calc.right-leg-profile-bottom {
+  top: 32.3vw;
+  left: calc(44% - 1.04vw);
+}
+.services__animation .btn-calc.left-leg-profile-center {
+  top: 26vw;
+  left: calc(42% - 1.04vw);
+}
+.services__animation .btn-calc.left-leg-profile-bottom {
+  top: 32.3vw;
+  left: calc(44% - 1.04vw);
+}
+.services__animation .btn-calc.right-hand-profile-top {
+  top: 8.6vw;
+  left: calc(30% - 1.04vw);
+}
+.services__animation .btn-calc.right-hand-profile-center {
+  top: 13.3vw;
+  left: calc(23% - 1.04vw);
+}
+.services__animation .btn-calc.right-hand-profile-bottom {
+  top: 17.3vw;
+  left: calc(13% - 1.04vw);
+}
+.services__animation .btn-calc.left-hand-profile-top {
+  top: 8.6vw;
+  left: calc(30% - 1.04vw);
+}
+.services__animation .btn-calc.left-hand-profile-center {
+  top: 13.3vw;
+  left: calc(23% - 1.04vw);
+}
+.services__animation .btn-calc.left-hand-profile-bottom {
+  top: 17.3vw;
+  left: calc(13% - 1.04vw);
+}
+.services__animation .btn-calc.stomach-profile {
+  top: 17.3vw;
+  left: calc(13% - 1.04vw);
 }
 .services__animation__footer img {
   width: 100%;
@@ -611,7 +740,7 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: top;
+  align-items: unset;
 }
 .services__main__left-column {
   width: 36.19%;
@@ -709,14 +838,6 @@ html {
   }
   .services__animation #rotation img {
     width: 100%;
-  }
-  .services__animation .btn-calc-pussy {
-    top: 105px;
-    right: 177px;
-  }
-  .services__animation .btn-calc-right-leg {
-    top: 164px;
-    right: 186px;
   }
 }
 .footer {
