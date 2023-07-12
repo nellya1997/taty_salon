@@ -375,7 +375,8 @@
         <div class="personal-memo-content__wrapper">
           <div class="personal-memo-content__item">
             <img class="personal-memo-content__img" src="./src/images/memo/personal-memo__item.jpg">
-            <a class="personal-memo-content__link" href="#">Подробный разбор перекрытия <br> старой зашрамированной татуировки</a>
+            <a class="personal-memo-content__link" href="#">Подробный разбор перекрытия <br> старой зашрамированной
+              татуировки</a>
           </div>
           <div class="personal-memo-content__item">
             <img class="personal-memo-content__img" src="./src/images/memo/personal-memo__item.jpg">
@@ -407,8 +408,13 @@
   </script>
 
   <script>
+
+
+
     const btn1 = document.getElementById('tabButton1');
     const btn2 = document.getElementById('tabButton2');
+
+    // window.matchMedia('(min-width: 768px)') ? btn1.removeEventListener('click') : btn1.removeEventListener('click')
 
     let tabContent1 = document.getElementById('tabContent1');
     let tabContent2 = document.getElementById('tabContent2');
@@ -436,6 +442,8 @@
         tabImageOpen2.style.cssText = 'transform: rotate(0deg);'
       }
     })
+
+
 
   </script>
 </body>
