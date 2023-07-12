@@ -48,6 +48,7 @@ html {
 
 body {
   overflow-x: hidden;
+  min-width: 320px;
 }
 
 ul {
@@ -56,13 +57,19 @@ ul {
 
 .link {
   text-decoration: none;
+  display: block;
   padding: 17px 50px;
-  background-image: url('../images/bg-button.png');
+  background-image: url(../../../src/images/bg-button.png);
   background-size: 100% 100%;
   // background-size: contain;
   background-repeat: no-repeat;
   // color: $purple;
   @include fonty(1.13rem, 600, 1.36em);
+
+  @media (min-width: 768px) {
+    max-width: 388px;
+    margin: 0 auto;
+  }
 }
 
 .text-center {
