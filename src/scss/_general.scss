@@ -94,9 +94,6 @@ ul {
   color: $dark;
   text-align: center;
   margin-bottom: 16px;
-}
-
-.wrapper-title {
   position: relative;
 
   &::after,
@@ -104,7 +101,8 @@ ul {
     position: absolute;
     content: '';
     top: 50%;
-    width: 26%;
+    left: 0;
+    width: calc(50% - 114px);
     height: 1px;
     background-color: $violet;
   }
@@ -114,6 +112,25 @@ ul {
     left: auto;
   }
 }
+
+// .wrapper-title {
+//   // position: relative;
+
+//   // &::after,
+//   // &::before {
+//   //   position: absolute;
+//   //   content: '';
+//   //   top: 50%;
+//   //   width: 26%;
+//   //   height: 1px;
+//   //   background-color: $violet;
+//   // }
+
+//   // &::before {
+//   //   right: 0;
+//   //   left: auto;
+//   // }
+// }
 
 @media (min-width: 375px) {
   .border-line {

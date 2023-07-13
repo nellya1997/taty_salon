@@ -35,6 +35,10 @@
         width: calc(50% - 10px);
     }
 
+    .about__photo-right &--desktop {
+            display: none;
+    }
+
     @media (min-width: 768px) {
         // .portfolio__wrapper .portfolio__slides & {
         //     height: 400px;
@@ -83,6 +87,28 @@
 
         .portfolio__wrapper &:nth-child(-1n+8) {
             margin-bottom: 31px;
+        }
+        
+        // .about__photo-left &--desktop {
+            
+        // }
+    }
+
+    @media (min-width: 1920px) {
+        .about__photo-right &--desktop {
+            display: block;
+        }
+
+        .about__photo-right & {
+            height: calc(50% - 1px);
+            
+            & img {
+                object-fit: contain;
+            }
+        }
+
+        .about__photo-left & {
+            max-height: 611px;
         }
     }
 }
