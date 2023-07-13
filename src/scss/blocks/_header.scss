@@ -3,6 +3,11 @@
     position: relative;
     z-index: 1;
 
+    &_active {
+        height: 100vh;
+        background-color: $stop-scroll-color;
+    }
+
     a {
         text-decoration: none;
         @include fonty(14px, 400, 14px);

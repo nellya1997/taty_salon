@@ -386,10 +386,10 @@ html {
 body {
   overflow-x: hidden;
   min-width: 320px;
+  position: relative;
 }
 
 .stop-scroll {
-  background-color: rgba(226, 226, 226, 0.7);
   overflow: hidden;
 }
 
@@ -542,6 +542,10 @@ ul {
   height: 60px;
   position: relative;
   z-index: 1;
+}
+.header_active {
+  height: 100vh;
+  background-color: rgba(226, 226, 226, 0.7);
 }
 .header a {
   text-decoration: none;
