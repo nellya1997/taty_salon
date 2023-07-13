@@ -49,10 +49,11 @@ html {
 body {
   overflow-x: hidden;
   min-width: 320px;
+  position: relative;
+  background-color: $bg-color;
 }
 
 .stop-scroll {
-  background-color: $stop-scroll-color;
   overflow: hidden;
 }
 

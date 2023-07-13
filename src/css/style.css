@@ -386,10 +386,11 @@ html {
 body {
   overflow-x: hidden;
   min-width: 320px;
+  position: relative;
+  background-color: rgb(243, 243, 243);
 }
 
 .stop-scroll {
-  background-color: rgba(226, 226, 226, 0.7);
   overflow: hidden;
 }
 
@@ -555,16 +556,16 @@ ul {
 }
 
 .header {
-  height: 60px;
-  position: relative;
+  width: 100%;
+  height: 140px;
+  position: fixed;
   z-index: 1;
+  background-color: rgb(243, 243, 243);
+  border: 2px solid red;
 }
-.header a {
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 14px;
-  color: rgb(34, 8, 43);
+.header_active {
+  height: 100vh;
+  background-color: rgba(226, 226, 226, 0.7);
 }
 .header ul {
   margin: 0 0;
@@ -582,6 +583,9 @@ ul {
   transform: translateY(-100vh);
   transition: transform 0.5s;
 }
+.header .nav__contacts {
+  display: none;
+}
 .header .nav_active {
   transform: translateY(0);
   transition: transform 0.5s;
@@ -591,32 +595,73 @@ ul {
   padding-bottom: 15px;
 }
 .header .nav__link {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 600;
-  line-height: 19px;
-  /* for PC
-      &-active {
-          border: 3px solid #825890;
-          border-radius: 50px;
-          padding: 5px 16px;
-          position: relative;
-
-          &::after {
-              //content: url("/src/images/header/drops.png");
-              //content: url("../../images/header/drops.png");
-              content: "";
-              position: absolute;
-              top: 100%;
-              left: 63%;
-
-              width: 38px;
-              height: 80px;
-              //background-image: url("../../images/header/drops.png");
-              background-image: url("/src/images/header/drops.png");
-              background-size: 38px 80px;
-          }
-      }
-      */
+  line-height: 1.35rem;
+}
+@media (min-width: 768px) {
+  .header .header {
+    position: fixed;
+  }
+  .header .nav {
+    margin: 0 auto;
+    width: 91.5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0px;
+    background-color: initial;
+    border: none;
+    box-shadow: none;
+    transform: translateY(0);
+    transition: transform 0.5s;
+  }
+  .header .nav__list {
+    width: 67.3%;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header .nav__link {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 41px;
+  }
+  .header .nav__link-active {
+    border: 3px solid #825890;
+    border-radius: 50px;
+    padding: 5px 16px;
+    position: relative;
+  }
+  .header .nav__link-active::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 63%;
+    width: 38px;
+    height: 80px;
+    background-image: url("../images/header/drops.png");
+    background-size: 38px 80px;
+  }
+  .header .nav__contacts {
+    display: initial;
+  }
+  .header .nav__contacts li:first-child span {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 30px;
+  }
+  .header .nav__contacts li:nth-child(2) span {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+  .header .nav .contact-badge {
+    display: none;
+  }
 }
 
 .burger {
@@ -658,6 +703,11 @@ ul {
   transition: transform 0.2s;
 }
 
+@media (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+}
 .contact-badge {
   display: flex;
   flex-direction: column;
