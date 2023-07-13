@@ -1,104 +1,70 @@
 .header {
-    @include flexy(column);
+    height: 60px;
+    position: relative;
+    z-index: 1;
 
-    &__nav {
-        border: $myBorder;
-        @include flexy(column);
+    a {
+        text-decoration: none;
+        @include fonty(14px, 400, 14px);
+        color: $font-color;
     }
 
+    ul {
+        margin: 0 0;
+        padding: 0 0;
 
-    &__link {
-        @include fonty(12px, 600, 16px);
+        li {
+            list-style-type: none;
+        }
+    }
 
-        &-active {
-            border: 3px solid #825890;
-            border-radius: 50px;
-            padding: 5px 16px;
-            position: relative;
+    .nav {
+        width: 100vw;
+        padding: 20px 20px;
+        background-color: $header-bg;
+        border: $header-border;
+        box-shadow: $header-shadow;
+        transform: translateY(-100vh);
+        transition: transform 0.5s;
 
-            &::after {
-                //content: url("/src/images/header/drops.png");
-                //content: url("../../images/header/drops.png");
-                content: "";
-                position: absolute;
-                top: 100%;
-                left: 63%;
+        &_active {
+            transform: translateY(0);
+            transition: transform 0.5s;
+        }
+    }
 
-                width: 38px;
-                height: 80px;
-                //background-image: url("../../images/header/drops.png");
-                background-image: url("/src/images/header/drops.png");
-                background-size: 38px 80px;
+    .nav__list {
+        width: 100%;
+        padding-bottom: 15px;
+
+
+    }
+
+    .nav__link {
+        @include fonty(14px, 600, 19px);
+
+        /* for PC
+            &-active {
+                border: 3px solid #825890;
+                border-radius: 50px;
+                padding: 5px 16px;
+                position: relative;
+    
+                &::after {
+                    //content: url("/src/images/header/drops.png");
+                    //content: url("../../images/header/drops.png");
+                    content: "";
+                    position: absolute;
+                    top: 100%;
+                    left: 63%;
+    
+                    width: 38px;
+                    height: 80px;
+                    //background-image: url("../../images/header/drops.png");
+                    background-image: url("/src/images/header/drops.png");
+                    background-size: 38px 80px;
+                }
             }
-        }
+            */
     }
-
-
-    &__contacts {
-        border: $myBorder;
-
-        @include flexy(column, center, flex-start);
-
-        &__phone {
-            @include fonty($weight: 600);
-            position: relative;
-
-            &::before {
-                content: "";
-                position: absolute;
-                top: 15%;
-                left: -20%;
-                width: 21px;
-                height: 21px;
-                background-image: url("/src/images/header/phone.png");
-            }
-        }
-    }
-
-    &__address {
-        @include fonty(18px, 400, 25px);
-        position: relative;
-
-        &::before {
-            content: "";
-            position: absolute;
-            top: 12%;
-            left: -18%;
-            width: 24px;
-            height: 24px;
-            //background-image: url("/src/images/header/location.png");
-            background-image: url("../../images/header/location.png");
-        }
-    }
-
-
-    &__socials {
-        border: $myBorder;
-    }
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (min-width: 375px) {}
-
-@media (min-width: 768px) {}
-
-@media (min-width: 1280px) {}

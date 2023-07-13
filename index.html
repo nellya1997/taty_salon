@@ -12,40 +12,50 @@
 <body>
 
   <header class="header">
-    <div class="header__nav">
-      <a href="#" class="header__link">Главная</a>
-      <a href="#" class="header__link">Обо мне</a>
-      <a href="#" class="header__link">Портфолио</a>
-      <a href="#" class="header__link">Услуги</a>
-      <a href="#" class="header__link">Памятки</a>
-      <a href="#" class="header__link">Отзывы</a>
-      <a href="#" class="header__link">Контакты</a>
+    <div class="burger">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-    <div class="header__contacts">
-      <a class="header__address" href="#">
-        <p>Адрес студии:</p>
-        <p>Г. Казань, Айвазовского 10/54</p>
-      </a>
-      <div class="header__schedule">
-        <p>График работы</p>
-        <p>Ежедневно 12:00 - 19:00</p>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li><a href="#" class="nav__link">Главная</a></li>
+        <li><a href="#" class="nav__link">Обо мне</a></li>
+        <li><a href="#" class="nav__link">Портфолио</a></li>
+        <li><a href="#" class="nav__link">Услуги</a></li>
+        <li><a href="#" class="nav__link">Памятки</a></li>
+        <li><a href="#" class="nav__link">Отзывы</a></li>
+        <li><a href="#" class="nav__link">Контакты</a></li>
+      </ul>
+      <div class="contact-badge">
+        <a class="contact-badge__item contact-badge__address" href="#">
+          <p>Адрес студии:</p>
+          <p>Г. Казань, Айвазовского 10/54</p>
+          <img class="contact-badge__icon" src="./src/images/header/location-pointer.svg" alt="location">
+        </a>
+        <div class="contact-badge__item contact-badge__schedule">
+          <p>График работы</p>
+          <p>Ежедневно 12:00 - 19:00</p>
+          <img class="contact-badge__icon" src="./src/images/header/clockIcon.svg" alt="schedule">
+        </div>
+        <a class="contact-badge__item contact-badge__phone" href="tel:+79600330101">
+          <p>Связь со мной</p>
+          <p>8-960-033-01-01</p>
+          <img class="contact-badge__icon" src="./src/images/header/phone.svg" alt="phone">
+        </a>
+        <div class="socials">
+          <a href="https://t.me/dinasynthetica" class="socails__item"><img src="./src/images/header/telegramm.svg" alt="telegramm"></a>
+          <a href="https://wa.me/+79600330101" class="socails__item"><img src="./src/images/header/what'sUpIcon.svg" alt="what's up"></a>
+          <a href="https://instagram.com/dina.synthetica?igshid=NjIwNzIyMDk2Mg==" class="socails__item"><img src="./src/images/header/instagramm.svg" alt="Instagramm"></a>
+          <a href="https://vk.com/dina_synthetica_tattoo" class="socails__item"><img src="./src/images/header/vk-icon.svg" alt="Vk"></a>
+        </div>
       </div>
-      <a class="header__phone" href="tel:+79600330101">
-        <p>Связь со мной</p>
-        <p>8-960-033-01-01</p>
-      </a>
-    </div>
-    <div class="header__socials">
-      <a href="" class="header__social"></a>
-      <a href="" class="header__social"></a>
-      <a href="" class="header__social"></a>
-      <a href="" class="header__social"></a>
-    </div>
+    </nav>
   </header>
 
 
   <main>
-    <section class="main"></section>
+    <section class="first"></section>
     <section class="about "></section>
     <section class="portfolio ">
       <div class="container">
