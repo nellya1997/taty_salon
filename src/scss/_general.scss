@@ -51,6 +51,11 @@ body {
   min-width: 320px;
 }
 
+.stop-scroll {
+  background-color: $stop-scroll-color;
+  overflow: hidden;
+}
+
 ul {
   list-style: none;
 }
