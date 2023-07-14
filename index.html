@@ -6,225 +6,596 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tattoo</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="src/css/style.css" />
 </head>
 
 <body>
 
   <header class="header">
-    <div class="header__nav">
-      <a href="#" class="header__link">Главная</a>
-      <a href="#" class="header__link">Обо мне</a>
-      <a href="#" class="header__link">Портфолио</a>
-      <a href="#" class="header__link">Услуги</a>
-      <a href="#" class="header__link">Памятки</a>
-      <a href="#" class="header__link">Отзывы</a>
-      <a href="#" class="header__link">Контакты</a>
+    <div class="burger">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-    <div class="header__contacts">
-      <a class="header__address" href="#">
-        <p>Адрес студии:</p>
-        <p>Г. Казань, Айвазовского 10/54</p>
-      </a>
-      <div class="header__schedule">
-        <p>График работы</p>
-        <p>Ежедневно 12:00 - 19:00</p>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li><a href="#" class="nav__link nav__link-active">Главная</a></li>
+        <li><a href="#" class="nav__link">Обо мне</a></li>
+        <li><a href="#" class="nav__link">Портфолио</a></li>
+        <li><a href="#" class="nav__link">Услуги</a></li>
+        <li><a href="#" class="nav__link">Памятки</a></li>
+        <li><a href="#" class="nav__link">Отзывы</a></li>
+        <li><a href="#" class="nav__link">Контакты</a></li>
+      </ul>
+      <ul class="nav__contacts">
+        <li><a class="contact-badge__item" href="tel:79600330101"><span>8-960-033-01-01</span>
+            <img class="contact-badge__icon" src="./src/images/header/phone.svg" alt="phone"></a></li>
+        <li><a class="contact-badge__item contact-badge__address" href="#"><span>Г. Казань, Айвазовского 10/54</span>
+            <img class="contact-badge__icon" src="./src/images/header/location-pointer.svg" alt="location"></a></li>
+      </ul>
+      <div class="contact-badge">
+        <a class="contact-badge__item contact-badge__address" href="#">
+          <p>Адрес студии:</p>
+          <p>Г. Казань, Айвазовского 10/54</p>
+          <img class="contact-badge__icon" src="./src/images/header/location-pointer.svg" alt="location">
+        </a>
+        <div class="contact-badge__item contact-badge__schedule">
+          <p>График работы</p>
+          <p>Ежедневно 12:00 - 19:00</p>
+          <img class="contact-badge__icon" src="./src/images/header/clockIcon.svg" alt="schedule">
+        </div>
+        <a class="contact-badge__item contact-badge__phone" href="tel:+79600330101">
+          <p>Связь со мной</p>
+          <p>8-960-033-01-01</p>
+          <img class="contact-badge__icon" src="./src/images/header/phone.svg" alt="phone">
+        </a>
+        <div class="socials">
+          <a href="https://t.me/dinasynthetica" class="socails__item"><img src="./src/images/header/telegramm.svg" alt="telegramm"></a>
+          <a href="https://wa.me/+79600330101" class="socails__item"><img src="./src/images/header/what'sUpIcon.svg" alt="what's up"></a>
+          <a href="https://instagram.com/dina.synthetica?igshid=NjIwNzIyMDk2Mg==" class="socails__item"><img src="./src/images/header/instagramm.svg" alt="Instagramm"></a>
+          <a href="https://vk.com/dina_synthetica_tattoo" class="socails__item"><img src="./src/images/header/vk-icon.svg" alt="Vk"></a>
+        </div>
       </div>
-      <a class="header__phone" href="tel:+79600330101">
-        <p>Связь со мной</p>
-        <p>8-960-033-01-01</p>
-      </a>
-    </div>
-    <div class="header__socials">
-      <a href="" class="header__social"></a>
-      <a href="" class="header__social"></a>
-      <a href="" class="header__social"></a>
-      <a href="" class="header__social"></a>
-    </div>
+    </nav>
   </header>
+  <section class="first">
+    <div class="container">
 
+      <div class="mobile">
+        <div class="first__title-mobile">
+          <img src="./src/images/first/icons/logo.svg" alt="Татуироквка лого" />
+        </div>
+        <div class="mobile-first__desc">В акварельном стиле</div>
+      </div>
+
+      <div class="first__row">
+        <div class="first__content">
+          <h1 class="first__title">
+            <img
+              src="./src/images/first/icons/logo.svg"
+              alt="TATTOO"
+            />
+          </h1>
+          <p class="first__desc">В акварельном стиле</p>
+
+
+          <picture class="first__tube-img">
+            <source
+              type="image/webp"
+              srcset="./src/images/first/tube.webp"
+            />
+            <source
+              type="image/png"
+              srcset="./src/images/first/tube.png"
+            />
+            <img src="./src/images/first/tube.png" alt="Тюбик" />
+          </picture>
+
+          <div class="first__img-mobile">
+            <!-- <img src="./images/girl.png" alt="girl" /> -->
+            <picture>
+              <source
+                type="image/webp"
+                srcset="./src/images/first/girl.webp"
+              />
+              <source
+                type="image/png"
+                srcset="./images/first/girl.png"
+              />
+              <img src="./src/images/first/girl.png" alt="girl" />
+            </picture>
+          </div>
+          <p class="first__desc-2">
+            Для тех, кто уверен в своих решениях
+          </p>
+          <button href="#!" class="first__btn">
+            Записаться на сеанс
+          </button>
+        </div>
+
+        <div class="first__img">
+          <picture>
+            <source
+              type="image/webp"
+              srcset="./src/images/first/girl.webp"
+            />
+            <source
+              type="image/png"
+              srcset="./src/images/first/girl.png"
+            />
+            <img src="./images/first/girl.png" alt="Татуировка Казань" />
+          </picture>
+        </div>
+        <ul class="social__list">
+          <li>
+            <a
+              href="https://t.me/dinasynthetica"
+              target="_blank"
+              ><img
+                src="./src/images/first/icons/tg.svg"
+                alt="tg"
+            /></a>
+          </li>
+          <li>
+            <a href="https://wa.me/+79600330101" target="_blank"
+              ><img
+                src="./src/images/first/icons/ws.svg"
+                alt="ws"
+            /></a>
+          </li>
+          <li>
+            <a
+              href="https://instagram.com/dina.synthetica?igshid=NjIwNzIyMDk2Mg=="
+              target="_blank"
+              ><img
+                src="./src/images/first/icons/ig.svg"
+                alt="ig"
+            /></a>
+          </li>
+          <li>
+            <a
+              href="https://vk.com/dina_synthetica_tattoo"
+              target="_blank"
+              ><img
+                src="./src/images/first/icons/vk.svg"
+                alt="vk"
+            /></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mobile">
+        <div class="mobile-first__desc_2">
+          Для тех, кто уверен в своих решениях
+        </div>
+        <a class="first__btn-mobile">
+          <picture>
+            <source
+              type="image/webp"
+              srcset="./src/images/first/bg.webp"
+            />
+            <source
+              type="image/png"
+              srcset="./src/images/first/bg.jpg"
+            />
+            <img src="./src/images/first/bg.jpg" alt="bg" />
+          </picture>
+          <p>Записаться на сеанс</p>
+        </a>
+      </div>
+      <div class="first__modal none" none>
+        <div class="modal-sign-up"></div>
+        <div class="modal-main">
+          <button class="modal__close-btn">
+            <img
+              src="./src/images/first/icons/close.svg"
+              alt="close"
+            />
+          </button>
+          <div class="modal-info">
+            <p class="modal__desc">Чтобы записаться на сеанс</p>
+            <p class="modal__desc2">
+              Напишите мне в любой мессенджер
+            </p>
+            <div class="tele">
+              <img
+                src="./src/images/first/icons/phone.svg"
+                alt="телофон"
+              /><span>8-960-033-01-01</span>
+            </div>
+            <ul class="social__list-modal">
+              <li>
+                <a
+                  href="https://t.me/dinasynthetica"
+                  target="_blank"
+                  ><img
+                    src="./src/images/first/icons/tg.svg"
+                    alt="тг"
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/+79600330101"
+                  target="_blank"
+                  ><img
+                    src="./src/images/first/icons/ws.svg"
+                    alt="вотсап"
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://instagram.com/dina.synthetica?igshid=NjIwNzIyMDk2Mg=="
+                  target="_blank"
+                  ><img
+                    src="./src/images/first/icons/ig.svg"
+                    alt="инстаграм"
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://vk.com/dina_synthetica_tattoo"
+                  target="_blank"
+                  ><img
+                    src="./src/images/first/icons/vk.svg"
+                    alt="вк"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <main>
     <section class="main"></section>
+    <section class="about">
+      <div class="container">
+        <div class="wrapper-title">
+          <h2 class="title">ОБО МНЕ</h2>
+        </div>
+
+        <div class="about__wrapper">
+          <div class="about__photo">
+            <div class="about__photo-left">
+              <picture class="picture">
+                <source type="image/jpeg" srcset="./src/images/about/content1-mobile.jpg" media="(max-width: 1024px)">
+                <source type="image/webp" srcset="./src/images/about/content1-mobile.webp" media="(max-width: 1024px)">
+                <source type="image/jpeg" srcset="./src/images/about/content1-desktop.jpg" media="(max-width: 4000px)">
+                <source type="image/webp" srcset="./src/images/about/content1-desktop.webp" media="(max-width: 4000px)">
+                <img src="./src/images/about/content1-desktop.jpg" alt="Обо мне">
+              </picture>
+            </div>
+            <div class="about__photo-right">
+              <picture class="picture">
+                <source type="image/jpeg" srcset="./src/images/about/content2-mobile.jpg" media="(max-width: 1024px)">
+                <source type="image/webp" srcset="./src/images/about/content2-mobile.webp" media="(max-width: 1024px)">
+                <source type="image/jpeg" srcset="./src/images/about/content2-desktop.jpg" media="(max-width: 4000px)">
+                <source type="image/webp" srcset="./src/images/about/content2-desktop.webp" media="(max-width: 4000px)">
+                <img src="./src/images/about/content2-desktop.jpg" alt="Обо мне">
+              </picture>
+
+              <picture class="picture picture--desktop">
+                <source type="image/jpeg" srcset="./src/images/about/content3-desktop.jpg" media="(max-width: 4000px)">
+                <source type="image/webp" srcset="./src/images/about/content3-desktop.webp" media="(max-width: 4000px)">
+                <img src="./src/images/about/content3-desktop.jpg" alt="Обо мне">
+              </picture>
+            </div>
+          </div>
+          <div class="about__info">
+            <p>Привет! Меня зовут Дина&nbsp;&mdash; я&nbsp;тату мастер</p>
+            <p>В&nbsp;данной сфере 5&nbsp;лет и&nbsp;за&nbsp;моей спиной больше 500 сеансов разной сложности</p>
+            <p>Работаю в&nbsp;авторском стиле&nbsp;&mdash; <strong>акварель, ботаническая тематика</strong></p>
+            <p>Эскизы рисую индивидуально&nbsp;&mdash; бесплатно перед сеансом, под запрос клиента, не&nbsp;повторяю ни&nbsp;свои, ни&nbsp;чужие работы</p>
+            <div class="about__smear">
+              <span>Татуировка&nbsp;&mdash; это любовь к&nbsp;себе в&nbsp;новом проявлении</span>
+            </div>
+          </div>
+        </div>
+
+        <ul class="about__list">
+          <li class="about__item">
+            <div class="about__circle"></div>
+            <p class="about__content1">Набор для заживления</p>
+            <p class="about__content2">Пленка и&nbsp;мазь или заживляющая пленка</p>
+          </li>
+          <li class="about__item">
+            <div class="about__circle"></div>
+            <p class="about__content1">Бесплатный эскиз</p>
+            <p class="about__content2">Рисую и&nbsp;показываю перед сеансом</p>
+          </li>
+          <li class="about__item">
+            <div class="about__circle"></div>
+            <p class="about__content1">Перекрытие старых тату</p>
+            <p class="about__content2">Перекрою твои шрамы и&nbsp;неудачное тату</p>
+          </li>
+          <li class="about__item">
+            <div class="about__circle"></div>
+            <p class="about__content1">Уютная атмосфера</p>
+            <p class="about__content2">Душевные разговоры за&nbsp;чашечкой чая</p>
+          </li>
+        </ul>
+
+        <p class="about__content-shadow text-center">Временных татуировок не&nbsp;существует, поэтому эта история только для тех, кто уверен в&nbsp;своих решениях и&nbsp;готов носить рисунок
+          на&nbsp;своем теле всю жизнь</p>
+      </div>
+    </section>
+    <section class="first"></section>
     <section class="about "></section>
     <section class="portfolio ">
       <div class="container">
         <div class="wrapper-title">
-          <h2 class="title">Портфолио</h2>
+          <h2 class="title">ПОРТФОЛИО</h2>
         </div>
 
         <div class="portfolio__wrapper">
-          <picture class="picture">
-            <source type="image/webp" srcset="./src/images/portfolio/content1.webp" media="(max-width: 2400px)">
-            <source type="image/jpeg" srcset="./src/images/portfolio/content1.jpg" media="(max-width: 2400px)">
+          <picture class="picture picture__portfolio">
+            <source type="image/webp" srcset="./src/images/portfolio/content1.webp" media="(max-width: 1024px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content1.jpg" media="(max-width: 1024px)">
             <img src="./src/images/portfolio/content1.jpg" alt="Портфолио">
           </picture>
 
           <picture class="picture">
-            <source type="image/webp" srcset="./src/images/portfolio/content2.webp" media="(max-width: 2400px)">
-            <source type="image/jpeg" srcset="./src/images/portfolio/content2.jpg" media="(max-width: 2400px)">
+            <source type="image/webp" srcset="./src/images/portfolio/content2.webp" media="(max-width: 1024px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content2.jpg" media="(max-width: 1024px)">
             <img src="./src/images/portfolio/content2.jpg" alt="Портфолио">
           </picture>
 
           <picture class="picture">
-            <source type="image/webp" srcset="./src/images/portfolio/content3.webp" media="(max-width: 2400px)">
-            <source type="image/jpeg" srcset="./src/images/portfolio/content3.jpg" media="(max-width: 2400px)">
+            <source type="image/webp" srcset="./src/images/portfolio/content3.webp" media="(max-width: 1024px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content3.jpg" media="(max-width: 1024px)">
             <img src="./src/images/portfolio/content3.jpg" alt="Портфолио">
           </picture>
 
-          <picture class="picture">
-            <source type="image/webp" srcset="./src/images/portfolio/content4.webp" media="(max-width: 2400px)">
-            <source type="image/jpeg" srcset="./src/images/portfolio/content4.jpg" media="(max-width: 2400px)">
-            <img src="./src/images/portfolio/content4.jpg" alt="Портфолио">
+          <picture class="picture picture--desktop">
+            <!-- <source type="image/webp" srcset="./src/images/portfolio/content3.webp" media="(max-width: 1024px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content3.jpg" media="(max-width: 1024px)"> -->
+            <source type="image/webp" srcset="./src/images/portfolio/content4-desktop.webp" media="(max-width: 4000px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content4-desktop.jpg" media="(max-width: 400px)">
+            <img src="./src/images/portfolio/content4-desktop.jpg" alt="Портфолио">
+          </picture>
+
+          <picture class="picture picture--desktop">
+            <!-- <source type="image/webp" srcset="./src/images/portfolio/content3.webp" media="(max-width: 1024px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content3.jpg" media="(max-width: 1024px)"> -->
+            <source type="image/webp" srcset="./src/images/portfolio/content5-desktop.webp" media="(max-width: 4000px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content5-desktop.jpg" media="(max-width: 400px)">
+            <img src="./src/images/portfolio/content5-desktop.jpg" alt="Портфолио">
+          </picture>
+
+          <picture class="picture picture--desktop">
+            <!-- <source type="image/webp" srcset="./src/images/portfolio/content3.webp" media="(max-width: 1024px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content3.jpg" media="(max-width: 1024px)"> -->
+            <source type="image/webp" srcset="./src/images/portfolio/content6-desktop.webp" media="(max-width: 4000px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content6-desktop.jpg" media="(max-width: 400px)">
+            <img src="./src/images/portfolio/content6-desktop.jpg" alt="Портфолио">
+          </picture>
+
+          <picture class="picture picture--desktop">
+            <!-- <source type="image/webp" srcset="./src/images/portfolio/content3.webp" media="(max-width: 1024px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content3.jpg" media="(max-width: 1024px)"> -->
+            <source type="image/webp" srcset="./src/images/portfolio/content7-desktop.webp" media="(max-width: 4000px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content7-desktop.jpg" media="(max-width: 400px)">
+            <img src="./src/images/portfolio/content7-desktop.jpg" alt="Портфолио">
+          </picture>
+
+          <picture class="picture picture--desktop">
+            <!-- <source type="image/webp" srcset="./src/images/portfolio/content3.webp" media="(max-width: 1024px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content3.jpg" media="(max-width: 1024px)"> -->
+            <source type="image/webp" srcset="./src/images/portfolio/content8-desktop.webp" media="(max-width: 4000px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content8-desktop.jpg" media="(max-width: 400px)">
+            <img src="./src/images/portfolio/content8-desktop.jpg" alt="Портфолио">
+          </picture>
+
+          <picture class="picture picture--desktop">
+            <!-- <source type="image/webp" srcset="./src/images/portfolio/content3.webp" media="(max-width: 1024px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content3.jpg" media="(max-width: 1024px)"> -->
+            <source type="image/webp" srcset="./src/images/portfolio/content9-desktop.webp" media="(max-width: 4000px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content9-desktop.jpg" media="(max-width: 400px)">
+            <img src="./src/images/portfolio/content9-desktop.jpg" alt="Портфолио">
+          </picture>
+
+          <picture class="picture picture--desktop">
+            <!-- <source type="image/webp" srcset="./src/images/portfolio/content3.webp" media="(max-width: 1024px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content3.jpg" media="(max-width: 1024px)"> -->
+            <source type="image/webp" srcset="./src/images/portfolio/content10-desktop.webp" media="(max-width: 4000px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content10-desktop.jpg" media="(max-width: 400px)">
+            <img src="./src/images/portfolio/content10-desktop.jpg" alt="Портфолио">
           </picture>
 
           <picture class="picture">
-            <source type="image/webp" srcset="./src/images/portfolio/content5.webp" media="(max-width: 2400px)">
-            <source type="image/jpeg" srcset="./src/images/portfolio/content5.jpg" media="(max-width: 2400px)">
-            <img src="./src/images/portfolio/content5.jpg" alt="Портфолио">
+            <source type="image/webp" srcset="./src/images/portfolio/content11.webp" media="(max-width: 1024px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content11.jpg" media="(max-width: 1024px)">
+            <img src="./src/images/portfolio/content11.jpg" alt="Портфолио">
           </picture>
 
           <picture class="picture">
-            <source type="image/webp" srcset="./src/images/portfolio/content6.webp" media="(max-width: 2400px)">
-            <source type="image/jpeg" srcset="./src/images/portfolio/content6.jpg" media="(max-width: 2400px)">
-            <img src="./src/images/portfolio/content6.jpg" alt="Портфолио">
+            <source type="image/webp" srcset="./src/images/portfolio/content12.webp" media="(max-width: 1024px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content12.jpg" media="(max-width: 1024px)">
+            <img src="./src/images/portfolio/content12.jpg" alt="Портфолио">
           </picture>
 
           <picture class="picture">
-            <source type="image/webp" srcset="./src/images/portfolio/content7.webp" media="(max-width: 2400px)">
-            <source type="image/jpeg" srcset="./src/images/portfolio/content7.jpg" media="(max-width: 2400px)">
-            <img src="./src/images/portfolio/content7.jpg" alt="Портфолио">
+            <source type="image/webp" srcset="./src/images/portfolio/content13.webp" media="(max-width: 1024px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content13.jpg" media="(max-width: 1024px)">
+            <img src="./src/images/portfolio/content13.jpg" alt="Портфолио">
           </picture>
 
           <picture class="picture">
-            <source type="image/webp" srcset="./src/images/portfolio/content8.webp" media="(max-width: 2400px)">
-            <source type="image/jpeg" srcset="./src/images/portfolio/content8.jpg" media="(max-width: 2400px)">
-            <img src="./src/images/portfolio/content8.jpg" alt="Портфолио">
+            <source type="image/webp" srcset="./src/images/portfolio/content14.webp" media="(max-width: 1024px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content14.jpg" media="(max-width: 1024px)">
+            <img src="./src/images/portfolio/content14.jpg" alt="Портфолио">
+          </picture>
+
+          <picture class="picture">
+            <source type="image/webp" srcset="./src/images/portfolio/content15.webp" media="(max-width: 1024px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content15.jpg" media="(max-width: 1024px)">
+            <img src="./src/images/portfolio/content15.jpg" alt="Портфолио">
+          </picture>
+
+          <picture class="picture picture--desktop">
+            <!-- <source type="image/webp" srcset="./src/images/portfolio/content3.webp" media="(max-width: 1024px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content3.jpg" media="(max-width: 1024px)"> -->
+            <source type="image/webp" srcset="./src/images/portfolio/content16-desktop.webp" media="(max-width: 4000px)">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content16-desktop.jpg" media="(max-width: 400px)">
+            <img src="./src/images/portfolio/content16-desktop.jpg" alt="Портфолио">
           </picture>
         </div>
 
-        <div class="portfolio__information">
-          <p>Перекрытие шрамов и&nbsp;неудачных тату</p>
-          <span>Перекрытия&nbsp;&mdash; это всегда непросто:</span>
-          <ul class="list portfolio__list">
-            <li><span>ограниченная цветовая палитра, так как светлые и&nbsp;теплые оттенки не&nbsp;перекрывают
-                темные</span></li>
-            <li><span>эскиз должен скрыть старую татуировку полностью, поэтому он&nbsp;обычно больше
-                по&nbsp;размеру</span></li>
-            <li><span>темные части старой татуировки останутся там, где они были, и&nbsp;нужно под них
-                подстраиваться</span></li>
-          </ul>
+        <div class="portfolio__flex">
+          <div class="portfolio__information">
+            <p>Перекрытие шрамов и&nbsp;неудачных тату</p>
+            <span>Перекрытия&nbsp;&mdash; это всегда непросто:</span>
+            <ul class="list portfolio__list">
+              <li><span>ограниченная цветовая палитра, так как светлые и&nbsp;теплые оттенки не&nbsp;перекрывают
+                  темные</span></li>
+              <li><span>эскиз должен скрыть старую татуировку полностью, поэтому он&nbsp;обычно больше
+                  по&nbsp;размеру</span></li>
+              <li><span>темные части старой татуировки останутся там, где они были, и&nbsp;нужно под них
+                  подстраиваться</span></li>
+            </ul>
 
-          <p>
-            Выпуклость никуда не&nbsp;пропадет и&nbsp;ее&nbsp;нужно прятать рисунком, поэтому если их&nbsp;закрасить
-            просто так, они станут заметнее на&nbsp;фоне ровной кожи
-          </p>
+            <p>
+              Выпуклость никуда не&nbsp;пропадет и&nbsp;ее&nbsp;нужно прятать рисунком, поэтому если их&nbsp;закрасить
+              просто так, они станут заметнее на&nbsp;фоне ровной кожи
+            </p>
 
-          <p>Любые шрамы перекрывать нужно очень осторожно</p>
+            <p>Любые шрамы перекрывать нужно очень осторожно</p>
 
 
-        </div>
-
-        <div class="swiper portfolio__swiper js-swiper-portfolio">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide portfolio__slides">
-              <picture class="picture picture--portfolio">
-                <source type="image/jpeg" srcset="./src/images/portfolio/before-after/before1.jpg"
-                  media="(max-width: 1024px)">
-                <source type="image/webp" srcset="./src/images/portfolio/before-after/before1.webp"
-                  media="(max-width: 1024px)">
-                <!-- <source type="image/jpeg" srcset="img/guests-768.jpg" media="(max-width: 968px)"> -->
-                <!-- <source type="image/jpeg" srcset="img/guests-1024.jpg" media="(max-width: 1440px)"> -->
-                <!-- <source type="image/webp" srcset="img/superskid/slide.webp" media="(max-width: 2400px)"> -->
-                <!-- <source type="image/jpeg" srcset="img/superskid/slide.jpg" media="(max-width: 2400px)"> -->
-                <img src="./src/images/portfolio/before-after/before1.jpg" alt="Работа до">
-              </picture>
-
-              <picture class="picture picture--portfolio">
-                <source type="image/jpeg" srcset="./src/images/portfolio/before-after/after1.jpg"
-                  media="(max-width: 1024px)">
-                <source type="image/webp" srcset="./src/images/portfolio/before-after/after1.webp"
-                  media="(max-width: 1024px)">
-                <img src="./src/images/portfolio/before-after/after1.jpg" alt="Работа после">
-              </picture>
-            </div>
-
-            <div class="swiper-slide portfolio__slides">
-              <picture class="picture picture--portfolio">
-                <source type="image/jpeg" srcset="./src/images/portfolio/before-after/before2.jpg"
-                  media="(max-width: 1024px)">
-                <source type="image/webp" srcset="./src/images/portfolio/before-after/before2.webp"
-                  media="(max-width: 1024px)">
-                <!-- <source type="image/jpeg" srcset="img/guests-768.jpg" media="(max-width: 968px)"> -->
-                <!-- <source type="image/jpeg" srcset="img/guests-1024.jpg" media="(max-width: 1440px)"> -->
-                <!-- <source type="image/webp" srcset="img/superskid/slide.webp" media="(max-width: 2400px)"> -->
-                <!-- <source type="image/jpeg" srcset="img/superskid/slide.jpg" media="(max-width: 2400px)"> -->
-                <img src="./src/images/portfolio/before-after/before2.jpg" alt="Работа до">
-              </picture>
-
-              <picture class="picture picture--portfolio">
-                <source type="image/jpeg" srcset="./src/images/portfolio/before-after/after2.jpg"
-                  media="(max-width: 1024px)">
-                <source type="image/webp" srcset="./src/images/portfolio/before-after/after2.webp"
-                  media="(max-width: 1024px)">
-                <img src="./src/images/portfolio/before-after/after2.jpg" alt="Работа после">
-              </picture>
-            </div>
-
-            <div class="swiper-slide portfolio__slides">
-              <picture class="picture picture--portfolio">
-                <source type="image/jpeg" srcset="./src/images/portfolio/before-after/before3.jpg"
-                  media="(max-width: 1024px)">
-                <source type="image/webp" srcset="./src/images/portfolio/before-after/before3.webp"
-                  media="(max-width: 1024px)">
-                <!-- <source type="image/jpeg" srcset="img/guests-768.jpg" media="(max-width: 968px)"> -->
-                <!-- <source type="image/jpeg" srcset="img/guests-1024.jpg" media="(max-width: 1440px)"> -->
-                <!-- <source type="image/webp" srcset="img/superskid/slide.webp" media="(max-width: 2400px)"> -->
-                <!-- <source type="image/jpeg" srcset="img/superskid/slide.jpg" media="(max-width: 2400px)"> -->
-                <img src="./src/images/portfolio/before-after/before3.jpg" alt="Работа до">
-              </picture>
-
-              <picture class="picture picture--portfolio">
-                <source type="image/jpeg" srcset="./src/images/portfolio/before-after/after3.jpg"
-                  media="(max-width: 1024px)">
-                <source type="image/webp" srcset="./src/images/portfolio/before-after/after3.webp"
-                  media="(max-width: 1024px)">
-                <img src="./src/images/portfolio/before-after/after3.jpg" alt="Работа после">
-              </picture>
-            </div>
-
-            <div class="swiper-slide portfolio__slides">
-              <picture class="picture picture--portfolio">
-                <source type="image/jpeg" srcset="./src/images/portfolio/before-after/before4.jpg"
-                  media="(max-width: 1024px)">
-                <source type="image/webp" srcset="./src/images/portfolio/before-after/before4.webp"
-                  media="(max-width: 1024px)">
-                <!-- <source type="image/jpeg" srcset="img/guests-768.jpg" media="(max-width: 968px)"> -->
-                <!-- <source type="image/jpeg" srcset="img/guests-1024.jpg" media="(max-width: 1440px)"> -->
-                <!-- <source type="image/webp" srcset="img/superskid/slide.webp" media="(max-width: 2400px)"> -->
-                <!-- <source type="image/jpeg" srcset="img/superskid/slide.jpg" media="(max-width: 2400px)"> -->
-                <img src="./src/images/portfolio/before-after/before4.jpg" alt="Работа до">
-              </picture>
-
-              <picture class="picture picture--portfolio">
-                <source type="image/jpeg" srcset="./src/images/portfolio/before-after/after4.jpg"
-                  media="(max-width: 1024px)">
-                <source type="image/webp" srcset="./src/images/portfolio/before-after/after4.webp"
-                  media="(max-width: 1024px)">
-                <img src="./src/images/portfolio/before-after/after4.jpg" alt="Работа после">
-              </picture>
-            </div>
           </div>
+          <!-- </div> -->
 
-          <div class="swiper-button-prev portfolio__swiper-button-prev"></div>
-          <div class="swiper-button-next portfolio__swiper-button-next"></div>
-        </div>
 
-        <div class="portfolio__consultation text-center">
-          <p>Если у&nbsp;тебя есть&nbsp;то, что хочешь перекрыть&nbsp;&mdash; то&nbsp;тебе ко&nbsp;мне</p>
-          <p>Напиши мне и&nbsp;мы&nbsp;обсудим об&nbsp;этом&nbsp;&mdash; консультация бесплатно</p>
+          <div class="swiper portfolio__swiper js-swiper-portfolio">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide portfolio__slides">
+                <!-- <div class=""> -->
+                <picture class="picture picture--portfolio">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/before1.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/before1.webp" media="(max-width: 1024px)">
+                  <!-- <source type="image/jpeg" srcset="img/guests-768.jpg" media="(max-width: 968px)"> -->
+                  <!-- <source type="image/jpeg" srcset="img/guests-1024.jpg" media="(max-width: 1440px)"> -->
+                  <!-- <source type="image/webp" srcset="img/superskid/slide.webp" media="(max-width: 2400px)"> -->
+                  <!-- <source type="image/jpeg" srcset="img/superskid/slide.jpg" media="(max-width: 2400px)"> -->
+                  <img src="./src/images/portfolio/before-after/before1.jpg" alt="Работа до">
+                </picture>
 
-          <a class="link text-center" href="#">Записаться на сеанс</a>
+                <picture class="picture picture--portfolio">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/after1.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/after1.webp" media="(max-width: 1024px)">
+                  <img src="./src/images/portfolio/before-after/after1.jpg" alt="Работа после">
+                </picture>
+                <!-- </div> -->
+              </div>
+
+              <div class="swiper-slide portfolio__slides">
+
+                <!-- <div class=""> -->
+                <picture class="picture picture--portfolio">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/before2.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/before2.webp" media="(max-width: 1024px)">
+                  <!-- <source type="image/jpeg" srcset="img/guests-768.jpg" media="(max-width: 968px)"> -->
+                  <!-- <source type="image/jpeg" srcset="img/guests-1024.jpg" media="(max-width: 1440px)"> -->
+                  <!-- <source type="image/webp" srcset="img/superskid/slide.webp" media="(max-width: 2400px)"> -->
+                  <!-- <source type="image/jpeg" srcset="img/superskid/slide.jpg" media="(max-width: 2400px)"> -->
+                  <img src="./src/images/portfolio/before-after/before2.jpg" alt="Работа до">
+                </picture>
+
+                <picture class="picture picture--portfolio">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/after2.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/after2.webp" media="(max-width: 1024px)">
+                  <img src="./src/images/portfolio/before-after/after2.jpg" alt="Работа после">
+                </picture>
+                <!-- </div> -->
+              </div>
+
+              <div class="swiper-slide portfolio__slides">
+                <!-- <div class=""> -->
+                <picture class="picture picture--portfolio">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/before3.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/before3.webp" media="(max-width: 1024px)">
+                  <!-- <source type="image/jpeg" srcset="img/guests-768.jpg" media="(max-width: 968px)"> -->
+                  <!-- <source type="image/jpeg" srcset="img/guests-1024.jpg" media="(max-width: 1440px)"> -->
+                  <!-- <source type="image/webp" srcset="img/superskid/slide.webp" media="(max-width: 2400px)"> -->
+                  <!-- <source type="image/jpeg" srcset="img/superskid/slide.jpg" media="(max-width: 2400px)"> -->
+                  <img src="./src/images/portfolio/before-after/before3.jpg" alt="Работа до">
+                </picture>
+
+                <picture class="picture picture--portfolio">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/after3.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/after3.webp" media="(max-width: 1024px)">
+                  <img src="./src/images/portfolio/before-after/after3.jpg" alt="Работа после">
+                </picture>
+                <!-- </div> -->
+              </div>
+
+              <div class="swiper-slide portfolio__slides">
+                <picture class="picture picture--portfolio">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/before4.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/before4.webp" media="(max-width: 1024px)">
+                  <!-- <source type="image/jpeg" srcset="img/guests-768.jpg" media="(max-width: 968px)"> -->
+                  <!-- <source type="image/jpeg" srcset="img/guests-1024.jpg" media="(max-width: 1440px)"> -->
+                  <!-- <source type="image/webp" srcset="img/superskid/slide.webp" media="(max-width: 2400px)"> -->
+                  <!-- <source type="image/jpeg" srcset="img/superskid/slide.jpg" media="(max-width: 2400px)"> -->
+                  <img src="./src/images/portfolio/before-after/before4.jpg" alt="Работа до">
+                </picture>
+
+                <picture class="picture picture--portfolio">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/after4.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/after4.webp" media="(max-width: 1024px)">
+                  <img src="./src/images/portfolio/before-after/after4.jpg" alt="Работа после">
+                </picture>
+              </div>
+
+              <div class="swiper-slide portfolio__slides">
+                <picture class="picture picture--portfolio">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/before5.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/before5.webp" media="(max-width: 1024px)">
+                  <!-- <source type="image/jpeg" srcset="img/guests-768.jpg" media="(max-width: 968px)"> -->
+                  <!-- <source type="image/jpeg" srcset="img/guests-1024.jpg" media="(max-width: 1440px)"> -->
+                  <!-- <source type="image/webp" srcset="img/superskid/slide.webp" media="(max-width: 2400px)"> -->
+                  <!-- <source type="image/jpeg" srcset="img/superskid/slide.jpg" media="(max-width: 2400px)"> -->
+                  <img src="./src/images/portfolio/before-after/before5.jpg" alt="Работа до">
+                </picture>
+
+                <picture class="picture picture--portfolio">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/after5.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/after5.webp" media="(max-width: 1024px)">
+                  <img src="./src/images/portfolio/before-after/after5.jpg" alt="Работа после">
+                </picture>
+              </div>
+
+              <div class="swiper-slide portfolio__slides">
+                <picture class="picture picture--portfolio">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/before6.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/before6.webp" media="(max-width: 1024px)">
+                  <!-- <source type="image/jpeg" srcset="img/guests-768.jpg" media="(max-width: 968px)"> -->
+                  <!-- <source type="image/jpeg" srcset="img/guests-1024.jpg" media="(max-width: 1440px)"> -->
+                  <!-- <source type="image/webp" srcset="img/superskid/slide.webp" media="(max-width: 2400px)"> -->
+                  <!-- <source type="image/jpeg" srcset="img/superskid/slide.jpg" media="(max-width: 2400px)"> -->
+                  <img src="./src/images/portfolio/before-after/before6.jpg" alt="Работа до">
+                </picture>
+
+                <picture class="picture picture--portfolio">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/after6.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/after6.webp" media="(max-width: 1024px)">
+                  <img src="./src/images/portfolio/before-after/after6.jpg" alt="Работа после">
+                </picture>
+              </div>
+            </div>
+
+            <div class="swiper-button-prev portfolio__swiper-button-prev"></div>
+            <div class="swiper-button-next portfolio__swiper-button-next"></div>
+          </div>
+          <!-- </div> -->
+
+          <div class="portfolio__consultation text-center">
+            <p>Если у&nbsp;тебя есть&nbsp;то, что хочешь перекрыть&nbsp;&mdash; то&nbsp;тебе ко&nbsp;мне</p>
+            <p>Напиши мне и&nbsp;мы&nbsp;обсудим об&nbsp;этом&nbsp;&mdash; консультация бесплатно</p>
+
+            <a class="link text-center" href="#">Записаться на сеанс</a>
+          </div>
         </div>
 
         <!-- </div> -->
