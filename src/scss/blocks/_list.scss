@@ -1,4 +1,9 @@
 .list {
+
+    &__content1 {
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
     &--cards {
 
         & li {
@@ -8,13 +13,25 @@
             text-align: center;
             position: relative;
             margin-bottom: 31px;
-    
+
+            & .circle {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: $violet1;
+                width: 53px;
+                height: 53px;
+                border-radius: 50%
+
+            }
+
             & p {
                 font-size: 18px;
                 line-height: 19px;
             }
-    
-            & .about__circle::after {
+
+            & .circle::after {
                 content: '1';
                 color: $white;
                 position: absolute;
@@ -22,16 +39,16 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
             }
-    
-            &:nth-child(2) .about__circle::after {
+
+            &:nth-child(2) .circle::after {
                 content: '2';
             }
-    
-            &:nth-child(3) .about__circle::after {
+
+            &:nth-child(3) .circle::after {
                 content: '3';
             }
-    
-            &:nth-child(4) .about__circle::after {
+
+            &:nth-child(4) .circle::after {
                 content: '4';
             }
         }
@@ -49,9 +66,15 @@
         @media (min-width: 1920px) {
             & {
                 flex-wrap: nowrap;
-                
+
                 & li {
-                    width: calc(25% - 20px);
+                    width: calc(25% - 48px);
+                    padding: 75px 10px 41px 10px;
+
+                    & .circle {
+                        width: 84px;
+                        height: 84px;
+                    }
                 }
             }
         }

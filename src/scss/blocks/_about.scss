@@ -40,22 +40,10 @@
         margin-bottom: 31px;
     }
 
-    &__content1 {
-        font-weight: 600;
-        margin-bottom: 10px;
-    }
-
-    &__circle {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: $violet1;
-        width: 53px;
-        height: 53px;
-        border-radius: 50%
-
-    }
+    // &__content1 {
+    //     font-weight: 600;
+    //     margin-bottom: 10px;
+    // }
 
     &__content-shadow {
         background: url(../images/about/shadow-mobile.png) no-repeat;
@@ -164,9 +152,9 @@
             line-height: 26px;
             padding: 0 20%;
         }
-        
-        // &__list {
-            
-        // }
+
+        &__wrapper {
+            margin-bottom: 105px;
+        }
     }
 }
