@@ -6,8 +6,6 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.cdnfonts.com/css/constantine");
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@400;500;700&family=Poppins:wght@400;500;700;900&family=Raleway:wght@200;400;600&family=Roboto:wght@300&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -451,6 +449,10 @@ ul {
   left: auto;
 }
 
+.none {
+  display: none;
+}
+
 @media (min-width: 375px) {
   .border-line {
     width: 23.44vw;
@@ -471,6 +473,48 @@ ul {
     background-image: url("../images/bg-button-md.png");
   }
 }
+.list--cards li {
+  background-color: rgba(218, 185, 235, 0.5);
+  padding: 32px 10px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 31px;
+}
+.list--cards li p {
+  font-size: 18px;
+  line-height: 19px;
+}
+.list--cards li .about__circle::after {
+  content: "1";
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.list--cards li:nth-child(2) .about__circle::after {
+  content: "2";
+}
+.list--cards li:nth-child(3) .about__circle::after {
+  content: "3";
+}
+.list--cards li:nth-child(4) .about__circle::after {
+  content: "4";
+}
+@media (min-width: 1024px) {
+  .list--cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: inherit;
+    flex-wrap: wrap;
+  }
+  .list--cards li {
+    width: calc(50% - 20px);
+  }
+}
+
 .container {
   margin: 0 10px;
 }
@@ -753,133 +797,71 @@ ul {
   height: 28px;
 }
 
-* {
-  padding: 0px;
-  margin: 0px;
-  border: none;
+.first {
+  margin-top: 50px;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Links */
-a,
-a:link,
-a:visited {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-/* Common */
-aside,
-nav,
-footer,
-header,
-section,
-main {
-  display: block;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  font-size: inherit;
-  font-weight: inherit;
-}
-
-ul,
-ul li {
-  list-style: none;
-}
-
-img {
-  vertical-align: top;
-}
-
-img,
-svg {
-  max-width: 100%;
-  height: auto;
-}
-
-address {
-  font-style: normal;
-}
-
-/* Form */
-input,
-textarea,
-button,
-select {
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
-  background-color: transparent;
-}
-
-input::-ms-clear {
-  display: none;
-}
-
-button,
-input[type=submit] {
-  display: inline-block;
-  box-shadow: none;
-  background-color: transparent;
-  background: none;
-  cursor: pointer;
-}
-
-input:focus,
-input:active,
-button:focus,
-button:active {
-  outline: none;
-}
-
-button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
-}
-
-label {
-  cursor: pointer;
-}
-
-legend {
-  display: block;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: "Manrope", sans-serif;
-  color: #22082b;
-}
-
-.none {
-  display: none;
-}
-
-.no-scroll {
+/* модальное окно */
+.first__modal {
+  position: fixed;
   overflow-y: hidden;
+  background: rgba(226, 226, 226, 0.7);
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
 }
 
-.first__btn:hover {
-  opacity: 0.7;
-  transition: 0.1s all ease-in;
+.modal-sign-up {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.modal-main {
+  position: relative;
+  width: 260px;
+  height: 208px;
+  border-radius: 30px;
+  background: #d6cdd9;
+  margin: 25vh auto;
+}
+
+.modal-info {
+  position: absolute;
+  padding: 25px 10px;
+  margin: 19px;
+  border-radius: 30px;
+  border: 3px solid #fff;
+  color: #22082b;
+  font-family: Constantine;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+
+.modal__desc {
+  font-size: 25px;
+  margin-bottom: 17px;
+}
+
+.container {
+  max-width: 360px;
+  padding: 0 5px;
+  margin: 0 auto;
+}
+
+.first__content {
+  position: relative;
+}
+
+.first__title-mobile {
+  width: 150px;
+  margin: 0 auto;
 }
 
 .social__list a:hover img,
@@ -1408,35 +1390,6 @@ body {
 .about__wrapper {
   margin-bottom: 31px;
 }
-.about__item {
-  background-color: rgba(218, 185, 235, 0.5);
-  padding: 32px 10px;
-  border-radius: 10px;
-  text-align: center;
-  position: relative;
-  margin-bottom: 31px;
-}
-.about__item p {
-  font-size: 18px;
-  line-height: 19px;
-}
-.about__item .about__circle::after {
-  content: "1";
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.about__item:nth-child(2) .about__circle::after {
-  content: "2";
-}
-.about__item:nth-child(3) .about__circle::after {
-  content: "3";
-}
-.about__item:nth-child(4) .about__circle::after {
-  content: "4";
-}
 .about__content1 {
   font-weight: 600;
   margin-bottom: 10px;
@@ -1468,19 +1421,13 @@ body {
   }
 }
 @media (min-width: 1024px) {
-  .about__wrapper, .about__list {
+  .about__wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: inherit;
   }
   .about__photo, .about__info {
-    width: calc(50% - 20px);
-  }
-  .about__list {
-    flex-wrap: wrap;
-  }
-  .about__item {
     width: calc(50% - 20px);
   }
   .about__content-shadow {
