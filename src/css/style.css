@@ -514,6 +514,14 @@ ul {
     width: calc(50% - 20px);
   }
 }
+@media (min-width: 1920px) {
+  .list--cards {
+    flex-wrap: nowrap;
+  }
+  .list--cards li {
+    width: calc(25% - 20px);
+  }
+}
 
 .container {
   margin: 0 10px;

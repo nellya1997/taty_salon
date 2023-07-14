@@ -45,5 +45,15 @@
                 width: calc(50% - 20px);
             }
         }
+
+        @media (min-width: 1920px) {
+            & {
+                flex-wrap: nowrap;
+                
+                & li {
+                    width: calc(25% - 20px);
+                }
+            }
+        }
     }
 }
