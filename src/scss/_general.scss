@@ -125,24 +125,13 @@ ul {
   }
 }
 
-// .wrapper-title {
-//   // position: relative;
+.none {
+	display: none;
+}
 
-//   // &::after,
-//   // &::before {
-//   //   position: absolute;
-//   //   content: '';
-//   //   top: 50%;
-//   //   width: 26%;
-//   //   height: 1px;
-//   //   background-color: $violet;
-//   // }
-
-//   // &::before {
-//   //   right: 0;
-//   //   left: auto;
-//   // }
-// }
+.card {
+  
+}
 
 @media (min-width: 375px) {
   .border-line {
