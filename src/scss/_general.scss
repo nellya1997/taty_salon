@@ -57,7 +57,11 @@ html {
 
   //чтобы убрать прыгающий скролл
   overflow-x: hidden;
-  margin-right: calc(-1 * (100vw - 100%));
+  // margin-right: calc(-1 * (100vw - 100%));
+
+  @media (min-width: 1920px) {
+    font-size: 44px;
+  }
 }
 
 body {
@@ -93,6 +97,7 @@ ul {
 }
 
 .link {
+  @include fonty(0.8rem, 600, 1.36em);
   text-decoration: none;
   display: block;
   padding: 17px 50px;
@@ -100,8 +105,6 @@ ul {
   background-size: 100% 100%;
   // background-size: contain;
   background-repeat: no-repeat;
-  // color: $purple;
-  @include fonty(1.13rem, 600, 1.36em);
 
   @media (min-width: 768px) {
     max-width: 388px;
@@ -157,9 +160,9 @@ ul {
 
   @media (min-width: 1280px) {
 
-    & {
-      font-size: 1.8rem;
-    }
+    // & {
+    //   font-size: 1.8rem;
+    // }
     &::after,
     &::before {
       width: 34%;
@@ -167,6 +170,11 @@ ul {
 }
 
   @media (min-width: 1920px) {
+
+    // & {
+    //   font-size: 1.8rem;
+    // }
+
     & span {
       max-width: 559px;
     }

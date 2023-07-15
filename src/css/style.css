@@ -384,7 +384,11 @@ html {
   scroll-behavior: smooth;
   color: #22082B;
   overflow-x: hidden;
-  margin-right: calc(-1 * (100vw - 100%));
+}
+@media (min-width: 1920px) {
+  html {
+    font-size: 44px;
+  }
 }
 
 body {
@@ -419,15 +423,15 @@ ul {
 }
 
 .link {
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.36em;
   text-decoration: none;
   display: block;
   padding: 17px 50px;
   background-image: url(../../../src/images/bg-button.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  font-size: 1.13rem;
-  font-weight: 600;
-  line-height: 1.36em;
 }
 @media (min-width: 768px) {
   .link {
@@ -478,9 +482,6 @@ ul {
   display: inline-block;
 }
 @media (min-width: 1280px) {
-  .title {
-    font-size: 1.8rem;
-  }
   .title::after, .title::before {
     width: 34%;
   }
