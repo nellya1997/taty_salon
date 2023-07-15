@@ -19,9 +19,9 @@
     });
 })();
 
-// js-swiper-portfolio
+// js-swiper
 
-const swiper1 = new Swiper('.js-swiper-portfolio', {
+const swiper1 = new Swiper('.js-swiper', {
     slidesPerView: 1,
     loop: true,
     spaceBetween: 50,
