@@ -19,6 +19,45 @@
     });
 })();
 
+//active navigation shows where user now:
+(function() {
+  const nav = document.querySelector('.nav__list');
+  const links = document.querySelectorAll('.nav__link');
+
+  window.addEventListener('scroll', () => {
+    let scrollDistance = window.scrollY;
+
+    document.querySelectorAll('.js-section').forEach((el, i) => {
+      
+      if(el.offsetTop - nav.clientHeight <= scrollDistance) {
+        links.forEach((el) => {
+          if (el.classList.contains('nav__link_active')) {
+            el.classList.remove('nav__link_active');
+          }
+        });
+        
+        links[i].classList.add('nav__link_active');
+      }
+    });
+  });
+})();
+
+
+//removing blocks with H1 and check-in button
+/*
+const firstTop = document.querySelector('.first__top');
+const checkIn = document.querySelector('.first__check-in');
+
+const leftSide = document.querySelector('.first__left-side');
+
+
+console.log(leftSide);
+leftSide.prepend(firstTop);
+leftSide.appendChild(checkIn);
+*/
+
+
+
 // js-swiper-portfolio
 
 const swiper1 = new Swiper('.js-swiper-portfolio', {
