@@ -1,8 +1,8 @@
 .first {
 
-    &__container {
-        padding: 0px 30px;
-    }
+    // &__container {
+    //     padding: 0px 30px;
+    // }
 
     &__top {
         img {
@@ -24,8 +24,8 @@
         gap: 10px;
         max-height: 755px;
         border: 1px solid $bg-color;
-        width: calc(269px + 564 * ((100vw - 320px) / 1920));
-        height: calc(219px + 537 * ((100vw - 320px) / 1920));
+        // width: calc(269px + 564 * ((100vw - 320px) / 1920));
+        // height: calc(219px + 537 * ((100vw - 320px) / 1920));
 
         picture {
             height: 130%;
@@ -70,25 +70,13 @@
             @include fonty(14px, 400, 19px);
             text-align: center;
         }
-
-        a {
-            font-family: 'Manrope';
-            @include fonty(14px, 600, 19px);
-            text-align: center;
-            display: block;
-            max-width: 224px;
-            margin: 0 auto;
-            padding: 15px 40px;
-            background-color: rgba(213, 189, 250, 1.0);
-            border-radius: 50px;
-        }
     }
 
     @media (min-width: 768px) {
 
 
         .first {
-            &__container {
+            &__wrapper {
                 padding-top: 45px;
                 @include flexy(row-reverse, space-between);
                 @include centry(91.4%);

@@ -60,46 +60,48 @@
   </header>
   <main>
     <section id="first" class="first js-section">
-      <div class="first__container">
+      <div class="container">
+        <div class="first__wrapper">
 
-        <div class="first__top">
-          <img src="./src/images/first/tattoo-logo.svg" alt="">
-          <p class="first__subtitle">В акварельном стиле</p>
-        </div>
-
-        <div class="first__girl">
-          <picture>
-            <img src="./src/images/first/girl.png" alt="тату салон">
-          </picture>
-          <div class="socials first__socials">
-            <a href="https://t.me/dinasynthetica" class="socails__item"><img src="./src/images/header/telegramm.svg" alt="telegramm"></a>
-            <a href="https://wa.me/+79600330101" class="socails__item"><img src="./src/images/header/what'sUpIcon.svg" alt="what's up"></a>
-            <a href="https://instagram.com/dina.synthetica?igshid=NjIwNzIyMDk2Mg==" class="socails__item"><img src="./src/images/header/instagramm.svg" alt="Instagramm"></a>
-            <a href="https://vk.com/dina_synthetica_tattoo" class="socails__item"><img src="./src/images/header/vk-icon.svg" alt="Vk"></a>
+          <div class="first__top">
+            <img src="./src/images/first/tattoo-logo.svg" alt="">
+            <p class="first__subtitle">В акварельном стиле</p>
           </div>
+
+          <div class="first__girl">
+            <picture>
+              <img src="./src/images/first/girl.png" alt="тату салон">
+            </picture>
+            <div class="socials first__socials">
+              <a href="https://t.me/dinasynthetica" class="socails__item"><img src="./src/images/header/telegramm.svg" alt="telegramm"></a>
+              <a href="https://wa.me/+79600330101" class="socails__item"><img src="./src/images/header/what'sUpIcon.svg" alt="what's up"></a>
+              <a href="https://instagram.com/dina.synthetica?igshid=NjIwNzIyMDk2Mg==" class="socails__item"><img src="./src/images/header/instagramm.svg" alt="Instagramm"></a>
+              <a href="https://vk.com/dina_synthetica_tattoo" class="socails__item"><img src="./src/images/header/vk-icon.svg" alt="Vk"></a>
+            </div>
+          </div>
+
+          <div class="first__left-side">
+            <picture class="first__img">
+              <img src="./src/images/first/tube-phone.png" alt="">
+            </picture>
+          </div>
+
+
+          <div class="first__check-in">
+            <p class="first__text">Для тех, кто уверен в&nbsp;своих решениях</p>
+            <a href="" class="link">Записаться на сеанс</a>
+          </div>
+
         </div>
-
-        <div class="first__left-side">
-          <picture class="first__img">
-            <img src="./src/images/first/tube-phone.png" alt="">
-          </picture>
-        </div>
-
-
-        <div class="first__check-in">
-          <p class="first__text">Для тех, кто уверен в&nbsp;своих решениях</p>
-          <a href="">Записаться на сеанс</a>
-        </div>
-
       </div>
 
     </section>
 
     <section id="about" class="about js-section">
       <div class="container">
-        <div class="wrapper-title">
-          <h2 class="title">ОБО МНЕ</h2>
-        </div>
+        <!-- <div class="wrapper-title"> -->
+        <h2 class="title">ОБО МНЕ</h2>
+        <!-- </div> -->
 
         <div class="about__wrapper">
           <div class="about__photo">
@@ -313,7 +315,7 @@
           <!-- </div> -->
 
 
-          <div class="swiper portfolio__swiper js-swiper-portfolio">
+          <div class="swiper portfolio__swiper js-swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide portfolio__slides">
                 <!-- <div class=""> -->
@@ -539,7 +541,27 @@
 
     <section id="memo" class="memo js-section"></section>
 
-    <section id="reviews" class="reviews js-section"></section>
+    <section id="reviews" class="reviews">
+      <div class="container">
+        <h2 class="title">ОТЗЫВЫ</h2>
+        <div class="swiper js-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <!-- <div class=""> -->
+              <picture class="picture">
+                <!-- <source type="image/jpeg" srcset="./src/images/portfolio/before-after/before1.jpg" media="(max-width: 1024px)"> -->
+                <!-- <source type="image/webp" srcset="./src/images/portfolio/before-after/before1.webp" media="(max-width: 1024px)"> -->
+                <!-- <source type="image/jpeg" srcset="img/guests-768.jpg" media="(max-width: 968px)"> -->
+                <!-- <source type="image/jpeg" srcset="img/guests-1024.jpg" media="(max-width: 1440px)"> -->
+                <source type="image/webp" srcset="img/superskid/slide.webp" media="(max-width: 4000px)">
+                <source type="image/jpeg" srcset="img/superskid/slide.jpg" media="(max-width: 4000px)">
+                <img src="./src/images/portfolio/before-after/before1.jpg" alt="Работа до">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
 

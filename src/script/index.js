@@ -51,7 +51,7 @@
   const checkIn = document.querySelector('.first__check-in');
   //в эти два объекта:
   const leftSide = document.querySelector('.first__left-side');
-  const firstContainer = document.querySelector('.first__container');
+  const firstContainer = document.querySelector('.first__wrapper');
   
   //определим контрольные точки где будет меняться расположение узлов первой секции:
   const widthMax = window.matchMedia('(min-width: 767px)');
@@ -87,9 +87,9 @@
 })();
 
 
-// js-swiper-portfolio
+// js-swiper
 
-const swiper1 = new Swiper('.js-swiper-portfolio', {
+const swiper1 = new Swiper('.js-swiper', {
     slidesPerView: 1,
     loop: true,
     spaceBetween: 50,
