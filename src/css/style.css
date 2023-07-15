@@ -365,7 +365,7 @@ template {
 @font-face {
   font-weight: 400;
   font-family: "Constantine", "font", sans-serif;
-  src: url(../fonts/Constantine.woff2) format("woff2"), url(../fonts/Constantine.woff) format("woff");
+  src: url(../fonts/Constantine.woff2) format("woff2"), url(../fonts/) format("woff");
 }
 * {
   box-sizing: border-box;
@@ -531,6 +531,7 @@ ul {
 @media (min-width: 1920px) {
   .list--cards {
     flex-wrap: nowrap;
+    margin-bottom: 104px;
   }
   .list--cards li {
     width: calc(25% - 48px);
@@ -866,11 +867,6 @@ ul {
 }
 @media (min-width: 567px) {
   .about__content-shadow {
-    padding-bottom: 74px;
-  }
-}
-@media (min-width: 567px) {
-  .about__content-shadow {
     padding-bottom: 116px;
   }
 }
@@ -885,6 +881,7 @@ ul {
     width: calc(50% - 20px);
   }
   .about__content-shadow {
+    font-family: "Constantine", "font", sans-serif;
     background: url(../images/about/shadow-desktop.png) no-repeat;
     background-position-y: bottom;
     padding-bottom: 135px;
@@ -951,6 +948,10 @@ ul {
   }
   .about__wrapper {
     margin-bottom: 105px;
+  }
+  .about__content-shadow {
+    font-size: 35px;
+    padding: 0 111px 219px 70px;
   }
 }
 
