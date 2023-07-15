@@ -155,28 +155,45 @@ ul {
     display: inline-block;
   }
 
+  @media (min-width: 1280px) {
+
+    & {
+      font-size: 1.8rem;
+    }
+    &::after,
+    &::before {
+      width: 34%;
+    }
 }
 
-@media (min-width: 375px) {
-  .border-line {
-    width: 23.44vw;
-  }
+  @media (min-width: 1920px) {
+    & span {
+      max-width: 559px;
+    }
 
-  .services {
-    @include m(bottom, 40);
-  }
 }
 
-@media (min-width: 768px) {
-  .link {
-    width: 100%;
-    font-size: 1rem;
-    display: block;
-  }
-}
+  @media (min-width: 375px) {
+    .border-line {
+      width: 23.44vw;
+    }
 
-@media (min-width: 1440px) {
-  .link {
-    background-image: url("../images/bg-button-md.png");
+    .services {
+      @include m(bottom, 40);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .link {
+      width: 100%;
+      font-size: 1rem;
+      display: block;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .link {
+      background-image: url("../images/bg-button-md.png");
+    }
   }
 }
