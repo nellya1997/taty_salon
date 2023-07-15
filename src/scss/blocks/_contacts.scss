@@ -61,22 +61,6 @@
       left: auto;
       width: 100px;
    }
-   .title {
-      font-size: 14px;
-   }
-   .title::before {
-      right: 0;
-      left: auto;
-   }
-   .title::after,
-   .title::before {
-      position: absolute;
-      content: "";
-      top: 50%;
-      width: calc(50% - 56px);
-      height: 1px;
-      background-color: #825890;
-   }
 }
 
 @media (min-width: 375px) {
@@ -110,14 +94,6 @@
          position: absolute;
          top: 4px;
          width: 168px;
-      }
-      .title {
-         font-size: 20px;
-      }
-   
-      .title::after,
-      .title::before {
-         width: calc(50% - 129px);
       }
    }
 }
@@ -178,14 +154,6 @@
          top: 2px;
          width: 307px;
       }
-      .title {
-         font-size: 26px;
-         font-family: "Constantine", "font", sans-serif;
-      }
-      .title::after,
-      .title::before {
-         width: calc(50% - 166px);
-      }
       
    }
 }
@@ -242,13 +210,6 @@
          top: 2px;
          width: 454px;
       }
-      .title {
-         font-size: 35px;
-      }
-      .title::after,
-      .title::before {
-         width: calc(50% - 294px);
-         height: 2px
-      }
+
    }
 }
