@@ -40,22 +40,11 @@
         margin-bottom: 31px;
     }
 
-    // &__content1 {
-    //     font-weight: 600;
-    //     margin-bottom: 10px;
-    // }
-
     &__content-shadow {
         background: url(../images/about/shadow-mobile.png) no-repeat;
         background-position-y: bottom;
         padding-bottom: 49px;
         background-size: 100%;
-    }
-
-    @media (min-width: 567px) {
-        &__content-shadow {
-            padding-bottom: 74px;
-        }
     }
 
     @media (min-width: 567px) {
@@ -75,6 +64,7 @@
         }
 
         &__content-shadow {
+            font-family: $constantine;
             background: url(../images/about/shadow-desktop.png) no-repeat;
             background-position-y: bottom;
             padding-bottom: 135px;
@@ -155,6 +145,11 @@
 
         &__wrapper {
             margin-bottom: 105px;
+        }
+
+        &__content-shadow {
+            font-size: 35px;
+            padding: 0 111px 219px 70px;
         }
     }
 }
