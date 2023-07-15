@@ -32,10 +32,10 @@
 
 @font-face {
   font-weight: 400;
-  font-family: "Constantine", "font", sans-serif;
+  font-family: "Constantine";
   src:
-    url('/src/fonts/Constantine.woff') format("woff"),
-    url('/src/fonts/Constantine.woff2') format("woff2");
+    url('../fonts/Constantine.woff') format("woff"),
+    url('../fonts/Constantine.woff2') format("woff2");
 }
 
 * {
@@ -165,7 +165,7 @@ ul {
     &::before {
       width: 34%;
     }
-}
+  }
 
   @media (min-width: 1920px) {
 
@@ -177,7 +177,7 @@ ul {
       max-width: 559px;
     }
 
-}
+  }
 
   @media (min-width: 375px) {
     .border-line {

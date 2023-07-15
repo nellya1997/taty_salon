@@ -364,7 +364,7 @@ template {
 }
 @font-face {
   font-weight: 400;
-  font-family: "Constantine", "font", sans-serif;
+  font-family: "Constantine";
   src: url("/src/fonts/Constantine.woff") format("woff"), url("/src/fonts/Constantine.woff2") format("woff2");
 }
 * {
