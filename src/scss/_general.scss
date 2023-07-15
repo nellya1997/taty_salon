@@ -125,7 +125,7 @@ ul {
 .title {
   font-family: Constantine, sans-serif;
   font-weight: 400;
-  font-size: 1.45rem;
+  font-size: 0.75rem;
   line-height: 1.2;
   color: $dark;
   text-align: center;
@@ -138,7 +138,7 @@ ul {
     content: "";
     top: 50%;
     left: 0;
-    width: calc(50% - 114px);
+    width: 30%;
     height: 1px;
     background-color: $violet;
   }
@@ -147,11 +147,14 @@ ul {
     right: 0;
     left: auto;
   }
-}
 
-//page 97???
-.none {
-  display: none;
+  & span {
+    // max-width: 559px;
+    max-width: 119px;
+    padding: 0 20px;
+    display: inline-block;
+  }
+
 }
 
 @media (min-width: 375px) {
