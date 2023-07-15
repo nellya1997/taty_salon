@@ -1,7 +1,252 @@
 .contacts {
-    background-color: red;
-    width: 100px;
-    height: 100px;
-    color: green;
-    border: 15px solid black;
+   .contact-badge {
+      @include flexy(column, space-between, flex-start);
+      gap: 15px;
+   }
+   &__wrapper {
+      @include flexy(row, center, center);
+      flex-wrap: wrap;
+      gap: 40px;
+      padding-top: 20px;
+   }
+
+   &__info {
+      border-radius: 10px;
+      background: rgba(218, 185, 235, 0.5);
+      padding: 20px;
+      width: 229px;
+      margin: 0 auto;
+      box-shadow: 0px 0px 10px 15px rgba(197, 192, 220, 0.2);
+   }
+   &__atelier {
+      position: relative;
+      @include flexy(row, center, center);
+      gap: 7px;
+      padding-right: 36px;
+   }
+
+   &__atelier-title {
+      writing-mode: vertical-lr;
+      text-orientation: upright;
+      color: #562667;
+      font-family: Constantine;
+      @include fonty(28px, 400, 30px);
+   }
+
+   &__atelier-video {
+      video {
+         width: 229px;
+         height: 234px;
+         border: 3px solid red;
+         background: #e3cfcf;
+      }
+   }
+   &__img {
+      position: absolute;
+      top: -49px;
+      left: -48px;
+      z-index: -1;
+   }
+   &__title {
+      @include fonty(14px, 400, 30px);
+      color: #000;
+      font-family: Constantine;
+      position: relative;
+      text-align: center;
+   }
+   &__img-title {
+      position: absolute;
+      top: 4px;
+      left: auto;
+      width: 100px;
+   }
+   .title {
+      font-size: 14px;
+   }
+   .title::before {
+      right: 0;
+      left: auto;
+   }
+   .title::after,
+   .title::before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      width: calc(50% - 56px);
+      height: 1px;
+      background-color: #825890;
+   }
+}
+
+@media (min-width: 375px) {
+   .contacts {
+      &__info {
+         width: 229px;
+         margin: 0 auto;
+      }
+   }
+}
+
+@media (min-width: 768px) {
+   .contacts {
+      &__wrapper {
+         @include flexy(row, space-between, center);
+         flex-wrap: wrap;
+         gap: 40px;
+         padding-top: 20px;
+      }
+      &__info {
+         width: 229px;
+         margin: 0;
+      }
+      &__atelier-video {
+         video {
+            border: 3px solid green;
+            background: #e3cfcf;
+         }
+      }
+      .contacts__img-title {
+         position: absolute;
+         top: 4px;
+         width: 168px;
+      }
+      .title {
+         font-size: 20px;
+      }
+   
+      .title::after,
+      .title::before {
+         width: calc(50% - 129px);
+      }
+   }
+}
+
+@media (min-width: 1280px) {
+   .contacts {
+      &__wrapper {
+         @include flexy(row, space-between, center);
+         flex-wrap: wrap;
+         gap: 40px;
+         padding-top: 20px;
+         padding-left: 20px;
+      }
+      &__atelier-video {
+         video {
+            width: 450px;
+            height: 350px;
+            border: 3px solid yellow;
+            background: #e3cfcf;
+         }
+      }
+      &__img {
+         top: -81px;
+         left: -99px;
+      }
+      &__info {
+         padding: 30px 0 40px 25px;
+         width: 400px;
+         box-shadow: 0px 0px 12px 24px rgba(197, 192, 220, 0.2);
+      }
+      &__atelier {
+         gap: 23px;
+         padding-right: 0;
+      }
+
+      &__atelier-title {
+         @include fonty(40px, 400, 30px);
+      }
+      // conctact-badge
+      .contact-badge {
+         gap: 20px;
+
+         &__item {
+            color: #22082b;
+            p:first-child {
+               @include fonty(18px, 600, 19px);
+               padding-bottom: 10px;
+            }
+
+            p:nth-child(2) {
+               @include fonty(16px, 400, 14px);
+            }
+         }
+      }
+
+      .contacts__img-title {
+         position: absolute;
+         top: 2px;
+         width: 307px;
+      }
+      .title {
+         font-size: 26px;
+      }
+      .title::after,
+      .title::before {
+         width: calc(50% - 166px);
+      }
+      
+   }
+}
+@media (min-width: 1730px) {
+   .contacts {
+      &__wrapper {
+         @include flexy(row, space-between, center);
+         flex-wrap: wrap;
+         gap: 40px;
+         padding-top: 20px;
+         padding-left: 50px;
+      }
+      &__atelier-video video {
+         width: 606px;
+         height: 450px;
+         border: 3px solid blue;
+         background: #e3cfcf;
+      }
+      &__img {
+         top: -114px;
+         left: -160px;
+      }
+      &__info {
+         padding: 50px 0 78px 45px;
+         width: 557px;
+         box-shadow: 0px 0px 12px 24px rgba(197, 192, 220, 0.2);
+      }
+      &__atelier {
+         gap: 23px;
+         padding-right: 0;
+      }
+
+      &__atelier-title {
+         @include fonty(60px, 400, 30px);
+      }
+      // conctact-badge
+      .contact-badge {
+         gap: 29px;
+
+         &__item {
+            color: #22082b;
+            p:first-child {
+               @include fonty(22px, 600, 19px);
+               padding-bottom: 10px;
+            }
+
+            p:nth-child(2) {
+               @include fonty(18px, 400, 14px);
+            }
+         }
+      }
+
+      .contacts__img-title {
+         top: 2px;
+         width: 454px;
+      }
+      .title {
+         font-size: 35px;
+      }
+      .title::after,
+      .title::before {
+         width: calc(50% - 294px);
+         height: 2px
+      }
+   }
 }
