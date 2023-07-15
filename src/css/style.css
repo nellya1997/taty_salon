@@ -477,27 +477,40 @@ ul {
   padding: 0 20px;
   display: inline-block;
 }
-
+@media (min-width: 1280px) {
+  .title {
+    font-size: 1.8rem;
+  }
+  .title::after, .title::before {
+    width: 34%;
+  }
+}
+@media (min-width: 1920px) {
+  .title span {
+    max-width: 559px;
+  }
+}
 @media (min-width: 375px) {
-  .border-line {
+  .title .border-line {
     width: 23.44vw;
   }
-  .services {
+  .title .services {
     margin-bottom: 40px;
   }
 }
 @media (min-width: 768px) {
-  .link {
+  .title .link {
     width: 100%;
     font-size: 1rem;
     display: block;
   }
 }
 @media (min-width: 1440px) {
-  .link {
+  .title .link {
     background-image: url("../images/bg-button-md.png");
   }
 }
+
 .list__content1 {
   font-weight: 600;
   margin-bottom: 10px;
@@ -1602,13 +1615,6 @@ ul {
     top: 4px;
     width: 168px;
   }
-  .contacts .title {
-    font-size: 20px;
-  }
-  .contacts .title::after,
-  .contacts .title::before {
-    width: calc(50% - 129px);
-  }
 }
 @media (min-width: 1280px) {
   .contacts__wrapper {
@@ -1667,14 +1673,6 @@ ul {
     top: 2px;
     width: 307px;
   }
-  .contacts .title {
-    font-size: 26px;
-    font-family: "Constantine", "font", sans-serif;
-  }
-  .contacts .title::after,
-  .contacts .title::before {
-    width: calc(50% - 166px);
-  }
 }
 @media (min-width: 1730px) {
   .contacts__wrapper {
@@ -1731,14 +1729,6 @@ ul {
   .contacts .contacts__img-title {
     top: 2px;
     width: 454px;
-  }
-  .contacts .title {
-    font-size: 35px;
-  }
-  .contacts .title::after,
-  .contacts .title::before {
-    width: calc(50% - 294px);
-    height: 2px;
   }
 }
 .footer {

@@ -89,14 +89,6 @@
          top: 4px;
          width: 168px;
       }
-      .title {
-         font-size: 20px;
-      }
-   
-      .title::after,
-      .title::before {
-         width: calc(50% - 129px);
-      }
    }
 }
 
@@ -156,15 +148,7 @@
          top: 2px;
          width: 307px;
       }
-      .title {
-         font-size: 26px;
-         font-family: "Constantine", "font", sans-serif;
-      }
-      .title::after,
-      .title::before {
-         width: calc(50% - 166px);
-      }
-      
+
    }
 }
 @media (min-width: 1730px) {
@@ -219,14 +203,6 @@
       .contacts__img-title {
          top: 2px;
          width: 454px;
-      }
-      .title {
-         font-size: 35px;
-      }
-      .title::after,
-      .title::before {
-         width: calc(50% - 294px);
-         height: 2px
       }
    }
 }
