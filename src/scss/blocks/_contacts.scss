@@ -46,6 +46,7 @@
       top: -49px;
       left: -48px;
       z-index: -1;
+      width: 100%;
    }
    &__title {
       @include fonty(14px, 400, 30px);
@@ -179,6 +180,7 @@
       }
       .title {
          font-size: 26px;
+         font-family: "Constantine", "font", sans-serif;
       }
       .title::after,
       .title::before {

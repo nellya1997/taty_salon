@@ -1454,6 +1454,7 @@ ul {
   top: -49px;
   left: -48px;
   z-index: -1;
+  width: 100%;
 }
 .contacts__title {
   font-size: 14px;
@@ -1583,6 +1584,7 @@ ul {
   }
   .contacts .title {
     font-size: 26px;
+    font-family: "Constantine", "font", sans-serif;
   }
   .contacts .title::after,
   .contacts .title::before {
