@@ -381,6 +381,8 @@ html {
   min-width: 320px;
   scroll-behavior: smooth;
   color: #22082B;
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
 }
 
 body {
@@ -390,8 +392,24 @@ body {
   background-color: rgb(243, 243, 243);
 }
 
+main {
+  padding-top: 60px;
+}
+
 .stop-scroll {
   overflow: hidden;
+}
+
+picture {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 ul {
@@ -634,7 +652,7 @@ ul {
 
 .header {
   width: 100%;
-  height: 140px;
+  height: 50px;
   position: fixed;
   z-index: 1;
   background-color: rgb(243, 243, 243);
@@ -827,6 +845,101 @@ ul {
 .socials a {
   width: 28px;
   height: 28px;
+}
+
+.first__container {
+  padding: 0px 30px;
+}
+.first__top img {
+  display: block;
+  margin: 0 auto;
+}
+.first__subtitle {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 0px;
+  text-align: center;
+}
+.first__girl {
+  padding: 20px 0px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  max-height: 755px;
+  border: 1px solid rgb(243, 243, 243);
+  width: calc(269px + 564 * (100vw - 320px) / 1920);
+  height: calc(219px + 537 * (100vw - 320px) / 1920);
+}
+.first__socials {
+  border: 2px solid red;
+  width: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.first__socials::before {
+  content: "";
+  width: 47px;
+  height: 1px;
+  background-color: #825890;
+  position: absolute;
+  top: -40px;
+  left: -11;
+  transform: rotate(90deg);
+}
+.first__socials::after {
+  content: "";
+  width: 47px;
+  height: 1px;
+  background-color: #825890;
+  position: absolute;
+  bottom: -40px;
+  left: -11;
+  transform: rotate(90deg);
+}
+.first__left-side {
+  display: none;
+}
+.first__check-in .first__text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  text-align: center;
+}
+.first__check-in a {
+  display: block;
+  width: 224px;
+  height: 47px;
+  margin: 0 auto;
+  background-color: rgb(213, 189, 250);
+  border-radius: 50px;
+}
+@media (min-width: 768px) {
+  .first .first__container {
+    padding-top: 45px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 91.4%;
+  }
+  .first .first__girl {
+    width: 41.3%;
+    margin: 0 0;
+  }
+  .first .first__left-side {
+    width: 28.6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .about__photo {
@@ -1659,4 +1772,4 @@ ul {
 .footer {
   width: 100%;
   height: 60px;
-}
+}/*# sourceMappingURL=style.css.map */
