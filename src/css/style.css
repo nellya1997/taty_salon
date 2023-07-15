@@ -655,11 +655,10 @@ ul {
 
 .header {
   width: 100%;
-  height: 50px;
+  height: 60px;
   position: fixed;
   z-index: 1;
   background-color: rgb(243, 243, 243);
-  border: 2px solid red;
 }
 .header_active {
   height: 100vh;
@@ -699,7 +698,7 @@ ul {
 }
 @media (min-width: 768px) {
   .header .header {
-    position: fixed;
+    padding: 0 0;
   }
   .header .nav {
     margin: 0 auto;
@@ -716,49 +715,54 @@ ul {
     transition: transform 0.5s;
   }
   .header .nav__list {
-    width: 67.3%;
-    padding: 50px 0;
+    padding: 20px 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
   .header .nav__link {
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 41px;
+    font-size: calc(14px + 16 * (100vw - 768px) / 1920);
   }
-  .header .nav__link-active {
+  .header .nav__link_active {
     border: 3px solid #825890;
     border-radius: 50px;
     padding: 5px 16px;
     position: relative;
   }
-  .header .nav__link-active::after {
+  .header .nav__link_active::after {
     content: "";
     position: absolute;
     top: 100%;
-    left: 63%;
+    left: 53%;
     width: 38px;
     height: 80px;
-    background-image: url("../images/header/drops.png");
+    background-image: url("../img/header/drops.png");
     background-size: 38px 80px;
+  }
+  .header .nav .contact-badge {
+    display: none;
+  }
+}
+@media (min-width: 930px) {
+  .header .header {
+    height: 140px;
+  }
+  .header .nav__list {
+    width: 67.3%;
   }
   .header .nav__contacts {
     display: initial;
   }
   .header .nav__contacts li:first-child span {
-    font-size: 22px;
+    font-size: 19px;
     font-weight: 600;
     line-height: 30px;
   }
   .header .nav__contacts li:nth-child(2) span {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 30px;
-  }
-  .header .nav .contact-badge {
-    display: none;
   }
 }
 
@@ -860,7 +864,7 @@ ul {
 .first__subtitle {
   font-size: 16px;
   font-weight: 500;
-  line-height: 0px;
+  line-height: 21px;
   text-align: center;
 }
 .first__girl {
@@ -876,8 +880,10 @@ ul {
   width: calc(269px + 564 * (100vw - 320px) / 1920);
   height: calc(219px + 537 * (100vw - 320px) / 1920);
 }
+.first__girl picture {
+  height: 130%;
+}
 .first__socials {
-  border: 2px solid red;
   width: 22px;
   display: flex;
   flex-direction: column;
@@ -915,10 +921,15 @@ ul {
   text-align: center;
 }
 .first__check-in a {
+  font-family: "Manrope";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19px;
+  text-align: center;
   display: block;
-  width: 224px;
-  height: 47px;
+  max-width: 224px;
   margin: 0 auto;
+  padding: 15px 40px;
   background-color: rgb(213, 189, 250);
   border-radius: 50px;
 }

@@ -1,12 +1,9 @@
 .header {
     width: 100%;
-    height: 50px;
+    height: 60px;
     position: fixed;
     z-index: 1;
     background-color: $bg-color;
-
-    border: $myBorder;
-
 
     &_active {
         height: 100vh;
@@ -43,18 +40,18 @@
         &__list {
             width: 100%;
             padding-bottom: 15px;
-
-
         }
 
         &__link {
             @include fonty(0.875rem, 600, 1.35rem);
+
         }
     }
 
     @media(min-width: 768px) {
+
         .header {
-            position: fixed;
+            padding: 0 0;
         }
 
         .nav {
@@ -69,15 +66,16 @@
             transition: transform 0.5s;
 
             &__list {
-                width: 67.3%;
-                padding: 50px 0;
+
+                padding: 20px 0;
                 @include flexy(row, space-between);
             }
 
             &__link {
-                @include fonty(30px, 600, 41px);
+                //@include fonty(30px, 600, 41px);
+                font-size: calc(14px + 16 * ((100vw - 768px) / 1920));
 
-                &-active {
+                &_active {
                     border: 3px solid #825890;
                     border-radius: 50px;
                     padding: 5px 16px;
@@ -87,34 +85,47 @@
                         content: "";
                         position: absolute;
                         top: 100%;
-                        left: 63%;
+                        left: 53%;
 
                         width: 38px;
                         height: 80px;
-                        background-image: url("../images/header/drops.png");
+                        background-image: url("../img/header/drops.png");
                         background-size: 38px 80px;
-                    }
-                }
-            }
-
-            &__contacts {
-                display: initial;
-
-                li:first-child {
-                    span {
-                        @include fonty(22px, 600);
-                    }
-                }
-
-                li:nth-child(2) {
-                    span {
-                        @include fonty(18px, 400);
                     }
                 }
             }
 
             .contact-badge {
                 display: none;
+            }
+        }
+
+    }
+
+    @media(min-width: 930px) {
+
+        .header {
+            height: 140px;
+        }
+
+        .nav__list {
+            width: 67.3%;
+        }
+
+        .nav__contacts {
+            display: initial;
+
+
+            li:first-child {
+                span {
+                    @include fonty(19px, 600);
+                }
+            }
+
+            li:nth-child(2) {
+                span {
+                    @include fonty(16px, 400);
+                }
             }
         }
     }
