@@ -19,6 +19,7 @@
     });
 })();
 
+
 //active navigation shows where user now:
 (function() {
   const nav = document.querySelector('.nav__list');
@@ -44,18 +45,46 @@
 
 
 //removing blocks with H1 and check-in button
-/*
-const firstTop = document.querySelector('.first__top');
-const checkIn = document.querySelector('.first__check-in');
-
-const leftSide = document.querySelector('.first__left-side');
-
-
-console.log(leftSide);
-leftSide.prepend(firstTop);
-leftSide.appendChild(checkIn);
-*/
-
+(function () {
+  //будем перемещать эти два узла:
+  const firstTop = document.querySelector('.first__top');
+  const checkIn = document.querySelector('.first__check-in');
+  //в эти два объекта:
+  const leftSide = document.querySelector('.first__left-side');
+  const firstContainer = document.querySelector('.first__container');
+  
+  //определим контрольные точки где будет меняться расположение узлов первой секции:
+  const widthMax = window.matchMedia('(min-width: 767px)');
+  const widthMin = window.matchMedia('(max-width: 768px)');
+  
+  //проверим ширину экрана пользователя при загрузке страницы:
+  (function () {
+  let screenWidth = window.screen.width;
+  
+  if (screenWidth > 768) {
+      firstContainer.prepend(firstTop);
+      firstContainer.appendChild(checkIn);
+  }
+  })();
+  
+  //вешаю обработчик событий на window
+  window.addEventListener('resize', changeFirstSection);
+  
+  function changeFirstSection() {
+      /*контрольная точка 767рх - при увеличении экрана с мобилки, JS удаляет узлы из firstTop and checkIn и добавляет их в leftSide:*/
+    if (window.matchMedia('(min-width: 767px)').matches) {
+      console.log('window bigger 767px');
+      leftSide.prepend(firstTop);
+      leftSide.appendChild(checkIn);
+    } else if (window.matchMedia('(max-width: 768px)')) {
+        /*теперь нужно переместить DOM элементы из ПК версии в мобильную в случае если пользователь переворачивает экран или меняет разрешение*/
+      console.log('window less 768px');
+      firstContainer.prepend(firstTop);
+      firstContainer.appendChild(checkIn);
+    }
+  }
+  return changeFirstSection();
+})();
 
 
 // js-swiper-portfolio
