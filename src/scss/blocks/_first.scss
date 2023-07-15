@@ -30,35 +30,37 @@
         picture {
             height: 130%;
         }
+
+        .socials {
+            width: 22px;
+            @include flexy(column);
+            position: relative;
+
+            &::before {
+                content: '';
+                width: 47px;
+                height: 1px;
+                background-color: $title-line-color;
+                position: absolute;
+                top: -40px;
+                left: -11;
+                transform: rotate(90deg);
+            }
+
+            &::after {
+                content: '';
+                width: 47px;
+                height: 1px;
+                background-color: $title-line-color;
+                position: absolute;
+                bottom: -40px;
+                left: -11;
+                transform: rotate(90deg);
+            }
+        }
     }
 
-    &__socials {
-        width: 22px;
-        @include flexy(column);
-        position: relative;
 
-        &::before {
-            content: '';
-            width: 47px;
-            height: 1px;
-            background-color: $title-line-color;
-            position: absolute;
-            top: -40px;
-            left: -11;
-            transform: rotate(90deg);
-        }
-
-        &::after {
-            content: '';
-            width: 47px;
-            height: 1px;
-            background-color: $title-line-color;
-            position: absolute;
-            bottom: -40px;
-            left: -11;
-            transform: rotate(90deg);
-        }
-    }
 
     &__left-side {
         display: none;
@@ -92,10 +94,5 @@
                 @include flexy(column);
             }
         }
-
-
-
-
     }
-
 }
