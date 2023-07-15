@@ -1,6 +1,8 @@
 @font-face {
-  font-family: 'Manrope';
-  src: url(../fonts/Manrope-Regular.woff) format("woff2"), url(../fonts/Manrope-Regular.woff2) format("woff");
+  font-family: "Manrope";
+  src:
+    url(../fonts/Manrope-Regular.woff) format("woff2"),
+    url(../fonts/Manrope-Regular.woff2) format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -8,8 +10,10 @@
 
 @font-face {
   font-weight: 500;
-  font-family: 'Manrope';
-  src: url(../fonts/Manrope-Medium.woff2) format("woff2"), url(../fonts/Manrope-Medium.woff) format("woff");
+  font-family: "Manrope";
+  src:
+    url(../fonts/Manrope-Medium.woff2) format("woff2"),
+    url(../fonts/Manrope-Medium.woff) format("woff");
   font-style: normal;
   font-display: swap;
 }
@@ -17,15 +21,21 @@
 @font-face {
   font-weight: 600;
   /* Соответствует значению "почти" bold )) */
-  font-family: 'Manrope';
+  font-family: "Manrope";
   // src: url("../fonts/Manrope-SemiBold.ttf");
-  src: url(../fonts/Manrope-SemiBold.woff2) format("woff2"), url(../fonts/Manrope-SemiBold.woff) format("woff");
+  src:
+    url(../fonts/Manrope-SemiBold.woff2) format("woff2"),
+    url(../fonts/Manrope-SemiBold.woff) format("woff");
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-weight: 400;
+  font-family: "Constantine", "font", sans-serif;
+  src:
+    url(../fonts/Constantine.woff2) format("woff2"),
+    url(../fonts/Constantine.woff) format("woff");
   font-family: 'Constantine', "font", sans-serif;
   src: url(../fonts/Constantine.woff2) format("woff2"), url(../fonts/) format("woff");
 }
@@ -37,13 +47,17 @@
 }
 
 html {
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
   font-weight: 400;
   font-size: 22px;
   line-height: 30px;
   min-width: 320px;
   scroll-behavior: smooth;
   color: $dark-purple;
+
+  //чтобы убрать прыгающий скролл
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
 }
 
 body {
@@ -53,9 +67,26 @@ body {
   background-color: $bg-color;
 }
 
+main {
+  padding-top: 60px;
+}
+
 .stop-scroll {
   overflow: hidden;
 }
+
+picture {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
 
 ul {
   list-style: none;
@@ -76,6 +107,10 @@ ul {
     max-width: 388px;
     margin: 0 auto;
   }
+}
+
+.none {
+  display: none;
 }
 
 .text-center {
@@ -100,7 +135,7 @@ ul {
   &::after,
   &::before {
     position: absolute;
-    content: '';
+    content: "";
     top: 50%;
     left: 0;
     width: calc(50% - 114px);
@@ -114,8 +149,9 @@ ul {
   }
 }
 
+//page 97???
 .none {
-	display: none;
+  display: none;
 }
 
 @media (min-width: 375px) {
@@ -138,6 +174,6 @@ ul {
 
 @media (min-width: 1440px) {
   .link {
-    background-image: url('../images/bg-button-md.png');
+    background-image: url("../images/bg-button-md.png");
   }
 }

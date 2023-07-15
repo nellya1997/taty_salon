@@ -10,7 +10,7 @@
 </head>
 
 <body>
-
+  <!-- Header -->
   <header class="header">
     <div class="burger">
       <span></span>
@@ -19,27 +19,27 @@
     </div>
     <nav class="nav">
       <ul class="nav__list">
-        <li><a href="#" class="nav__link nav__link-active">Главная</a></li>
-        <li><a href="#" class="nav__link">Обо мне</a></li>
-        <li><a href="#" class="nav__link">Портфолио</a></li>
-        <li><a href="#" class="nav__link">Услуги</a></li>
-        <li><a href="#" class="nav__link">Памятки</a></li>
-        <li><a href="#" class="nav__link">Отзывы</a></li>
-        <li><a href="#" class="nav__link">Контакты</a></li>
+        <li><a href="#first" class="nav__link nav__link_active">Главная</a></li>
+        <li><a href="#about" class="nav__link">Обо мне</a></li>
+        <li><a href="#portfolio" class="nav__link">Портфолио</a></li>
+        <li><a href="#services" class="nav__link">Услуги</a></li>
+        <li><a href="#memo" class="nav__link">Памятки</a></li>
+        <li><a href="#reviews" class="nav__link">Отзывы</a></li>
+        <li><a href="#contacts" class="nav__link">Контакты</a></li>
       </ul>
       <ul class="nav__contacts">
         <li><a class="contact-badge__item" href="tel:79600330101"><span>8-960-033-01-01</span>
             <img class="contact-badge__icon" src="./src/images/header/phone.svg" alt="phone"></a></li>
-        <li><a class="contact-badge__item contact-badge__address" href="#"><span>Г. Казань, Айвазовского 10/54</span>
+        <li><a class="contact-badge__item" href="#"><span>Г. Казань, Айвазовского 10/54</span>
             <img class="contact-badge__icon" src="./src/images/header/location-pointer.svg" alt="location"></a></li>
       </ul>
       <div class="contact-badge">
-        <a class="contact-badge__item contact-badge__address" href="#">
+        <a class="contact-badge__item" href="#">
           <p>Адрес студии:</p>
           <p>Г. Казань, Айвазовского 10/54</p>
           <img class="contact-badge__icon" src="./src/images/header/location-pointer.svg" alt="location">
         </a>
-        <div class="contact-badge__item contact-badge__schedule">
+        <div class="contact-badge__item">
           <p>График работы</p>
           <p>Ежедневно 12:00 - 19:00</p>
           <img class="contact-badge__icon" src="./src/images/header/clockIcon.svg" alt="schedule">
@@ -50,18 +50,52 @@
           <img class="contact-badge__icon" src="./src/images/header/phone.svg" alt="phone">
         </a>
         <div class="socials">
-          <a href="https://t.me/dinasynthetica" class="socails__item"><img src="./src/images/header/telegramm.svg" alt="telegramm"></a>
+          <a href="https://t.me/dinasynthetica" class="socails__item"><img src="./src/images/header/telegramm.svg" alt="телеграмм"></a>
           <a href="https://wa.me/+79600330101" class="socails__item"><img src="./src/images/header/what'sUpIcon.svg" alt="what's up"></a>
-          <a href="https://instagram.com/dina.synthetica?igshid=NjIwNzIyMDk2Mg==" class="socails__item"><img src="./src/images/header/instagramm.svg" alt="Instagramm"></a>
-          <a href="https://vk.com/dina_synthetica_tattoo" class="socails__item"><img src="./src/images/header/vk-icon.svg" alt="Vk"></a>
+          <a href="https://instagram.com/dina.synthetica?igshid=NjIwNzIyMDk2Mg==" class="socails__item"><img src="./src/images/header/instagramm.svg" alt="Инстаграмм"></a>
+          <a href="https://vk.com/dina_synthetica_tattoo" class="socails__item"><img src="./src/images/header/vk-icon.svg" alt="Вконтакте"></a>
         </div>
       </div>
     </nav>
   </header>
   <main>
-    <section class="first"></section>
-    <section class="main"></section>
-    <section class="about">
+    <section id="first" class="first">
+      <div class="first__container">
+
+        <div class="first__top">
+          <img src="./src/images/first/tattoo-logo.svg" alt="">
+          <p class="first__subtitle">В акварельном стиле</p>
+        </div>
+
+        <div class="first__girl">
+          <picture>
+            <img src="./src/images/first/girl.png" alt="тату салон">
+          </picture>
+          <div class="socials first__socials">
+            <a href="https://t.me/dinasynthetica" class="socails__item"><img src="./src/images/header/telegramm.svg" alt="telegramm"></a>
+            <a href="https://wa.me/+79600330101" class="socails__item"><img src="./src/images/header/what'sUpIcon.svg" alt="what's up"></a>
+            <a href="https://instagram.com/dina.synthetica?igshid=NjIwNzIyMDk2Mg==" class="socails__item"><img src="./src/images/header/instagramm.svg" alt="Instagramm"></a>
+            <a href="https://vk.com/dina_synthetica_tattoo" class="socails__item"><img src="./src/images/header/vk-icon.svg" alt="Vk"></a>
+          </div>
+        </div>
+
+        <div class="first__left-side">
+          <picture class="first__img">
+            <img src="./src/img/first/tube-phone.png" alt="">
+          </picture>
+        </div>
+
+
+        <div class="first__check-in">
+          <p class="first__text">Для тех, кто уверен в&nbsp;своих решениях</p>
+          <a href="">Записаться на сеанс</a>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="about" class="about">
       <div class="container">
         <div class="wrapper-title">
           <h2 class="title">ОБО МНЕ</h2>
@@ -98,7 +132,8 @@
             <p>Привет! Меня зовут Дина&nbsp;&mdash; я&nbsp;тату мастер</p>
             <p>В&nbsp;данной сфере 5&nbsp;лет и&nbsp;за&nbsp;моей спиной больше 500 сеансов разной сложности</p>
             <p>Работаю в&nbsp;авторском стиле&nbsp;&mdash; <strong>акварель, ботаническая тематика</strong></p>
-            <p>Эскизы рисую индивидуально&nbsp;&mdash; бесплатно перед сеансом, под запрос клиента, не&nbsp;повторяю ни&nbsp;свои, ни&nbsp;чужие работы</p>
+            <p>Эскизы рисую индивидуально&nbsp;&mdash; бесплатно перед сеансом, под запрос клиента, не&nbsp;повторяю
+              ни&nbsp;свои, ни&nbsp;чужие работы</p>
             <div class="about__smear">
               <span>Татуировка&nbsp;&mdash; это любовь к&nbsp;себе в&nbsp;новом проявлении</span>
             </div>
@@ -128,12 +163,12 @@
           </li>
         </ul>
 
-        <p class="about__content-shadow text-center">Временных татуировок не&nbsp;существует, поэтому эта история только для тех, кто уверен в&nbsp;своих решениях и&nbsp;готов носить рисунок
+        <p class="about__content-shadow text-center">Временных татуировок не&nbsp;существует, поэтому эта история только
+          для тех, кто уверен в&nbsp;своих решениях и&nbsp;готов носить рисунок
           на&nbsp;своем теле всю жизнь</p>
       </div>
     </section>
-    <section class="about "></section>
-    <section class="portfolio ">
+    <section id="portfolio" class="portfolio">
       <div class="container">
         <div class="wrapper-title">
           <h2 class="title">ПОРТФОЛИО</h2>
@@ -413,9 +448,7 @@
       </div>
     </section>
 
-
-
-    <section class="services">
+    <section id="services" class="services">
       <div class="container">
         <div class="wrapper-title">
           <h2 class="title">Услуги</h2>
@@ -502,63 +535,62 @@
           </div>
         </div>
     </section>
-    <section class="memo "></section>
-
-    <section class="reviews"></section>
 
 
+    <section id="memo" class="memo"></section>
 
-    <section class="contacts">
+    <section id="reviews" class="reviews"></section>
+
+
+
+    <section id="contacts" class="contacts">
       <div class="container">
         <div class="wrapper-title">
           <h2 class="title">Контакты</h2>
         </div>
-        <div class="contacts__info-wrapper">
+        <img class="contacts__img-title" src="/src/images/contacts/content2.png" alt="">
+        <div class="contacts__wrapper">
+
           <div class="contacts__info">
-            <div class="contacts__info-items">
-              <div class="contacts__info-item">
-                <div class="contacts__info-subtitle info-subtitle">
-                  Адрес студии:
-                </div>
-                <div class="contacts__info-desc info-desc">
-                  Г. Казань, Айвазовского 10/54
-                </div>
+            <div class="contact-badge">
+              <a class="contact-badge__item " href="#">
+                <p>Адрес студии:</p>
+                <p>Г. Казань, Айвазовского 10/54</p>
+                <img class="contact-badge__icon" src="./src/images/header/location-pointer.svg" alt="location">
+              </a>
+              <div class="contact-badge__item">
+                <p>График работы</p>
+                <p>Ежедневно 12:00 - 19:00</p>
+                <img class="contact-badge__icon" src="./src/images/header/clockIcon.svg" alt="schedule">
               </div>
-              <div class="contacts__info-item">
-                <div class="contacts__info-subtitle info-subtitle">
-                  График работы:
-                </div>
-                <div class="contacts__info-desc info-desc">
-                  Ежедневно 12:00 - 19:00
-                </div>
+              <a class="contact-badge__item contact-badge__phone" href="tel:+79600330101">
+                <p>Связь со мной</p>
+                <p>8-960-033-01-01</p>
+                <img class="contact-badge__icon" src="./src/images/header/phone.svg" alt="phone">
+              </a>
+              <div class="socials">
+                <a href="https://t.me/dinasynthetica" class="socails__item"><img src="./src/images/header/telegramm.svg" alt="telegramm"></a>
+                <a href="https://wa.me/+79600330101" class="socails__item"><img src="./src/images/header/what'sUpIcon.svg" alt="what's up"></a>
+                <a href="https://instagram.com/dina.synthetica?igshid=NjIwNzIyMDk2Mg==" class="socails__item"><img src="./src/images/header/instagramm.svg" alt="Instagramm"></a>
+                <a href="https://vk.com/dina_synthetica_tattoo" class="socails__item"><img src="./src/images/header/vk-icon.svg" alt="Vk"></a>
               </div>
-              <div class="contacts__info-item info-item">
-                <div class="contacts__info-subtitle">
-                  Связь со мной:
-                </div>
-                <div class="contacts__info-desc info-desc">
-                  <a href="">8-960-033-01-01</a>
-                </div>
-              </div>
+
             </div>
           </div>
-          <div class="contacts__info-socials info-socials">
-            <div class="contacts__info-social info-social">
-              <a href="#!"><img src="./src/images/contacts/tg.png" alt=""></a>
+          <div class="contacts__atelier">
+            <div class="contacts__atelier-title">Студия</div>
+            <img src="./src/images/contacts/content.png" class="contacts__img"></img>
+            <div class="contacts__atelier-video">
+              <video src=""></video>
             </div>
-            <div class="contacts__info-social info-social">
-              <a href="#!"><img src="./src/images/contacts/wb.png" alt=""></a>
-            </div>
-            <div class="contacts__info-social info-social">
-              <a href="#!"><img src="./src/images/contacts/inst.png" alt=""></a>
-            </div>
-            <div class="contacts__info-social info-social">
-              <a href="#!"><img src="./src/images/contacts/vk.png" alt=""></a>
-            </div>
+
+
           </div>
         </div>
       </div>
+      </div>
     </section>
+
   </main>
   <footer class="footer">
   </footer>
