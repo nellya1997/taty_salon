@@ -48,13 +48,7 @@
       z-index: -1;
       width: 100%;
    }
-   &__title {
-      @include fonty(14px, 400, 30px);
-      color: #000;
-      font-family: Constantine;
-      position: relative;
-      text-align: center;
-   }
+
    &__img-title {
       position: absolute;
       top: 4px;
@@ -154,7 +148,7 @@
          top: 2px;
          width: 307px;
       }
-      
+
    }
 }
 @media (min-width: 1730px) {
@@ -210,6 +204,5 @@
          top: 2px;
          width: 454px;
       }
-
    }
 }

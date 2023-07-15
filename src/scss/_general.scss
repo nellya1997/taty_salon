@@ -57,7 +57,11 @@ html {
 
   //чтобы убрать прыгающий скролл
   overflow-x: hidden;
-  margin-right: calc(-1 * (100vw - 100%));
+  // margin-right: calc(-1 * (100vw - 100%));
+
+  @media (min-width: 1920px) {
+    font-size: 44px;
+  }
 }
 
 body {
@@ -93,6 +97,7 @@ ul {
 }
 
 .link {
+  @include fonty(0.8rem, 600, 1.36em);
   text-decoration: none;
   display: block;
   padding: 17px 50px;
@@ -100,8 +105,6 @@ ul {
   background-size: 100% 100%;
   // background-size: contain;
   background-repeat: no-repeat;
-  // color: $purple;
-  @include fonty(1.13rem, 600, 1.36em);
 
   @media (min-width: 768px) {
     max-width: 388px;
@@ -125,7 +128,7 @@ ul {
 .title {
   font-family: Constantine, sans-serif;
   font-weight: 400;
-  font-size: 1.45rem;
+  font-size: 0.75rem;
   line-height: 1.2;
   color: $dark;
   text-align: center;
@@ -138,7 +141,7 @@ ul {
     content: "";
     top: 50%;
     left: 0;
-    width: calc(50% - 114px);
+    width: 30%;
     height: 1px;
     background-color: $violet;
   }
@@ -147,33 +150,58 @@ ul {
     right: 0;
     left: auto;
   }
-}
 
-//page 97???
-.none {
-  display: none;
-}
-
-@media (min-width: 375px) {
-  .border-line {
-    width: 23.44vw;
+  & span {
+    // max-width: 559px;
+    max-width: 119px;
+    padding: 0 20px;
+    display: inline-block;
   }
 
-  .services {
-    @include m(bottom, 40);
-  }
+  @media (min-width: 1280px) {
+
+    // & {
+    //   font-size: 1.8rem;
+    // }
+    &::after,
+    &::before {
+      width: 34%;
+    }
 }
 
-@media (min-width: 768px) {
-  .link {
-    width: 100%;
-    font-size: 1rem;
-    display: block;
-  }
+  @media (min-width: 1920px) {
+
+    // & {
+    //   font-size: 1.8rem;
+    // }
+
+    & span {
+      max-width: 559px;
+    }
+
 }
 
-@media (min-width: 1440px) {
-  .link {
-    background-image: url("../images/bg-button-md.png");
+  @media (min-width: 375px) {
+    .border-line {
+      width: 23.44vw;
+    }
+
+    .services {
+      @include m(bottom, 40);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .link {
+      width: 100%;
+      font-size: 1rem;
+      display: block;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .link {
+      background-image: url("../images/bg-button-md.png");
+    }
   }
 }
