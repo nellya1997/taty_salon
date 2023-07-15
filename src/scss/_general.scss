@@ -36,6 +36,8 @@
   src:
     url(../fonts/Constantine.woff2) format("woff2"),
     url(../fonts/Constantine.woff) format("woff");
+  font-family: 'Constantine', "font", sans-serif;
+  src: url(../fonts/Constantine.woff2) format("woff2"), url(../fonts/) format("woff");
 }
 
 * {
@@ -151,8 +153,6 @@ ul {
 .none {
   display: none;
 }
-
-.card {}
 
 @media (min-width: 375px) {
   .border-line {
