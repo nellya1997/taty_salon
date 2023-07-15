@@ -5,9 +5,11 @@
     &__item {
         padding-left: 20px;
         position: relative;
+        color: #22082b;
+        font-family: Manrope;
 
         img {
-            content: '';
+            content: "";
             position: absolute;
             top: 10%;
             left: 0%;
@@ -17,12 +19,10 @@
 
         p:first-child {
             @include fonty(14px, 600, 19px);
-            position: relative;
         }
 
         p:nth-child(2) {
             @include fonty(12px, 400, 14px);
         }
     }
-
 }
