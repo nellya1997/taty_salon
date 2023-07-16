@@ -751,10 +751,11 @@
             <div class="contacts__atelier-title">Студия</div>
             <img src="./src/images/contacts/content.png" class="contacts__img"></img>
             <div class="contacts__atelier-video">
-              <video src=""></video>
+              <video loop controls preload="auto">
+              <source src="" type="video/webm">
+              <source src="" type="video/mp4">
+              </video>
             </div>
-
-
           </div>
         </div>
       </div>
@@ -762,7 +763,69 @@
     </section>
 
   </main>
+  <!-- footer -->
   <footer class="footer">
+    <div class="container">
+      <img class="footer__bg-desktop" src="/src/images/footer/bg.png" alt="">
+      <div class="footer__inner">
+        <div class="contact-badge">
+          <a class="contact-badge__item " href="#">
+            <p>Адрес студии:</p>
+            <p>Г. Казань, Айвазовского 10/54</p>
+            <img class="contact-badge__icon" src="./src/images/header/location-pointer.svg" alt="location">
+          </a>
+          <div class="contact-badge__item">
+            <p>График работы</p>
+            <p>Ежедневно 12:00 - 19:00</p>
+            <img class="contact-badge__icon" src="./src/images/header/clockIcon.svg" alt="schedule">
+          </div>
+          <a class="contact-badge__item" href="tel:+79600330101">
+            <p>Связь со мной</p>
+            <p>8-960-033-01-01</p>
+            <img class="contact-badge__icon" src="./src/images/header/phone.svg" alt="phone">
+          </a>
+          <div class="socials">
+            <a href="https://t.me/dinasynthetica" class="socails__item"><img src="./src/images/header/telegramm.svg"
+                alt="telegramm"></a>
+            <a href="https://wa.me/+79600330101" class="socails__item"><img src="./src/images/header/what'sUpIcon.svg"
+                alt="what's up"></a>
+            <a href="https://instagram.com/dina.synthetica?igshid=NjIwNzIyMDk2Mg==" class="socails__item"><img
+                src="./src/images/header/instagramm.svg" alt="Instagramm"></a>
+            <a href="https://vk.com/dina_synthetica_tattoo" class="socails__item"><img
+                src="./src/images/header/vk-icon.svg" alt="Vk"></a>
+          </div>
+
+        </div>
+        <ul class="footer__nav">
+          <li><a href="#first">Главная</a> </li>
+          <li><a href="#about">О&nbsp;себе</a> </li>
+          <li><a href="#portfolio">Портфолио</a> </li>
+          <li><a href="#services">Услуги</a> </li>
+          <li><a href="#memo">Памятки</a></li>
+          <li><a href="#reviews">Отзывы</a> </li>
+          <li><a href="#contacts">Контакты</a> </li>
+        </ul>
+
+        <div class="footer__desktop">
+          <a class="contact-badge__item" href="tel:+79600330101">
+            <p>Связь со мной:</p>
+            <p>8-960-033-01-01</p>
+            <img class="contact-badge__icon" src="./src/images/header/phone.svg" alt="phone">
+          </a>
+          <div class="socials">
+            <a href="https://t.me/dinasynthetica" class="socails__item"><img src="./src/images/header/telegramm.svg"
+                alt="telegramm"></a>
+            <a href="https://wa.me/+79600330101" class="socails__item"><img src="./src/images/header/what'sUpIcon.svg"
+                alt="what's up"></a>
+            <a href="https://instagram.com/dina.synthetica?igshid=NjIwNzIyMDk2Mg==" class="socails__item"><img
+                src="./src/images/header/instagramm.svg" alt="Instagramm"></a>
+            <a href="https://vk.com/dina_synthetica_tattoo" class="socails__item"><img
+                src="./src/images/header/vk-icon.svg" alt="Vk"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
