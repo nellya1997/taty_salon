@@ -17,6 +17,22 @@
         //header contains 100vh  (нужно переписать потому что под хедером должно быть видно страничку);
         header.classList.toggle('header_active');
     });
+        
+        
+  //при нажатии на якорную ссылку или на ссылку адрес/тлф - мобильное меню также должно закрываться
+  //для этого я дал класс js-header-close чтобы получить нужный массив ссылок, при нажатии на которые header будет закрываться
+    
+    let links = Array.from(document.querySelectorAll('.js-header-close'));
+      
+    links.forEach((el) => {
+      el.addEventListener('click', function() {
+        burgerBtn.classList.toggle('burger_active');
+        mobileNav.classList.toggle('nav_active');
+        body.classList.toggle('stop-scroll');
+        header.classList.toggle('header_active');
+      });
+    });
+
 })();
 
 
