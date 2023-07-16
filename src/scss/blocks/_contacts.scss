@@ -1,4 +1,6 @@
 .contacts {
+   position: relative;
+   padding-bottom: 132px;
    .contact-badge {
       @include flexy(column, space-between, flex-start);
       gap: 15px;
@@ -30,15 +32,15 @@
       text-orientation: upright;
       color: #562667;
       font-family: Constantine;
-      @include fonty(28px, 400, 30px);
+      // @include fonty(28px, 400, 30px);
    }
 
    &__atelier-video {
+      position: relative;
       video {
          width: 229px;
          height: 234px;
-         border: 3px solid red;
-         background: #e3cfcf;
+         // background: #e3cfcf;
       }
    }
    &__img {
@@ -51,10 +53,17 @@
 
    &__img-title {
       position: absolute;
-      top: 4px;
+      top: 6px;
       left: auto;
       width: 100px;
    }
+}
+video {
+
+   object-fit: cover;
+   overflow-clip-margin: content-box;
+   overflow: clip;
+   border: none;
 }
 
 @media (min-width: 375px) {
@@ -78,15 +87,9 @@
          width: 229px;
          margin: 0;
       }
-      &__atelier-video {
-         video {
-            border: 3px solid green;
-            background: #e3cfcf;
-         }
-      }
       .contacts__img-title {
          position: absolute;
-         top: 4px;
+         top: 3px;
          width: 168px;
       }
    }
@@ -105,13 +108,12 @@
          video {
             width: 450px;
             height: 350px;
-            border: 3px solid yellow;
-            background: #e3cfcf;
          }
       }
       &__img {
-         top: -81px;
-         left: -99px;
+         width: 130%;
+         top: -88px;
+         left: -125px;
       }
       &__info {
          padding: 30px 0 40px 25px;
@@ -145,10 +147,9 @@
 
       .contacts__img-title {
          position: absolute;
-         top: 2px;
+         top: -3px;
          width: 307px;
       }
-
    }
 }
 @media (min-width: 1730px) {
@@ -163,12 +164,11 @@
       &__atelier-video video {
          width: 606px;
          height: 450px;
-         border: 3px solid blue;
-         background: #e3cfcf;
       }
       &__img {
-         top: -114px;
-         left: -160px;
+         width: 130%;
+         top: -115px;
+         left: -206px;
       }
       &__info {
          padding: 50px 0 78px 45px;
@@ -201,8 +201,9 @@
       }
 
       .contacts__img-title {
-         top: 2px;
+         top: -1px;
          width: 454px;
       }
    }
 }
+
