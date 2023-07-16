@@ -46,13 +46,11 @@
             @include fonty(0.875rem, 600, 1.35rem);
         }
     }
+}
 
-
-    @media(min-width: 768px) {
-
-        .header {
-            padding: 0 0;
-        }
+@media(min-width: 768px) {
+    .header {
+        padding: 0 0;
 
         .nav {
             //width: 91.5%;
@@ -85,7 +83,6 @@
                     color: black;
                 }
 
-
                 &_active {
                     border: 3px solid #825890;
                     border-radius: 50px;
@@ -104,17 +101,18 @@
                         background-size: 38px 80px;
                     }
                 }
-
             }
 
             .contact-badge {
                 display: none;
             }
         }
-
     }
+}
 
-    @media(min-width: 930px) {
+@media(min-width: 930px) {
+    .header {
+        height: 140px;
 
         .nav__list {
             width: 67.3%;
