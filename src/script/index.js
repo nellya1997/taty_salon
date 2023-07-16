@@ -73,12 +73,10 @@
   function changeFirstSection() {
       /*контрольная точка 767рх - при увеличении экрана с мобилки, JS удаляет узлы из firstTop and checkIn и добавляет их в leftSide:*/
     if (window.matchMedia('(min-width: 767px)').matches) {
-      console.log('window bigger 767px');
       leftSide.prepend(firstTop);
       leftSide.appendChild(checkIn);
     } else if (window.matchMedia('(max-width: 768px)')) {
         /*теперь нужно переместить DOM элементы из ПК версии в мобильную в случае если пользователь переворачивает экран или меняет разрешение*/
-      console.log('window less 768px');
       firstContainer.prepend(firstTop);
       firstContainer.appendChild(checkIn);
     }
