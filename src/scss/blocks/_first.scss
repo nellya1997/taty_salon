@@ -1,9 +1,9 @@
 .first {
     @include centry(91%);
+    padding: 20px 0;
 
     &__top {
         img {
-            //вот ее нужно превратить в надпись Н1
             display: block;
             margin: 0 auto;
         }
@@ -16,52 +16,63 @@
 
     .girl {
         margin: 0 auto;
+        padding-top: calc(25px + 35 * ((100vw - 320px) / 768));
+        padding-bottom: 6px;
         @include flexy(row);
         gap: 10px;
         max-height: 755px;
 
-
-
-        // width: calc(269px + 564 * ((100vw - 320px) / 1920));
-        // height: calc(219px + 537 * ((100vw - 320px) / 1920));
-
-
         &__wrapper {
             @include flexy();
-            position: relative;
-        }
+            //position: relative;
 
-        &__border {
-            //хз какой там цвет правильно - просто пока тупо ткнул пипетков в paint
-            border: 2px solid rgba(75, 11, 122, 1.0);
+            picture {
+                width: 90%;
+                position: relative;
+                margin: -10% 0% 0% 10%;
 
-
-
-            &:before {
-                content: "";
-                width: 170%;
-                height: 100%;
-                background-image: url('../images/first/girl-background.png');
-                background-size: 100% 100%;
-                position: absolute;
-                z-index: -1;
-                top: 0px;
-                left: -25%;
             }
         }
 
 
-        picture {
-            height: 130%;
+        h1 {
+            font-family: 'Constantine';
+            font-size: calc(25px + 45 * ((100vw - 320px) / 1920));
+            font-weight: 400;
+            line-height: calc(32px + 48 * ((100vw - 320px) / 1920));
+            text-transform: uppercase;
+            padding-right: 5px;
         }
 
 
+        &__border {
+            //хз какой там цвет правильно - просто пока тупо ткнул пипетков в paint
+            border: 2px solid rgba(75, 11, 122, 1.0);
+            position: relative;
 
+            &:before {
+                content: "";
+                width: 160%;
+                height: 100%;
+                background-image: url('../images/first/girl-background.png');
+                //background-image: url('../images/first/girl-background.webp');
+                background-size: 100% 100%;
+                position: absolute;
+                z-index: -1;
+                bottom: 8%;
+                left: -30%;
+            }
 
-
-
-
-
+            &::after {
+                content: 'Казань';
+                font-family: 'Constantine';
+                font-size: calc(11px + 33 * ((100vw - 320px) / 1920));
+                line-height: 0;
+                position: absolute;
+                bottom: 102%;
+                left: 0;
+            }
+        }
     }
 
     .socials {
@@ -115,21 +126,28 @@
     }
 }
 
-
 @media (min-width: 768px) {
     .first {
-        padding-top: 40px;
+        padding: 60px 0;
 
 
         &__wrapper {
             padding-top: 45px;
             @include flexy(row-reverse, space-between);
-            @include centry(91.4%);
         }
 
         .girl {
-            width: 41.3%;
+            //я не знаю как работает эта формула именно в этом случае: я хотел из 49% вычитать 8, но так работало плохо
+            width: calc(51% - 160 * ((100vw - 767px) / 1920));
             margin: 0 0;
+            gap: 30px;
+
+            &__border {
+
+                &::after {
+                    bottom: 103%;
+                }
+            }
         }
 
         &__left-side {
