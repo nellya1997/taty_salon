@@ -383,6 +383,7 @@ html {
   min-width: 320px;
   scroll-behavior: smooth;
   color: #22082B;
+  overflow: auto;
   margin-left: calc(100vw - 100%);
   margin-right: 0;
 }
@@ -894,6 +895,10 @@ ul {
   height: 28px;
 }
 
+.first {
+  margin: 0 auto;
+  width: 91%;
+}
 .first__top img {
   display: block;
   margin: 0 auto;
@@ -904,7 +909,7 @@ ul {
   line-height: 21px;
   text-align: center;
 }
-.first__girl {
+.first .girl {
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -912,38 +917,64 @@ ul {
   align-items: center;
   gap: 10px;
   max-height: 755px;
-  border: 1px solid rgb(243, 243, 243);
 }
-.first__girl picture {
+.first .girl__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.first .girl__border {
+  border: 2px solid rgb(75, 11, 122);
+}
+.first .girl__border:before {
+  content: "";
+  width: 170%;
+  height: 100%;
+  background-image: url("../images/first/girl-background.png");
+  background-size: 100% 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: -25%;
+}
+.first .girl picture {
   height: 130%;
 }
-.first__girl .socials {
-  width: 22px;
+.first .socials {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
 }
-.first__girl .socials::before {
+.first .socials::before {
   content: "";
-  width: 47px;
+  width: calc(47px + 138 * (100vw - 320px) / 1920);
   height: 1px;
   background-color: #825890;
   position: absolute;
-  top: -40px;
-  left: -11;
+  bottom: calc(140px + 230 * (100vw - 320px) / 1920);
   transform: rotate(90deg);
 }
-.first__girl .socials::after {
+.first .socials::after {
   content: "";
-  width: 47px;
+  width: calc(47px + 138 * (100vw - 320px) / 1920);
   height: 1px;
   background-color: #825890;
   position: absolute;
-  bottom: -40px;
-  left: -11;
+  top: calc(140px + 230 * (100vw - 320px) / 1920);
   transform: rotate(90deg);
+}
+.first .socials a {
+  display: block;
+  width: calc(20px + 38 * (100vw - 320px) / 1920);
+  height: calc(20px + 38 * (100vw - 320px) / 1920);
+}
+.first .socials a img {
+  width: calc(20px + 38 * (100vw - 320px) / 1920);
+  height: calc(20px + 38 * (100vw - 320px) / 1920);
 }
 .first__left-side {
   display: none;
@@ -968,7 +999,7 @@ ul {
     margin: 0 auto;
     width: 91.4%;
   }
-  .first__girl {
+  .first .girl {
     width: 41.3%;
     margin: 0 0;
   }
@@ -2130,4 +2161,4 @@ video {
     left: -131px;
     top: 49px;
   }
-}
+}/*# sourceMappingURL=style.css.map */

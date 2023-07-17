@@ -57,6 +57,7 @@ html {
   color: $dark-purple;
 
   //чтобы убрать прыгающий скролл
+  overflow: auto;
   margin-left: calc(100vw - 100%);
   margin-right: 0;
 
