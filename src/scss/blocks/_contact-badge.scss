@@ -26,3 +26,17 @@
         }
     }
 }
+
+@media(min-width: 768px) {
+    .contact-badge {
+
+        &__item {
+            @include flexy(row, flex-start);
+
+            img {
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+}
