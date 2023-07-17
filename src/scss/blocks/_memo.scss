@@ -2,19 +2,31 @@
 	margin-bottom: 40px;
 	padding: 0 20px;
 
-	// .list--cards li .circle::after {
-	// 	content: '';
-	// 	background-image: url('../../images/memo/smile.svg');
-	// 	width: 100%;
-	// 	height: 100%;
-	// 	background-size: 100%;
-	// 	background-repeat: no-repeat;
-	// 	position: absolute;
-	// 	top: 50%;
-	// 	left: 50%;
-	// 	transform: translate(-50%, -50%);
-	// 	z-index: 1;
-	// }
+	.list--cards li .circle::after {
+		content: '';
+		background-image: url('./../images/memo/smile.svg');
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: 50%;
+		position: absolute;
+		top: 40px;
+		left: 40px;
+		transform: translate(-50%, -50%);
+		z-index: 1;
+	}
+
+	.list--cards li:nth-child(2) .circle::after {
+		background-image: url('./../images/memo/plate.svg');
+	}
+
+	.list--cards li:nth-child(3) .circle::after {
+		background-image: url('./../images/memo/moon.svg');
+	}
+
+	.list--cards li:nth-child(4) .circle::after {
+		background-image: url('./../images/memo/t-shirt.svg');
+	}
 
 	&__h2 {
 		font-size: 14px;
@@ -287,11 +299,9 @@
 
 @media (min-width: 1920px) {
 	.memo {
-		.list--cards li .circle img {
-			width: 41px;
-			height: 41px;
-			top: 22px;
-			left: 22px;
+		.list--cards li .circle::after {
+			top: 63px;
+			left: 63px;
 		}
 
 		&__desc {
@@ -345,4 +355,6 @@
 			font-size: 25px;
 		}
 	}
+
+	
 }
