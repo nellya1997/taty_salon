@@ -406,6 +406,11 @@ body {
   overflow: hidden;
 }
 
+button {
+  padding: 0;
+  border: none;
+}
+
 main {
   padding-top: 60px;
 }
@@ -611,6 +616,7 @@ ul {
 .portfolio__wrapper .picture {
   width: calc(20% - 5px);
   height: 130px;
+  cursor: pointer;
 }
 .portfolio__wrapper .picture--desktop {
   display: none;
@@ -1181,6 +1187,7 @@ ul {
   padding-top: 64px;
   background-size: 100%;
   margin-bottom: 32px;
+  position: relative;
 }
 .portfolio__wrapper {
   display: flex;
@@ -2196,4 +2203,43 @@ video {
     left: -131px;
     top: 49px;
   }
+}
+.popup {
+  position: absolute;
+  top: 124px;
+  left: 0;
+  background-color: rgba(161, 166, 180, 0.5);
+  width: 100%;
+  z-index: 1;
+  visibility: hidden;
+  transition: visibility 0.3s linear;
+}
+.popup__inner {
+  padding: 56px;
+}
+.popup.open {
+  visibility: visible;
+}
+.popup__close {
+  position: absolute;
+  top: 10px;
+  width: 25px;
+  height: 25px;
+  right: 10px;
+  background-color: rgba(218, 185, 235, 0.5);
+  cursor: pointer;
+}
+.popup__close::after, .popup__close::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 23px;
+  transform: translate(-50%, -50%) rotate(45deg);
+  height: 2px;
+  background-color: #A289AA;
+  transition: background-color 0.2s ease-in;
+}
+.popup__close::before {
+  transform: translate(-50%, -50%) rotate(-45deg);
 }/*# sourceMappingURL=style.css.map */
