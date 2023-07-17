@@ -707,6 +707,10 @@ ul {
   transform: translateY(-100vh);
   transition: transform 0.5s;
 }
+.header .nav a,
+.header .nav p {
+  color: rgb(34, 8, 43);
+}
 .header .nav__contacts {
   display: none;
 }
@@ -752,7 +756,7 @@ ul {
   }
   .header .nav__link {
     display: inline-block;
-    font-size: calc(11px + 16 * (100vw - 768px) / 1920);
+    font-size: calc(11px + 26 * (100vw - 768px) / 1920);
     position: relative;
   }
   .header .nav__link:hover {
