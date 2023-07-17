@@ -12,6 +12,7 @@
     .portfolio__wrapper & {
         width: calc(20% - 5px);
         height: 130px;
+        cursor: pointer;
 
         &--desktop {
             display: none;

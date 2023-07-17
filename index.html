@@ -180,13 +180,13 @@
         </div>
 
         <div class="portfolio__wrapper">
-          <picture class="picture picture__portfolio">
+          <picture data-modal class="picture picture__portfolio">
             <source type="image/webp" srcset="./src/images/portfolio/content1.webp" media="(max-width: 1024px)">
             <source type="image/jpeg" srcset="./src/images/portfolio/content1.jpg" media="(max-width: 1024px)">
             <img src="./src/images/portfolio/content1.jpg" alt="Портфолио">
           </picture>
 
-          <picture class="picture">
+          <picture data-modal class="picture">
             <source type="image/webp" srcset="./src/images/portfolio/content2.webp" media="(max-width: 1024px)">
             <source type="image/jpeg" srcset="./src/images/portfolio/content2.jpg" media="(max-width: 1024px)">
             <img src="./src/images/portfolio/content2.jpg" alt="Портфолио">
@@ -449,7 +449,12 @@
           </div>
         </div>
 
-        <!-- </div> -->
+        <div class="popup">
+          <div class="popup__inner">
+            <button class="popup__close" data-close></button>
+          </div>
+
+        </div>
       </div>
     </section>
 
@@ -545,149 +550,154 @@
 
     <section id="memo" class="memo js-section">
       <div class="container">
-        <div class="wrapper-title">
-          <h2 class="title">Памятки</h2>
-          <p class="memo__h2 text-center">Как поготовиться к сеансу?</p>
-        </div>
-        <ul class="list list--cards">
-          <li>
-            <div class="circle"> <img src="./src/images/memo/smile.svg" alt="улыбка"></div>
-            <p class="list__content1">Отличное настроение</p>
-            <p class="list__content2">Подумать о хорошем и расслабиться</p>
-          </li>
-          <li>
-            <div class="circle"><img src="./src/images/memo/plate.svg" alt="завтрак"></div>
-            <p class="list__content1">Покушать</p>
-            <p class="list__content2">Перед сеансом быть сытым</p>
-          </li>
-          <li>
-            <div class="circle"><img src="./src/images/memo/moon.svg" alt="луна"></div>
-            <p class="list__content1">Выспаться</p>
-            <p class="list__content2">Чтобы организм не стрессовал</p>
-          </li>
-          <li>
-            <div class="circle"><img src="./src/images/memo/t-shirt.svg" alt="футболка"></div>
-            <p class="list__content1">Удобная одежда</p>
-            <p class="list__content2">Для вашего комфорта - любимая одежда</p>
-          </li>
-        </ul>
-        <p class="memo__desc">
-          Эти пункты нужны, чтобы наши базовые потребности были полностью закрыты и организм дополнительно не
-          стрессовал
-        </p>
-        <div class="memo__wrapper">
+
+              <h2 class="title"> <span>Памятки</span></h2>
+              <p class="memo__h2 text-center">Как поготовиться к сеансу?</p>
+          
+          <ul class="list list--cards">
+              <li>
+                  <div class="circle"></div> 
+                  <p class="list__content1">Отличное настроение</p>
+                  <p class="list__content2">Подумать о хорошем и расслабиться</p>
+              </li>
+              <li>
+                  <div class="circle"></div>
+                  <p class="list__content1">Покушать</p>
+                  <p class="list__content2">Перед сеансом быть сытым</p>
+              </li>
+              <li>
+                  <div class="circle"></div>
+                  <p class="list__content1">Выспаться</p>
+                  <p class="list__content2">Чтобы организм не стрессовал</p>
+              </li>
+              <li>
+                  <div class="circle"></div>
+                  <p class="list__content1">Удобная одежда</p>
+                  <p class="list__content2">Для вашего комфорта - любимая одежда</p>
+              </li>
+          </ul>
+          <p class="memo__desc">
+              Эти пункты нужны, чтобы наши базовые потребности были полностью закрыты и организм дополнительно не
+              стрессовал
+          </p>
+      <div class="memo__wrapper">
+          
+          <div class="memo__separation">
+              <div class="memo__content">
+                  <div class="memo__pluse-btn"></div>
+                  <h3 class="memo__switch text-center">
+                      Заживление татуировки
+                  </h3>
+              </div>
+              <div class="memo__list">
+                  <div class="memo__list-item">
+                      <img src="./src/images/nums/1.svg"
+                           alt="1">
+                      <div class="item-content">
+                          <h3>Активное заживление</h3>
+                          <p>В это время кожа в области татуировки
+                              краснеет, возникает припухлость, а самое главное -
+                              начинает выделяться вязкая бесцветная жидкость.
+                          </p>
+                          <p>Данный этап длится в среднем <strong>до 2 дней</strong>, бить
+                              тревогу не надо, это естественный физиологический
+                              процесс
+                          </p>
+                      </div>
+                  </div>
+                  <div class="memo__list-item">
+                      <img src="./src/images/nums/2.svg"
+                           alt="1">
+                      <div class="item-content">
+                          <h3>Регенерация</h3>
+                          <p>В этот период опухоль спадает, сукровица
+                              перестает выделятся, кожа подсыхает и стягивается.
+                          </p>
+                          <p>Длительность этого этапа – <strong>до 6 дней</strong>
+                          </p>
+                      </div>
+                  </div>
+                  <div class="memo__list-item">
+                      <img src="./src/images/nums/3.svg"
+                           alt="1">
+                      <div class="item-content">
+                          <h3>Восстановление</h3>
+                          <p>В этот период кожа начинает шелушиться,
+                              а “корочки” постепенно отпадать.
+                              Область тату может достаточно ощутимо зудеть
+                          </p>
+                          <p>Этап длится от <strong>7 до 14 дней</strong>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+              <div class="memo__rules">
+                  <p>До заживления - нельзя ходить в сауны, бани,
+                      купаться в бассейне, море, водоемах,
+                      заниматься активным спортом - 7-10 дней примерно</p>
+                  <p>При посещении пляжа использовать солнцезащитные средства</p>
+                  <p>На месте татуировки противопоказана лазерная и фотоэпиляция</p>
+              </div>
+          </div>
 
           <div class="memo__separation">
-            <div class="memo__content">
-              <img src="src/images/memo/pluse.svg" alt="плюс">
-              <h3 class="memo__switch text-center">
-                Заживление татуировки
-              </h3>
-            </div>
-            <div class="memo__list">
-              <div class="memo__list-item">
-                <img src="./src/images/nums/1.svg" alt="1">
-                <div class="item-content">
-                  <h3>Активное заживление</h3>
-                  <p>В это время кожа в области татуировки
-                    краснеет, возникает припухлость, а самое главное -
-                    начинает выделяться вязкая бесцветная жидкость.
-                  </p>
-                  <p>Данный этап длится в среднем <strong>до 2 дней</strong>, бить
-                    тревогу не надо, это естественный физиологический
-                    процесс
-                  </p>
-                </div>
+              <div class="memo__content">
+                <div class="memo__pluse-btn"></div>
+                  <h3 class="memo__switch text-center">
+                      Уход за татуировкой
+                  </h3>
               </div>
-              <div class="memo__list-item">
-                <img src="./src/images/nums/2.svg" alt="1">
-                <div class="item-content">
-                  <h3>Регенерация</h3>
-                  <p>В этот период опухоль спадает, сукровица
-                    перестает выделятся, кожа подсыхает и стягивается.
-                  </p>
-                  <p>Длительность этого этапа – <strong>до 6 дней</strong>
-                  </p>
-                </div>
+              <div class="memo__list">
+                  <div class="memo__list-item">
+                      <img src="./src/images/nums/1.svg"
+                           alt="1">
+                      <div class="item-content">
+                          <p>Небольшие татуировки <strong>(до 15 см)</strong> удобно заживлять
+                              с помощью <strong>специальной плёнки.</strong>
+                          </p>
+                          <p>Ходить с этой пленкой тебе нужно <strong>6-7 дней.</strong>
+                          </p>
+                          <p>Под пленкой будет скапливаться жидкость. <br> <strong>Не прокалывай плёнку</strong>,
+                              не сливай эту жидкость и старайся не носить одежду,
+                              которая может давить на плёнку. </p>
+                          <p>После того, как <strong>снимешь плёнку</strong>, тщательно промой татуировку
+                              с мылом и протяжении недели следует <strong>мазать мазью или увлажняющим кремом</strong>. </p>
+                      </div>
+                  </div>
+                  <div class="memo__list-item">
+                      <img src="./src/images/nums/2.svg"
+                           alt="1">
+                      <div class="item-content">
+                          
+                          <p>Большие татуировки <strong>(от 15 см)</strong> удобно заживлять с помощью <strong>пелёнки</strong>.
+                          </p>
+                          <p>Первый раз меняй компресс <strong>перед сном</strong> в день сеанса 
+                              - нужно промыть теплой водой с кусковым мылом </strong>
+                          </p>
+                          <p>После этого необходимо дать подсохнуть и намазать тонким 
+                              слоем мази. И снова надеть пеленку.</p>
+                              <p>На второй день днем можно ходить без пеленки - только не забывайте наносить 
+                                  мазь, в течение недели, но на ночь всё равно заматывайте пеленкой.</p>
+                      </div>
+                  </div>
               </div>
-              <div class="memo__list-item">
-                <img src="./src/images/nums/3.svg" alt="1">
-                <div class="item-content">
-                  <h3>Восстановление</h3>
-                  <p>В этот период кожа начинает шелушиться,
-                    а “корочки” постепенно отпадать.
-                    Область тату может достаточно ощутимо зудеть
-                  </p>
-                  <p>Этап длится от <strong>7 до 14 дней</strong>
-                  </p>
-                </div>
+          </div>
+      </div>
+          <div class="memo__personal">
+              <h3 class="text-center">Личные памятки</h3>
+              <div>
+                  <img src="./src/images/memo/layer.svg" alt="фон">
+                  <a target="_blank" href="https://vk.com/@dina_synthetica_tattoo-poetapnyi-razbor-perekrytiya-staroi-tatuirovki">Подробный разбор перекрытия старой зашрамированной татуировки</a>
               </div>
-            </div>
-            <div class="memo__rules">
-              <p>До заживления - нельзя ходить в сауны, бани,
-                купаться в бассейне, море, водоемах,
-                заниматься активным спортом - 7-10 дней примерно</p>
-              <p>При посещении пляжа использовать солнцезащитные средства</p>
-              <p>На месте татуировки противопоказана лазерная и фотоэпиляция</p>
-            </div>
-          </div>
-
-          <div class="memo__separation">
-            <div class="memo__content">
-              <img src="src/images/memo/pluse.svg" alt="плюс">
-              <h3 class="memo__switch text-center">
-                Уход за татуировкой
-              </h3>
-            </div>
-            <div class="memo__list">
-              <div class="memo__list-item">
-                <img src="./src/images/nums/1.svg" alt="1">
-                <div class="item-content">
-                  <p>Небольшие татуировки <strong>(до 15 см)</strong> удобно заживлять
-                    с помощью <strong>специальной плёнки.</strong>
-                  </p>
-                  <p>Ходить с этой пленкой тебе нужно <strong>6-7 дней.</strong>
-                  </p>
-                  <p>Под пленкой будет скапливаться жидкость. <br> <strong>Не прокалывай плёнку</strong>,
-                    не сливай эту жидкость и старайся не носить одежду,
-                    которая может давить на плёнку. </p>
-                  <p>После того, как <strong>снимешь плёнку</strong>, тщательно промой татуировку
-                    с мылом и протяжении недели следует <strong>мазать мазью или увлажняющим кремом</strong>. </p>
-                </div>
+              <div>
+                  <img src="./src/images/memo/layer.svg" alt="фон">
+                  <a target="_blank" href="https://vk.com/@dina_synthetica_tattoo-pochemu-tatuirovki-bledneut-i-pro-korrekciu">Почему тату бледнеет?</a>
               </div>
-              <div class="memo__list-item">
-                <img src="./src/images/nums/2.svg" alt="1">
-                <div class="item-content">
-
-                  <p>Большие татуировки <strong>(от 15 см)</strong> удобно заживлять с помощью <strong>пелёнки</strong>.
-                  </p>
-                  <p>Первый раз меняй компресс <strong>перед сном</strong> в день сеанса
-                    - нужно промыть теплой водой с кусковым мылом </strong>
-                  </p>
-                  <p>После этого необходимо дать подсохнуть и намазать тонким
-                    слоем мази. И снова надеть пеленку.</p>
-                  <p>На второй день днем можно ходить без пеленки - только не забывайте наносить
-                    мазь, в течение недели, но на ночь всё равно заматывайте пеленкой.</p>
-                </div>
+              <div>
+                  <img src="./src/images/memo/layer.svg" alt="фон" />
+                  <a target="_blank" href="https://vk.com/wall-211069230_846">Как готовиться твой эскиз?</a>
               </div>
-            </div>
           </div>
-        </div>
-        <div class="memo__personal">
-          <h3 class="text-center">Личные памятки</h3>
-          <div>
-            <img src="./src/images/memo/layer.svg" target="_blank" alt="фон">
-            <a href="https://vk.com/@dina_synthetica_tattoo-poetapnyi-razbor-perekrytiya-staroi-tatuirovki">Подробный разбор перекрытия старой зашрамированной татуировки</a>
-          </div>
-          <div>
-            <img src="./src/images/memo/layer.svg" target="_blank" alt="фон">
-            <a href="https://vk.com/@dina_synthetica_tattoo-pochemu-tatuirovki-bledneut-i-pro-korrekciu">Почему тату бледнеет?</a>
-          </div>
-          <div>
-            <img src="./src/images/memo/layer.svg" target="_blank" alt="фон" />
-            <a href="https://vk.com/wall-211069230_846">Как готовиться твой эскиз?</a>
-          </div>
-        </div>
 
 
 
@@ -822,6 +832,7 @@
 
   </main>
   <!-- footer -->
+  
   <footer class="footer js-section">
     <div class="container">
       <img class="footer__bg-desktop" src="/src/images/footer/bg.png" alt="">
@@ -877,6 +888,10 @@
     </div>
 
   </footer>
+  
+  <!-- <div class="popup">
+    <div class="popup__inner"></div>
+  </div> -->
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="./src/script/jquery-1.12.0.min.js"></script>
