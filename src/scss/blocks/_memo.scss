@@ -1,14 +1,25 @@
-.wrapper-title {
-	margin-bottom: 50px;
-}
-
 .memo {
 	margin-bottom: 40px;
 	padding: 0 20px;
 
+	// .list--cards li .circle::after {
+	// 	content: '';
+	// 	background-image: url('../../images/memo/smile.svg');
+	// 	width: 100%;
+	// 	height: 100%;
+	// 	background-size: 100%;
+	// 	background-repeat: no-repeat;
+	// 	position: absolute;
+	// 	top: 50%;
+	// 	left: 50%;
+	// 	transform: translate(-50%, -50%);
+	// 	z-index: 1;
+	// }
+
 	&__h2 {
 		font-size: 14px;
 		font-weight: 700;
+		margin-bottom: 50px;
 	}
 
 	&__desc {
@@ -19,6 +30,7 @@
 		font-style: normal;
 		font-weight: 500;
 		line-height: 105%;
+		margin-bottom: 20px;
 	}
 	&__switch {
 		position: relative;
@@ -30,19 +42,41 @@
 	&__content {
 		display: flex;
 		align-items: center;
-		margin-top: 20px;
+
 		column-gap: 13px;
 		transition: transform 0.5s ease;
+	}
 
-		img {
-			width: 17px;
-			height: 17px;
-			cursor: pointer;
-			transform: rotate(45deg);
+	&__pluse-btn {
+		position: relative;
+		width: 25px;
+		height: 25px;
+		transition: transform 0.5s ease;
+		cursor: pointer;
+
+		&::before {
+			content: '';
+			width: 25px;
+			height: 2px;
+			background-color: #825890;
+			position: absolute;
+			left: 0;
+			top: 11px;
+			transform: translateY(-50%);
 		}
 
-		img.rotated {
-			transform: rotate(90deg);
+		&::after {
+			content: '';
+			width: 25px;
+			height: 2px;
+			background-color: #825890;
+			position: absolute;
+			left: 0;
+			top: 11px;
+			transform: rotate(90deg) translate(-6%, 0%);
+		}
+		&.rotated {
+			transform: rotate(45deg);
 		}
 	}
 
@@ -78,9 +112,10 @@
 		align-items: flex-start;
 		column-gap: 5px;
 
-        img{
-            width: 10px;
-        }
+		img {
+			width: 10px;
+			height: 14px;
+		}
 	}
 
 	&__list {
@@ -191,7 +226,6 @@
 			img {
 				width: 10px;
 				height: 14px;
-				margin-top: 4px;
 			}
 		}
 	}
@@ -204,15 +238,17 @@
 
 @media (min-width: 1024px) {
 	.memo {
-		&__content {
-			img {
-				display: none;
-			}
+		&__pluse-btn {
+			display: none;
+		}
+
+		&__desc {
+			margin-bottom: 30px;
 		}
 		&__wrapper {
 			@include flexy($justify: space-between, $align: flex-start);
 			column-gap: 60px;
-			margin-top: 30px;
+			margin-bottom: 70px;
 		}
 
 		&__list {
@@ -229,7 +265,6 @@
 
 		&__personal {
 			@include flexy($justify: space-between);
-			margin-top: 70px;
 			margin-bottom: 70px;
 			h3 {
 				display: none;
@@ -276,13 +311,12 @@
 			}
 		}
 
-        &__wrapper{
-            column-gap: 100px;
-        }
+		&__wrapper {
+			column-gap: 100px;
+		}
 
 		&__personal {
 			@include flexy($justify: space-between);
-			margin-top: 70px;
 			margin-bottom: 70px;
 			h3 {
 				display: none;
@@ -292,8 +326,7 @@
 				text-decoration-thickness: 2px;
 				line-height: 1.6;
 				max-width: 470px;
-                margin-right: 79px;
-
+				margin-right: 79px;
 			}
 
 			img {
@@ -305,7 +338,6 @@
 			img {
 				width: 30px;
 				height: 40px;
-				margin-top: 4px;
 			}
 		}
 		.item-content h3,

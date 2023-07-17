@@ -1,5 +1,5 @@
 const switchElements = document.querySelectorAll('.memo__switch')
-const imgElements = document.querySelectorAll('.memo__content img')
+const imgElements = document.querySelectorAll('.memo__pluse-btn')
 const listElements = document.querySelectorAll('.memo__list')
 
 switchElements.forEach(function (switchElement, index) {
