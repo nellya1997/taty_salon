@@ -1620,17 +1620,36 @@ ul {
     width: 100%;
   }
 }
-.wrapper-title {
-  margin-bottom: 50px;
-}
-
 .memo {
   margin-bottom: 40px;
   padding: 0 20px;
 }
+.memo .list--cards li .circle::after {
+  content: "";
+  background-image: url("./../images/memo/smile.svg");
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.memo .list--cards li:nth-child(2) .circle::after {
+  background-image: url("./../images/memo/plate.svg");
+}
+.memo .list--cards li:nth-child(3) .circle::after {
+  background-image: url("./../images/memo/moon.svg");
+}
+.memo .list--cards li:nth-child(4) .circle::after {
+  background-image: url("./../images/memo/t-shirt.svg");
+}
 .memo__h2 {
   font-size: 14px;
   font-weight: 700;
+  margin-bottom: 50px;
 }
 .memo__desc {
   color: #22082b;
@@ -1640,6 +1659,7 @@ ul {
   font-style: normal;
   font-weight: 500;
   line-height: 105%;
+  margin-bottom: 20px;
 }
 .memo__switch {
   position: relative;
@@ -1650,19 +1670,39 @@ ul {
 .memo__content {
   display: flex;
   align-items: center;
-  margin-top: 20px;
   -moz-column-gap: 13px;
        column-gap: 13px;
   transition: transform 0.5s ease;
 }
-.memo__content img {
-  width: 17px;
-  height: 17px;
+.memo__pluse-btn {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  transition: transform 0.5s ease;
   cursor: pointer;
-  transform: rotate(45deg);
 }
-.memo__content img.rotated {
-  transform: rotate(90deg);
+.memo__pluse-btn::before {
+  content: "";
+  width: 25px;
+  height: 2px;
+  background-color: #825890;
+  position: absolute;
+  left: 0;
+  top: 11px;
+  transform: translateY(-50%);
+}
+.memo__pluse-btn::after {
+  content: "";
+  width: 25px;
+  height: 2px;
+  background-color: #825890;
+  position: absolute;
+  left: 0;
+  top: 11px;
+  transform: rotate(90deg) translate(-6%, 0%);
+}
+.memo__pluse-btn.rotated {
+  transform: rotate(45deg);
 }
 .memo__content img, .memomemo__switch {
   transition: transform 0.3s ease;
@@ -1693,6 +1733,7 @@ ul {
 }
 .memo__list-item img {
   width: 10px;
+  height: 14px;
 }
 .memo__list {
   overflow: hidden;
@@ -1790,7 +1831,6 @@ ul {
   .memo__list-item img {
     width: 10px;
     height: 14px;
-    margin-top: 4px;
   }
   .item-content h3,
   .item-content p {
@@ -1798,8 +1838,11 @@ ul {
   }
 }
 @media (min-width: 1024px) {
-  .memo__content img {
+  .memo__pluse-btn {
     display: none;
+  }
+  .memo__desc {
+    margin-bottom: 30px;
   }
   .memo__wrapper {
     display: flex;
@@ -1808,7 +1851,7 @@ ul {
     align-items: flex-start;
     -moz-column-gap: 60px;
          column-gap: 60px;
-    margin-top: 30px;
+    margin-bottom: 70px;
   }
   .memo__list {
     max-height: 1000px;
@@ -1825,7 +1868,6 @@ ul {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 70px;
     margin-bottom: 70px;
   }
   .memo__personal h3 {
@@ -1844,11 +1886,9 @@ ul {
   }
 }
 @media (min-width: 1920px) {
-  .memo .list--cards li .circle img {
-    width: 41px;
-    height: 41px;
-    top: 22px;
-    left: 22px;
+  .memo .list--cards li .circle::after {
+    top: 63px;
+    left: 63px;
   }
   .memo__desc {
     font-size: 25px;
@@ -1871,7 +1911,6 @@ ul {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 70px;
     margin-bottom: 70px;
   }
   .memo__personal h3 {
@@ -1894,7 +1933,6 @@ ul {
   .memo__list-item img {
     width: 30px;
     height: 40px;
-    margin-top: 4px;
   }
   .memo .item-content h3,
   .memo .item-content p {
