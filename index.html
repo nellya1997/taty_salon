@@ -187,13 +187,13 @@
         </div>
 
         <div class="portfolio__wrapper">
-          <picture class="picture picture__portfolio">
+          <picture data-modal class="picture picture__portfolio">
             <source type="image/webp" srcset="./src/images/portfolio/content1.webp" media="(max-width: 1024px)">
             <source type="image/jpeg" srcset="./src/images/portfolio/content1.jpg" media="(max-width: 1024px)">
             <img src="./src/images/portfolio/content1.jpg" alt="Портфолио">
           </picture>
 
-          <picture class="picture">
+          <picture data-modal class="picture">
             <source type="image/webp" srcset="./src/images/portfolio/content2.webp" media="(max-width: 1024px)">
             <source type="image/jpeg" srcset="./src/images/portfolio/content2.jpg" media="(max-width: 1024px)">
             <img src="./src/images/portfolio/content2.jpg" alt="Портфолио">
@@ -456,7 +456,12 @@
           </div>
         </div>
 
-        <!-- </div> -->
+        <div class="popup">
+          <div class="popup__inner">
+            <button class="popup__close" data-close></button>
+          </div>
+
+        </div>
       </div>
     </section>
 
@@ -829,6 +834,7 @@
 
   </main>
   <!-- footer -->
+  
   <footer class="footer js-section">
     <div class="container">
       <img class="footer__bg-desktop" src="/src/images/footer/bg.png" alt="">
@@ -884,6 +890,10 @@
     </div>
 
   </footer>
+  
+  <!-- <div class="popup">
+    <div class="popup__inner"></div>
+  </div> -->
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="./src/script/jquery-1.12.0.min.js"></script>

@@ -138,3 +138,66 @@ const swiper2 = new Swiper('.js-swiper-reviews', {
     // }
   }
 });
+
+
+// подключение попапа в портфолио
+
+class popupItem {
+  constructor(src, alt) {
+      this.src = src;
+      this.alt = alt;
+      // this.titile = titile;
+      // this.descr = descr;
+      // this.price = price;
+      // this.classes = classes;
+      // this.parent = document.querySelector(parentSelector);
+      // this.transfer = 27;
+      // this.changeToUAH();
+  }
+  
+  // srcPicture() {
+  //   this.picture = 
+  // }
+}
+
+
+
+const modalPortfolio = document.querySelector('[data-modal]'),
+      modal = document.querySelector('.popup'),
+      modalInner = document.querySelector('.popup__inner'),
+      modalClose = document.querySelector('[data-close]'),
+      portfolioWrapper = document.querySelector('.portfolio__wrapper');
+
+modalPortfolio.addEventListener('click', () => {
+  modal.classList.toggle('open');
+  modalInner.prepend(modalPortfolio);
+});
+
+modalClose.addEventListener('click', () => {
+  modal.classList.toggle('open');
+  portfolioWrapper.prepend(modalPortfolio);
+})
+
+// const modalPortfolio = document.querySelectorAll('[data-modal]'),
+//       modal = document.querySelector('.popup'),
+//       modalInner = document.querySelector('.popup__inner'),
+//       modalClose = document.querySelector('[data-close]'),
+//       portfolioWrapper = document.querySelector('.portfolio__wrapper');
+
+// modalPortfolio.forEach(item => {
+
+//   item.addEventListener ('click', () => {
+//     // const target = event.target;
+//     modal.classList.toggle('open');
+//     modalInner.prepend(modalPortfolio);
+// });
+// });
+
+// modalClose.addEventListener('click', () => {
+//   modal.classList.toggle('open');
+//   portfolioWrapper.prepend(modalPortfolio);
+// })
+
+
+
+
