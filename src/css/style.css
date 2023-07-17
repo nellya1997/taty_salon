@@ -707,6 +707,10 @@ ul {
   transform: translateY(-100vh);
   transition: transform 0.5s;
 }
+.header .nav a,
+.header .nav p {
+  color: rgb(34, 8, 43);
+}
 .header .nav__contacts {
   display: none;
 }
@@ -752,7 +756,7 @@ ul {
   }
   .header .nav__link {
     display: inline-block;
-    font-size: calc(11px + 16 * (100vw - 768px) / 1920);
+    font-size: calc(11px + 26 * (100vw - 768px) / 1920);
     position: relative;
   }
   .header .nav__link:hover {
@@ -905,6 +909,7 @@ ul {
 .first {
   margin: 0 auto;
   width: 91%;
+  padding: 20px 0;
 }
 .first__top img {
   display: block;
@@ -918,6 +923,8 @@ ul {
 }
 .first .girl {
   margin: 0 auto;
+  padding-top: calc(25px + 35 * (100vw - 320px) / 768);
+  padding-bottom: 6px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -930,24 +937,43 @@ ul {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+.first .girl__wrapper picture {
+  width: 90%;
   position: relative;
+  margin: -10% 0% 0% 10%;
+}
+.first .girl h1 {
+  font-family: "Constantine";
+  font-size: calc(25px + 45 * (100vw - 320px) / 1920);
+  font-weight: 400;
+  line-height: calc(32px + 48 * (100vw - 320px) / 1920);
+  text-transform: uppercase;
+  padding-right: 5px;
 }
 .first .girl__border {
   border: 2px solid rgb(75, 11, 122);
+  position: relative;
 }
 .first .girl__border:before {
   content: "";
-  width: 170%;
+  width: 160%;
   height: 100%;
   background-image: url("../images/first/girl-background.png");
   background-size: 100% 100%;
   position: absolute;
   z-index: -1;
-  top: 0px;
-  left: -25%;
+  bottom: 8%;
+  left: -30%;
 }
-.first .girl picture {
-  height: 130%;
+.first .girl__border::after {
+  content: "Казань";
+  font-family: "Constantine";
+  font-size: calc(11px + 33 * (100vw - 320px) / 1920);
+  line-height: 0;
+  position: absolute;
+  bottom: 102%;
+  left: 0;
 }
 .first .socials {
   display: flex;
@@ -995,7 +1021,7 @@ ul {
 
 @media (min-width: 768px) {
   .first {
-    padding-top: 40px;
+    padding: 60px 0;
   }
   .first__wrapper {
     padding-top: 45px;
@@ -1003,12 +1029,14 @@ ul {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
-    width: 91.4%;
   }
   .first .girl {
-    width: 41.3%;
+    width: calc(51% - 160 * (100vw - 767px) / 1920);
     margin: 0 0;
+    gap: 30px;
+  }
+  .first .girl__border::after {
+    bottom: 103%;
   }
   .first__left-side {
     width: 28.6%;
