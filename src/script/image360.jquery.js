@@ -1,17 +1,23 @@
-const rotate = (num) => { //функция подсчёта угла поворота кнопок
-	if (num <= 1) return 0;
-	if (num < 4 || num > 22) {
-		return num * 15 - 15;
-	}
-	else if (num > 11 && num < 15) {
-		return num * 15 - 15;
-	}
+// ищем кнопки в документе
+const buttons = document.querySelectorAll('.btn-calc');
+
+const rotate = (slide, classList) => { //функция подсчёта угла поворота кнопок
+	const isProfile = classList.contains('profile');
+	if (isProfile) {
+		const profileRight = 7; //средний слайд, профиль справа
+		const profileLeft = 19;
+	if (slide === profileRight && classList.contains('profile-right')) return 0;
+	if (slide === profileLeft && classList.contains('profile-left')) return 0;
 	return 90;
-	if (num < 4 || num > 22) {
-		return num * 15 - 15;
 	}
-	else if (num > 11 && num < 15) {
-		return num * 15 - 15;
+
+	if (slide <= 1) return 0;
+
+	if (slide < 4 || slide > 22) {
+		return slide * 15 - 15;
+	}
+	else if (slide > 11 && slide < 15) {
+		return slide * 15 - 15;
 	}
 	return 90;
 };
@@ -21,7 +27,7 @@ const rotate = (num) => { //функция подсчёта угла повор�
 		
 		// настройки
 		var settings = $.extend( {
-			'count_loop': 10, // количество оборотов на ширину блока
+			'count_loop': 1, // количество оборотов на ширину блока
 		}, options);
 		
 		var $main_div = this, // блок с картинками
@@ -32,13 +38,6 @@ const rotate = (num) => { //функция подсчёта угла повор�
 			index_img = 0, // индекс отображаемой картинки
 			last_perc = 0, // предыдущее положение курсора относительно блока в процентах
 			direction = true; // напавление движения мыши true - влево, false -  вправо
-
-			//ищем кнопки в документе
-			const buttons = document.querySelectorAll('.btn-calc');
-//			const buttonThroatImage = document.querySelector('.throat');
-//			const buttonBreastImage = document.querySelector('.breast');
-			//кнопки, которые не должны быть отображены на старте скрываем вот таким способом
-//			buttonRightLegImage.style.transform = `rotateY(90deg)`;
 						
 		var methods = {
 			
@@ -70,17 +69,21 @@ const rotate = (num) => { //функция подсчёта угла повор�
 					if(index_img > (count_imgs - 1)) index_img = 0;
 					// тут мы врезаемся в события jQuery и меняем поворот кнопок
 					// index_img + 1 потому что номер слайда тут считается индексом, а нам нужен номер
+
+					const slidePoints = [1, 2, 3, 7, 12, 13, 14, 19, 23, 24];
 					buttons.forEach((button) => {
-						if ((button.classList.contains('throat') || button.classList.contains('breast')) && index_img > 10 && index_img < 16) {
-							return button.style.transform = `rotateY(${rotate(index_img + 1, button.classList)}deg) translateY(2vw)`;
+						const { classList } = button;
+						if (classList.contains('active') && !slidePoints.includes(index_img + 1)) {
+							classList.remove('active', 'animate__heartBeat');
+							state.activeBlock.innerHTML = state.defaultBlock;
+							state.activeButton = document.createElement('a');
 						}
-						button.style.transform = `rotateY(${rotate(index_img + 1, button.classList)}deg)`;
-					});
-					buttons.forEach((button) => {
-						if ((button.classList.contains('throat') || button.classList.contains('breast')) && index_img > 10 && index_img < 16) {
-							return button.style.transform = `rotateY(${rotate(index_img + 1, button.classList)}deg) translateY(2vw)`;
+						if ((classList.contains('clavicle') || classList.contains('ribs')) && index_img > 10 && index_img < 16) {
+							return window.screen.width > 768
+							? button.style.transform = `rotateY(${rotate(index_img + 1, classList)}deg) translateY(2vw)`
+							: button.style.transform = `rotateY(${rotate(index_img + 1, classList)}deg) translateY(6vw)`;
 						}
-						button.style.transform = `rotateY(${rotate(index_img + 1, button.classList)}deg)`;
+						button.style.transform = `rotateY(${rotate(index_img + 1, classList)}deg)`;
 					});
 					$main_div.find("img").hide();
 					$main_div.find("img").eq(index_img).show();
