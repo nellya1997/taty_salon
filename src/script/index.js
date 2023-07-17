@@ -124,3 +124,17 @@ const swiper1 = new Swiper('.js-swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+// подключение слайдер в отзывах, он только в мобильной версии
+
+const swiper2 = new Swiper('.js-swiper-reviews', {
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+    },
+    // 1024: {
+    //   swiper.destroy( deleteInstance , cleanStyles );
+    // }
+  }
+});

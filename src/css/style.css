@@ -631,6 +631,13 @@ ul {
 .about__photo-right .picture--desktop {
   display: none;
 }
+.reviews .picture {
+  height: 396px;
+}
+.reviews .picture img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 @media (min-width: 768px) {
   .picture--portfolio {
     height: 468px;

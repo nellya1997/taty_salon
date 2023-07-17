@@ -38,6 +38,14 @@
     .about__photo-right &--desktop {
             display: none;
     }
+    
+    .reviews & {
+        height: 396px;
+        
+        & img {
+            object-fit: contain;
+        }
+    }
 
     @media (min-width: 768px) {
         // .portfolio__wrapper .portfolio__slides & {
