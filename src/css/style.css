@@ -83,8 +83,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -419,8 +418,7 @@ picture {
 picture img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 ul {
@@ -605,8 +603,7 @@ ul {
 .picture img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .portfolio__wrapper .picture {
   width: calc(20% - 5px);
@@ -636,8 +633,7 @@ ul {
   height: 396px;
 }
 .reviews .picture img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 @media (min-width: 768px) {
   .picture--portfolio {
@@ -673,8 +669,7 @@ ul {
     height: calc(50% - 1px);
   }
   .about__photo-right .picture img {
-    -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
   .about__photo-left .picture {
     max-height: 611px;
@@ -884,13 +879,13 @@ ul {
 }
 
 @media (min-width: 768px) {
-  .contact-badge__item {
+  .header .contact-badge__item {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
   }
-  .contact-badge__item img {
+  .header .contact-badge__item img {
     width: 16px;
     height: 16px;
   }
@@ -1646,8 +1641,7 @@ ul {
   font-size: 0.82rem;
   font-weight: 400;
   line-height: 1.35;
-  -moz-column-gap: 1.33em;
-       column-gap: 1.33em;
+  column-gap: 1.33em;
 }
 .services__main__right-column .calculator__calc ul .active,
 .modalWindow .calculator__calc ul .active {
@@ -1916,7 +1910,7 @@ ul {
   display: block;
   width: 81.25%;
   max-height: 90vh;
-  overflow: scroll;
+  overflow: auto;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -2004,8 +1998,7 @@ ul {
 .memo__content {
   display: flex;
   align-items: center;
-  -moz-column-gap: 13px;
-       column-gap: 13px;
+  column-gap: 13px;
   transition: transform 0.5s ease;
 }
 .memo__pluse-btn {
@@ -2062,8 +2055,7 @@ ul {
   margin-top: 22px;
   display: flex;
   align-items: flex-start;
-  -moz-column-gap: 5px;
-       column-gap: 5px;
+  column-gap: 5px;
 }
 .memo__list-item img {
   width: 10px;
@@ -2109,8 +2101,7 @@ ul {
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 10px;
-  -moz-column-gap: 5px;
-       column-gap: 5px;
+  column-gap: 5px;
 }
 .memo__personal h3 {
   text-align: center;
@@ -2127,8 +2118,7 @@ ul {
   font-style: normal;
   font-weight: 600;
   text-decoration-line: underline;
-  -webkit-text-decoration-skip-ink: none;
-          text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
   text-decoration-thickness: 1px;
   line-height: 1.5;
 }
@@ -2159,8 +2149,7 @@ ul {
     line-height: 1.6;
   }
   .memo__list-item {
-    -moz-column-gap: 7px;
-         column-gap: 7px;
+    column-gap: 7px;
   }
   .memo__list-item img {
     width: 10px;
@@ -2183,8 +2172,7 @@ ul {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    -moz-column-gap: 60px;
-         column-gap: 60px;
+    column-gap: 60px;
     margin-bottom: 70px;
   }
   .memo__list {
@@ -2237,8 +2225,7 @@ ul {
     font-size: 25px;
   }
   .memo__wrapper {
-    -moz-column-gap: 100px;
-         column-gap: 100px;
+    column-gap: 100px;
   }
   .memo__personal {
     display: flex;
@@ -2261,8 +2248,7 @@ ul {
     width: 130px;
   }
   .memo__list-item {
-    -moz-column-gap: 12px;
-         column-gap: 12px;
+    column-gap: 12px;
   }
   .memo__list-item img {
     width: 30px;
@@ -2423,6 +2409,11 @@ ul {
     top: -3px;
     width: 307px;
   }
+  .contacts .socails__item img,
+  .contacts .socials a {
+    width: 46px;
+    height: 46px;
+  }
 }
 @media (min-width: 1730px) {
   .contacts__wrapper {
@@ -2572,6 +2563,14 @@ ul {
     top: -159px;
     left: 0;
   }
+  .footer .socails__item img,
+  .footer .socials a {
+    width: 46px;
+    height: 46px;
+  }
+  .socials {
+    gap: 10px;
+  }
 }
 @media (min-width: 1920px) {
   .footer__desktop .contact-badge__item img {
@@ -2620,4 +2619,6 @@ ul {
 }
 .popup__close::before {
   transform: translate(-50%, -50%) rotate(-45deg);
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
