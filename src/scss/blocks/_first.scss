@@ -162,17 +162,3 @@
         }
     }
 }
-
-//сраный костыль для прижатия girl.png к низу рамки от 1920рх:
-@media(max-width: 1919px) {
-    .first {
-        .girl {
-            picture {
-                img {
-                    position: relative;
-                    bottom: -7px;
-                }
-            }
-        }
-    }
-}

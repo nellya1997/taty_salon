@@ -287,17 +287,17 @@ const swiperReview = new Swiper('.js-swiper-reviews', {
 
   breakpoints: {
     // when window width is >= 480px
-    479: {
+    480: {
       slidesPerView: 2,
       spaceBetween: 20
     },
     // when window width is >= 767px
-    767: {
+    768: {
       slidesPerView: 3,
       spaceBetween: 30
     },
     // when window width is >= 10224px
-    1023: {
+    1024: {
       slidesPerView: 5,
       spaceBetween: 30
     },

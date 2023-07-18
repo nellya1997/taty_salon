@@ -702,8 +702,17 @@
         </h2>
         <div class="swiper js-swiper-reviews" data-mobile="false">
           <div class="swiper-wrapper">
+            <!--в стилях буду показывать 1й слайд на пк, а 2й и 3й на планшетах и мобильных устройствах-->
 
-            <div class="swiper-slide">
+            <div class="swiper-slide pc-slide">
+              <picture class="picture">
+                <source type="image/webp" srcset="./src/images/reviews/slider-pc-first.webp" media="(max-width: 4000px)">
+                <source type="image/jpeg" srcset="./src/images/reviews/slider-pc-first.png" media="(max-width: 4000px)">
+                <img src="./src/images/reviews/slider-pc-first.png" alt="Отзыв клиента">
+              </picture>
+            </div>
+
+            <div class="swiper-slide mob-slide">
               <picture class="picture">
                 <source type="image/webp" srcset="./src/images/reviews/content1-mobile.webp" media="(max-width: 1024px)">
                 <source type="image/webp" srcset="./src/images/reviews/content1-mobile.jpg" media="(max-width: 1024px)">
@@ -713,7 +722,7 @@
               </picture>
             </div>
 
-            <div class="swiper-slide">
+            <div class="swiper-slide mob-slide">
               <picture class="picture">
                 <source type="image/webp" srcset="./src/images/reviews/content2-mobile.webp" media="(max-width: 1024px)">
                 <source type="image/webp" srcset="./src/images/reviews/content2-mobile.jpg" media="(max-width: 1024px)">
@@ -760,7 +769,6 @@
                 <img src="./src/images/reviews/content6-desktop.jpg" alt="Отзыв клиента">
               </picture>
             </div>
-
 
           </div>
         </div>

@@ -1048,12 +1048,6 @@ ul {
     align-items: center;
   }
 }
-@media (max-width: 1919px) {
-  .first .girl picture img {
-    position: relative;
-    bottom: -7px;
-  }
-}
 .about {
   overflow-x: hidden;
 }
@@ -2287,6 +2281,19 @@ ul {
   .memo .item-content h3,
   .memo .item-content p {
     font-size: 25px;
+  }
+}
+.reviews .swiper-wrapper .pc-slide {
+  display: none;
+}
+
+@media (min-width: 767px) {
+  .reviews .swiper-wrapper .pc-slide {
+    display: block;
+  }
+  .reviews .swiper-wrapper .mob-slide {
+    display: none;
+    border: 2px solid red;
   }
 }
 .contacts {
