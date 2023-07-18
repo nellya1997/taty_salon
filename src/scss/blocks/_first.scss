@@ -1,8 +1,9 @@
 .first {
+    @include centry(91%);
+    padding: 20px 0;
 
     &__top {
         img {
-            //вот ее нужно превратить в надпись Н1
             display: block;
             margin: 0 auto;
         }
@@ -13,49 +14,103 @@
         text-align: center;
     }
 
-    &__girl {
-        // padding: 20px 0px;
+    .girl {
         margin: 0 auto;
+        padding-top: calc(25px + 35 * ((100vw - 320px) / 768));
+        padding-bottom: 6px;
         @include flexy(row);
         gap: 10px;
         max-height: 755px;
-        border: 1px solid $bg-color;
-        // width: calc(269px + 564 * ((100vw - 320px) / 1920));
-        // height: calc(219px + 537 * ((100vw - 320px) / 1920));
 
-        picture {
-            height: 130%;
+        &__wrapper {
+            @include flexy();
+            //position: relative;
+
+            picture {
+                width: 90%;
+                position: relative;
+                margin: -10% 0% 0% 10%;
+
+            }
         }
 
-        .socials {
-            width: 22px;
-            @include flexy(column);
+
+        h1 {
+            font-family: 'Constantine';
+            font-size: calc(25px + 45 * ((100vw - 320px) / 1920));
+            font-weight: 400;
+            line-height: calc(32px + 48 * ((100vw - 320px) / 1920));
+            text-transform: uppercase;
+            padding-right: 5px;
+        }
+
+
+        &__border {
+            //хз какой там цвет правильно - просто пока тупо ткнул пипетков в paint
+            border: 2px solid rgba(75, 11, 122, 1.0);
             position: relative;
 
-            &::before {
-                content: '';
-                width: 47px;
-                height: 1px;
-                background-color: $title-line-color;
+            &:before {
+                content: "";
+                width: 160%;
+                height: 100%;
+                background-image: url('../images/first/paints.png');
+                //background-image: url('../images/first/paints.webp');
+                background-size: 100% 100%;
                 position: absolute;
-                top: -40px;
-                left: -11;
-                transform: rotate(90deg);
+                z-index: -1;
+                bottom: 8%;
+                left: -30%;
             }
 
             &::after {
-                content: '';
-                width: 47px;
-                height: 1px;
-                background-color: $title-line-color;
+                content: 'Казань';
+                font-family: 'Constantine';
+                font-size: calc(11px + 33 * ((100vw - 320px) / 1920));
+                line-height: 0;
                 position: absolute;
-                bottom: -40px;
-                left: -11;
-                transform: rotate(90deg);
+                bottom: 102%;
+                left: 0;
             }
         }
     }
 
+    .socials {
+        //width: 22px;
+        @include flexy(column);
+        position: relative;
+
+        &::before {
+            content: '';
+            width: calc(47px + 138 * ((100vw - 320px) / 1920));
+            height: 1px;
+            background-color: $title-line-color;
+            position: absolute;
+            bottom: calc(140px + 230 * ((100vw - 320px) / 1920));
+            transform: rotate(90deg);
+        }
+
+        &::after {
+            content: '';
+            width: calc(47px + 138 * ((100vw - 320px) / 1920));
+            height: 1px;
+            background-color: $title-line-color;
+            position: absolute;
+            top: calc(140px + 230 * ((100vw - 320px) / 1920));
+            transform: rotate(90deg);
+        }
+
+        a {
+            display: block;
+            width: calc(20px + 38 * ((100vw - 320px) / 1920));
+            height: calc(20px + 38 * ((100vw - 320px) / 1920));
+
+            img {
+                width: calc(20px + 38 * ((100vw - 320px) / 1920));
+                height: calc(20px + 38 * ((100vw - 320px) / 1920));
+            }
+        }
+    }
 
 
     &__left-side {
@@ -69,26 +124,35 @@
             text-align: center;
         }
     }
+}
 
-    @media (min-width: 768px) {
+@media (min-width: 768px) {
+    .first {
+        padding: 60px 0;
 
 
-        .first {
-            &__wrapper {
-                padding-top: 45px;
-                @include flexy(row-reverse, space-between);
-                @include centry(91.4%);
+        &__wrapper {
+            padding-top: 45px;
+            @include flexy(row-reverse, space-between);
+        }
+
+        .girl {
+            //я не знаю как работает эта формула именно в этом случае: я хотел из 49% вычитать 8, но так работало плохо
+            width: calc(51% - 160 * ((100vw - 767px) / 1920));
+            margin: 0 0;
+            gap: 30px;
+
+            &__border {
+
+                &::after {
+                    bottom: 103%;
+                }
             }
+        }
 
-            &__girl {
-                width: 41.3%;
-                margin: 0 0;
-            }
-
-            &__left-side {
-                width: 28.6%;
-                @include flexy(column);
-            }
+        &__left-side {
+            width: 28.6%;
+            @include flexy(column);
         }
     }
 }

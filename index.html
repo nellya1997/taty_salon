@@ -7,9 +7,16 @@
   <title>Tattoo</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <link rel="stylesheet" href="src/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
+  <div class="modalBackground">
+    <div class="modalActive">
+      <div class="modalClose"></div>
+      <div class="modalWindow"></div>
+    </div>
+  </div>
   <header class="header">
     <div class="burger">
       <span></span>
@@ -18,22 +25,24 @@
     </div>
     <nav class="nav">
       <ul class="nav__list">
-        <li><a href="#first" class="nav__link nav__link_active">Главная</a></li>
-        <li><a href="#about" class="nav__link">Обо мне</a></li>
-        <li><a href="#portfolio" class="nav__link">Портфолио</a></li>
-        <li><a href="#services" class="nav__link">Услуги</a></li>
-        <li><a href="#memo" class="nav__link">Памятки</a></li>
-        <li><a href="#reviews" class="nav__link">Отзывы</a></li>
-        <li><a href="#contacts" class="nav__link">Контакты</a></li>
+        <li><a href="#first" class="nav__link nav__link_active js-header-close">Главная</a></li>
+        <li><a href="#about" class="nav__link js-header-close">Обо мне</a></li>
+        <li><a href="#portfolio" class="nav__link js-header-close">Портфолио</a></li>
+        <li><a href="#services" class="nav__link js-header-close">Услуги</a></li>
+        <li><a href="#memo" class="nav__link js-header-close">Памятки</a></li>
+        <li><a href="#reviews" class="nav__link js-header-close">Отзывы</a></li>
+        <li><a href="#contacts" class="nav__link js-header-close">Контакты</a></li>
       </ul>
       <ul class="nav__contacts">
-        <li><a class="contact-badge__item" href="tel:79600330101"><span>8-960-033-01-01</span>
-            <img class="contact-badge__icon" src="./src/images/header/phone.svg" alt="phone"></a></li>
-        <li><a class="contact-badge__item" href="#"><span>Г. Казань, Айвазовского 10/54</span>
-            <img class="contact-badge__icon" src="./src/images/header/location-pointer.svg" alt="location"></a></li>
+        <li><a class="contact-badge__item" href="tel:79600330101"><img class="contact-badge__icon" src="./src/images/header/phone.svg" alt="phone">
+            <span>8-960-033-01-01</span>
+          </a></li>
+        <li><a class="contact-badge__item" href="#"><img class="contact-badge__icon" src="./src/images/header/location-pointer.svg" alt="location">
+            <span>Г. Казань, Айвазовского 10/54</span>
+          </a></li>
       </ul>
       <div class="contact-badge">
-        <a class="contact-badge__item" href="#">
+        <a class="contact-badge__item js-header-close" href="https://goo.gl/maps/AcZq1Pf4cUV465kx8">
           <p>Адрес студии:</p>
           <p>Г. Казань, Айвазовского 10/54</p>
           <img class="contact-badge__icon" src="./src/images/header/location-pointer.svg" alt="location">
@@ -43,56 +52,55 @@
           <p>Ежедневно 12:00 - 19:00</p>
           <img class="contact-badge__icon" src="./src/images/header/clockIcon.svg" alt="schedule">
         </div>
-        <a class="contact-badge__item contact-badge__phone" href="tel:+79600330101">
+        <a class="contact-badge__item js-header-close" href="tel:+79600330101">
           <p>Связь со мной</p>
           <p>8-960-033-01-01</p>
           <img class="contact-badge__icon" src="./src/images/header/phone.svg" alt="phone">
         </a>
         <div class="socials">
-          <a href="https://t.me/dinasynthetica" class="socails__item"><img src="./src/images/header/telegramm.svg"
-              alt="телеграмм"></a>
-          <a href="https://wa.me/+79600330101" class="socails__item"><img src="./src/images/header/what'sUpIcon.svg"
-              alt="what's up"></a>
-          <a href="https://instagram.com/dina.synthetica?igshid=NjIwNzIyMDk2Mg==" class="socails__item"><img
-              src="./src/images/header/instagramm.svg" alt="Инстаграмм"></a>
-          <a href="https://vk.com/dina_synthetica_tattoo" class="socails__item"><img
-              src="./src/images/header/vk-icon.svg" alt="Вконтакте"></a>
+          <a href="https://t.me/dinasynthetica" class="socails__item"><img src="./src/images/header/telegramm.svg" alt="телеграмм"></a>
+          <a href="https://wa.me/+79600330101" class="socails__item"><img src="./src/images/header/what'sUpIcon.svg" alt="what's up"></a>
+          <a href="https://instagram.com/dina.synthetica?igshid=NjIwNzIyMDk2Mg==" class="socails__item"><img src="./src/images/header/instagramm.svg" alt="Инстаграмм"></a>
+          <a href="https://vk.com/dina_synthetica_tattoo" class="socails__item"><img src="./src/images/header/vk-icon.svg" alt="Вконтакте"></a>
         </div>
       </div>
     </nav>
   </header>
   <main>
     <section id="first" class="first js-section">
-      <div class="container">
-        <div class="first__wrapper">
-          <div class="first__top">
-            <img src="./src/images/first/tattoo-logo.svg" alt="">
-            <p class="first__subtitle">В акварельном стиле</p>
-          </div>
-          <div class="first__girl">
-            <picture>
-              <img src="./src/images/first/girl.png" alt="тату салон">
-            </picture>
-            <div class="socials">
-              <a href="https://t.me/dinasynthetica" class="socails__item"><img src="./src/images/header/telegramm.svg"
-                  alt="telegramm"></a>
-              <a href="https://wa.me/+79600330101" class="socails__item"><img src="./src/images/header/what'sUpIcon.svg"
-                  alt="what's up"></a>
-              <a href="https://instagram.com/dina.synthetica?igshid=NjIwNzIyMDk2Mg==" class="socails__item"><img
-                  src="./src/images/header/instagramm.svg" alt="Instagramm"></a>
-              <a href="https://vk.com/dina_synthetica_tattoo" class="socails__item"><img
-                  src="./src/images/header/vk-icon.svg" alt="Vk"></a>
+      <div class="first__wrapper">
+        <div class="first__top">
+          <img src="./src/images/first/tattoo-logo.svg" alt="Тату салон">
+          <p class="first__subtitle">В акварельном стиле</p>
+        </div>
+        <div class="girl">
+          <div class="girl__wrapper">
+            <h1>t<br>a<br>t<br>t<br>o<br>o</h1>
+            <div class="girl__border">
+              <picture>
+                <source type="image/png" srcset="./src/images/first/girl.png">
+                <source type="image/webp" srcset="./src/images/first/girl.webp">
+                <img src="./src/images/first/girl.png" alt="Тату салон">
+              </picture>
             </div>
           </div>
-          <div class="first__left-side">
-            <picture class="first__img">
-              <img src="./src/images/first/tube-phone.png" alt="">
-            </picture>
+          <div class="socials">
+            <a href="https://t.me/dinasynthetica" class="socails__item"><img src="./src/images/header/telegramm.svg" alt="telegramm"></a>
+            <a href="https://wa.me/+79600330101" class="socails__item"><img src="./src/images/header/what'sUpIcon.svg" alt="what's up"></a>
+            <a href="https://instagram.com/dina.synthetica?igshid=NjIwNzIyMDk2Mg==" class="socails__item"><img src="./src/images/header/instagramm.svg" alt="Instagramm"></a>
+            <a href="https://vk.com/dina_synthetica_tattoo" class="socails__item"><img src="./src/images/header/vk-icon.svg" alt="Vk"></a>
           </div>
-          <div class="first__check-in">
-            <p class="first__text">Для тех, кто уверен в&nbsp;своих решениях</p>
-            <a href="" class="link">Записаться на сеанс</a>
-          </div>
+        </div>
+        <div class="first__left-side">
+          <picture class="first__img">
+            <source type="image/png" srcset="./src/images/first/tube.png">
+            <source type="image/webp" srcset="./src/images/first/tube.webp">
+            <img src="./src/images/first/tube.png" alt="Тату салон">
+          </picture>
+        </div>
+        <div class="first__check-in">
+          <p class="first__text">Для тех, кто уверен в&nbsp;своих решениях</p>
+          <a href="" class="link">Записаться на сеанс</a>
         </div>
       </div>
     </section>
@@ -179,13 +187,13 @@
         </div>
 
         <div class="portfolio__wrapper">
-          <picture class="picture picture__portfolio">
+          <picture data-modal class="picture picture__portfolio">
             <source type="image/webp" srcset="./src/images/portfolio/content1.webp" media="(max-width: 1024px)">
             <source type="image/jpeg" srcset="./src/images/portfolio/content1.jpg" media="(max-width: 1024px)">
             <img src="./src/images/portfolio/content1.jpg" alt="Портфолио">
           </picture>
 
-          <picture class="picture">
+          <picture data-modal class="picture">
             <source type="image/webp" srcset="./src/images/portfolio/content2.webp" media="(max-width: 1024px)">
             <source type="image/jpeg" srcset="./src/images/portfolio/content2.jpg" media="(max-width: 1024px)">
             <img src="./src/images/portfolio/content2.jpg" alt="Портфолио">
@@ -248,8 +256,7 @@
           <picture class="picture picture--desktop">
             <!-- <source type="image/webp" srcset="./src/images/portfolio/content3.webp" media="(max-width: 1024px)">
             <source type="image/jpeg" srcset="./src/images/portfolio/content3.jpg" media="(max-width: 1024px)"> -->
-            <source type="image/webp" srcset="./src/images/portfolio/content10-desktop.webp"
-              media="(max-width: 4000px)">
+            <source type="image/webp" srcset="./src/images/portfolio/content10-desktop.webp" media="(max-width: 4000px)">
             <source type="image/jpeg" srcset="./src/images/portfolio/content10-desktop.jpg" media="(max-width: 400px)">
             <img src="./src/images/portfolio/content10-desktop.jpg" alt="Портфолио">
           </picture>
@@ -287,8 +294,7 @@
           <picture class="picture picture--desktop">
             <!-- <source type="image/webp" srcset="./src/images/portfolio/content3.webp" media="(max-width: 1024px)">
             <source type="image/jpeg" srcset="./src/images/portfolio/content3.jpg" media="(max-width: 1024px)"> -->
-            <source type="image/webp" srcset="./src/images/portfolio/content16-desktop.webp"
-              media="(max-width: 4000px)">
+            <source type="image/webp" srcset="./src/images/portfolio/content16-desktop.webp" media="(max-width: 4000px)">
             <source type="image/jpeg" srcset="./src/images/portfolio/content16-desktop.jpg" media="(max-width: 400px)">
             <img src="./src/images/portfolio/content16-desktop.jpg" alt="Портфолио">
           </picture>
@@ -324,10 +330,8 @@
               <div class="swiper-slide portfolio__slides">
                 <!-- <div class=""> -->
                 <picture class="picture picture--portfolio">
-                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/before1.jpg"
-                    media="(max-width: 1024px)">
-                  <source type="image/webp" srcset="./src/images/portfolio/before-after/before1.webp"
-                    media="(max-width: 1024px)">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/before1.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/before1.webp" media="(max-width: 1024px)">
                   <!-- <source type="image/jpeg" srcset="img/guests-768.jpg" media="(max-width: 968px)"> -->
                   <!-- <source type="image/jpeg" srcset="img/guests-1024.jpg" media="(max-width: 1440px)"> -->
                   <!-- <source type="image/webp" srcset="img/superskid/slide.webp" media="(max-width: 2400px)"> -->
@@ -336,10 +340,8 @@
                 </picture>
 
                 <picture class="picture picture--portfolio">
-                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/after1.jpg"
-                    media="(max-width: 1024px)">
-                  <source type="image/webp" srcset="./src/images/portfolio/before-after/after1.webp"
-                    media="(max-width: 1024px)">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/after1.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/after1.webp" media="(max-width: 1024px)">
                   <img src="./src/images/portfolio/before-after/after1.jpg" alt="Работа после">
                 </picture>
                 <!-- </div> -->
@@ -349,10 +351,8 @@
 
                 <!-- <div class=""> -->
                 <picture class="picture picture--portfolio">
-                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/before2.jpg"
-                    media="(max-width: 1024px)">
-                  <source type="image/webp" srcset="./src/images/portfolio/before-after/before2.webp"
-                    media="(max-width: 1024px)">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/before2.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/before2.webp" media="(max-width: 1024px)">
                   <!-- <source type="image/jpeg" srcset="img/guests-768.jpg" media="(max-width: 968px)"> -->
                   <!-- <source type="image/jpeg" srcset="img/guests-1024.jpg" media="(max-width: 1440px)"> -->
                   <!-- <source type="image/webp" srcset="img/superskid/slide.webp" media="(max-width: 2400px)"> -->
@@ -361,10 +361,8 @@
                 </picture>
 
                 <picture class="picture picture--portfolio">
-                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/after2.jpg"
-                    media="(max-width: 1024px)">
-                  <source type="image/webp" srcset="./src/images/portfolio/before-after/after2.webp"
-                    media="(max-width: 1024px)">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/after2.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/after2.webp" media="(max-width: 1024px)">
                   <img src="./src/images/portfolio/before-after/after2.jpg" alt="Работа после">
                 </picture>
                 <!-- </div> -->
@@ -373,10 +371,8 @@
               <div class="swiper-slide portfolio__slides">
                 <!-- <div class=""> -->
                 <picture class="picture picture--portfolio">
-                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/before3.jpg"
-                    media="(max-width: 1024px)">
-                  <source type="image/webp" srcset="./src/images/portfolio/before-after/before3.webp"
-                    media="(max-width: 1024px)">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/before3.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/before3.webp" media="(max-width: 1024px)">
                   <!-- <source type="image/jpeg" srcset="img/guests-768.jpg" media="(max-width: 968px)"> -->
                   <!-- <source type="image/jpeg" srcset="img/guests-1024.jpg" media="(max-width: 1440px)"> -->
                   <!-- <source type="image/webp" srcset="img/superskid/slide.webp" media="(max-width: 2400px)"> -->
@@ -385,10 +381,8 @@
                 </picture>
 
                 <picture class="picture picture--portfolio">
-                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/after3.jpg"
-                    media="(max-width: 1024px)">
-                  <source type="image/webp" srcset="./src/images/portfolio/before-after/after3.webp"
-                    media="(max-width: 1024px)">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/after3.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/after3.webp" media="(max-width: 1024px)">
                   <img src="./src/images/portfolio/before-after/after3.jpg" alt="Работа после">
                 </picture>
                 <!-- </div> -->
@@ -396,10 +390,8 @@
 
               <div class="swiper-slide portfolio__slides">
                 <picture class="picture picture--portfolio">
-                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/before4.jpg"
-                    media="(max-width: 1024px)">
-                  <source type="image/webp" srcset="./src/images/portfolio/before-after/before4.webp"
-                    media="(max-width: 1024px)">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/before4.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/before4.webp" media="(max-width: 1024px)">
                   <!-- <source type="image/jpeg" srcset="img/guests-768.jpg" media="(max-width: 968px)"> -->
                   <!-- <source type="image/jpeg" srcset="img/guests-1024.jpg" media="(max-width: 1440px)"> -->
                   <!-- <source type="image/webp" srcset="img/superskid/slide.webp" media="(max-width: 2400px)"> -->
@@ -408,20 +400,16 @@
                 </picture>
 
                 <picture class="picture picture--portfolio">
-                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/after4.jpg"
-                    media="(max-width: 1024px)">
-                  <source type="image/webp" srcset="./src/images/portfolio/before-after/after4.webp"
-                    media="(max-width: 1024px)">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/after4.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/after4.webp" media="(max-width: 1024px)">
                   <img src="./src/images/portfolio/before-after/after4.jpg" alt="Работа после">
                 </picture>
               </div>
 
               <div class="swiper-slide portfolio__slides">
                 <picture class="picture picture--portfolio">
-                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/before5.jpg"
-                    media="(max-width: 1024px)">
-                  <source type="image/webp" srcset="./src/images/portfolio/before-after/before5.webp"
-                    media="(max-width: 1024px)">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/before5.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/before5.webp" media="(max-width: 1024px)">
                   <!-- <source type="image/jpeg" srcset="img/guests-768.jpg" media="(max-width: 968px)"> -->
                   <!-- <source type="image/jpeg" srcset="img/guests-1024.jpg" media="(max-width: 1440px)"> -->
                   <!-- <source type="image/webp" srcset="img/superskid/slide.webp" media="(max-width: 2400px)"> -->
@@ -430,20 +418,16 @@
                 </picture>
 
                 <picture class="picture picture--portfolio">
-                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/after5.jpg"
-                    media="(max-width: 1024px)">
-                  <source type="image/webp" srcset="./src/images/portfolio/before-after/after5.webp"
-                    media="(max-width: 1024px)">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/after5.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/after5.webp" media="(max-width: 1024px)">
                   <img src="./src/images/portfolio/before-after/after5.jpg" alt="Работа после">
                 </picture>
               </div>
 
               <div class="swiper-slide portfolio__slides">
                 <picture class="picture picture--portfolio">
-                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/before6.jpg"
-                    media="(max-width: 1024px)">
-                  <source type="image/webp" srcset="./src/images/portfolio/before-after/before6.webp"
-                    media="(max-width: 1024px)">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/before6.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/before6.webp" media="(max-width: 1024px)">
                   <!-- <source type="image/jpeg" srcset="img/guests-768.jpg" media="(max-width: 968px)"> -->
                   <!-- <source type="image/jpeg" srcset="img/guests-1024.jpg" media="(max-width: 1440px)"> -->
                   <!-- <source type="image/webp" srcset="img/superskid/slide.webp" media="(max-width: 2400px)"> -->
@@ -452,10 +436,8 @@
                 </picture>
 
                 <picture class="picture picture--portfolio">
-                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/after6.jpg"
-                    media="(max-width: 1024px)">
-                  <source type="image/webp" srcset="./src/images/portfolio/before-after/after6.webp"
-                    media="(max-width: 1024px)">
+                  <source type="image/jpeg" srcset="./src/images/portfolio/before-after/after6.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/portfolio/before-after/after6.webp" media="(max-width: 1024px)">
                   <img src="./src/images/portfolio/before-after/after6.jpg" alt="Работа после">
                 </picture>
               </div>
@@ -474,125 +456,109 @@
           </div>
         </div>
 
-        <!-- </div> -->
+        <div class="popup">
+          <div class="popup__inner">
+            <button class="popup__close" data-close></button>
+          </div>
+
+        </div>
       </div>
     </section>
 
-    <section id="services" class="services js-section">
-      <div class="container">
-        <div class="wrapper-title">
-          <h2 class="title">
-            <span>Услуги</span>
-          </h2>
-        </div>
-        <p class="services__h2 text-center">Нажми на место, где хотите набить тату, чтобы узнать цену</p>
-        <div class="services__main">
-          <div class="services__main__left-column text-center">
-            <p>Эта процедура — не из приятных, и она доставляет определенные сложности вне зависимости от пола и
-              возраста человека.
-              Существует так называемая карта боли, которая иллюстрирует самые болезненные и относительно неприятные
-              области для нанесения
-              рисунка.</p>
-            <div class="services__main__left-column__pain-points">
-              <picture>
-                <source media="(max-width:768px)" srcset="./src/images/anatomy-md.png">
-                <img src="./src/images/anatomy.png" alt="Болевые точки">
-              </picture>
-              <div class="pain-points__text">
-                <p>Наименее болезненно</p>
-                <p>Очень больно</p>
-              </div>
+    <section id="services" class="services container js-section">
+      <div class="services__header">
+        <img class="border-line" src="./src/images/services/line.png" alt="Border line">
+        <h2>Услуги</h1>
+          <img class="border-line" src="./src/images/services/line.png" alt="Border line">
+      </div>
+      <p class="services__h2 text-center">Нажми на место, где хотите набить тату, чтобы узнать цену</p>
+      <div class="services__main">
+        <div class="services__main__left-column text-center">
+          <p>Эта процедура — не из приятных, и она доставляет определенные сложности вне зависимости от пола и возраста человека.
+            Существует так называемая карта боли, которая иллюстрирует самые болезненные и относительно неприятные области для нанесения
+            рисунка.</p>
+          <div class="services__main__left-column__pain-points">
+            <picture>
+              <source media="(max-width:768px)" srcset="./src/images/services/anatomy-md.png">
+              <img src="./src/images/services/anatomy.png" alt="Болевые точки">
+            </picture>
+            <div class="pain-points__text">
+              <p>Наименее болезненно</p>
+              <p>Очень больно</p>
             </div>
-          </div>
-          <div class="services__animation">
-            <div id="rotation">
-              <img src="./src/images/1.jpg" style="display: inline;">
-              <img src="./src/images/2.jpg">
-              <img src="./src/images/3.jpg">
-              <img src="./src/images/4.jpg">
-              <img src="./src/images/5.jpg">
-              <img src="./src/images/6.jpg">
-              <img src="./src/images/7.jpg">
-              <img src="./src/images/8.jpg">
-              <img src="./src/images/9.jpg">
-              <img src="./src/images/10.jpg">
-              <img src="./src/images/11.jpg">
-              <img src="./src/images/12.jpg">
-              <img src="./src/images/13.jpg">
-              <img src="./src/images/14.jpg">
-              <img src="./src/images/15.jpg">
-              <img src="./src/images/16.jpg">
-              <img src="./src/images/17.jpg">
-              <img src="./src/images/18.jpg">
-              <img src="./src/images/19.jpg">
-              <img src="./src/images/20.jpg">
-              <img src="./src/images/21.jpg">
-              <img src="./src/images/22.jpg">
-              <img src="./src/images/23.jpg">
-              <img src="./src/images/24.jpg">
-            </div>
-            <a class="link-calc link-calc-pussy"></a>
-            <a class="link-calc link-calc-right-leg"></a>
-            <div class="services__animation__footer">
-              <img src="./src/images/twist.png" alt="Покрути">
-              <p class="services__h2 text-center">Покрути</p>
-            </div>
-          </div>
-          <div class="services__main__right-column">
-            <p>Восприимчивость различных участков неодинакова. На болезненность влияют разные факторы: плотность кожи,
-              количество нервных
-              окончаний в определенной области, удаленность от кости (если кость близко к коже, будет больно при
-              нанесении тату).
-            </p>
-            <p class="mt-18"><strong>Важно!</strong> Если вам становится нестерпимо больно, не надо дергаться и
-              извиваться под рукой мастера. Лучше всего прервать
-              сеанс и продолжить в следующий раз.
-            </p>
-            <p class="mt-36 mb-15 h2">Если знаешь размер и место тату, то смело записывайся</p>
-            <a class="link text-center" href="#">Записаться на сеанс</a>
-            <a class="btn-calc throat"></a>
-            <a class="btn-calc breast"></a>
-            <a class="btn-calc left-hand-top"></a>
-            <a class="btn-calc left-hand-center"></a>
-            <a class="btn-calc left-hand-bottom"></a>
-            <a class="btn-calc right-hand-top"></a>
-            <a class="btn-calc right-hand-center"></a>
-            <a class="btn-calc right-hand-bottom"></a>
-            <a class="btn-calc left-leg-top"></a>
-            <a class="btn-calc left-leg-center"></a>
-            <a class="btn-calc left-leg-bottom"></a>
-            <a class="btn-calc right-leg-top"></a>
-            <a class="btn-calc right-leg-center"></a>
-            <a class="btn-calc right-leg-bottom"></a>
           </div>
         </div>
+        <div class="services__animation">
+          <div id="rotation"></div>
+          <a id="clavicle" class="btn-calc clavicle"></a>
+          <a id="ribs" class="btn-calc ribs"></a>
+          <a id="left-hand-top" class="btn-calc left-hand-top"></a>
+          <a id="left-hand-center" class="btn-calc left-hand-center"></a>
+          <a id="left-hand-bottom" class="btn-calc left-hand-bottom"></a>
+          <a id="right-hand-top" class="btn-calc right-hand-top"></a>
+          <a id="right-hand-center" class="btn-calc right-hand-center"></a>
+          <a id="right-hand-bottom" class="btn-calc right-hand-bottom"></a>
+          <a id="left-leg-top" class="btn-calc left-leg-top"></a>
+          <a id="left-leg-center" class="btn-calc left-leg-center"></a>
+          <a id="left-leg-bottom" class="btn-calc left-leg-bottom"></a>
+          <a id="right-leg-top" class="btn-calc right-leg-top"></a>
+          <a id="right-leg-center" class="btn-calc right-leg-center"></a>
+          <a id="right-leg-bottom" class="btn-calc right-leg-bottom"></a>
+          <a id="right-leg-profile-center" class="btn-calc right-leg-profile-center profile-right profile"></a>
+          <a id="right-leg-profile-bottom" class="btn-calc right-leg-profile-bottom profile-right profile"></a>
+          <a id="right-hand-profile-top" class="btn-calc right-hand-profile-top profile-right profile"></a>
+          <a id="right-hand-profile-center" class="btn-calc right-hand-profile-center profile-right profile"></a>
+          <a id="right-hand-profile-bottom" class="btn-calc right-hand-profile-bottom profile-right profile"></a>
+          <a id="right-stomach-profile" class="btn-calc right-stomach-profile profile-right profile"></a>
+          <a id="left-leg-profile-center" class="btn-calc left-leg-profile-center profile-left profile"></a>
+          <a id="left-leg-profile-bottom" class="btn-calc left-leg-profile-bottom profile-left profile"></a>
+          <a id="left-hand-profile-top" class="btn-calc left-hand-profile-top profile-left profile"></a>
+          <a id="left-hand-profile-center" class="btn-calc left-hand-profile-center profile-left profile"></a>
+          <a id="left-hand-profile-bottom" class="btn-calc left-hand-profile-bottom profile-left profile"></a>
+          <a id="left-stomach-profile" class="btn-calc left-stomach-profile profile-left profile"></a>
+          <div class="services__animation__footer">
+            <img src="./src/images/services/twist.png" alt="Покрути">
+            <p class="services__h2 text-center">Покрути</p>
+          </div>
+        </div>
+        <div class="services__main__right-column">
+          <p>Восприимчивость различных участков неодинакова. На болезненность влияют разные факторы: плотность кожи, количество нервных
+            окончаний в определенной области, удаленность от кости (если кость близко к коже, будет больно при нанесении тату).
+          </p>
+          <p class="mt-18"><strong>Важно!</strong> Если вам становится нестерпимо больно, не надо дергаться и извиваться под рукой мастера. Лучше всего прервать
+            сеанс и продолжить в следующий раз.
+          </p>
+          <p class="mt-36 mb-15 h2">Если знаешь размер и место тату, то смело записывайся</p>
+          <a class="btn" href="#">Записаться на сеанс</a>
+        </div>
+      </div>
     </section>
 
 
-    <section class="memo">
+    <section id="memo" class="memo js-section">
       <div class="container">
-        <div class="wrapper-title">
-          <h2 class="title">Памятки</h2>
-          <p class="memo__h2 text-center">Как поготовиться к сеансу?</p>
-        </div>
+
+        <h2 class="title"> <span>Памятки</span></h2>
+        <p class="memo__h2 text-center">Как поготовиться к сеансу?</p>
+
         <ul class="list list--cards">
           <li>
-            <div class="circle"> <img src="./src/images/memo/smile.svg" alt="улыбка"></div>
+            <div class="circle"></div>
             <p class="list__content1">Отличное настроение</p>
             <p class="list__content2">Подумать о хорошем и расслабиться</p>
           </li>
           <li>
-            <div class="circle"><img src="./src/images/memo/plate.svg" alt="завтрак"></div>
+            <div class="circle"></div>
             <p class="list__content1">Покушать</p>
             <p class="list__content2">Перед сеансом быть сытым</p>
           </li>
           <li>
-            <div class="circle"><img src="./src/images/memo/moon.svg" alt="луна"></div>
+            <div class="circle"></div>
             <p class="list__content1">Выспаться</p>
             <p class="list__content2">Чтобы организм не стрессовал</p>
           </li>
           <li>
-            <div class="circle"><img src="./src/images/memo/t-shirt.svg" alt="футболка"></div>
+            <div class="circle"></div>
             <p class="list__content1">Удобная одежда</p>
             <p class="list__content2">Для вашего комфорта - любимая одежда</p>
           </li>
@@ -605,7 +571,7 @@
 
           <div class="memo__separation">
             <div class="memo__content">
-              <img src="src/images/memo/pluse.svg" alt="плюс">
+              <div class="memo__pluse-btn"></div>
               <h3 class="memo__switch text-center">
                 Заживление татуировки
               </h3>
@@ -660,7 +626,7 @@
 
           <div class="memo__separation">
             <div class="memo__content">
-              <img src="src/images/memo/pluse.svg" alt="плюс">
+              <div class="memo__pluse-btn"></div>
               <h3 class="memo__switch text-center">
                 Уход за татуировкой
               </h3>
@@ -702,18 +668,16 @@
         <div class="memo__personal">
           <h3 class="text-center">Личные памятки</h3>
           <div>
-            <img src="./src/images/memo/layer.svg" target="_blank" alt="фон">
-            <a href="https://vk.com/@dina_synthetica_tattoo-poetapnyi-razbor-perekrytiya-staroi-tatuirovki">Подробный
-              разбор перекрытия старой зашрамированной татуировки</a>
+            <img src="./src/images/memo/layer.svg" alt="фон">
+            <a target="_blank" href="https://vk.com/@dina_synthetica_tattoo-poetapnyi-razbor-perekrytiya-staroi-tatuirovki">Подробный разбор перекрытия старой зашрамированной татуировки</a>
           </div>
           <div>
-            <img src="./src/images/memo/layer.svg" target="_blank" alt="фон">
-            <a href="https://vk.com/@dina_synthetica_tattoo-pochemu-tatuirovki-bledneut-i-pro-korrekciu">Почему тату
-              бледнеет?</a>
+            <img src="./src/images/memo/layer.svg" alt="фон">
+            <a target="_blank" href="https://vk.com/@dina_synthetica_tattoo-pochemu-tatuirovki-bledneut-i-pro-korrekciu">Почему тату бледнеет?</a>
           </div>
           <div>
-            <img src="./src/images/memo/layer.svg" target="_blank" alt="фон" />
-            <a href="https://vk.com/wall-211069230_846">Как готовиться твой эскиз?</a>
+            <img src="./src/images/memo/layer.svg" alt="фон" />
+            <a target="_blank" href="https://vk.com/wall-211069230_846">Как готовиться твой эскиз?</a>
           </div>
         </div>
 
@@ -722,31 +686,80 @@
       </div>
     </section>
 
-    <section id="reviews" class="reviews">
+    <section id="reviews" class="reviews js-section">
       <div class="container">
         <h2 class="title">
           <span>ОТЗЫВЫ</span>
         </h2>
-        <div class="swiper js-swiper">
+        <div class="swiper js-swiper-reviews" data-mobile="false">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <!-- <div class=""> -->
+              <div class="reviews__flex">
+                <picture class="picture">
+                  <source type="image/webp" srcset="./src/images/reviews/content1-mobile.webp" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/reviews/content1-mobile.jpg" media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/reviews/content1-desktop.webp" media="(max-width: 4000px)">
+                  <source type="image/jpeg" srcset="./src/images/reviews/content1-desktop.jpg" media="(max-width: 4000px)">
+                  <img src="./src/images/reviews/content1-desktop.jpg" alt="Отзыв клиента">
+                </picture>
+
+              </div>
+            </div>
+
+            <!-- эта картинка добавляется в ревьюс__флекс на десктоп через жс  -->
+            <div class="swiper-slide">
               <picture class="picture">
-                <!-- <source type="image/jpeg" srcset="./src/images/portfolio/before-after/before1.jpg" media="(max-width: 1024px)"> -->
-                <!-- <source type="image/webp" srcset="./src/images/portfolio/before-after/before1.webp" media="(max-width: 1024px)"> -->
-                <!-- <source type="image/jpeg" srcset="img/guests-768.jpg" media="(max-width: 968px)"> -->
-                <!-- <source type="image/jpeg" srcset="img/guests-1024.jpg" media="(max-width: 1440px)"> -->
-                <source type="image/webp" srcset="img/superskid/slide.webp" media="(max-width: 4000px)">
-                <source type="image/jpeg" srcset="img/superskid/slide.jpg" media="(max-width: 4000px)">
-                <img src="./src/images/portfolio/before-after/before1.jpg" alt="Работа до">
+                <source type="image/webp" srcset="./src/images/reviews/content2-mobile.webp" media="(max-width: 1024px)">
+                <source type="image/webp" srcset="./src/images/reviews/content2-mobile.jpg" media="(max-width: 1024px)">
+                <source type="image/webp" srcset="./src/images/reviews/content2-desktop.webp" media="(max-width: 4000px)">
+                <source type="image/jpeg" srcset="./src/images/reviews/content2-desktop.jpg" media="(max-width: 4000px)">
+                <img src="./src/images/reviews/content2-desktop.jpg" alt="Отзыв клиента">
+              </picture>
+            </div>
+
+            <div class="swiper-slide">
+              <picture class="picture">
+                <source type="image/webp" srcset="./src/images/reviews/content3-mobile.webp" media="(max-width: 1024px)">
+                <source type="image/webp" srcset="./src/images/reviews/content3-mobile.jpg" media="(max-width: 1024px)">
+                <source type="image/webp" srcset="./src/images/reviews/content3-desktop.webp" media="(max-width: 4000px)">
+                <source type="image/jpeg" srcset="./src/images/reviews/content3-desktop.jpg" media="(max-width: 4000px)">
+                <img src="./src/images/reviews/content3-desktop.jpg" alt="Отзыв клиента">
+              </picture>
+            </div>
+
+            <div class="swiper-slide">
+              <picture class="picture">
+                <source type="image/webp" srcset="./src/images/reviews/content4-mobile.webp" media="(max-width: 1024px)">
+                <source type="image/webp" srcset="./src/images/reviews/content4-mobile.jpg" media="(max-width: 1024px)">
+                <source type="image/webp" srcset="./src/images/reviews/content4-desktop.webp" media="(max-width: 4000px)">
+                <source type="image/jpeg" srcset="./src/images/reviews/content4-desktop.jpg" media="(max-width: 4000px)">
+                <img src="./src/images/reviews/content4-desktop.jpg" alt="Отзыв клиента">
+              </picture>
+            </div>
+
+            <div class="swiper-slide">
+              <picture class="picture">
+                <source type="image/webp" srcset="./src/images/reviews/content5-mobile.webp" media="(max-width: 1024px)">
+                <source type="image/webp" srcset="./src/images/reviews/content5-mobile.jpg" media="(max-width: 1024px)">
+                <source type="image/webp" srcset="./src/images/reviews/content5-desktop.webp" media="(max-width: 4000px)">
+                <source type="image/jpeg" srcset="./src/images/reviews/content5-desktop.jpg" media="(max-width: 4000px)">
+                <img src="./src/images/reviews/content5-desktop.jpg" alt="Отзыв клиента">
+              </picture>
+            </div>
+
+            <div class="swiper-slide">
+              <picture class="picture">
+                <source type="image/webp" srcset="./src/images/reviews/content6-desktop.webp" media="(max-width: 4000px)">
+                <source type="image/jpeg" srcset="./src/images/reviews/content6-desktop.jpg" media="(max-width: 4000px)">
+                <img src="./src/images/reviews/content6-desktop.jpg" alt="Отзыв клиента">
               </picture>
             </div>
           </div>
         </div>
       </div>
+      </div>
     </section>
-
-
 
     <section id="contacts" class="contacts js-section">
       <div class="container">
@@ -761,21 +774,30 @@
           <div class="contacts__info">
             <div class="contact-badge">
               <a class="contact-badge__item " href="#">
+              <a class="contact-badge__item " href="#">
                 <p>Адрес студии:</p>
                 <p>Г. Казань, Айвазовского 10/54</p>
+                <img class="contact-badge__icon" src="./src/images/header/location-pointer.svg" alt="location">
                 <img class="contact-badge__icon" src="./src/images/header/location-pointer.svg" alt="location">
               </a>
               <div class="contact-badge__item">
                 <p>График работы</p>
                 <p>Ежедневно 12:00 - 19:00</p>
                 <img class="contact-badge__icon" src="./src/images/header/clockIcon.svg" alt="schedule">
+                <img class="contact-badge__icon" src="./src/images/header/clockIcon.svg" alt="schedule">
               </div>
+              <a class="contact-badge__item contact-badge__phone" href="tel:+79600330101">
               <a class="contact-badge__item contact-badge__phone" href="tel:+79600330101">
                 <p>Связь со мной</p>
                 <p>8-960-033-01-01</p>
                 <img class="contact-badge__icon" src="./src/images/header/phone.svg" alt="phone">
+                <img class="contact-badge__icon" src="./src/images/header/phone.svg" alt="phone">
               </a>
               <div class="socials">
+                <a href="https://t.me/dinasynthetica" class="socails__item"><img src="./src/images/header/telegramm.svg" alt="telegramm"></a>
+                <a href="https://wa.me/+79600330101" class="socails__item"><img src="./src/images/header/what'sUpIcon.svg" alt="what's up"></a>
+                <a href="https://instagram.com/dina.synthetica?igshid=NjIwNzIyMDk2Mg==" class="socails__item"><img src="./src/images/header/instagramm.svg" alt="Instagramm"></a>
+                <a href="https://vk.com/dina_synthetica_tattoo" class="socails__item"><img src="./src/images/header/vk-icon.svg" alt="Vk"></a>
                 <a href="https://t.me/dinasynthetica" class="socails__item"><img src="./src/images/header/telegramm.svg"
                     alt="telegramm"></a>
                 <a href="https://wa.me/+79600330101" class="socails__item"><img
@@ -791,6 +813,7 @@
           <div class="contacts__atelier">
             <div class="contacts__atelier-title">Студия</div>
             <img src="./src/images/contacts/content.png" class="contacts__img"></img>
+            <img src="./src/images/contacts/content.png" class="contacts__img"></img>
             <div class="contacts__atelier-video">
               <iframe src="https://drive.google.com/file/d/1bB4DJhQxHCA_foYYZQKaoZ08rE-I4RMy/preview" allow="autoplay"
                 allowfullscreen></iframe>
@@ -804,7 +827,8 @@
 
   </main>
   <!-- footer -->
-  <footer class="footer">
+
+  <footer class="footer js-section">
     <div class="container">
       <img class="footer__bg-desktop" src="/src/images/footer/bg.png" alt="">
       <div class="footer__inner">
@@ -825,14 +849,10 @@
             <img class="contact-badge__icon" src="./src/images/header/phone.svg" alt="phone">
           </a>
           <div class="socials">
-            <a href="https://t.me/dinasynthetica" class="socails__item"><img src="./src/images/header/telegramm.svg"
-                alt="telegramm"></a>
-            <a href="https://wa.me/+79600330101" class="socails__item"><img src="./src/images/header/what'sUpIcon.svg"
-                alt="what's up"></a>
-            <a href="https://instagram.com/dina.synthetica?igshid=NjIwNzIyMDk2Mg==" class="socails__item"><img
-                src="./src/images/header/instagramm.svg" alt="Instagramm"></a>
-            <a href="https://vk.com/dina_synthetica_tattoo" class="socails__item"><img
-                src="./src/images/header/vk-icon.svg" alt="Vk"></a>
+            <a href="https://t.me/dinasynthetica" class="socails__item"><img src="./src/images/header/telegramm.svg" alt="telegramm"></a>
+            <a href="https://wa.me/+79600330101" class="socails__item"><img src="./src/images/header/what'sUpIcon.svg" alt="what's up"></a>
+            <a href="https://instagram.com/dina.synthetica?igshid=NjIwNzIyMDk2Mg==" class="socails__item"><img src="./src/images/header/instagramm.svg" alt="Instagramm"></a>
+            <a href="https://vk.com/dina_synthetica_tattoo" class="socails__item"><img src="./src/images/header/vk-icon.svg" alt="Vk"></a>
           </div>
 
         </div>
@@ -853,29 +873,28 @@
             <img class="contact-badge__icon" src="./src/images/header/phone.svg" alt="phone">
           </a>
           <div class="socials">
-            <a href="https://t.me/dinasynthetica" class="socails__item"><img src="./src/images/header/telegramm.svg"
-                alt="telegramm"></a>
-            <a href="https://wa.me/+79600330101" class="socails__item"><img src="./src/images/header/what'sUpIcon.svg"
-                alt="what's up"></a>
-            <a href="https://instagram.com/dina.synthetica?igshid=NjIwNzIyMDk2Mg==" class="socails__item"><img
-                src="./src/images/header/instagramm.svg" alt="Instagramm"></a>
-            <a href="https://vk.com/dina_synthetica_tattoo" class="socails__item"><img
-                src="./src/images/header/vk-icon.svg" alt="Vk"></a>
+            <a href="https://t.me/dinasynthetica" class="socails__item"><img src="./src/images/header/telegramm.svg" alt="telegramm"></a>
+            <a href="https://wa.me/+79600330101" class="socails__item"><img src="./src/images/header/what'sUpIcon.svg" alt="what's up"></a>
+            <a href="https://instagram.com/dina.synthetica?igshid=NjIwNzIyMDk2Mg==" class="socails__item"><img src="./src/images/header/instagramm.svg" alt="Instagramm"></a>
+            <a href="https://vk.com/dina_synthetica_tattoo" class="socails__item"><img src="./src/images/header/vk-icon.svg" alt="Vk"></a>
           </div>
         </div>
       </div>
     </div>
 
   </footer>
+
+  <!-- <div class="popup">
+    <div class="popup__inner"></div>
+  </div> -->
+
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="./src/script/jquery-1.12.0.min.js"></script>
+  <script src="./src/script/state.js"></script>
+  <script src="./src/script/renderCalcBlock.js"></script>
+  <script src="./src/script/data.js"></script>
   <script src="./src/script/image360.jquery.js"></script>
   <script src="./src/script/index.js"></script>
-  <script>
-    $(document).ready(function () {
-      $("#rotation").image360();
-    });
-  </script>
   <script src="./src/script/modal.js"></script>
   <script src="./src/script/memo.js"></script>
 </body>

@@ -12,6 +12,7 @@
     .portfolio__wrapper & {
         width: calc(20% - 5px);
         height: 130px;
+        cursor: pointer;
 
         &--desktop {
             display: none;
@@ -37,6 +38,14 @@
 
     .about__photo-right &--desktop {
             display: none;
+    }
+    
+    .reviews & {
+        height: 396px;
+        
+        & img {
+            object-fit: contain;
+        }
     }
 
     @media (min-width: 768px) {
