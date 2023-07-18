@@ -1,23 +1,15 @@
-// const singUpBtn = document.querySelector('.first__btn')
-// const modalBg = document.querySelector('.modal-sign-up')
-// const modal = document.querySelector('.first__modal')
-// const modalCloseBtn = document.querySelector('.modal__close-btn')
-// const modalMobile = document.querySelector('.first__btn-mobile')
+const portfolioArray = document.querySelectorAll('[data-modal]');
+const scrollBar = window.innerWidth - document.body.clientWidth;
 
-// const modalOpen = function () {
-// 	modal.classList.remove('none')
-// 	document.body.classList.add('no-scroll')
-// }
-
-// const modalClose = function () {
-// 	modal.classList.add('none')
-// 	document.body.classList.remove('no-scroll')
-// }
-
-// singUpBtn.onclick = modalOpen
-
-// modalBg.onclick = modalClose
-
-// modalCloseBtn.onclick = modalClose
-
-// modalMobile.onclick = modalOpen
+portfolioArray.forEach((image) => {
+  image.addEventListener('click', () => {
+    modalBackground.style.display = 'block';
+    modalBackground.firstElementChild.style.width = 'max-content';
+    modalBackground.parentElement.style.overflow = 'hidden';
+    
+    if (window.screen.width > 768) {
+      document.body.style.marginRight = `${scrollBar}px`;
+    }
+    state.activeModalBlock.innerHTML = image.innerHTML;
+  });
+});
