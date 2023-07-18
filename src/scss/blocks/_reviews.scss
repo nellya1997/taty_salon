@@ -1,5 +1,28 @@
-// .reviews {
-//     // &__flex {
-//     //     display: flex;
-//     // }
-// }
+.reviews {
+
+    .swiper-wrapper {
+
+        .pc-slide {
+            display: none;
+
+        }
+    }
+}
+
+
+@media (min-width: 767px) {
+    .reviews {
+
+        .swiper-wrapper {
+
+            .pc-slide {
+                display: block;
+            }
+
+            .mob-slide {
+                display: none;
+                border: $myBorder;
+            }
+        }
+    }
+}

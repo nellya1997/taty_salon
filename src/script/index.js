@@ -128,16 +128,16 @@ const calculatorHandler = (selectors) => ({ target }) => {
     const priceOld = activeBlock.querySelector('.calculator__price').firstElementChild;
     const timeOld = activeBlock.querySelector('.calculator__time').firstElementChild;
 
-      target.classList.add('active', 'animate__heartBeat');
-      activeButton.classList.remove('active', 'animate__heartBeat');
+    target.classList.add('active', 'animate__heartBeat');
+    activeButton.classList.remove('active', 'animate__heartBeat');
 
-      const { price, time } = data.find(
-        (value) => value.descriptions.name === name
-      ).descriptions;
-      priceOld.textContent = `от ${price[target.id]} рублей`;
-      timeOld.textContent = time[target.id];
-    }
-  };
+    const { price, time } = data.find(
+      (value) => value.descriptions.name === name
+    ).descriptions;
+    priceOld.textContent = `от ${price[target.id]} рублей`;
+    timeOld.textContent = time[target.id];
+  }
+};
 
 const animationHandler = ({ target }) => {
   const { activeButton, defaultBlock } = state;
@@ -278,6 +278,39 @@ const swiper1 = new Swiper('.js-swiper', {
 
 // подключение слайдер в отзывах, он только в мобильной версии
 
+//создадим еще еэкземпляр swiper: на пк будет демонстрироваться сразу 5 слайдов, на мобилке 1
+
+const swiperReview = new Swiper('.js-swiper-reviews', {
+  slidesPerView: 1,
+  loop: true,
+  spaceBetween: 20,
+
+  breakpoints: {
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    // when window width is >= 767px
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    },
+    // when window width is >= 10224px
+    1024: {
+      slidesPerView: 5,
+      spaceBetween: 30
+    },
+  }
+
+});
+
+
+
+
+
+
+/*
 const swiper2 = new Swiper('.js-swiper-reviews', {
   breakpoints: {
     // when window width is >= 320px
@@ -289,7 +322,7 @@ const swiper2 = new Swiper('.js-swiper-reviews', {
     // }
   },
 });
-
+*/
 // подключение попапа в портфолио
 
 class popupItem {

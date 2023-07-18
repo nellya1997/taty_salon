@@ -1,0 +1,94 @@
+    <section id="reviews" class="reviews js-section">
+      <div class="container">
+        <h2 class="title">
+          <span>ОТЗЫВЫ</span>
+        </h2>
+        <div class="swiper js-swiper-reviews" data-mobile="false">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <!-- <div class=""> -->
+              <div class="reviews__flex">
+                <picture class="picture">
+                  <source type="image/webp" srcset="./src/images/reviews/content1-mobile.webp"
+                    media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/reviews/content1-mobile.jpg"
+                    media="(max-width: 1024px)">
+                  <source type="image/webp" srcset="./src/images/reviews/content1-desktop.webp"
+                    media="(max-width: 4000px)">
+                  <source type="image/jpeg" srcset="./src/images/reviews/content1-desktop.jpg"
+                    media="(max-width: 4000px)">
+                  <img src="./src/images/reviews/content1-desktop.jpg" alt="Отзыв клиента">
+                </picture>
+
+              </div>
+            </div>
+
+            <!-- эта картинка добавляется в ревьюс__флекс на десктоп через жс  -->
+            <div class="swiper-slide">
+              <picture class="picture">
+                <source type="image/webp" srcset="./src/images/reviews/content2-mobile.webp"
+                  media="(max-width: 1024px)">
+                <source type="image/webp" srcset="./src/images/reviews/content2-mobile.jpg" media="(max-width: 1024px)">
+                <source type="image/webp" srcset="./src/images/reviews/content2-desktop.webp"
+                  media="(max-width: 4000px)">
+                <source type="image/jpeg" srcset="./src/images/reviews/content2-desktop.jpg"
+                  media="(max-width: 4000px)">
+                <img src="./src/images/reviews/content2-desktop.jpg" alt="Отзыв клиента">
+              </picture>
+            </div>
+
+            <div class="swiper-slide">
+              <picture class="picture">
+                <source type="image/webp" srcset="./src/images/reviews/content3-mobile.webp"
+                  media="(max-width: 1024px)">
+                <source type="image/webp" srcset="./src/images/reviews/content3-mobile.jpg" media="(max-width: 1024px)">
+                <source type="image/webp" srcset="./src/images/reviews/content3-desktop.webp"
+                  media="(max-width: 4000px)">
+                <source type="image/jpeg" srcset="./src/images/reviews/content3-desktop.jpg"
+                  media="(max-width: 4000px)">
+                <img src="./src/images/reviews/content3-desktop.jpg" alt="Отзыв клиента">
+              </picture>
+            </div>
+
+            <div class="swiper-slide">
+              <picture class="picture">
+                <source type="image/webp" srcset="./src/images/reviews/content4-mobile.webp"
+                  media="(max-width: 1024px)">
+                <source type="image/webp" srcset="./src/images/reviews/content4-mobile.jpg" media="(max-width: 1024px)">
+                <source type="image/webp" srcset="./src/images/reviews/content4-desktop.webp"
+                  media="(max-width: 4000px)">
+                <source type="image/jpeg" srcset="./src/images/reviews/content4-desktop.jpg"
+                  media="(max-width: 4000px)">
+                <img src="./src/images/reviews/content4-desktop.jpg" alt="Отзыв клиента">
+              </picture>
+            </div>
+
+            <div class="swiper-slide">
+              <picture class="picture">
+                <source type="image/webp" srcset="./src/images/reviews/content5-mobile.webp"
+                  media="(max-width: 1024px)">
+                <source type="image/webp" srcset="./src/images/reviews/content5-mobile.jpg" media="(max-width: 1024px)">
+                <source type="image/webp" srcset="./src/images/reviews/content5-desktop.webp"
+                  media="(max-width: 4000px)">
+                <source type="image/jpeg" srcset="./src/images/reviews/content5-desktop.jpg"
+                  media="(max-width: 4000px)">
+                <img src="./src/images/reviews/content5-desktop.jpg" alt="Отзыв клиента">
+              </picture>
+            </div>
+
+            <div class="swiper-slide">
+              <picture class="picture">
+                <source type="image/webp" srcset="./src/images/reviews/content6-desktop.webp"
+                  media="(max-width: 4000px)">
+                <source type="image/jpeg" srcset="./src/images/reviews/content6-desktop.jpg"
+                  media="(max-width: 4000px)">
+                <img src="./src/images/reviews/content6-desktop.jpg" alt="Отзыв клиента">
+              </picture>
+            </div>
+            
+            
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
