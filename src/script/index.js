@@ -179,6 +179,8 @@ const modalClose = document.querySelector('.modalClose');
       modalBackground.parentElement.style.overflow = '';
       if (modalBackground.firstElementChild.style.width === 'max-content') {
         modalBackground.firstElementChild.style.width = '';
+        document.querySelector('.header').style.paddingRight = '';
+        modalBackground.firstElementChild.style.padding = '';
         document.body.style.marginRight = '';
       }
 
