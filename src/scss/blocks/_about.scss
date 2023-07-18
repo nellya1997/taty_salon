@@ -1,4 +1,6 @@
 .about {
+    overflow-x: hidden;
+    
     &__photo {
         @include flexy(row, space-between, inherit);
         margin-bottom: 22px;
