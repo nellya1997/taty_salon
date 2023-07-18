@@ -1,6 +1,7 @@
 .first {
     @include centry(91%);
     padding: 20px 0;
+    overflow-x: hidden;
 
     &__top {
         img {
