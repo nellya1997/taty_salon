@@ -110,6 +110,7 @@
 
 /*                                        */
 // JS файлы из калькулятор index.js
+
 const createInfoBlock = (id) => {
   const slides = [...document.querySelectorAll('#rotation > img')];
   // получаем номер активного слайда
@@ -121,7 +122,7 @@ const createInfoBlock = (id) => {
 };
 
 const calculatorHandler = (selectors) => ({ target }) => {
-  const activeBlock  = window.screen.width > 768 ? state.activeBlock : state.activeModalBlock;
+  const activeBlock = window.screen.width > 768 ? state.activeBlock : state.activeModalBlock;
   if (target.classList.contains('active')) {
     return;
   } else {
@@ -173,13 +174,13 @@ const modalClose = document.querySelector('.modalClose');
 const modalActive = document.querySelector('.modalActive');
 
 [modalClose, modalBackground].forEach((modal) => {
-  modal.addEventListener('click', ({  target }) => {
+  modal.addEventListener('click', ({ target }) => {
     if (target === modalBackground || target === modalClose) {
-        modalBackground.style.display = 'none';
-        modalBackground.parentElement.style.overflow = '';
-        buttons.forEach((button) => button.style.visibility = 'visible');
-        state.activeButton.classList.remove('active', 'animate__heartBeat');
-        state.activeButton = document.createElement('a');
+      modalBackground.style.display = 'none';
+      modalBackground.parentElement.style.overflow = '';
+      buttons.forEach((button) => button.style.visibility = 'visible');
+      state.activeButton.classList.remove('active', 'animate__heartBeat');
+      state.activeButton = document.createElement('a');
     }
   });
 });
@@ -195,21 +196,21 @@ buttons.forEach((button) => {
 // функция добавления изображения на страницу после полной загрузки
 const preloadImages = (array) => {
   if (!preloadImages.list) {
-      preloadImages.list = [];
+    preloadImages.list = [];
   }
   const list = preloadImages.list;
   for (let i = 0; i < array.length; i++) {
-      const img = new Image();
-      img.onload = () => {
-          const index = list.indexOf(this);
-          if (index !== -1) {
-              list.splice(index, 1);
-          }
+    const img = new Image();
+    img.onload = () => {
+      const index = list.indexOf(this);
+      if (index !== -1) {
+        list.splice(index, 1);
       }
-      list.push(img);
-      img.src = array[i];
-      img.id = i + 1;
-      document.querySelector('#rotation').append(img);
+    }
+    list.push(img);
+    img.src = array[i];
+    img.id = i + 1;
+    document.querySelector('#rotation').append(img);
   }
 };
 
@@ -240,11 +241,15 @@ preloadImages([
   "./src/images/services/24.jpg",
 ]);
 
+
 window.addEventListener("load", () => {
   $(document).ready(function () {
     $("#rotation").image360();
   });
 });
+
+
+
 /*                                        */
 
 // js-swiper
@@ -282,17 +287,17 @@ const swiper2 = new Swiper('.js-swiper-reviews', {
 
 class popupItem {
   constructor(src, alt) {
-      this.src = src;
-      this.alt = alt;
-      // this.titile = titile;
-      // this.descr = descr;
-      // this.price = price;
-      // this.classes = classes;
-      // this.parent = document.querySelector(parentSelector);
-      // this.transfer = 27;
-      // this.changeToUAH();
+    this.src = src;
+    this.alt = alt;
+    // this.titile = titile;
+    // this.descr = descr;
+    // this.price = price;
+    // this.classes = classes;
+    // this.parent = document.querySelector(parentSelector);
+    // this.transfer = 27;
+    // this.changeToUAH();
   }
-  
+
   // srcPicture() {
   //   this.picture = 
   // }

@@ -1,5 +1,6 @@
 .services {
   @include flexy(column, space-between, unset);
+  @include centry(91.6%);
 
   &__header {
     @include flexy(row, space-between, center);
