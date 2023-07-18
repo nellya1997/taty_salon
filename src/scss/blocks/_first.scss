@@ -31,6 +31,10 @@
                 width: 90%;
                 position: relative;
                 margin: -10% 0% 0% 10%;
+
+                img {
+                    vertical-align: middle;
+                }
             }
         }
 
@@ -42,6 +46,7 @@
             line-height: calc(32px + 48 * ((100vw - 320px) / 1920));
             text-transform: uppercase;
             padding-right: 5px;
+            color: $dark-violet;
         }
 
 
@@ -67,10 +72,11 @@
                 content: 'Казань';
                 font-family: 'Constantine';
                 font-size: calc(11px + 33 * ((100vw - 320px) / 1920));
+                color: $dark-violet;
                 line-height: 0;
                 position: absolute;
-                bottom: 102%;
-                left: 0;
+                top: -4%;
+                left: -0.1rem;
             }
         }
     }

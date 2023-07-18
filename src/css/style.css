@@ -940,6 +940,9 @@ ul {
   position: relative;
   margin: -10% 0% 0% 10%;
 }
+.first .girl__wrapper picture img {
+  vertical-align: middle;
+}
 .first .girl h1 {
   font-family: "Constantine";
   font-size: calc(25px + 45 * (100vw - 320px) / 1920);
@@ -947,6 +950,7 @@ ul {
   line-height: calc(32px + 48 * (100vw - 320px) / 1920);
   text-transform: uppercase;
   padding-right: 5px;
+  color: #562667;
 }
 .first .girl__border {
   border: 2px solid rgb(75, 11, 122);
@@ -967,10 +971,11 @@ ul {
   content: "Казань";
   font-family: "Constantine";
   font-size: calc(11px + 33 * (100vw - 320px) / 1920);
+  color: #562667;
   line-height: 0;
   position: absolute;
-  bottom: 102%;
-  left: 0;
+  top: -4%;
+  left: -0.1rem;
 }
 .first .socials {
   display: flex;
