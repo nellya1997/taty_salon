@@ -383,7 +383,6 @@ html {
   min-width: 320px;
   scroll-behavior: smooth;
   color: #22082B;
-  overflow: auto;
   margin-left: calc(100vw - 100%);
   margin-right: 0;
 }
