@@ -45,8 +45,9 @@
 }
 
 html {
-  width: 100%;
-  height: 100%;
+  //пока не удолил т.к. это было нужно для фикса скачущего бургера, но оно вродеть и так работает
+  //width: 100%;
+  //height: 100%;
 
   font-family: "Manrope", sans-serif;
   font-weight: 400;
@@ -68,9 +69,10 @@ html {
 
 body {
   width: 100%;
+  max-width: 100vw;
   height: 100%;
   overflow-x: hidden;
-  min-width: 320px;
+  //min-width: 320px;
   position: relative;
   background-color: $bg-color;
 }
