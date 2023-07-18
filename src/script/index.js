@@ -171,16 +171,22 @@ const animationHandler = ({ target }) => {
 
 const modalBackground = document.querySelector('.modalBackground');
 const modalClose = document.querySelector('.modalClose');
-const modalActive = document.querySelector('.modalActive');
 
 [modalClose, modalBackground].forEach((modal) => {
   modal.addEventListener('click', ({ target }) => {
     if (target === modalBackground || target === modalClose) {
       modalBackground.style.display = 'none';
       modalBackground.parentElement.style.overflow = '';
-      buttons.forEach((button) => button.style.visibility = 'visible');
-      state.activeButton.classList.remove('active', 'animate__heartBeat');
-      state.activeButton = document.createElement('a');
+      if (modalBackground.firstElementChild.style.width === 'max-content') {
+        modalBackground.firstElementChild.style.width = '';
+        document.body.style.marginRight = '';
+      }
+
+      if (state.activeButton.classList.contains('active')) {
+        buttons.forEach((button) => button.style.visibility = 'visible');
+        state.activeButton.classList.remove('active', 'animate__heartBeat');
+        state.activeButton = document.createElement('a');
+      }
     }
   });
 });
