@@ -106,6 +106,7 @@
 
 /*                                        */
 // JS файлы из калькулятор index.js
+
 const createInfoBlock = (id) => {
   const slides = [...document.querySelectorAll('#rotation > img')];
   // получаем номер активного слайда
@@ -117,20 +118,15 @@ const createInfoBlock = (id) => {
   return renderCalcBlock(name, price, time);
 };
 
-const calculatorHandler =
-  (selectors) =>
-  ({ target }) => {
-    const activeBlock =
-      window.screen.width > 768 ? state.activeBlock : state.activeModalBlock;
-    if (target.classList.contains('active')) {
-      return;
-    } else {
-      const activeButton = selectors.querySelector('.active');
-      const name = activeBlock.firstElementChild.textContent;
-      const priceOld =
-        activeBlock.querySelector('.calculator__price').firstElementChild;
-      const timeOld =
-        activeBlock.querySelector('.calculator__time').firstElementChild;
+const calculatorHandler = (selectors) => ({ target }) => {
+  const activeBlock = window.screen.width > 768 ? state.activeBlock : state.activeModalBlock;
+  if (target.classList.contains('active')) {
+    return;
+  } else {
+    const activeButton = selectors.querySelector('.active');
+    const name = activeBlock.firstElementChild.textContent;
+    const priceOld = activeBlock.querySelector('.calculator__price').firstElementChild;
+    const timeOld = activeBlock.querySelector('.calculator__time').firstElementChild;
 
       target.classList.add('active', 'animate__heartBeat');
       activeButton.classList.remove('active', 'animate__heartBeat');
@@ -175,16 +171,22 @@ const animationHandler = ({ target }) => {
 
 const modalBackground = document.querySelector('.modalBackground');
 const modalClose = document.querySelector('.modalClose');
-const modalActive = document.querySelector('.modalActive');
 
 [modalClose, modalBackground].forEach((modal) => {
   modal.addEventListener('click', ({ target }) => {
     if (target === modalBackground || target === modalClose) {
       modalBackground.style.display = 'none';
       modalBackground.parentElement.style.overflow = '';
-      buttons.forEach((button) => (button.style.visibility = 'visible'));
-      state.activeButton.classList.remove('active', 'animate__heartBeat');
-      state.activeButton = document.createElement('a');
+      if (modalBackground.firstElementChild.style.width === 'max-content') {
+        modalBackground.firstElementChild.style.width = '';
+        document.body.style.marginRight = '';
+      }
+
+      if (state.activeButton.classList.contains('active')) {
+        buttons.forEach((button) => button.style.visibility = 'visible');
+        state.activeButton.classList.remove('active', 'animate__heartBeat');
+        state.activeButton = document.createElement('a');
+      }
     }
   });
 });
@@ -210,7 +212,7 @@ const preloadImages = (array) => {
       if (index !== -1) {
         list.splice(index, 1);
       }
-    };
+    }
     list.push(img);
     img.src = array[i];
     img.id = i + 1;
@@ -245,11 +247,15 @@ preloadImages([
   './src/images/services/24.jpg',
 ]);
 
+
 window.addEventListener('load', () => {
   $(document).ready(function () {
     $('#rotation').image360();
   });
 });
+
+
+
 /*                                        */
 
 // js-swiper
