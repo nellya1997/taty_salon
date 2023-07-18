@@ -59,8 +59,7 @@ html {
 
   //чтобы убрать прыгающий скролл
   //overflow: auto; - удолить - изза этого событие скроллу отключилось во всем document!!!!!11111
-  margin-left: calc(100vw - 100%);
-  margin-right: 0;
+ 
 
   @media (min-width: 1920px) {
     font-size: 44px;
