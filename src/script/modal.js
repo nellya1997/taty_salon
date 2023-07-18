@@ -9,6 +9,7 @@ portfolioArray.forEach((image) => {
     
     if (window.screen.width > 768) {
       document.body.style.marginRight = `${scrollBar}px`;
+      document.querySelector('.header').style.paddingRight = `${scrollBar}px`;
     }
     state.activeModalBlock.innerHTML = image.innerHTML;
   });
