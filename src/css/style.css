@@ -888,13 +888,13 @@ ul {
 }
 
 @media (min-width: 768px) {
-  .contact-badge__item {
+  .header .contact-badge__item {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
   }
-  .contact-badge__item img {
+  .header .contact-badge__item img {
     width: 16px;
     height: 16px;
   }
@@ -2425,6 +2425,11 @@ ul {
     top: -3px;
     width: 307px;
   }
+  .contacts .socails__item img,
+  .contacts .socials a {
+    width: 46px;
+    height: 46px;
+  }
 }
 @media (min-width: 1730px) {
   .contacts__wrapper {
@@ -2574,6 +2579,14 @@ ul {
     top: -159px;
     left: 0;
   }
+  .footer .socails__item img,
+  .footer .socials a {
+    width: 46px;
+    height: 46px;
+  }
+  .socials {
+    gap: 10px;
+  }
 }
 @media (min-width: 1920px) {
   .footer__desktop .contact-badge__item img {
@@ -2622,4 +2635,4 @@ ul {
 }
 .popup__close::before {
   transform: translate(-50%, -50%) rotate(-45deg);
-}/*# sourceMappingURL=style.css.map */
+}

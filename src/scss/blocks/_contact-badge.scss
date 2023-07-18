@@ -27,9 +27,8 @@
     }
 }
 
-@media(min-width: 768px) {
-    .contact-badge {
-
+@media (min-width: 768px) {
+    .header .contact-badge {
         &__item {
             @include flexy(row, flex-start);
 
