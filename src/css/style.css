@@ -1931,9 +1931,15 @@ ul {
   width: 17px;
   height: 17px;
   cursor: pointer;
+  z-index: 3;
 }
 .modalBackground .modalActive .modalWindow {
   position: relative;
+  padding-top: 0px;
+}
+.modalBackground .modalActive .modalWindow img {
+  vertical-align: middle;
+  z-index: 2;
 }
 
 @keyframes show {

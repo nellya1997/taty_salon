@@ -180,6 +180,7 @@ const modalClose = document.querySelector('.modalClose');
       if (modalBackground.firstElementChild.style.width === 'max-content') {
         modalBackground.firstElementChild.style.width = '';
         document.querySelector('.header').style.paddingRight = '';
+        modalBackground.firstElementChild.style.padding = '';
         document.body.style.marginRight = '';
       }
 

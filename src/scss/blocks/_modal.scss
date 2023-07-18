@@ -42,10 +42,17 @@
             width: 17px;
             height: 17px;
             cursor: pointer;
+            z-index: 3;
         }
 
         .modalWindow {
             position: relative;
+            @include p(top, 0);
+
+            img {
+                vertical-align: middle;
+                z-index: 2;
+            }
         }
     }
 }
