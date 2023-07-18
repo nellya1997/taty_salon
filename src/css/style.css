@@ -390,7 +390,6 @@ html {
 body {
   max-width: 100vw;
   height: 100%;
-  overflow-x: hidden;
   position: relative;
   background-color: rgb(243, 243, 243);
 }
@@ -902,6 +901,7 @@ ul {
   margin: 0 auto;
   width: 91%;
   padding: 20px 0;
+  overflow-x: hidden;
 }
 .first__top img {
   display: block;
