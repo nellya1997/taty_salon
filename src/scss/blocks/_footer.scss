@@ -9,7 +9,7 @@
         right: 0;
     }
     &__inner {
-        @include flexy(row, space-between, center);
+        @include flexy(row, space-between, start);
         gap: 30px;
     }
     &__nav {
@@ -47,6 +47,10 @@
         &__nav {
             flex-direction: row;
             gap: 31px;
+        }
+        &__inner {
+            @include flexy(row, space-between, center);
+            gap: 30px;
         }
         .contact-badge {
             .socials,
@@ -93,5 +97,9 @@
     .footer__desktop .contact-badge__item img {
         left: -131px;
         top: 49px;
+    }
+
+    .footer__nav {
+        gap: 63px;
     }
 }
