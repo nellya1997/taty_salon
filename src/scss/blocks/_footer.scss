@@ -36,6 +36,11 @@
 }
 
 @media (min-width: 768px) {
+    // .footer {
+    //     .contact-badge__item {
+    //         flex-direction: column;
+    //     }
+    // }
 }
 
 @media (min-width: 1280px) {
@@ -91,8 +96,17 @@
             top: -159px;
             left: 0;
         }
+        .socails__item img,
+        .socials a {
+            width: 46px;
+            height: 46px;
+        }
+    }
+    .socials {
+        gap: 10px;
     }
 }
+
 @media (min-width: 1920px) {
     .footer__desktop .contact-badge__item img {
         left: -131px;

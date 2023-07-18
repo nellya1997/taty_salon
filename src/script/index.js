@@ -25,7 +25,6 @@
 
   //клик по ссылкам в mobile-header должен работать и отключаться в зависимости от разрешения
   function checkCurrentWidth() {
-
     if (window.screen.width < 768) {
       links.forEach((el) => {
         el.addEventListener('click', closeHeader);
@@ -35,14 +34,12 @@
         el.removeEventListener('click', closeHeader);
       });
     }
-
   }
 
   checkCurrentWidth();
 
   //будем следить за поворотом экрана пользователем:
   window.addEventListener('resize', checkCurrentWidth);
-
 })();
 
 //active navigation shows where user now:
@@ -54,7 +51,6 @@
     let scrollDistance = window.scrollY;
 
     document.querySelectorAll('.js-section').forEach((el, i) => {
-
       if (el.offsetTop - nav.clientHeight <= scrollDistance) {
         links.forEach((el) => {
           if (el.classList.contains('nav__link_active')) {
@@ -115,9 +111,10 @@ const createInfoBlock = (id) => {
   const slides = [...document.querySelectorAll('#rotation > img')];
   // получаем номер активного слайда
   const activeSlide = slides.find((slide) => slide.style.display !== 'none').id;
-  const { name, price, time } = (activeSlide > 11 && activeSlide < 15)
-    ? data.find((value) => value.ids.includes(`${id}-back`)).descriptions
-    : data.find((value) => value.ids.includes(id)).descriptions;
+  const { name, price, time } =
+    activeSlide > 11 && activeSlide < 15
+      ? data.find((value) => value.ids.includes(`${id}-back`)).descriptions
+      : data.find((value) => value.ids.includes(id)).descriptions;
   return renderCalcBlock(name, price, time);
 };
 
@@ -131,22 +128,25 @@ const calculatorHandler = (selectors) => ({ target }) => {
     const priceOld = activeBlock.querySelector('.calculator__price').firstElementChild;
     const timeOld = activeBlock.querySelector('.calculator__time').firstElementChild;
 
-    target.classList.add('active', 'animate__heartBeat');
-    activeButton.classList.remove('active', 'animate__heartBeat');
+      target.classList.add('active', 'animate__heartBeat');
+      activeButton.classList.remove('active', 'animate__heartBeat');
 
-    const { price, time } = data.find((value) => value.descriptions.name === name).descriptions;
-    priceOld.textContent = `от ${price[target.id]} рублей`;
-    timeOld.textContent = time[target.id];
-  }
-};
+      const { price, time } = data.find(
+        (value) => value.descriptions.name === name
+      ).descriptions;
+      priceOld.textContent = `от ${price[target.id]} рублей`;
+      timeOld.textContent = time[target.id];
+    }
+  };
 
 const animationHandler = ({ target }) => {
   const { activeButton, defaultBlock } = state;
-  const activeBlock = window.screen.width > 768 ? state.activeBlock : state.activeModalBlock;
+  const activeBlock =
+    window.screen.width > 768 ? state.activeBlock : state.activeModalBlock;
   if (window.screen.width <= 768) {
     modalBackground.style.display = 'block';
     modalBackground.parentElement.style.overflow = 'hidden';
-    buttons.forEach((button) => button.style.visibility = 'hidden');
+    buttons.forEach((button) => (button.style.visibility = 'hidden'));
   }
   if (activeButton.id !== target.id) {
     if (activeButton.classList.contains('active')) {
@@ -221,36 +221,36 @@ const preloadImages = (array) => {
 };
 
 preloadImages([
-  "./src/images/services/1.jpg",
-  "./src/images/services/2.jpg",
-  "./src/images/services/3.jpg",
-  "./src/images/services/4.jpg",
-  "./src/images/services/5.jpg",
-  "./src/images/services/6.jpg",
-  "./src/images/services/7.jpg",
-  "./src/images/services/8.jpg",
-  "./src/images/services/9.jpg",
-  "./src/images/services/10.jpg",
-  "./src/images/services/11.jpg",
-  "./src/images/services/12.jpg",
-  "./src/images/services/13.jpg",
-  "./src/images/services/14.jpg",
-  "./src/images/services/15.jpg",
-  "./src/images/services/16.jpg",
-  "./src/images/services/17.jpg",
-  "./src/images/services/18.jpg",
-  "./src/images/services/19.jpg",
-  "./src/images/services/20.jpg",
-  "./src/images/services/21.jpg",
-  "./src/images/services/22.jpg",
-  "./src/images/services/23.jpg",
-  "./src/images/services/24.jpg",
+  './src/images/services/1.jpg',
+  './src/images/services/2.jpg',
+  './src/images/services/3.jpg',
+  './src/images/services/4.jpg',
+  './src/images/services/5.jpg',
+  './src/images/services/6.jpg',
+  './src/images/services/7.jpg',
+  './src/images/services/8.jpg',
+  './src/images/services/9.jpg',
+  './src/images/services/10.jpg',
+  './src/images/services/11.jpg',
+  './src/images/services/12.jpg',
+  './src/images/services/13.jpg',
+  './src/images/services/14.jpg',
+  './src/images/services/15.jpg',
+  './src/images/services/16.jpg',
+  './src/images/services/17.jpg',
+  './src/images/services/18.jpg',
+  './src/images/services/19.jpg',
+  './src/images/services/20.jpg',
+  './src/images/services/21.jpg',
+  './src/images/services/22.jpg',
+  './src/images/services/23.jpg',
+  './src/images/services/24.jpg',
 ]);
 
 
-window.addEventListener("load", () => {
+window.addEventListener('load', () => {
   $(document).ready(function () {
-    $("#rotation").image360();
+    $('#rotation').image360();
   });
 });
 
@@ -285,9 +285,8 @@ const swiper2 = new Swiper('.js-swiper-reviews', {
     // 1024: {
     //   swiper.destroy( deleteInstance , cleanStyles );
     // }
-  }
+  },
 });
-
 
 // подключение попапа в портфолио
 
@@ -305,10 +304,9 @@ class popupItem {
   }
 
   // srcPicture() {
-  //   this.picture = 
+  //   this.picture =
   // }
 }
-
 
 /*
 
@@ -348,7 +346,4 @@ modalClose.addEventListener('click', () => {
 //   modal.classList.toggle('open');
 //   portfolioWrapper.prepend(modalPortfolio);
 // })
-
-
-
 
