@@ -681,7 +681,7 @@ ul {
 .header {
   width: 100vw;
   height: 60px;
-  position: relative;
+  position: fixed;
   z-index: 2;
   background-color: rgb(243, 243, 243);
 }
@@ -1041,6 +1041,12 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+}
+@media (max-width: 1919px) {
+  .first .girl picture img {
+    position: relative;
+    bottom: -7px;
   }
 }
 .about {

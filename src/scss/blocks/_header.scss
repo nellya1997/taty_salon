@@ -1,7 +1,7 @@
 .header {
     width: 100vw;
     height: 60px;
-    position: relative;
+    position: fixed;
     z-index: 2;
     background-color: $bg-color;
 
@@ -118,7 +118,7 @@
 
 @media(min-width: 930px) {
     .header {
-       // height: 140px;
+        // height: 140px;
 
         .nav__list {
             width: 67.3%;
