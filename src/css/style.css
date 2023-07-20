@@ -1014,6 +1014,12 @@ ul {
 .first__left-side {
   display: none;
 }
+.first__check-in {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .first__check-in .first__text {
   font-size: 14px;
   font-weight: 400;
