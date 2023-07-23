@@ -12,6 +12,6 @@ portfolioArray.forEach((image) => {
       document.body.style.marginRight = `${scrollBar}px`;
       document.querySelector('.header').style.paddingRight = `${scrollBar}px`;
     }
-    state.activeModalBlock.innerHTML = image.innerHTML;
+    state.activeModalBlock.innerHTML = image.outerHTML;
   });
 });
