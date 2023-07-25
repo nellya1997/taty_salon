@@ -191,10 +191,23 @@
 
         <div class="portfolio__wrapper">
           <picture data-modal class="picture picture__portfolio">
-            <source type="image/webp" srcset="./src/images/portfolio/content1.webp" media="(max-width: 1024px)">
-            <source type="image/jpeg" srcset="./src/images/portfolio/content1.jpg" media="(max-width: 1024px)">
+            <source type="image/webp" srcset="./src/images/portfolio/content1.webp" media="(max-width: 1024px)" sizes="80vw">
+            <source type="image/jpeg" srcset="./src/images/portfolio/content1.jpg" media="(max-width: 1024px)" sizes="80vw">
+
+
+
             <img src="./src/images/portfolio/content1.jpg" alt="Портфолио">
           </picture>
+
+
+          <!-- с этим разъебусь в своем локалОчке
+                      <picture data-modal class="picture picture__portfolio">
+            <source srcset="./src/images/portfolio/test/content1-406.jpg 406w, ./src/images/portfolio/test/content1-609.jpg 609w, ./src/images/portfolio/test/content1-812.jpg 812w"
+              sizes="(min-width: 1280px) 812px, (min-width: 768px) 609px, 80vw">
+            <img src="./src/images/portfolio/test/content1-609.jpg" alt="Портфолио">
+          </picture>
+          -->
+
 
           <picture data-modal class="picture">
             <source type="image/webp" srcset="./src/images/portfolio/content2.webp" media="(max-width: 1024px)">
