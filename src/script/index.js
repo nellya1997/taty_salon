@@ -42,7 +42,7 @@
   window.addEventListener('resize', checkCurrentWidth);
 })();
 
-//active navigation shows where user now:
+//active navigation shows where is user now:
 (function () {
   const nav = document.querySelector('.nav__list');
   const links = document.querySelectorAll('.nav__link');
@@ -101,6 +101,7 @@
       firstContainer.appendChild(checkIn);
     }
   }
+  
   return changeFirstSection();
 })();
 
