@@ -32,7 +32,10 @@
     }
 }
 
-@media (min-width: 375px) {
+@media (min-width: 320px) {
+    .footer__nav li{
+        font-size: 14px;
+    }
 }
 
 @media (min-width: 768px) {

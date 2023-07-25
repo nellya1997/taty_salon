@@ -111,6 +111,10 @@ ul {
     max-width: 388px;
     margin: 0 auto;
   }
+
+  @media(min-width: 320px){
+    font-size: 14px;
+  }
 }
 
 .none {

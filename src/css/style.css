@@ -441,6 +441,11 @@ ul {
     margin: 0 auto;
   }
 }
+@media (min-width: 320px) {
+  .link {
+    font-size: 14px;
+  }
+}
 
 .none {
   display: none;
@@ -577,6 +582,11 @@ ul {
     font-size: 35px;
     width: 84px;
     height: 84px;
+  }
+}
+@media (min-width: 320px) {
+  .list--cards li p {
+    font-size: 14px;
   }
 }
 
@@ -801,6 +811,11 @@ ul {
     font-size: 16px;
     font-weight: 400;
     line-height: 30px;
+  }
+}
+@media (min-width: 320px) {
+  .header .nav__link {
+    font-size: 14px;
   }
 }
 .burger {
@@ -1188,6 +1203,18 @@ ul {
   }
 }
 
+@media (min-width: 320px) {
+  .about__info p {
+    font-size: 14px;
+  }
+  .about__smear span {
+    font-size: 16px;
+  }
+  .about__content-shadow {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
 .portfolio {
   background: url(../../../src/images/portfolio/bg.png) no-repeat;
   padding-top: 64px;
@@ -1230,7 +1257,7 @@ ul {
 }
 .portfolio__list li::after {
   content: "";
-  background-color: #A289AA;
+  background-color: #a289aa;
   width: 21px;
   height: 21px;
   border-radius: 50%;
@@ -1383,6 +1410,18 @@ ul {
   }
 }
 
+@media (min-width: 320px) {
+  .portfolio__information p {
+    font-size: 16px;
+  }
+  .portfolio__information span {
+    font-size: 14px;
+  }
+  .portfolio__consultation {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
 .services {
   display: flex;
   flex-direction: column;
@@ -1905,12 +1944,35 @@ ul {
     text-align: center;
   }
 }
-@media (max-width: 320px) {
+@media (min-width: 320px) {
   .services__h2 {
     display: block;
-    font-size: 1.2em;
     line-height: 1.1;
+    font-size: 16px;
     margin-bottom: 17.5px;
+  }
+  .services__main__left-column::before {
+    font-size: 22px;
+  }
+  .services__main__right-column p,
+  .services a {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+  .modalWindow .h2,
+  .modalWindow .h3 {
+    font-size: 16px;
+  }
+  .modalWindow .mt-13,
+  .modalWindow .mb-15,
+  .modalWindow .mt-18 {
+    font-size: 14px;
+  }
+  .modalWindow .calculator__calc ul {
+    font-size: 14px;
+  }
+  .modalWindow .calculator .h3 {
+    font-size: 16px;
   }
 }
 .modalBackground {
@@ -2556,6 +2618,11 @@ ul {
   display: none;
 }
 
+@media (min-width: 320px) {
+  .footer__nav li {
+    font-size: 14px;
+  }
+}
 @media (min-width: 1280px) {
   .footer {
     position: relative;
