@@ -178,8 +178,9 @@ const modalClose = document.querySelector('.modalClose');
     if (target === modalBackground || target === modalClose) {
       modalBackground.style.display = 'none';
       modalBackground.parentElement.style.overflow = '';
-      if (modalBackground.firstElementChild.style.width === 'max-content') {
+      if (modalBackground.firstElementChild.style.width !== '81.25%') {
         modalBackground.firstElementChild.style.width = '';
+        modalBackground.firstElementChild.style.overflow = 'auto';
         document.querySelector('.header').style.paddingRight = '';
         modalBackground.firstElementChild.style.padding = '';
         document.body.style.marginRight = '';
