@@ -1,14 +1,14 @@
 .reviews {
 
     .swiper-wrapper {
+        //чтобы отодвинуть кнопки навигации
+        padding-bottom: 8%;
 
         .pc-slide {
             display: none;
-
         }
     }
 }
-
 
 @media (min-width: 767px) {
     .reviews {
