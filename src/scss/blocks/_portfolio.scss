@@ -5,6 +5,22 @@
 	margin-bottom: 32px;
 	position: relative;
 
+	.wrapper-title {
+
+		//пишу это ублюдочным способом: тот кто это верстал потом напиши норм, пока работает и ебись оно конем
+		h2 {
+
+			&::after,
+			&::before {
+				width: 26%;
+			}
+
+			span {
+				padding: 0 0;
+			}
+		}
+	}
+
 	&__wrapper {
 		display: flex;
 		flex-wrap: wrap;
@@ -127,8 +143,7 @@
 
 		& {
 			margin-bottom: 192px;
-			background: url(../../../src/images/portfolio/bg-desktop.png)
-				no-repeat;
+			background: url(../../../src/images/portfolio/bg-desktop.png) no-repeat;
 		}
 
 		&__flex {
@@ -170,6 +185,7 @@
 			& p:first-child {
 				margin-bottom: 8px;
 			}
+
 			// @include flexy(column, center, center);
 
 			& .link {
@@ -249,15 +265,33 @@
 	.portfolio {
 		&__information {
 			p {
-                font-size: 16px;
+				font-size: 16px;
 			}
-            span{
-                font-size: 14px;
-            }
+
+			span {
+				font-size: 14px;
+			}
 		}
-        &__consultation{
-            font-size: 16px;
-            line-height: 1.5;
-        }
+
+		&__consultation {
+			font-size: 16px;
+			line-height: 1.5;
+		}
+	}
+}
+
+@media (min-width: 475px) {
+
+	//тоже написано ублюдочно - как будет время - надонаписать норм, пока работает и ебись оно конем
+	.portfolio {
+		.wrapper-title {
+			h2 {
+
+				&::after,
+				&::before {
+					width: 30%;
+				}
+			}
+		}
 	}
 }

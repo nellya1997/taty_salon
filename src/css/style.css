@@ -1222,6 +1222,12 @@ ul {
   margin-bottom: 32px;
   position: relative;
 }
+.portfolio .wrapper-title h2::after, .portfolio .wrapper-title h2::before {
+  width: 26%;
+}
+.portfolio .wrapper-title h2 span {
+  padding: 0 0;
+}
 .portfolio__wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -1420,6 +1426,11 @@ ul {
   .portfolio__consultation {
     font-size: 16px;
     line-height: 1.5;
+  }
+}
+@media (min-width: 475px) {
+  .portfolio .wrapper-title h2::after, .portfolio .wrapper-title h2::before {
+    width: 30%;
   }
 }
 .services {
@@ -2354,6 +2365,9 @@ ul {
   .memo .item-content p {
     font-size: 25px;
   }
+}
+.reviews .swiper-wrapper {
+  padding-bottom: 8%;
 }
 .reviews .swiper-wrapper .pc-slide {
   display: none;

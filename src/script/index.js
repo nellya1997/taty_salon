@@ -285,8 +285,14 @@ const swiper1 = new Swiper('.js-swiper', {
 const swiperReview = new Swiper('.js-swiper-reviews', {
   slidesPerView: 1,
   loop: true,
+  //чтобы слайдер крутил бесконечно нужно добавить в 2 раза больше картинок чем есть в slidesPerView
   spaceBetween: 20,
-
+  
+    navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  
   breakpoints: {
     // when window width is >= 480px
     480: {
@@ -304,7 +310,7 @@ const swiperReview = new Swiper('.js-swiper-reviews', {
       spaceBetween: 30
     },
   }
-
+  
 });
 
 
