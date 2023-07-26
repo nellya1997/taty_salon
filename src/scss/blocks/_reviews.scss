@@ -2,7 +2,7 @@
 
     .swiper-wrapper {
         //чтобы отодвинуть кнопки навигации
-        padding-bottom: 8%;
+        padding-bottom: 12%;
 
         .pc-slide {
             display: none;
@@ -14,6 +14,7 @@
     .reviews {
 
         .swiper-wrapper {
+            padding-bottom: 1%;
 
             .pc-slide {
                 display: block;
@@ -24,5 +25,11 @@
                 border: $myBorder;
             }
         }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            display: none;
+        }
+
     }
 }
