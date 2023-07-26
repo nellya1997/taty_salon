@@ -2367,19 +2367,26 @@ ul {
   }
 }
 .reviews .swiper-wrapper {
-  padding-bottom: 8%;
+  padding-bottom: 12%;
 }
 .reviews .swiper-wrapper .pc-slide {
   display: none;
 }
 
 @media (min-width: 767px) {
+  .reviews .swiper-wrapper {
+    padding-bottom: 1%;
+  }
   .reviews .swiper-wrapper .pc-slide {
     display: block;
   }
   .reviews .swiper-wrapper .mob-slide {
     display: none;
     border: 2px solid red;
+  }
+  .reviews .swiper-button-prev,
+  .reviews .swiper-button-next {
+    display: none;
   }
 }
 .contacts {
