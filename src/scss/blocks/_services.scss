@@ -212,6 +212,38 @@
 			}
 		}
 	}
+
+	#range {
+		-webkit-appearance: none;
+		appearance: none;
+		background: transparent;
+		cursor: pointer;
+		width: 100%;
+	}
+
+	.range {
+		input {
+			&::-webkit-slider-runnable-track,
+			&::-moz-range-track {
+				background: $violet;
+				height: 0.2rem;
+			}
+	
+			&::-webkit-slider-thumb,
+			&::-moz-range-thumb {
+				border: none;
+				background-image: url('../images/services/point.svg');
+				background-repeat: no-repeat;
+				background-size: cover;
+				height: 2.08vw;
+				width: 2.08vw; 
+			}
+		}
+
+		label {
+			visibility: hidden;
+		}
+	}
 }
 
 .services__main__right-column,
