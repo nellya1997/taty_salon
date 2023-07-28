@@ -87,6 +87,7 @@ const rotate = (slide, classList) => { //функция подсчёта угл�
 					});
 					$main_div.find("img").hide();
 					$main_div.find("img").eq(index_img).show();
+					$('#range').val(index_img);
 				}			
 			},
 			
@@ -96,7 +97,7 @@ const rotate = (slide, classList) => { //функция подсчёта угл�
 			
 		};
 		
-		$main_div.bind('mousedown touchstart touchmove touchend mousemove click', function (e) {				
+		const animation = (e) => {
 			e.preventDefault();
 			if(e.type === 'mousedown' || e.type === 'touchstart'){
 				// клик или тач
@@ -109,49 +110,54 @@ const rotate = (slide, classList) => { //функция подсчёта угл�
 				if(start_drag){
 					var touch = e.originalEvent.touches[0];
 					// движение влево
-					if(position_X > touch.pageX){
+					if(position_X > touch.pageX) {
 						direction = false;
 					}
 					// движение вправо
-					if(position_X < touch.pageX){
+					if(position_X < touch.pageX) {
 						direction = true;
 					}
 					position_X = touch.pageX;
 					var offset_div = $main_div.offset();
 					var positionX = (touch.pageX - offset_div.left);
 					// анимация
-					methods.move_imgs(positionX);					
+					methods.move_imgs(positionX);
 				}
 			} else if (e.type === 'touchend') {
 				// отпустили тач
 				start_drag = false;
 			}
-		});
-		
-		// движение мышки
-		$main_div.bind('mousemove', function (e) {
+		};
+
+		const animate = (e) => {
 			e.preventDefault();
 			if(start_drag){				
 				// движение влево
 				if(position_X > e.pageX){
-					direction = false;
+					direction = e.target.parentElement.classList.contains('range') ? true : false;
 				}
 				// движение вправо
 				if(position_X < e.pageX){
-					direction = true;
+					direction = e.target.parentElement.classList.contains('range') ? false : true;
 				}
 				position_X = e.pageX;
 				var offset_div = $main_div.offset();
 				var positionX = (e.pageX - offset_div.left);
 				// анимация
-				methods.move_imgs(positionX);					
+				methods.move_imgs(positionX);
 			}
-		});
+		};
+
+		$main_div.bind('mousedown touchstart touchmove touchend mousemove click', animation);
+
+		$('#range').bind('mousedown touchstart touchmove touchend mousemove click', animation);
+		
+		// движение мышки
+		$main_div.bind('mousemove', animate);
+		$('#range').bind('mousemove', animate);
 		
 		// остановка, если отпустили конпку мышки
-		$(document).bind('mouseup', function (e) {
-			start_drag = false;
-		});	
+		$(document).bind('mouseup', () => start_drag = false);
 		
 		$(window).resize(function() {
 			methods.resize();
