@@ -97,6 +97,10 @@ ul {
   list-style: none;
 }
 
+a {
+  @include link-color(black, black, black);
+}
+
 .link {
   @include fonty(0.8rem, 600, 1.36em);
   text-decoration: none;
@@ -112,10 +116,76 @@ ul {
     margin: 0 auto;
   }
 
-  @media(min-width: 320px){
+  @media(min-width: 320px) {
     font-size: 14px;
   }
 }
+
+.link__decoration {
+
+  &_increase {
+    &:hover {
+      transition-duration: 0.3s;
+      transform: scale(1.4);
+    }
+
+    &:active {
+      position: relative;
+      top: -3px;
+    }
+  }
+
+  &_underscore {
+    position: relative;
+
+    &:after {
+      background-color: $title-line-color;
+      display: block;
+      content: "";
+      height: 2px;
+      width: 0%;
+      -webkit-transition: width .3s ease-in-out;
+      -moz--transition: width .3s ease-in-out;
+      transition: width .3s ease-in-out;
+
+      position: absolute;
+      left: 0;
+      bottom: 0px;
+    }
+
+    &:hover:after {
+      width: 100%;
+    }
+  }
+
+  &_checkIn {
+    &:hover {
+      transition-duration: 0.3s;
+      transform: scale(1.2);
+    }
+
+    &:active {
+      position: relative;
+      top: -3px;
+    }
+  }
+
+  &_color {
+
+    &:hover {
+      background-color: black;
+      border-radius: 50%;
+    }
+
+    &:active {
+      position: relative;
+      top: -3px;
+    }
+  }
+
+}
+
+
 
 .none {
   display: none;

@@ -31,3 +31,18 @@
 @mixin m($side, $px) {
     margin-#{$side}: #{$px}px;
 }
+
+@mixin link-color ($hover, $active, $visited) {
+
+    &:hover {
+        color: $hover;
+    }
+
+    &:active {
+        color: $active;
+    }
+
+    &:visited {
+        color: $visited;
+    }
+}

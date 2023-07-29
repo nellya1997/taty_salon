@@ -1,10 +1,12 @@
 .contacts {
    position: relative;
    padding-bottom: 132px;
+
    .contact-badge {
       @include flexy(column, space-between, flex-start);
       gap: 15px;
    }
+
    &__wrapper {
       @include flexy(row, center, center);
       flex-wrap: wrap;
@@ -19,7 +21,15 @@
       width: 229px;
       margin: 0 auto;
       box-shadow: 0px 0px 10px 15px rgba(197, 192, 220, 0.2);
+
+      .link__decoration_underscore {
+
+         &:after {
+            bottom: -5px;
+         }
+      }
    }
+
    &__atelier {
       position: relative;
       @include flexy(row, center, center);
@@ -37,12 +47,14 @@
 
    &__atelier-video {
       position: relative;
+
       iframe {
          width: 229px;
          height: 234px;
          // background: #e3cfcf;
       }
    }
+
    &__img {
       position: absolute;
       top: -49px;
@@ -58,6 +70,7 @@
       width: 100px;
    }
 }
+
 // iframe {
 //    object-fit: cover;
 //    overflow-clip-margin: content-box;
@@ -85,10 +98,12 @@
          gap: 40px;
          padding-top: 20px;
       }
+
       &__info {
          width: 229px;
          margin: 0;
       }
+
       .contacts__img-title {
          position: absolute;
          top: 3px;
@@ -106,22 +121,26 @@
          padding-top: 20px;
          padding-left: 20px;
       }
+
       &__atelier-video {
          iframe {
             width: 450px;
             height: 350px;
          }
       }
+
       &__img {
          width: 130%;
          top: -88px;
          left: -125px;
       }
+
       &__info {
          padding: 30px 0 40px 25px;
          width: 400px;
          box-shadow: 0px 0px 12px 24px rgba(197, 192, 220, 0.2);
       }
+
       &__atelier {
          gap: 23px;
          padding-right: 0;
@@ -130,12 +149,14 @@
       &__atelier-title {
          @include fonty(40px, 400, 30px);
       }
+
       // conctact-badge
       .contact-badge {
          gap: 20px;
 
          &__item {
             color: #22082b;
+
             p:first-child {
                @include fonty(18px, 600, 19px);
                padding-bottom: 10px;
@@ -152,13 +173,15 @@
          top: -3px;
          width: 307px;
       }
+
       .socails__item img,
-        .socials a {
-            width: 46px;
-            height: 46px;
-        }
+      .socials a {
+         width: 46px;
+         height: 46px;
+      }
    }
 }
+
 @media (min-width: 1730px) {
    .contacts {
       &__wrapper {
@@ -168,20 +191,24 @@
          padding-top: 20px;
          padding-left: 50px;
       }
+
       &__atelier-video iframe {
          width: 606px;
          height: 450px;
       }
+
       &__img {
          width: 130%;
          top: -115px;
          left: -206px;
       }
+
       &__info {
          padding: 50px 0 78px 45px;
          width: 557px;
          box-shadow: 0px 0px 12px 24px rgba(197, 192, 220, 0.2);
       }
+
       &__atelier {
          gap: 23px;
          padding-right: 0;
@@ -190,12 +217,14 @@
       &__atelier-title {
          @include fonty(60px, 400, 30px);
       }
+
       // conctact-badge
       .contact-badge {
          gap: 29px;
 
          &__item {
             color: #22082b;
+
             p:first-child {
                @include fonty(22px, 600, 19px);
                padding-bottom: 10px;

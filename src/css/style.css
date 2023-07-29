@@ -83,7 +83,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -415,11 +416,22 @@ picture {
 picture img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 ul {
   list-style: none;
+}
+
+a:hover {
+  color: black;
+}
+a:active {
+  color: black;
+}
+a:visited {
+  color: black;
 }
 
 .link {
@@ -443,6 +455,50 @@ ul {
   .link {
     font-size: 14px;
   }
+}
+
+.link__decoration_increase:hover {
+  transition-duration: 0.3s;
+  transform: scale(1.4);
+}
+.link__decoration_increase:active {
+  position: relative;
+  top: -3px;
+}
+.link__decoration_underscore {
+  position: relative;
+}
+.link__decoration_underscore:after {
+  background-color: #825890;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 0%;
+  -webkit-transition: width 0.3s ease-in-out;
+  -moz--transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+}
+.link__decoration_underscore:hover:after {
+  width: 100%;
+}
+.link__decoration_checkIn:hover {
+  transition-duration: 0.3s;
+  transform: scale(1.2);
+}
+.link__decoration_checkIn:active {
+  position: relative;
+  top: -3px;
+}
+.link__decoration_color:hover {
+  background-color: black;
+  border-radius: 50%;
+}
+.link__decoration_color:active {
+  position: relative;
+  top: -3px;
 }
 
 .none {
@@ -610,7 +666,8 @@ ul {
 .picture img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .portfolio__wrapper .picture {
   width: calc(20% - 5px);
@@ -640,7 +697,8 @@ ul {
   height: 396px;
 }
 .reviews .picture img {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 @media (min-width: 768px) {
   .picture--portfolio {
@@ -676,7 +734,8 @@ ul {
     height: calc(50% - 1px);
   }
   .about__photo-right .picture img {
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   .about__photo-left .picture {
     max-height: 611px;
@@ -731,6 +790,11 @@ ul {
   line-height: 1.35rem;
 }
 
+@media (min-width: 320px) {
+  .header .nav__link {
+    font-size: 14px;
+  }
+}
 @media (min-width: 768px) {
   .header {
     position: fixed;
@@ -763,12 +827,6 @@ ul {
     display: inline-block;
     font-size: calc(11px + 26 * (100vw - 768px) / 1920);
     position: relative;
-  }
-  .header .nav__link:hover {
-    transform: scale(1.4);
-  }
-  .header .nav__link:active {
-    color: black;
   }
   .header .nav__link_active {
     border: 3px solid #825890;
@@ -806,11 +864,6 @@ ul {
     font-size: 16px;
     font-weight: 400;
     line-height: 30px;
-  }
-}
-@media (min-width: 320px) {
-  .header .nav__link {
-    font-size: 14px;
   }
 }
 .burger {
@@ -1620,7 +1673,8 @@ ul {
 }
 .services #range {
   -webkit-appearance: none;
-  appearance: none;
+  -moz-appearance: none;
+       appearance: none;
   background: transparent;
   cursor: pointer;
   width: 100%;
@@ -1724,7 +1778,8 @@ ul {
   font-size: 0.82em;
   font-weight: 400;
   line-height: 1.35;
-  column-gap: 1.33em;
+  -moz-column-gap: 1.33em;
+       column-gap: 1.33em;
 }
 .services__main__right-column .calculator__calc ul .active,
 .modalWindow .calculator__calc ul .active {
@@ -2111,7 +2166,8 @@ ul {
 .memo__content {
   display: flex;
   align-items: center;
-  column-gap: 13px;
+  -moz-column-gap: 13px;
+       column-gap: 13px;
   transition: transform 0.5s ease;
 }
 .memo__pluse-btn {
@@ -2168,7 +2224,8 @@ ul {
   margin-top: 22px;
   display: flex;
   align-items: flex-start;
-  column-gap: 5px;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
 }
 .memo__list-item img {
   width: 10px;
@@ -2214,7 +2271,8 @@ ul {
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 10px;
-  column-gap: 5px;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
 }
 .memo__personal h3 {
   text-align: center;
@@ -2231,7 +2289,8 @@ ul {
   font-style: normal;
   font-weight: 600;
   text-decoration-line: underline;
-  text-decoration-skip-ink: none;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
   text-decoration-thickness: 1px;
   line-height: 1.5;
 }
@@ -2262,7 +2321,8 @@ ul {
     line-height: 1.6;
   }
   .memo__list-item {
-    column-gap: 7px;
+    -moz-column-gap: 7px;
+         column-gap: 7px;
   }
   .memo__list-item img {
     width: 10px;
@@ -2285,7 +2345,8 @@ ul {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    column-gap: 60px;
+    -moz-column-gap: 60px;
+         column-gap: 60px;
     margin-bottom: 70px;
   }
   .memo__list {
@@ -2338,7 +2399,8 @@ ul {
     font-size: 25px;
   }
   .memo__wrapper {
-    column-gap: 100px;
+    -moz-column-gap: 100px;
+         column-gap: 100px;
   }
   .memo__personal {
     display: flex;
@@ -2361,7 +2423,8 @@ ul {
     width: 130px;
   }
   .memo__list-item {
-    column-gap: 12px;
+    -moz-column-gap: 12px;
+         column-gap: 12px;
   }
   .memo__list-item img {
     width: 30px;
@@ -2422,6 +2485,9 @@ ul {
   width: 229px;
   margin: 0 auto;
   box-shadow: 0px 0px 10px 15px rgba(197, 192, 220, 0.2);
+}
+.contacts__info .link__decoration_underscore:after {
+  bottom: -5px;
 }
 .contacts__atelier {
   position: relative;
@@ -2760,6 +2826,4 @@ ul {
 }
 .popup__close::before {
   transform: translate(-50%, -50%) rotate(-45deg);
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

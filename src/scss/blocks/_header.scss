@@ -53,6 +53,12 @@
 	}
 }
 
+@media (min-width: 320px) {
+	.header .nav__link {
+		font-size: 14px;
+	}
+}
+
 @media (min-width: 768px) {
 	.header {
 		position: fixed;
@@ -81,14 +87,6 @@
 				display: inline-block;
 				font-size: calc(11px + 26 * ((100vw - 768px) / 1920));
 				position: relative;
-
-				&:hover {
-					transform: scale(1.4);
-				}
-
-				&:active {
-					color: black;
-				}
 
 				&_active {
 					border: 3px solid #825890;
@@ -141,10 +139,4 @@
 			}
 		}
 	}
-}
-
-@media (min-width: 320px) {
-    .header .nav__link{
-        font-size: 14px;
-    }
 }

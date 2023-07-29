@@ -1,4 +1,3 @@
-
 .services {
 	font-size: 1.15vw;
 
@@ -226,12 +225,13 @@
 
 	.range {
 		input {
+
 			&::-webkit-slider-runnable-track,
 			&::-moz-range-track {
 				background: $violet;
 				height: 0.2em;
 			}
-	
+
 			&::-webkit-slider-thumb,
 			&::-moz-range-thumb {
 				border: none;
@@ -239,7 +239,7 @@
 				background-repeat: no-repeat;
 				background-size: cover;
 				height: 2.08vw;
-				width: 2.08vw; 
+				width: 2.08vw;
 			}
 		}
 	}
@@ -370,7 +370,7 @@
 		font-size: 14px;
 	}
 
-  .services {
+	.services {
 		font-size: 14px;
 	}
 }
@@ -383,7 +383,7 @@
 
 	.services {
 		font-size: 15px;
-	
+
 		&__main {
 			@include flexy(column, center, center);
 
@@ -400,7 +400,7 @@
 					@include fonty(1.5em, 600, 1.36em);
 				}
 
-				> p {
+				>p {
 					display: none;
 				}
 			}
@@ -564,7 +564,7 @@
 					&::-webkit-slider-thumb,
 					&::-moz-range-thumb {
 						height: 6.88vw;
-						width: 6.88vw; 
+						width: 6.88vw;
 					}
 				}
 			}
@@ -630,15 +630,15 @@
 		font-size: 10px;
 	}
 
-  .services {
+	.services {
 		font-size: 10px;
 
-    &__h2 {
-      display: block;
-      font-size: 1.2em;
-      line-height: 1.1;
+		&__h2 {
+			display: block;
+			font-size: 1.2em;
+			line-height: 1.1;
 
-      @include m(bottom, 17.5);
-    }
-  }
+			@include m(bottom, 17.5);
+		}
+	}
 }
