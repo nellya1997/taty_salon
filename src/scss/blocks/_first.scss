@@ -148,6 +148,7 @@
             width: calc(51% - 160 * ((100vw - 767px) / 1920));
             margin: 0 0;
             gap: 30px;
+            padding: 0 10px;
 
             &__border {
 
@@ -155,6 +156,10 @@
                     bottom: 103%;
                 }
             }
+        }
+
+        .socials {
+            gap: 13px;
         }
 
         &__left-side {

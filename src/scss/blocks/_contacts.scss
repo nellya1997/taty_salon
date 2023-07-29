@@ -5,6 +5,10 @@
    .contact-badge {
       @include flexy(column, space-between, flex-start);
       gap: 15px;
+
+      .socials {
+         gap: 13px;
+      }
    }
 
    &__wrapper {

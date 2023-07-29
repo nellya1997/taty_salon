@@ -169,23 +169,7 @@ a {
       top: -3px;
     }
   }
-
-  &_color {
-
-    &:hover {
-      background-color: black;
-      border-radius: 50%;
-    }
-
-    &:active {
-      position: relative;
-      top: -3px;
-    }
-  }
-
 }
-
-
 
 .none {
   display: none;
