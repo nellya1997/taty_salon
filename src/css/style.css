@@ -492,14 +492,6 @@ a:visited {
   position: relative;
   top: -3px;
 }
-.link__decoration_color:hover {
-  background-color: black;
-  border-radius: 50%;
-}
-.link__decoration_color:active {
-  position: relative;
-  top: -3px;
-}
 
 .none {
   display: none;
@@ -1106,9 +1098,13 @@ a:visited {
     width: calc(51% - 160 * (100vw - 767px) / 1920);
     margin: 0 0;
     gap: 30px;
+    padding: 0 10px;
   }
   .first .girl__border::after {
     bottom: 103%;
+  }
+  .first .socials {
+    gap: 13px;
   }
   .first__left-side {
     width: 28.6%;
@@ -2469,6 +2465,9 @@ a:visited {
   align-items: flex-start;
   gap: 15px;
 }
+.contacts .contact-badge .socials {
+  gap: 13px;
+}
 .contacts__wrapper {
   display: flex;
   flex-direction: row;
@@ -2691,6 +2690,9 @@ a:visited {
   align-items: start;
   gap: 30px;
 }
+.footer__inner .contact-badge .link__decoration_underscore:after {
+  bottom: -5px;
+}
 .footer__nav {
   display: flex;
   flex-direction: column;
@@ -2734,6 +2736,9 @@ a:visited {
     align-items: center;
     gap: 30px;
   }
+  .footer .contact-badge {
+    padding-bottom: 5px;
+  }
   .footer .contact-badge .socials,
   .footer .contact-badge .contact-badge__item:nth-child(3) {
     display: none;
@@ -2752,7 +2757,7 @@ a:visited {
     height: 16px;
   }
   .footer__desktop .socials {
-    margin-top: 10px;
+    margin-top: 20px;
   }
   .footer .contact-badge__item p:first-child {
     padding-bottom: 10px;
