@@ -111,11 +111,11 @@ const rotate = (slide, classList) => { //функция подсчёта угл�
 					var touch = e.originalEvent.touches[0];
 					// движение влево
 					if(position_X > touch.pageX) {
-						direction = false;
+						direction = e.target.parentElement.classList.contains('range') ? true : false;
 					}
 					// движение вправо
 					if(position_X < touch.pageX) {
-						direction = true;
+						direction = e.target.parentElement.classList.contains('range') ? false : true;
 					}
 					position_X = touch.pageX;
 					var offset_div = $main_div.offset();
