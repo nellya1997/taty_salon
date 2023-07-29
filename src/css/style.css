@@ -83,8 +83,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -416,8 +415,7 @@ picture {
 picture img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 ul {
@@ -612,8 +610,7 @@ ul {
 .picture img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .portfolio__wrapper .picture {
   width: calc(20% - 5px);
@@ -643,8 +640,7 @@ ul {
   height: 396px;
 }
 .reviews .picture img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 @media (min-width: 768px) {
   .picture--portfolio {
@@ -680,8 +676,7 @@ ul {
     height: calc(50% - 1px);
   }
   .about__photo-right .picture img {
-    -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
   .about__photo-left .picture {
     max-height: 611px;
@@ -1434,12 +1429,15 @@ ul {
   }
 }
 .services {
+  font-size: 1.15vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: unset;
   margin: 0 auto;
   width: 91.6%;
+  margin-bottom: 45px;
+  margin-top: 25px;
 }
 .services__header {
   display: flex;
@@ -1582,7 +1580,7 @@ ul {
 }
 .services__animation__footer .services__h2 {
   font-family: Constantine, sans-serif;
-  font-size: 1.37rem;
+  font-size: 1.37em;
   font-weight: 400;
   line-height: 1.07;
 }
@@ -1598,7 +1596,7 @@ ul {
 }
 .services__main__left-column {
   width: 36.19%;
-  font-size: 0.9rem;
+  font-size: 0.9em;
   font-weight: 400;
   line-height: 1.07em;
   padding-top: 35px;
@@ -1613,18 +1611,37 @@ ul {
   width: 100%;
 }
 .services__main__left-column__pain-points .pain-points__text {
-  font-size: 0.8rem;
+  font-size: 0.8em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin-top: 6px;
 }
+.services #range {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+}
+.services .range input::-webkit-slider-runnable-track, .services .range input::-moz-range-track {
+  background: #825890;
+  height: 0.2em;
+}
+.services .range input::-webkit-slider-thumb, .services .range input::-moz-range-thumb {
+  border: none;
+  background-image: url("../images/services/point.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 2.08vw;
+  width: 2.08vw;
+}
 
 .services__main__right-column,
 .modalWindow {
   width: 33.81%;
-  font-size: 0.9rem;
+  font-size: 0.9em;
   font-weight: 400;
   line-height: 1.36em;
   padding-top: 35px;
@@ -1647,7 +1664,7 @@ ul {
 }
 .services__main__right-column .h2,
 .modalWindow .h2 {
-  font-size: 1rem;
+  font-size: 1em;
   font-weight: 600;
   line-height: 1.36em;
 }
@@ -1657,17 +1674,17 @@ ul {
   flex-direction: column;
   justify-content: start;
   align-items: unset;
-  row-gap: 0.7rem;
+  row-gap: 0.7em;
 }
 .services__main__right-column .calculator .h3,
 .modalWindow .calculator .h3 {
-  font-size: 0.9rem;
+  font-size: 0.9em;
   font-weight: 600;
   line-height: 1.35;
 }
 .services__main__right-column .calculator__calc,
 .modalWindow .calculator__calc {
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.7em;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -1690,13 +1707,13 @@ ul {
   background-position: top;
   width: 2.2vw;
   height: 2.2vw;
-  margin-right: 0.5rem;
+  margin-right: 0.5em;
   bottom: 0.6vw;
 }
 .services__main__right-column .calculator__calc-header p,
 .modalWindow .calculator__calc-header p {
   margin-top: 1.1vw;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.75em;
 }
 .services__main__right-column .calculator__calc ul,
 .modalWindow .calculator__calc ul {
@@ -1704,11 +1721,10 @@ ul {
   flex-direction: row;
   justify-content: start;
   align-items: center;
-  font-size: 0.82rem;
+  font-size: 0.82em;
   font-weight: 400;
   line-height: 1.35;
-  -moz-column-gap: 1.33em;
-       column-gap: 1.33em;
+  column-gap: 1.33em;
 }
 .services__main__right-column .calculator__calc ul .active,
 .modalWindow .calculator__calc ul .active {
@@ -1736,7 +1752,7 @@ ul {
   background-position: center;
   width: 2.2vw;
   height: 2.2vw;
-  margin-right: 0.5rem;
+  margin-right: 0.5em;
 }
 .services__main__right-column .calculator__time,
 .modalWindow .calculator__time {
@@ -1754,14 +1770,28 @@ ul {
   background-position: center;
   width: 2.2vw;
   height: 2.2vw;
-  margin-right: 0.5rem;
+  margin-right: 0.5em;
 }
 
 .modalWindow {
   width: 100%;
 }
 
+@media (max-width: 1280px) {
+  .modalWindow {
+    font-size: 14px;
+  }
+  .services {
+    font-size: 14px;
+  }
+}
 @media (max-width: 768px) {
+  .modalWindow {
+    font-size: 15px;
+  }
+  .services {
+    font-size: 15px;
+  }
   .services__main {
     display: flex;
     flex-direction: column;
@@ -1776,7 +1806,7 @@ ul {
   }
   .services__main__left-column::before {
     content: "Шкала боли";
-    font-size: 1.5rem;
+    font-size: 1.5em;
     font-weight: 600;
     line-height: 1.36em;
   }
@@ -1905,8 +1935,9 @@ ul {
     top: 48vw;
     left: calc(47% - 3.44vw);
   }
-  .services__animation__footer {
-    display: none;
+  .services__animation__footer #range::-webkit-slider-thumb, .services__animation__footer #range::-moz-range-thumb {
+    height: 6.88vw;
+    width: 6.88vw;
   }
   .modalWindow {
     width: 100%;
@@ -1940,7 +1971,7 @@ ul {
     background-position: center;
     width: 5vw;
     height: 5vw;
-    margin-right: 0.5rem;
+    margin-right: 0.5em;
   }
   .modalWindow .calculator__price::before {
     width: 5vw;
@@ -1955,35 +1986,18 @@ ul {
     text-align: center;
   }
 }
-@media (min-width: 320px) {
+@media (max-width: 320px) {
+  .modalWindow {
+    font-size: 10px;
+  }
+  .services {
+    font-size: 10px;
+  }
   .services__h2 {
     display: block;
+    font-size: 1.2em;
     line-height: 1.1;
-    font-size: 16px;
     margin-bottom: 17.5px;
-  }
-  .services__main__left-column::before {
-    font-size: 22px;
-  }
-  .services__main__right-column p,
-  .services a {
-    font-size: 14px;
-    line-height: 1.3;
-  }
-  .modalWindow .h2,
-  .modalWindow .h3 {
-    font-size: 16px;
-  }
-  .modalWindow .mt-13,
-  .modalWindow .mb-15,
-  .modalWindow .mt-18 {
-    font-size: 14px;
-  }
-  .modalWindow .calculator__calc ul {
-    font-size: 14px;
-  }
-  .modalWindow .calculator .h3 {
-    font-size: 16px;
   }
 }
 .modalBackground {
@@ -2097,8 +2111,7 @@ ul {
 .memo__content {
   display: flex;
   align-items: center;
-  -moz-column-gap: 13px;
-       column-gap: 13px;
+  column-gap: 13px;
   transition: transform 0.5s ease;
 }
 .memo__pluse-btn {
@@ -2155,8 +2168,7 @@ ul {
   margin-top: 22px;
   display: flex;
   align-items: flex-start;
-  -moz-column-gap: 5px;
-       column-gap: 5px;
+  column-gap: 5px;
 }
 .memo__list-item img {
   width: 10px;
@@ -2202,8 +2214,7 @@ ul {
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 10px;
-  -moz-column-gap: 5px;
-       column-gap: 5px;
+  column-gap: 5px;
 }
 .memo__personal h3 {
   text-align: center;
@@ -2220,8 +2231,7 @@ ul {
   font-style: normal;
   font-weight: 600;
   text-decoration-line: underline;
-  -webkit-text-decoration-skip-ink: none;
-          text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
   text-decoration-thickness: 1px;
   line-height: 1.5;
 }
@@ -2252,8 +2262,7 @@ ul {
     line-height: 1.6;
   }
   .memo__list-item {
-    -moz-column-gap: 7px;
-         column-gap: 7px;
+    column-gap: 7px;
   }
   .memo__list-item img {
     width: 10px;
@@ -2276,8 +2285,7 @@ ul {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    -moz-column-gap: 60px;
-         column-gap: 60px;
+    column-gap: 60px;
     margin-bottom: 70px;
   }
   .memo__list {
@@ -2330,8 +2338,7 @@ ul {
     font-size: 25px;
   }
   .memo__wrapper {
-    -moz-column-gap: 100px;
-         column-gap: 100px;
+    column-gap: 100px;
   }
   .memo__personal {
     display: flex;
@@ -2354,8 +2361,7 @@ ul {
     width: 130px;
   }
   .memo__list-item {
-    -moz-column-gap: 12px;
-         column-gap: 12px;
+    column-gap: 12px;
   }
   .memo__list-item img {
     width: 30px;
@@ -2754,4 +2760,6 @@ ul {
 }
 .popup__close::before {
   transform: translate(-50%, -50%) rotate(-45deg);
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
