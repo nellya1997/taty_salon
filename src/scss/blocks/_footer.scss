@@ -8,6 +8,7 @@
         content: url(/src/images/footer/mob-bg.png);
         top: -71px;
         right: 0;
+        z-index: -1;
     }
 
     &__inner {
@@ -127,6 +128,7 @@
             position: absolute;
             top: -159px;
             left: 0;
+            z-index: -1;
         }
 
         .socails__item img,
