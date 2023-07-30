@@ -14,7 +14,7 @@
     .reviews {
 
         .swiper-wrapper {
-            padding-bottom: 1%;
+            padding-bottom: 5%;
 
             .pc-slide {
                 display: block;
@@ -25,11 +25,15 @@
                 border: $myBorder;
             }
         }
+    }
+}
+
+@media (min-width: 1024px) {
+    .reviews {
 
         .swiper-button-prev,
         .swiper-button-next {
             display: none;
         }
-
     }
 }

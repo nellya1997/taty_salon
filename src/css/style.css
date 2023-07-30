@@ -431,7 +431,7 @@ a:active {
   color: black;
 }
 a:visited {
-  color: black;
+  color: #22082B;
 }
 
 .link {
@@ -2487,7 +2487,7 @@ a:visited {
 
 @media (min-width: 767px) {
   .reviews .swiper-wrapper {
-    padding-bottom: 1%;
+    padding-bottom: 5%;
   }
   .reviews .swiper-wrapper .pc-slide {
     display: block;
@@ -2496,6 +2496,8 @@ a:visited {
     display: none;
     border: 2px solid red;
   }
+}
+@media (min-width: 1024px) {
   .reviews .swiper-button-prev,
   .reviews .swiper-button-next {
     display: none;

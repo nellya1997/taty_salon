@@ -92,13 +92,12 @@ picture {
   }
 }
 
-
 ul {
   list-style: none;
 }
 
 a {
-  @include link-color(black, black, black);
+  @include link-color(black, black, $purple);
 }
 
 .link {
