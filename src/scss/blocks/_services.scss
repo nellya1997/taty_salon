@@ -408,10 +408,6 @@
 
 @media (max-width: 768px) {
 
-	.modalWindow {
-		font-size: 15px;
-	}
-
 	.services {
 		font-size: 15px;
 
@@ -618,13 +614,14 @@
 		width: 100%;
 		padding-top: 0;
 		line-height: 1.5;
+		font-size: 15px;
 
 		.mt-13 {
 			@include m(top, 8);
 		}
 
 		.calculator {
-			font-size: 1.2em;
+			font-size: 1em;
 
 			&__calc-header {
 				display: block;

@@ -10,7 +10,7 @@ const state = {
       сеанс и продолжить в следующий раз.
     </p>
     <p class="mt-36 mb-15 h2">Если знаешь размер и место тату, то смело записывайся</p>
-    <a class="btn" href="#">Записаться на сеанс</a>`,
+    <a class="link text-center link__decoration_checkIn" href="#">Записаться на сеанс</a>`,
   activeBlock: document.querySelector('.services__main__right-column'),
   activeModalBlock: document.querySelector('.modalWindow'),
 }
