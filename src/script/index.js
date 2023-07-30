@@ -284,6 +284,10 @@ const swiper1 = new Swiper('.js-swiper', {
 
 const swiperReview = new Swiper('.js-swiper-reviews', {
   slidesPerView: 1,
+  allowSlideNext: true,
+  allowSlidePrev: true,
+  allowTouchMove: true,
+  grabCursor: true,
   loop: true,
   //чтобы слайдер крутил бесконечно нужно добавить в 2 раза больше картинок чем есть в slidesPerView
   spaceBetween: 20,
@@ -304,7 +308,7 @@ const swiperReview = new Swiper('.js-swiper-reviews', {
       slidesPerView: 3,
       spaceBetween: 30
     },
-    // when window width is >= 10224px
+    // when window width is >= 1023px
     1024: {
       slidesPerView: 5,
       spaceBetween: 30
