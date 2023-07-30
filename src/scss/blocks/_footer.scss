@@ -31,10 +31,12 @@
 
         li {
             text-align: right;
-            color: #22082b;
             @include fonty(16px, 600, normal);
-
             font-family: Manrope;
+        }
+
+        a {
+            color: #22082b;
         }
     }
 
