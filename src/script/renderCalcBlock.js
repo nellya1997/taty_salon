@@ -40,5 +40,5 @@ const renderCalcBlock = (name, price, time) => {
   <p class="mb-15">
     Заживление пленкой
   </p>
-  <a class="btn" href="#">Записаться на сеанс</a>`
+  <a class="link text-center link__decoration_checkIn" href="#">Записаться на сеанс</a>`
 };
