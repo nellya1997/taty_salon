@@ -1695,6 +1695,7 @@ a:visited {
   appearance: none;
   border: none;
   background-image: url("../images/services/point.svg");
+  border-radius: 50%;
   background-repeat: no-repeat;
   background-size: cover;
   height: 2.08vw;
