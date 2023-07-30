@@ -221,26 +221,58 @@
 		background: transparent;
 		cursor: pointer;
 		width: 100%;
-	}
+		margin-bottom: 0.1em;
+		margin-bottom: 30px;
 
-	.range {
-		input {
+		&::-webkit-slider-runnable-track {
+			background: $violet;
+			height: 0.25em;
+		}
 
-			&::-webkit-slider-runnable-track,
-			&::-moz-range-track {
-				background: $violet;
-				height: 0.2em;
-			}
+		&::-moz-range-track {
+			background: $violet;
+			height: 0.25em;
+		}
 
-			&::-webkit-slider-thumb,
-			&::-moz-range-thumb {
-				border: none;
-				background-image: url('../images/services/point.svg');
-				background-repeat: no-repeat;
-				background-size: cover;
-				height: 2.08vw;
-				width: 2.08vw;
-			}
+		&::-ms-track {
+			background: $violet;
+			height: 0.2em;
+		}
+
+		&::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			appearance: none;
+			border: none;
+			background-image: url('../images/services/point.svg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			height: 2.08vw;
+			width: 2.08vw;
+			margin-top: calc((0.25em / 2) - (2.08vw / 2));
+		}
+
+		&::-moz-range-thumb {
+			-webkit-appearance: none;
+			appearance: none;
+			border: none;
+			background-image: url('../images/services/point.svg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			height: 2.08vw;
+			width: 2.08vw;
+			margin-top: calc((0.25em / 2) - (2.08vw / 2));
+		}
+
+		&::-ms-thumb {
+			-webkit-appearance: none;
+			appearance: none;
+			border: none;
+			background-image: url('../images/services/point.svg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			height: 2.08vw;
+			width: 2.08vw;
+			margin-top: calc((0.2em / 2) - (2.08vw / 2));
 		}
 	}
 
@@ -561,10 +593,22 @@
 			&__footer {
 				#range {
 
-					&::-webkit-slider-thumb,
+					&::-webkit-slider-thumb {
+						height: 6.88vw;
+						width: 6.88vw;
+						margin-top: calc((0.25em / 2) - (6.88vw / 2));
+					}
+
 					&::-moz-range-thumb {
 						height: 6.88vw;
 						width: 6.88vw;
+						margin-top: calc((0.25em / 2) - (6.88vw / 2));
+					}
+
+					&::-ms-thumb {
+						height: 6.88vw;
+						width: 6.88vw;
+						margin-top: calc((0.2em / 2) - (6.88vw / 2));
 					}
 				}
 			}

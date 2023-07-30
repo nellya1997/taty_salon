@@ -1675,18 +1675,54 @@ a:visited {
   background: transparent;
   cursor: pointer;
   width: 100%;
+  margin-bottom: 0.1em;
+  margin-bottom: 30px;
 }
-.services .range input::-webkit-slider-runnable-track, .services .range input::-moz-range-track {
+.services #range::-webkit-slider-runnable-track {
+  background: #825890;
+  height: 0.25em;
+}
+.services #range::-moz-range-track {
+  background: #825890;
+  height: 0.25em;
+}
+.services #range::-ms-track {
   background: #825890;
   height: 0.2em;
 }
-.services .range input::-webkit-slider-thumb, .services .range input::-moz-range-thumb {
+.services #range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
   border: none;
   background-image: url("../images/services/point.svg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 2.08vw;
   width: 2.08vw;
+  margin-top: calc(0.125em - 1.04vw);
+}
+.services #range::-moz-range-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  border: none;
+  background-image: url("../images/services/point.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 2.08vw;
+  width: 2.08vw;
+  margin-top: calc(0.125em - 1.04vw);
+}
+.services #range::-ms-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background-image: url("../images/services/point.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 2.08vw;
+  width: 2.08vw;
+  margin-top: calc(0.1em - 1.04vw);
 }
 
 .services__main__right-column,
@@ -1987,9 +2023,20 @@ a:visited {
     top: 48vw;
     left: calc(47% - 3.44vw);
   }
-  .services__animation__footer #range::-webkit-slider-thumb, .services__animation__footer #range::-moz-range-thumb {
+  .services__animation__footer #range::-webkit-slider-thumb {
     height: 6.88vw;
     width: 6.88vw;
+    margin-top: calc(0.125em - 3.44vw);
+  }
+  .services__animation__footer #range::-moz-range-thumb {
+    height: 6.88vw;
+    width: 6.88vw;
+    margin-top: calc(0.125em - 3.44vw);
+  }
+  .services__animation__footer #range::-ms-thumb {
+    height: 6.88vw;
+    width: 6.88vw;
+    margin-top: calc(0.1em - 3.44vw);
   }
   .modalWindow {
     width: 100%;
