@@ -2731,6 +2731,7 @@ a:visited {
   content: url(/src/images/footer/mob-bg.png);
   top: -71px;
   right: 0;
+  z-index: -1;
 }
 .footer__inner {
   display: flex;
@@ -2825,6 +2826,7 @@ a:visited {
     position: absolute;
     top: -159px;
     left: 0;
+    z-index: -1;
   }
   .footer .socails__item img,
   .footer .socials a {
