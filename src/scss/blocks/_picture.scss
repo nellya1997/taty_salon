@@ -4,9 +4,8 @@
     width: 100%;
 
     & img {
-        width: 100%;
-        height: 100%;
         object-fit: cover;
+        vertical-align: middle;
     }
 
     .portfolio__wrapper & {
@@ -26,9 +25,14 @@
     }
 
     &--portfolio {
-        width: calc(50% - 10px);
+        //width: calc(50% - 20px);
         // height: auto;
-        height: 170px;
+        padding: 0px 10px;
+        height: 49vh;
+
+        img {
+            object-fit: contain;
+        }
     }
 
     .portfolio__wrapper .portfolio__slides & {
@@ -37,12 +41,12 @@
     }
 
     .about__photo-right &--desktop {
-            display: none;
+        display: none;
     }
-    
+
     .reviews & {
         height: 396px;
-        
+
         & img {
             object-fit: contain;
         }
@@ -54,7 +58,7 @@
         // }
 
         &--portfolio {
-            height: 468px;
+            //height: 468px;
         }
 
         .portfolio__wrapper &,
@@ -80,7 +84,7 @@
             width: calc(12.5% - 17px);
             height: 257px;
         }
-        
+
         .portfolio__wrapper &:nth-last-child(-1n+8) {
             height: 360px;
         }
@@ -91,15 +95,15 @@
         // }
 
         &--portfolio {
-            height: 415px;
+            //height: 415px;
         }
 
         .portfolio__wrapper &:nth-child(-1n+8) {
             margin-bottom: 31px;
         }
-        
+
         // .about__photo-left &--desktop {
-            
+
         // }
     }
 
@@ -110,7 +114,7 @@
 
         .about__photo-right & {
             height: calc(50% - 1px);
-            
+
             & img {
                 object-fit: contain;
             }
