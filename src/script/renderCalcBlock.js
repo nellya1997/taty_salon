@@ -1,9 +1,10 @@
 const renderCalcBlock = (name, price, time) => {
   const isAdditionalSelector = price[3] ? `<li id="3" class="selector">от 25 см</li>` : ``;
+  const isMobile = window.screen.width <= 768;
   return `
     <p class="h2">${name}</p>
     <p class="mt-13">
-      Но не стоит полностью полагаться на разработанную шкалу и отказываться от желания сделать тату только потому, 
+      Не стоит полностью полагаться на разработанную шкалу и отказываться от желания сделать тату только потому, 
       что выбранный участок считается максимально чувствительным. 
     </p>
     <p class="mt-13">
@@ -40,5 +41,5 @@ const renderCalcBlock = (name, price, time) => {
   <p class="mb-15">
     Заживление пленкой
   </p>
-  <a class="link text-center link__decoration_checkIn" href="#">Записаться на сеанс</a>`
+  <a class="link text-center link__decoration_checkIn" href="https://wa.me/+79600330101" target="_blank" ${isMobile ? 'style="width: 100%"' : ''}>Записаться на сеанс</a>`
 };
