@@ -81,7 +81,7 @@
 	}
 
 	&__swiper {
-		padding-bottom: 100px;
+		padding-bottom: 4vw;
 		margin-bottom: 20px;
 	}
 
@@ -292,6 +292,10 @@
 					width: 30%;
 				}
 			}
+		}
+
+		&__swiper {
+			padding-bottom: 8vw;
 		}
 	}
 }
