@@ -148,12 +148,12 @@ const rotate = (slide, classList) => { //функция подсчёта угл�
 			}
 		};
 
-		$main_div.bind('mousedown touchstart touchmove touchend mousemove click', animation);
+//		$main_div.bind('mousedown touchstart touchmove touchend mousemove click', animation);
 
 		$('#range').bind('mousedown touchstart touchmove touchend mousemove click', animation);
 		
 		// движение мышки
-		$main_div.bind('mousemove', animate);
+//		$main_div.bind('mousemove', animate);
 		$('#range').bind('mousemove', animate);
 		
 		// остановка, если отпустили конпку мышки
