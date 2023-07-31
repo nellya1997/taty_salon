@@ -117,7 +117,6 @@
 
 @media (min-width: 930px) {
 	.header {
-		// height: 140px;
 
 		.nav__list {
 			width: 67.3%;
@@ -126,15 +125,18 @@
 		.nav__contacts {
 			display: initial;
 
-			li:first-child {
-				span {
-					@include fonty(19px, 600);
-				}
-			}
+			.contact-badge__item {
+				@include flexy();
+				gap: 10px;
 
-			li:nth-child(2) {
+				img {
+					position: initial;
+					width: 28px;
+					height: 28px;
+				}
+
 				span {
-					@include fonty(16px, 400);
+					font-size: calc(13px + 20 * ((100vw - 930px) / 1920));
 				}
 			}
 		}
