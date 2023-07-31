@@ -12,7 +12,9 @@ portfolioArray.forEach((image) => {
     if (window.screen.width > 768) {
       document.body.style.marginRight = `${scrollBar}px`;
       document.querySelector('.header').style.paddingRight = `${scrollBar}px`;
-      modalBackground.firstElementChild.style.width = '60vw';
+      modalBackground.firstElementChild.style.width = 'max-content';
+      modalBackground.firstElementChild.lastElementChild.style.height = '100vh';
+      modalBackground.firstElementChild.style.maxHeight = '100vh';
     }
     state.activeModalBlock.innerHTML = image.outerHTML;
   });

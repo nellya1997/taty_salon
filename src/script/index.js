@@ -180,7 +180,9 @@ const modalClose = document.querySelector('.modalClose');
       modalBackground.parentElement.style.overflow = '';
       if (modalBackground.firstElementChild.style.width !== '81.25%') {
         modalBackground.firstElementChild.style.width = '';
-        modalBackground.firstElementChild.style.overflow = 'auto';
+        modalBackground.firstElementChild.lastElementChild.style.height = '';
+        modalBackground.firstElementChild.style.maxHeight = '';
+        modalBackground.firstElementChild.style.overflow = '';
         document.querySelector('.header').style.paddingRight = '';
         modalBackground.firstElementChild.style.padding = '';
         document.body.style.marginRight = '';
