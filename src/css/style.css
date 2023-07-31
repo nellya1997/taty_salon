@@ -675,7 +675,7 @@ a:visited {
   margin-bottom: 6px;
 }
 .picture--portfolio {
-  padding: 0px 10px;
+  padding: 0px 3px;
   height: 49vh;
 }
 .picture--portfolio img {
@@ -1325,7 +1325,7 @@ a:visited {
   margin-bottom: 0;
 }
 .portfolio__swiper {
-  padding-bottom: 4vw;
+  padding-bottom: 40px;
   margin-bottom: 20px;
 }
 .portfolio__slides {
@@ -1483,7 +1483,7 @@ a:visited {
     width: 30%;
   }
   .portfolio__swiper {
-    padding-bottom: 8vw;
+    padding-bottom: 120px;
   }
 }
 .services {
@@ -2486,7 +2486,7 @@ a:visited {
   }
 }
 .reviews .swiper-wrapper {
-  padding-bottom: 12%;
+  padding-bottom: 45px;
 }
 .reviews .swiper-wrapper .pc-slide {
   display: none;
@@ -2494,7 +2494,7 @@ a:visited {
 
 @media (min-width: 767px) {
   .reviews .swiper-wrapper {
-    padding-bottom: 5%;
+    padding-bottom: 55px;
   }
   .reviews .swiper-wrapper .pc-slide {
     display: block;
