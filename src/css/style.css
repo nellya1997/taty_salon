@@ -1337,12 +1337,15 @@ a:visited {
   width: 37px;
   height: 37px;
   bottom: 0;
-  background: url(./../../../src/icon/left.svg) no-repeat;
   background-size: 37px 37px;
   left: calc(50% - 54px);
 }
+.portfolio__swiper-button-prev {
+  background: url("../icon/left.svg") no-repeat;
+  left: calc(50% - 54px);
+}
 .portfolio__swiper-button-next {
-  background: url(../../../src/icon/right.svg) no-repeat;
+  background: url("../icon/right.svg") no-repeat;
   left: auto;
   right: calc(50% - 54px);
 }

@@ -293,8 +293,8 @@ const swiperReview = new Swiper('.js-swiper-reviews', {
   spaceBetween: 20,
   
     navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.portfolio__swiper-button-next',
+    prevEl: '.portfolio__swiper-button-prev',
   },
   
   breakpoints: {
